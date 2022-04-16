@@ -1,0 +1,331 @@
+
+
+body{
+background-color: #dedbd7;
+}
+
+#name{
+font-size: 25px;
+font-family: 'Oswald', sans-serif;
+
+}
+
+#bike{
+width: 60px;
+}
+
+#everything{
+margin-top: 10vh;
+}
+
+#photo{
+    
+width: 100%;
+margin-left: auto;
+left: auto;
+right: auto
+}
+
+#email{
+    font-size: 40%;
+    margin-left: 1%;
+    color: #09a96f;
+    padding-top: 22px;
+}
+#email:after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+
+
+#information{
+
+}
+
+#bookRow{
+margin-top: 80px;
+}
+
+hr.type_1{
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+	background-color: brown;
+	margin-top: 7vh;
+}
+hr.type_1:after {
+	#content: '\002665';
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	padding: 0 10px;
+	background: #dedbd7;
+	color: #e86254;
+	font-size: 28px;
+}
+
+hr.type_2{
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+	background-color: brown;
+	margin-top: 7vh;
+}
+hr.type_2:after {
+	content: 'Books';
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	padding: 0 10px;
+	background: #dedbd7;
+	color: #e86254;
+	font-size: 24px;
+}
+
+hr.type_3{
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+	background-color: brown;
+	margin-top: 7vh;
+}
+hr.type_3:after {
+	content: 'Projects';
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	padding: 0 10px;
+	background: #dedbd7;
+	color: #e86254;
+	font-size: 24px;
+}
+
+hr.type_4{
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+	background-color: brown;
+}
+hr.type_4:after {
+	content: 'Papers in international journals';
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	padding: 0 10px;
+	background: #dedbd7;
+	color: #e86254;
+	font-size: 24px;
+}
+
+hr.type_5{
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+	background-color: brown;
+}
+hr.type_5:after {
+	content: 'Papers in international proceedings';
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	padding: 0 10px;
+	background: #dedbd7;
+	color: #e86254;
+	font-size: 24px;
+}
+
+hr.type_6{
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+	background-color: brown;
+	margin-top: 7vh;
+}
+hr.type_6:after {
+	content: 'Other stuff';
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	padding: 0 10px;
+	background: #dedbd7;
+	color: #e86254;
+	font-size: 24px;
+}
+
+hr.type_7{
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+	background-color: brown;
+	margin-top: 7vh;
+}
+hr.type_7:after {
+	content: 'Chapters in Books';
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	padding: 0 10px;
+	background: #dedbd7;
+	color: #e86254;
+	font-size: 24px;
+}
+
+hr.type_8{
+    border-top: 4px double #8c8b8b;
+text-align: center;
+	background-color: brown;
+#border: 0px;
+	margin-top: 7vh;
+}
+hr.type_8:after {
+	content: 'YOUTUBE Videos';
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	padding: 0 10px;
+	background: #dedbd7;
+	color: #e86254;
+	font-size: 24px;
+}
+
+hr.type_9{
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+	background-color: brown;
+	margin-top: 7vh;
+}
+hr.type_9:after {
+	content: 'Posters';
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	padding: 0 10px;
+	background: #dedbd7;
+	color: #e86254;
+	font-size: 24px;
+}
+
+hr.type_10{
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+	background-color: brown;
+	margin-top: 7vh;
+}
+hr.type_10:after {
+	content: 'Recognitions';
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	padding: 0 10px;
+	background: #dedbd7;
+	color: #e86254;
+	font-size: 24px;
+}
+
+hr.type_11{
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+	background-color: brown;
+	margin-top: 7vh;
+}
+hr.type_11:after {
+	content: 'Referee for international journals indexed in Current Contents';
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	padding: 0 10px;
+	background: #dedbd7;
+	color: #e86254;
+	font-size: 24px;
+}
+
+hr.type_12{
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+	background-color: brown;
+	margin-top: 7vh;
+}
+hr.type_12:after {
+	content: 'Textbook (pdf)';
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	padding: 0 10px;
+	background: #dedbd7;
+	color: #e86254;
+	font-size: 24px;
+}
+
+hr.type_13{
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+	background-color: brown;
+	margin-top: 7vh;
+}
+hr.type_13:after {
+	content: 'Editor';
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	padding: 0 10px;
+	background: #dedbd7;
+	color: #e86254;
+	font-size: 24px;
+}
+
+hr.type_14{
+	border-top: 4px double #8c8b8b;
+	text-align: center;
+	background-color: brown;
+	margin-top: 7vh;
+}
+hr.type_14:after {
+	content: 'Recommended videos';
+	display: inline-block;
+	position: relative;
+	top: -25px;
+	padding: 0 10px;
+	background: #dedbd7;
+	color: #e86254;
+	font-size: 24px;
+}
+
+.shaded{
+background-color: #c5c0bc;
+margin-top: 10px;
+border: 2px solid #ad9494;
+}
+
+.shaded1{
+background-color: #c5c0bc;
+margin-top: 10px;
+border: 2px solid #ad9494;
+}
+
+.shaded2{
+background-color: #c5c0bc;
+#margin-top: 10px;
+border: 2px solid #ad9494;
+}
+
+.shaded3{
+background-color: #c5c0bc;
+	margin-top: 3vh;
+#margin-top: 10px;
+border: 2px solid #ad9494;
+}
+
+.shaded_yt{
+background-color: #b0444c80;
+margin-top: 10px;
+color: white;
+border-radius: 20px;
+padding-bottom: 10px;
+}
+
+.boxed{
+#background-color: #c5c0bc;
+#margin-top: 10px;
+border: 1px solid #ad9494;
+}
+
+a.shaded_yt{
+    color: white;
+}
+
+.skip{
+    margin-top: 5vh
+}

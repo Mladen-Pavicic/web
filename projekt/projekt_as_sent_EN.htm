@@ -1,0 +1,2891 @@
+<meta name="keywords" content="quantum computation, quantum communication, quantum computer, qubit, quantum gate, quantum cryptography, quantum error-correction, Quantum Repeaters, quantum teleportation, Kochen--Specker Setup, Interaction-Free Computation, Shor's Algorithm, Quantum Simulator, Quantum Turing Machines, Turing Machines, Quantum Algebra, Entanglement, Entangled Qubits, Springer">
+
+<html xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:w="urn:schemas-microsoft-com:office:word"
+xmlns:st1="urn:schemas-microsoft-com:office:smarttags"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=ProgId content=Word.Document>
+<meta name=Generator content="Microsoft Word 11">
+<meta name=Originator content="Microsoft Word 11">
+<link rel=File-List href="projekt_as_sent_EN_files/filelist.xml">
+<title>						</title>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceName"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="PlaceType"/>
+<o:SmartTagType namespaceuri="urn:schemas-microsoft-com:office:smarttags"
+ name="place"/>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>RH - TDU</o:Author>
+  <o:Template>PROJEKT.DOT</o:Template>
+  <o:LastAuthor>Prof. Mladen Pavicic</o:LastAuthor>
+  <o:Revision>2</o:Revision>
+  <o:TotalTime>2</o:TotalTime>
+  <o:LastPrinted>2006-03-07T00:04:00Z</o:LastPrinted>
+  <o:Created>2006-12-24T13:42:00Z</o:Created>
+  <o:LastSaved>2006-12-24T13:42:00Z</o:LastSaved>
+  <o:Pages>14</o:Pages>
+  <o:Words>6670</o:Words>
+  <o:Characters>38019</o:Characters>
+  <o:Company>RH - TDU</o:Company>
+  <o:Lines>316</o:Lines>
+  <o:Paragraphs>89</o:Paragraphs>
+  <o:CharactersWithSpaces>44600</o:CharactersWithSpaces>
+  <o:Version>11.8107</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:DocumentProtection>Forms</w:DocumentProtection>
+  <w:UnprotectPassword>7F76DE31</w:UnprotectPassword>
+  <w:PunctuationKerning/>
+  <w:DrawingGridHorizontalSpacing>6 pt</w:DrawingGridHorizontalSpacing>
+  <w:DrawingGridVerticalSpacing>6 pt</w:DrawingGridVerticalSpacing>
+  <w:DisplayVerticalDrawingGridEvery>0</w:DisplayVerticalDrawingGridEvery>
+  <w:UseMarginsForDrawingGridOrigin/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:Compatibility>
+   <w:BalanceSingleByteDoubleByteWidth/>
+   <w:DoNotLeaveBackslashAlone/>
+   <w:ULTrailSpace/>
+   <w:DoNotExpandShiftReturn/>
+   <w:WW6BorderRules/>
+   <w:FootnoteLayoutLikeWW8/>
+   <w:ShapeLayoutLikeWW8/>
+   <w:AlignTablesRowByRow/>
+   <w:ForgetLastTabAlignment/>
+   <w:AutoSpaceLikeWord95/>
+   <w:LayoutRawTableWidth/>
+   <w:LayoutTableRowsApart/>
+   <w:UseWord97LineBreakingRules/>
+   <w:SelectEntireFieldWithStartOrEnd/>
+   <w:UseWord2002TableStyleRules/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+ </w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" LatentStyleCount="156">
+ </w:LatentStyles>
+</xml><![endif]--><!--[if !mso]><object
+ classid="clsid:38481807-CA0E-42D2-BF39-B33AF135CC4D" id=ieooui></object>
+<style>
+st1\:*{behavior:url(#ieooui) }
+</style>
+<![endif]-->
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:1627421319 -2147483648 8 0 66047 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-parent:"";
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:HR;
+	mso-fareast-language:HR;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 207.65pt right 415.3pt;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:HR;
+	mso-fareast-language:HR;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	tab-stops:center 207.65pt right 415.3pt;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:HR;
+	mso-fareast-language:HR;}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-noshow:yes;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	font-size:8.0pt;
+	font-family:Tahoma;
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:HR;
+	mso-fareast-language:HR;}
+p.Style2, li.Style2, div.Style2
+	{mso-style-name:Style2;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	background:#F2F2F2;
+	mso-shading:windowtext;
+	mso-pattern:gray-5 auto;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	border:none;
+	mso-border-alt:solid windowtext 1.5pt;
+	padding:0cm;
+	mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt;
+	mso-border-shadow:yes;
+	font-size:14.0pt;
+	mso-bidi-font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:HR;
+	mso-fareast-language:HR;
+	font-weight:bold;
+	mso-bidi-font-weight:normal;}
+p.Style1, li.Style1, div.Style1
+	{mso-style-name:Style1;
+	margin:0cm;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	mso-layout-grid-align:none;
+	punctuation-wrap:simple;
+	text-autospace:none;
+	border:none;
+	mso-border-alt:solid windowtext 1.5pt;
+	padding:0cm;
+	mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt;
+	mso-border-shadow:yes;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-fareast-font-family:"Times New Roman";
+	mso-ansi-language:HR;
+	mso-fareast-language:HR;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+ /* Page Definitions */
+ @page
+	{mso-footnote-separator:url("projekt_as_sent_EN_files/header.htm") fs;
+	mso-footnote-continuation-separator:url("projekt_as_sent_EN_files/header.htm") fcs;
+	mso-endnote-separator:url("projekt_as_sent_EN_files/header.htm") es;
+	mso-endnote-continuation-separator:url("projekt_as_sent_EN_files/header.htm") ecs;}
+@page Section1
+	{size:21.0cm 842.0pt;
+	margin:42.55pt 1.0cm 42.55pt 2.0cm;
+	mso-header-margin:25.5pt;
+	mso-footer-margin:25.5pt;
+	mso-page-numbers:0;
+	mso-title-page:yes;
+	mso-header:url("projekt_as_sent_EN_files/header.htm") h1;
+	mso-footer:url("projekt_as_sent_EN_files/header.htm") f1;
+	mso-first-footer:url("projekt_as_sent_EN_files/header.htm") ff1;
+	mso-paper-source:0;}
+div.Section1
+	{page:Section1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:434909877;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1340680290 856615308 67698713 67698715 67698703 67698713 67698715 67698703 67698713 67698715;}
+@list l0:level1
+	{mso-level-text:"%1\)";
+	mso-level-tab-stop:54.0pt;
+	mso-level-number-position:left;
+	margin-left:54.0pt;
+	text-indent:-36.0pt;}
+@list l0:level2
+	{mso-level-number-format:alpha-lower;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+@list l1
+	{mso-list-id:2050374099;
+	mso-list-type:hybrid;
+	mso-list-template-ids:155059726 68812815 68812825 68812827 68812815 68812825 68812827 68812815 68812825 68812827;}
+@list l1:level1
+	{mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+-->
+</style>
+<!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0cm 5.4pt 0cm 5.4pt;
+	mso-para-margin:0cm;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman";
+	mso-ansi-language:#0400;
+	mso-fareast-language:#0400;
+	mso-bidi-language:#0400;}
+</style>
+<![endif]-->
+</head>
+
+<body lang=EN-GB style='tab-interval:36.0pt'>
+
+<div class=Section1>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='border-collapse:collapse;mso-yfti-tbllook:480;mso-padding-alt:0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes'>
+  <td width=232 style='width:173.7pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-AU
+  style='font-size:11.0pt;mso-ansi-language:EN-AU'></span></b><span
+  lang=HR style='font-size:11.0pt'><o:p></o:p></span></p>
+  </td>
+  <td width=232 style='width:173.7pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal><span lang=HR style='font-size:11.0pt'><o:p>&nbsp;</o:p></span></p>
+  </td>
+  <td width=232 style='width:173.7pt;padding:0cm 5.4pt 0cm 5.4pt'>
+  <p class=MsoNormal align=right style='text-align:right'><b style='mso-bidi-font-weight:
+  normal'><span lang=EN-AU style='font-size:11.0pt;mso-ansi-language:EN-AU'>
+  </span></b><b style='mso-bidi-font-weight:normal'><span lang=HR
+  style='font-size:11.0pt'><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=HR
+style='font-size:18.0pt;mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><i style='mso-bidi-font-style:
+normal'><span lang=EN-AU style='font-size:20.0pt;mso-bidi-font-size:10.0pt;
+mso-ansi-language:EN-AU'>RESEARCH PROPOSAL<o:p></o:p></span></i></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
+style='font-size:24.0pt;mso-bidi-font-size:10.0pt;mso-ansi-language:EN-AU'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'><u><span lang=EN-AU
+style='font-size:24.0pt;mso-bidi-font-size:10.0pt;mso-ansi-language:EN-AU'>
+QUANTUM COMPUTATION:<o:p></o:p></span></u></i></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><b style='mso-bidi-font-weight:
+normal'><i style='mso-bidi-font-style:normal'><u><span lang=EN-AU
+style='font-size:24.0pt;mso-bidi-font-size:10.0pt;mso-ansi-language:EN-AU'>
+PARALLELISM AND VISUALISATION<o:p></o:p></span></u></i></b></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=HR
+style='font-size:18.0pt;mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=EN-AU
+style='font-size:18.0pt;mso-bidi-font-size:10.0pt;mso-ansi-language:EN-AU'>
+Head: Mladen Pavicic</span><span lang=HR style='font-size:18.0pt;mso-bidi-font-size:
+10.0pt'><o:p></o:p></span></p>
+
+<p class=MsoNormal align=center style='text-align:center'><span lang=HR
+style='font-size:18.0pt;mso-bidi-font-size:10.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<span lang=HR style='font-size:10.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:HR;mso-fareast-language:HR;mso-bidi-language:
+AR-SA'><br clear=all style='mso-special-character:line-break;page-break-before:
+always'>
+</span>
+
+<p class=MsoNormal><span lang=HR style='font-size:3.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt;
+background:#F2F2F2;mso-shading:windowtext;mso-pattern:gray-5 auto'>
+
+<p class=Style2 style='background:#F2F2F2;mso-shading:windowtext;mso-pattern:
+gray-5 auto;border:none;mso-border-alt:solid windowtext .75pt;padding:0cm;
+mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=EN-AU style='mso-ansi-language:
+EN-AU'>DESCRIPTION OF RESEARCH<o:p></o:p></span></p>
+
+</div>
+
+<p class=MsoNormal><span lang=HR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=HR>9.0</span><b style='mso-bidi-font-weight:normal'><span
+lang=HR style='font-size:14.0pt;mso-bidi-font-size:10.0pt'> </span></b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-AU style='font-size:14.0pt;
+mso-bidi-font-size:10.0pt;mso-ansi-language:EN-AU'>RESEARCH PLAN, PROCEDURES
+AND METHODS</span></b><b style='mso-bidi-font-weight:normal'><span lang=HR
+style='font-size:14.0pt;mso-bidi-font-size:10.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal><span lang=HR><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0
+ style='margin-left:5.4pt;border-collapse:collapse;mso-padding-alt:0cm 5.15pt 0cm 5.15pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:18.45pt'>
+  <td width=47 style='width:35.2pt;padding:0cm 5.15pt 0cm 5.15pt;height:18.45pt'>
+  <p class=MsoNormal><span lang=HR>9.1<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+  </td>
+  <td width=633 style='width:475.1pt;padding:0cm 5.15pt 0cm 5.15pt;height:18.45pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-AU
+  style='mso-ansi-language:EN-AU'>Presumptions (hypothesis, </span></b><span
+  lang=HR>5 000 </span><span lang=EN-AU style='mso-ansi-language:EN-AU'>characters<b
+  style='mso-bidi-font-weight:normal'>):</b></span><b style='mso-bidi-font-weight:
+  normal'><span lang=HR><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:4.0cm'>
+  <td width=680 colspan=2 valign=top style='width:18.0cm;padding:0cm 5.15pt 0cm 5.15pt;
+  height:4.0cm'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text91></a><!--[if supportFields]><span
+  style='mso-bookmark:Text91'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text91'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text91'><span lang=HR>&nbsp;&nbsp;The project would carry
+  out research in the field of quantum computation. We will work in the
+  following four interconnected subfields:</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>(1)<span style='mso-tab-count:1'>           </span>Quantum
+  algorithms</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>(2)<span style='mso-tab-count:1'>           </span>Theoretical
+  description of quantum systems quantum algorithms can be based on (with a
+  focus on Hilbert spaces and related algebras)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>(3)<span style='mso-tab-count:1'>           </span>Quantum
+  error correction</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>(4)<span style='mso-tab-count:1'>           </span>Design
+  of quantum hardware elements so as to serve as test benches for the results
+  obtained in (1-3). </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>Two main features of the proposed experiments are an
+  overlapping of classical and quantum parallel computing and a visualization
+  of physical and numerical processes that cannot be accessed directly since
+  they are either too small (at atomic scale) or too numerous (massive data
+  manipulation). </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>(1)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>We assume that first efficient quantum algorithms that
+  will be implemented into future quantum computers will be those that would
+  calculate quantum mechanical problems and simulate quantum mechanical
+  systems. The complexity of the algorithms should not grow exponentially with
+  the number or size of variables and there are still only a few such
+  algorithms put forward. What helps, however, is that all of them are based on
+  the Fourier transform and therefore reduce to finding eigenvalues and
+  eigenvectors of unitary operators. [1] (Here [1] means Reference 10.5.1 given
+  below.) This opens a general approach to calculating quantum problems since
+  such eigenvalue problems amounts to solving Schrodinger equations. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>Therefore, our aim is to elaborate on Fourier transform
+  algorithms for states of atoms used in the quantum computation experiments.
+  In doing so we partly rely on the results obtained under (2) because the
+  algorithms we designed there open a possibility of a novel approach to
+  quantum algebras and theoretical descriptions of quantum systems [22]
+  suitable for quantum computation, on the one hand, and of finding new quantum
+  error-correction schemes for preserving coherence of quantum states within
+  quantum computers, on the other. The main feature of designing the algorithms
+  is the use of a graphical representation, i.e., visualization.</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>(2)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>Under theoretical descriptions of quantum systems we
+  aim to develop</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>(a)<span style='mso-tab-count:1'>           </span>a
+  discrete finite Hilbert space description of quantum systems for an
+  implementation into a discrete quantum computer and </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>(b)<span style='mso-tab-count:1'>           </span>a
+  quasi-classical description of Schrodinger equations (often used in
+  chemistry) for an implementation into a continuous quantum computer. [2] </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>The way to achieve (a) is via quantum algebras and
+  algebraic quantum equations that directly describe subspace properties of the
+  Hilbert space and for which we obtained groundbreaking results (previously
+  unknown properties and classes of equations) [22,11,27]. The algebras are
+  isomorphic to chosen Hilbert spaces and we can treat quantum computer as a
+  quantum simulator and implement discrete description of quantum systems
+  &quot;qubit by qubit&quot; into a discrete quantum computer as opposed to
+  classical computers where we have to digitalize any equation before solving
+  it. These algebras describe quantum objects and processes so as to enable
+  their direct introduction into a quantum computer. The way to achieve (b) is
+  via novel quantization of the quasi-classical description of particle-field
+  interaction that we also developed. [2] </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>(3)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>As for quantum error-correction, the ability of quantum
+  computers to calculate exponentially faster than today's classical computers
+  depends on the efficiency of the quantum error-correction codes that can
+  correct the states faster than they can decohere. Our algorithms for
+  exhaustive generation of arbitrary Kochen-Specker states can be re-elaborated
+  so as to generate arbitrary error-correction codes. Our goal is an algorithm
+  for exhaustive generation of quantum error-correction codes. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>(4)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>The fundamental experiments we will design for testing
+  the details of (1-3) are: (a) atom-photon coupling, (b) superposition of atom
+  states, (c) atom-photon and atom-atom entanglements, (d) construction of
+  quantum gates using (a)-(c). The new experimental proposals rely on the
+  groundbreaking experimental proposals we put forward in the last 10 years.
+  Pavicic, M. and J. Summhammer, Phys. Rev. Lett. 73, 3191 (1994); Pavicic, M.,
+  J. Opt. Soc. Am. B 12, 821 (1995); Pavicic, M., Phys. Lett. A 223, 241
+  (1996); Paul, H. and Pavicic, M., J.Opt. Soc. Am. B 14, 1275 (1997).</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR>The elaboration on the algorithms we are going to
+  develop in (1-3) and their testing will heavily rely on classical parallel
+  computing. Without cluster and grid technology that would be impossible and
+  without a constant improvement of algorithms through cooperation with other teams
+  the results we have achieved so far would not be possible. The same applies
+  to the graphical visualization of quantum states we are going to use and
+  develop. &nbsp;&nbsp;&nbsp; </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text91'><span lang=HR><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00008813000006005400650078007400390031000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text91'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text91'></span><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  </div>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=HR style='font-size:3.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=680
+ style='width:18.0cm;margin-left:5.15pt;border-collapse:collapse;mso-padding-alt:
+ 0cm 5.15pt 0cm 5.15pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:21.25pt'>
+  <td width=47 style='width:35.45pt;padding:0cm 5.15pt 0cm 5.15pt;height:21.25pt'>
+  <p class=MsoNormal><span lang=HR>9.2<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+  </td>
+  <td width=633 style='width:474.85pt;padding:0cm 5.15pt 0cm 5.15pt;height:
+  21.25pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-AU
+  style='mso-ansi-language:EN-AU'>Research procedures, protocol and plan </span></b><span
+  lang=HR>(10 000 </span><span lang=EN-AU style='mso-ansi-language:EN-AU'>characters</span><span
+  lang=HR>)</span><b style='mso-bidi-font-weight:normal'><span lang=EN-AU
+  style='mso-ansi-language:EN-AU'>:</span><span lang=HR><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:4.0cm'>
+  <td width=680 colspan=2 valign=top style='width:18.0cm;padding:0cm 5.15pt 0cm 5.15pt;
+  height:4.0cm'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><!--[if supportFields]><span
+  lang=HR><span style='mso-element:field-begin'></span><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span><![endif]--><span
+  lang=HR>&nbsp;&nbsp;&nbsp;Our project has the following four interwoven parts
+  </span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>(i)<span
+  style='mso-tab-count:1'>            </span>Quantum algorithms </span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>(ii)<span
+  style='mso-tab-count:1'>           </span>Theoretical description of quantum
+  systems </span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>(iii)<span
+  style='mso-tab-count:1'>          </span>Quantum error correction </span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>(iv)<span
+  style='mso-tab-count:1'>          </span>Design of quantum hardware elements</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>(i)</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>There are
+  still only a few quantum algorithms whose complexity does not grow
+  exponentially with the number or size of variables. All of them are based on
+  the Fourier transform and therefore that they all can be reduced to finding
+  eigenvalues and eigenvectors of unitary operators. [1] (Here [1] means
+  Reference 10.5. given below.) Such eigenvalue problems amount to solving
+  Schrodinger equations. However, it also shows that it is most promising to
+  start with algorithms that would calculate genuine quantum problems and that
+  a search for &quot;classical&quot; (e.g., Shor's algorithm for factoring
+  numbers) and universal Fourier transform algorithms might greatly benefit
+  from any new algorithm of the former kind.</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>So,
+  assuming that the first efficient quantum algorithms that are going to be
+  implemented into would-be quantum computers will be quantum mechanical ones,
+  we are going to concentrate on algorithms that would calculate and simulate
+  quantum mechanical systems like atomic and molecular states. </span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>Our final
+  aim is to elaborate on Fourier transform algorithms for states of atoms used
+  in the quantum computation experiments. In planning this we rely on our
+  recent ground breaking algorithms and programs in the field of computational
+  algebras corresponding to a Hilbert space description of quantum systems. In
+  particular, we are going to use algorithms and programs we previously
+  designed for obtaining results in Refs. [4,6,7,11].</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>We are
+  also going to use algorithms we previously used for obtaining arbitrary
+  Kochen-Specker states [3,13] because the algorithms we designed there open a
+  possibility of a novel approach to quantum algebras and theoretical
+  descriptions of quantum systems [22] suitable for quantum computation.</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>New
+  algorithms and programs will be developed for obtaining a visualisation of
+  Fourier transform algorithm outputs since the characteristic distribution of
+  peaks in the outputs of Fourier transform algorithm turn out to be highly
+  significant for their handling and application.<span
+  style='mso-spacerun:yes'>  </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>(ii)</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>It is
+  well-known that the quantum gates are well described by simple Hilbert space
+  formalisms and that they can all be eventually reduced to two level gates.
+  (&quot;Two level gates are universal.&quot;) So, there is no problem with the
+  formalism describing quantum gates. The problem is how to describe quantum
+  systems and processes by means of finite dimensional algebras so as to enable
+  a direct introduction of the description into a quantum computer. For,
+  continuous quantum states (e.g., position of an electron, radial distribution
+  of an electron cloud, etc.) imply a representation by means of an infinite-dimensional
+  Hilbert space and it cannot be introduced directly into a discrete quantum
+  computer with discrete quantum gates - we mean qubits - even when they are
+  superposed and entangled.<span style='mso-spacerun:yes'>  </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>With such
+  quantum algebras at hand, the difference between a classical problem
+  introduced into a classical computer and a quantum problem introduced into a
+  quantum computer by means of the algebras would be the following. Any
+  classical problem we want to calculate we first have to digitalize, i.e.,
+  express in Boolean algebra (formulate with the help of 0,1 strings) and only
+  then introduce into a classical computer. A quantum problem, on the other
+  hand, originally and genuinely expressed by means of a quantum algebra could
+  be introduced directly into a quantum computer whose language is quantum
+  algebra in the same sense in which Boolean algebra is the language of a
+  classical computer. </span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>Implementation
+  of quantum problems into a continuous quantum computer requires a different
+  approach. [2]</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>The main
+  tool for finding new algebras will be the numerous algorithms and programs we
+  developed for generating and evaluating quantum algebras, Hilbert lattices,
+  Greechie diagrams, MMP diagrams, and Kochen-Specker states we developed over
+  the last 15 years. </span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>In
+  particular we will use varieties of program nauty developed by our foreign
+  coworker at the project, Brendan McKay, Professor of Computer Science at the
+  Department of Computer Science at the Australian National University and
+  programs lattice, oml, beran, and greechie developed by our foreign coworker
+  Norman D. Megill.<span style='mso-spacerun:yes'>  </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>To find
+  new quantum algebras we have to carry out massive parallel calculations on
+  clusters and the grid as we already did in coming to our previous algebras.
+  [26] We will also develop a visualization of a graphical representation of
+  algebras in analogy to the ones we used in Refs. [26,27]</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>The way to
+  achieve implementation of quantum problems into a continuous quantum computer
+  is via novel quantization of the quasi-classical description of
+  particle-field interaction that we also developed. [2] </span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>(iii)</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>The
+  ability of quantum computers to calculate exponentially faster than today's
+  classical computers depends on the efficiency of the quantum error-correction
+  scheme that can correct the states faster than they can decohere. Our
+  algorithms for exhaustive generation of arbitrary Kochen-Specker systems can
+  be re-elaborated so as to generate arbitrary error-correction schemes. Our
+  goal is an algorithm for exhaustive generation of quantum error-correction
+  schemes. </span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>To achieve
+  this goal we will use </span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>1.<span
+  style='mso-tab-count:1'>             </span>Interval analysis programs and
+  the library ALIAS for solving nonlinear equations, developed by our foreign
+  coworker at the project, Jean-Pierre Merlet, Head of the COPRIN project at
+  the INRIA, the French national institute for research in computer science and
+  control</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>2.<span
+  style='mso-tab-count:1'>             </span>Other varieties of program nauty
+  developed by Brendan McKay (see above)</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>3.<span
+  style='mso-tab-count:1'>             </span>Programs states and states01
+  developed by Norman D. Megill (see above). </span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>4.<span
+  style='mso-tab-count:1'>             </span>Numerical methods for solving
+  systems of nonlinear algebraic equations resulting from the discretization
+  and of programming implementation of several partition of unity methods and
+  discrete element method used in discontinuous deformation analysis elaborated
+  by our coworker Kresimir Fresl. Also his comprehensive library of functions
+  and data types in programing language C++.<span style='mso-spacerun:yes'> 
+  </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>Again we
+  will have to generate a huge number of candidates for reliable codes and will
+  handle them with the help of their geometry and their graphical
+  representation that we can then in turn use for both - their parallel
+  computation and their visualization.</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>(iv)</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>To test
+  the obtained algebras and error-correction schemes we will design fundamental
+  experiments with a particular emphasis on engineering and controlling atom
+  states and their superposition and the properties of photons interaction with
+  photons. In particular the time windows required for controlling states and
+  interaction will give us estimates of decoherence time and required level of
+  error correction. We plan to analyse (a) atom-photon coupling, (b)
+  superposition of atom states, (c) atom-photon and atom-atom entanglements,
+  (d) quantum gates that use (a)-(c). The experiments will partly rely on our
+  previous the ground breaking results: Pavicic, M. and J. Summhammer, Phys. Rev.
+  Lett. 73, 3191 (1994); Pavicic, M., J. Opt. Soc. Am. B 12, 821 (1995). We
+  will also use the results from Pavicic, M., Phys. Lett. A 223, 241 (1996);
+  Paul, H. and Pavicic, M., J.Opt. Soc. Am. B 14, 1275 (1997).</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>(i-iii)</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>These
+  parts of the project require massive parallel calculations on clusters and
+  the grid. The project will be a part a bigger program Distributed Processing
+  and<span style='mso-spacerun:yes'>  </span>Scientific Data Visualization at
+  the Institute Rudjer Boskovic in Zagreb. The project and program will
+  (through the University Computing Centre) join the EGEE-II project (Enabling
+  Grids for E-sciencE). Thus the present project will be one of the nodes of
+  the program.<span style='mso-spacerun:yes'>  </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>The
+  Institute Rudjer Boskovic and the University Computing Centre will contribute
+  to the core infrastructure services, monitoring and control, security and
+  incident response, user support and middleware. Especially for the
+  middleware, there will be work on simplifying installation and configuration
+  tools and procedures and also on heterogeneity support.</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>The University
+  Computing Centre will contribute to networking issues in EGEE-II project.</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>We also
+  expect to be included in and possibly given a priority access to the CRO-GRID
+  infrastructure.<span style='mso-spacerun:yes'>  </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR>&nbsp;</span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span lang=HR><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00001027000006007400650078007400390032000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span><!--[if supportFields]><span lang=HR><span
+  style='mso-element:field-end'></span></span><![endif]--><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  </div>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=HR style='font-size:3.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=680
+ style='width:18.0cm;margin-left:5.15pt;border-collapse:collapse;mso-padding-alt:
+ 0cm 5.15pt 0cm 5.15pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:18.15pt'>
+  <td width=47 style='width:35.45pt;padding:0cm 5.15pt 0cm 5.15pt;height:18.15pt'>
+  <p class=MsoNormal><span lang=HR>9.3</span><b style='mso-bidi-font-weight:
+  normal'><span lang=HR style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p></o:p></span></b></p>
+  </td>
+  <td width=633 style='width:474.85pt;padding:0cm 5.15pt 0cm 5.15pt;height:
+  18.15pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-AU
+  style='mso-ansi-language:EN-AU'>Purpose and aim of proposed research project </span></b><span
+  lang=HR>(2 500 </span><span lang=EN-AU style='mso-ansi-language:EN-AU'>characters</span><span
+  lang=HR>)</span><b style='mso-bidi-font-weight:normal'><span lang=EN-AU
+  style='mso-ansi-language:EN-AU'>:</span></b><b style='mso-bidi-font-weight:
+  normal'><span lang=HR style='font-size:12.0pt;mso-bidi-font-size:10.0pt'><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:4.0cm'>
+  <td width=680 colspan=2 valign=top style='width:18.0cm;padding:0cm 5.15pt 0cm 5.15pt;
+  height:4.0cm'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=text93></a><!--[if supportFields]><span
+  style='mso-bookmark:text93'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:text93'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:text93'><span lang=HR>The main purpose of the project is
+  to contribute to the World's efforts to develop, test, and implement the
+  quantum computation theory for the would-be quantum computers as well as
+  related quantum structures.<span style='mso-spacerun:yes'>    </span></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>The main aim of the project is to achieve novel results
+  in the following subfields of quantum computation:</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>(i)<span style='mso-tab-count:1'>            </span>Quantum
+  algorithms </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>(ii)<span style='mso-tab-count:1'>           </span>Theoretical
+  description of quantum systems quantum algorithms can be based on (with a
+  focus on Hilbert spaces and related algebras)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>(iii)<span style='mso-tab-count:1'>          </span>Quantum
+  error correction</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>(iv)<span style='mso-tab-count:1'>          </span>Design
+  of quantum hardware elements so as to serve as test benches for the results
+  obtained in (i)-(iii). </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>(i)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>We plan to develop quantum algorithms for finding
+  eigenvalues and eigenvectors of unitary operators what amounts to solving
+  Schrodinger equations. Our aim is to elaborate on Fourier transforms
+  algorithms for excited states of atoms used in the quantum computation
+  experiments. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>(ii)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>As for the quantum algebra and related theoretical
+  descriptions of quantum systems, we will consider (a) a discrete finite
+  Hilbert space description of quantum systems for an implementation into a
+  discrete quantum computer and (b) a quasi-classical description of
+  Schrodinger equations (often used in chemistry) for an implementation into a continuous
+  quantum computer. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>The way to achieve (a) is via quantum algebras and
+  algebraic quantum equations which directly describe subspace properties of
+  the Hilbert space. The algebras are isomorphic to chosen Hilbert spaces and
+  we can treat quantum computer as a quantum simulator and implement discrete
+  description of quantum systems &quot;qubit by qubit&quot; into a discrete
+  quantum computer as opposed to classical computers where we have to
+  digitalize any equation before solving it. Our ultimate goal is to find a set
+  of algebraic equations which will be isomorphic to the Hilbert space. Our
+  previous steps indicate that this goal could be achieved. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>The way to achieve (b) is via novel quantization of the
+  quasi-classical description of particle-field interaction that we also
+  developed. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>(iii)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>Our goal are algorithms for exhaustive generation of
+  arbitrary quantum error-correction codes.<span style='mso-spacerun:yes'> 
+  </span></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>(iv)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>Our aim is to devise setups for atom-photon coupling
+  and controlling atom superposition as well as constructing related quantum
+  gates. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>(i-iii)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text93'><span lang=HR>We intend to extensively use classical parallel
+  computing and visualization on clusters and Grid, thus contributing to
+  e-science projects. <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0000C409000006007400650078007400390033000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:text93'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:text93'></span></p>
+  </div>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=HR style='font-size:3.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=680
+ style='width:18.0cm;margin-left:5.15pt;border-collapse:collapse;mso-padding-alt:
+ 0cm 5.15pt 0cm 5.15pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:21.65pt'>
+  <td width=47 style='width:35.45pt;padding:0cm 5.15pt 0cm 5.15pt;height:21.65pt'>
+  <p class=MsoNormal><span lang=HR>9.4</span></p>
+  </td>
+  <td width=633 style='width:474.85pt;padding:0cm 5.15pt 0cm 5.15pt;height:
+  21.65pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-AU
+  style='mso-ansi-language:EN-AU'>Research application </span></b><span
+  lang=HR>(2 500 </span><span lang=EN-AU style='mso-ansi-language:EN-AU'>characters</span><b
+  style='mso-bidi-font-weight:normal'><span lang=HR>)</span></b><b
+  style='mso-bidi-font-weight:normal'><span lang=EN-AU style='mso-ansi-language:
+  EN-AU'>:</span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:4.0cm'>
+  <td width=680 colspan=2 valign=top style='width:18.0cm;padding:0cm 5.15pt 0cm 5.15pt;
+  height:4.0cm'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=text94></a><!--[if supportFields]><span
+  style='mso-bookmark:text94'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:text94'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:text94'><span lang=HR>We will consider applications of our
+  research according to its parts</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR>(i)<span style='mso-tab-count:1'>            </span>Quantum
+  algorithms </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR>(ii)<span style='mso-tab-count:1'>           </span>Theoretical
+  description of quantum systems and quantum algebras</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR>(iii)<span style='mso-tab-count:1'>          </span>Quantum
+  error correction</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR>(iv)<span style='mso-tab-count:1'>          </span>Design
+  of quantum hardware elements so as to serve as test benches for the results
+  obtained in (i)-(iii). </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR>(i)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR>Any new polynomially complex quantum algorithm has a
+  tremendous impact on the global efforts to develop the theory and
+  experimental implementation of quantum computing, the field in which billions
+  of Euros have already been invested. This will hold for our future algorithms
+  as well.</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR>(ii)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR>Quantum algebras and theoretical descriptions of
+  quantum systems we will develop will have their implication not only for
+  quantum computation but also for quantum mechanics in general, the theory of
+  Hilbert spaces, lattice theory, theory of Hilbert lattices, graph and
+  hypergraph theory, and for quasi-classical description of quantum system (in
+  physics as well as chemistry and biology). </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR>Since the methods of obtaining algebras and verifying
+  their properties heavily rely on parallel computing and visualization, our
+  research will contribute to these fields as well. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR>Also, solving algebraic equations will, as a rule,
+  reduce to solving huge number of systems of nonlinear equations. We found a
+  way to translate such equations into systems of graphs that satisfy
+  particular conditions and this speeds up solving the problems exponentially.
+  Such a method of solving nonlinear equations can have an application whenever
+  nonlinear equations appear.</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR>(iii)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR>New quantum error-correction codes will have not only a
+  direct application in the quantum computation and quantum cryptography but
+  also in the classical computation.. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR>(iv)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text94'><span lang=HR>Experiments for implementing quantum gates and
+  engineering quantum states will not only directly contribute to quantum
+  computations as its hardware but also to our basic understanding of quantum
+  physics and immediate commercial implementation for example in quantum
+  cryptography. <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0000C409000006007400650078007400390034000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:text94'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:text94'></span></p>
+  </div>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=HR style='font-size:3.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=680
+ style='width:18.0cm;margin-left:5.15pt;border-collapse:collapse;mso-padding-alt:
+ 0cm 5.15pt 0cm 5.15pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:21.4pt'>
+  <td width=47 style='width:35.45pt;padding:0cm 5.15pt 0cm 5.15pt;height:21.4pt'><b
+  style='mso-bidi-font-weight:normal'><span lang=HR style='font-size:10.0pt;
+  font-family:"Times New Roman";mso-fareast-font-family:"Times New Roman";
+  mso-ansi-language:HR;mso-fareast-language:HR;mso-bidi-language:AR-SA'><br
+  clear=all style='page-break-before:always'>
+  </span></b>
+  <p class=MsoNormal style='margin-top:3.0pt'><span lang=HR>9.5<b
+  style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+  </td>
+  <td width=633 style='width:474.85pt;padding:0cm 5.15pt 0cm 5.15pt;height:
+  21.4pt'>
+  <p class=MsoNormal style='margin-top:3.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=HR>Expected results: </span></b><span lang=HR>(1 000
+  characters for each year):<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;height:21.4pt'>
+  <td width=47 valign=top style='width:35.45pt;padding:0cm 5.15pt 0cm 5.15pt;
+  height:21.4pt'>
+  <p class=MsoNormal align=right style='margin-top:3.0pt;text-align:right'><span
+  lang=HR style='font-size:9.0pt'>9.5.1<o:p></o:p></span></p>
+  </td>
+  <td width=633 style='width:474.85pt;padding:0cm 5.15pt 0cm 5.15pt;height:
+  21.4pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=EN-AU style='mso-ansi-language:EN-AU'>After 1<sup>st</sup>
+  year:</span></b><span lang=EN-AU> </span><a name=text951></a><!--[if supportFields]><span
+  style='mso-bookmark:text951'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:text951'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:text951'><span lang=HR>&nbsp;&nbsp;&nbsp;We will start
+  with rewriting and speeding up algorithms for obtaining Kochen-Specker states
+  in 3, 4, and 5 dimensions and simultaneous designing of new algorithms.</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text951'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text951'><span lang=HR>It is expected to obtain sets of all up to 24 states
+  in 4-dimensional and over 30 states in 3-dimensional spaces. Note that this
+  has been absolutely inconceivable for the previous 40 years (since Kochen and
+  Specker arrived at a possibility of existence of the quantum states that
+  cannot be given a classical interpretation in 1965). Direct generation
+  (without our algorithms) would require billions of ages of the Universe. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text951'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text951'><span lang=HR>At least some new classes of algebraic equations
+  corresponding to properties of subspaces of an infinite-dimensional Hilbert
+  space will be generated. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text951'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text951'><span lang=HR>A new CNOT gate based on photon quantum interrogation
+  of atoms will be designed.<span style='mso-spacerun:yes'>  </span></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text951'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text951'><span lang=HR>We will start writing parallel computing application
+  for the Grid and clusters. &nbsp;&nbsp; </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text951'><span lang=HR><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0000E8030000070074006500780074003900350031000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:text951'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:text951'></span><b style='mso-bidi-font-weight:normal'><span
+  lang=HR><o:p>&nbsp;</o:p></span></b></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;height:21.4pt'>
+  <td width=47 valign=top style='width:35.45pt;padding:0cm 5.15pt 0cm 5.15pt;
+  height:21.4pt'>
+  <p class=MsoNormal align=right style='margin-top:3.0pt;text-align:right'><span
+  lang=HR style='font-size:9.0pt'>9.5.2<o:p></o:p></span></p>
+  </td>
+  <td width=633 style='width:474.85pt;padding:0cm 5.15pt 0cm 5.15pt;height:
+  21.4pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=EN-AU style='mso-ansi-language:EN-AU'>After 2<sup>nd</sup>
+  year:</span></b><span lang=EN-AU> </span><a name=Text952></a><!--[if supportFields]><span
+  style='mso-bookmark:Text952'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text952'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text952'><span lang=HR>&nbsp;We will start investigating
+  the geometry of quantum error-correction codes and designing algorithms for
+  its generation.<span style='mso-spacerun:yes'>   </span></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR>We expect to be able to generate first
+  error-correction codes. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR>We will start investigating finite dimensional Hilbert
+  spaces. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR>We expect to obtain first algebras corresponding the
+  finite dimensional Hilbert spaces. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR>We will start investigating continuous quasi-classical
+  representation of quantum systems. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR>We expect to get quasi-classical particle -
+  electromagnetic field interaction model applicable to a description of atom-photon
+  interaction within quantum gates. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR>We expect to get a design of controlling
+  (&quot;squeezing&quot; and &quot;freezing&quot;) atom superposition.<span
+  style='mso-spacerun:yes'>   </span></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR>We will start investigating Fourier transform
+  algorithms.</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR>We will start writing graphical (visualization)
+  application for the Grid. Cooperation with other projects from the program
+  will be explored.&nbsp;&nbsp;&nbsp;&nbsp;.</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text952'><span lang=HR><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0000E8030000070054006500780074003900350032000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text952'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text952'></span><b style='mso-bidi-font-weight:normal'><span
+  lang=HR><o:p>&nbsp;</o:p></span></b></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;height:21.4pt'>
+  <td width=47 valign=top style='width:35.45pt;padding:0cm 5.15pt 0cm 5.15pt;
+  height:21.4pt'>
+  <p class=MsoNormal align=right style='margin-top:3.0pt;text-align:right'><span
+  lang=HR style='font-size:9.0pt'>9.5.3<o:p></o:p></span></p>
+  </td>
+  <td width=633 style='width:474.85pt;padding:0cm 5.15pt 0cm 5.15pt;height:
+  21.4pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=EN-AU style='mso-ansi-language:EN-AU'>After 3<sup>rd</sup>
+  year</span><span lang=HR>:</span></b><span lang=HR> <a name=Text953></a></span><!--[if supportFields]><span
+  style='mso-bookmark:Text953'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text953'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text953'><span lang=HR>We expect to find several infinite
+  classes of algebraic equations and possibly prove their isomorphism to an
+  arbitrary infinite dimensional Hilbert space corresponding to a continuous
+  space distribution of a state of a quantum system. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR>First properties of finite classes of algebraic
+  equations and their relations with infinite ones are expected.</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR>This would also mean finishing the PhD thesis of our
+  foreign coworker N.D. Megill who would then continue to work on the project
+  as a post-doctoral fellow. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR>First Fourier transform algorithms for quantum systems
+  are expected to be found, </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR>in particular the ones for excited states of atoms
+  used in the experiments. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR>Computational tests on a model of a controlled state
+  of an atom. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR>We will start to introduce CSS
+  (Steane-Calderbank-Shor) scheme into our algorithms.</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR>Algorithms for introducing quasi-classical quantum
+  states into continuous computers. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text953'><span lang=HR>Grid cooperation with other teams in EU will be
+  explored. <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0000E8030000070054006500780074003900350033000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text953'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text953'></span><b style='mso-bidi-font-weight:normal'><span
+  lang=HR><o:p></o:p></span></b></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;height:21.4pt'>
+  <td width=47 valign=top style='width:35.45pt;padding:0cm 5.15pt 0cm 5.15pt;
+  height:21.4pt'>
+  <p class=MsoNormal align=right style='margin-top:3.0pt;text-align:right'><span
+  lang=HR style='font-size:9.0pt'>9.5.4<o:p></o:p></span></p>
+  </td>
+  <td width=633 style='width:474.85pt;padding:0cm 5.15pt 0cm 5.15pt;height:
+  21.4pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=EN-AU style='mso-ansi-language:EN-AU'>After 4<sup>th</sup>
+  year</span><span lang=HR>:</span></b><span lang=HR> <a name=Text954></a></span><!--[if supportFields]><span
+  style='mso-bookmark:Text954'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text954'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text954'><span lang=HR>We will investigate relations
+  between infinite classes of algebraic equations corresponding to continuous
+  space distribution of quantum states and finite classes of algebraic
+  equations corresponding to discrete space distribution of quantum states. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text954'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text954'><span lang=HR>Elaboration on finite classes of algebraic equations
+  and their relations with infinite ones are expected. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text954'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text954'><span lang=HR>Fourier transform algorithms for more complicated
+  quantum systems (e.g., entangled) are expected to be found. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text954'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text954'><span lang=HR>Computational tests on new designs of experiments are
+  planned. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text954'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text954'><span lang=HR>An investigation on nolinear error-correction codes is
+  planned. Possible algorithms. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text954'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text954'><span lang=HR>Quantum ternary and quaternary linear code algorithms
+  will be tested. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text954'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text954'><span lang=HR>Cooperation with Grid teams and projects of the program
+  will continue. <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0000E8030000070054006500780074003900350034000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text954'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text954'></span><b style='mso-bidi-font-weight:normal'><span
+  lang=HR><o:p></o:p></span></b></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;mso-yfti-lastrow:yes;height:21.4pt'>
+  <td width=47 valign=top style='width:35.45pt;padding:0cm 5.15pt 0cm 5.15pt;
+  height:21.4pt'>
+  <p class=MsoNormal align=right style='margin-top:3.0pt;text-align:right'><span
+  lang=HR style='font-size:9.0pt'>9.5.5<o:p></o:p></span></p>
+  </td>
+  <td width=633 style='width:474.85pt;padding:0cm 5.15pt 0cm 5.15pt;height:
+  21.4pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><b style='mso-bidi-font-weight:
+  normal'><span lang=EN-AU style='mso-ansi-language:EN-AU'>After 5<sup>th</sup>
+  year</span><span lang=HR>:</span></b><span lang=HR> <a name=Text955></a></span><!--[if supportFields]><span
+  style='mso-bookmark:Text955'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text955'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text955'><span lang=HR>&nbsp;&nbsp;&nbsp;Unification of
+  the obtained discrete algebras will be carried out.</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text955'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text955'><span lang=HR>Its application to general universal description of
+  quantum systems will be considered. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text955'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text955'><span lang=HR>Quasi-classical continuous theory of quantum system
+  implementation into continuous quantum computers will be considered.<span
+  style='mso-spacerun:yes'>   </span></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text955'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text955'><span lang=HR>Fourier transform algorithms for general quantum
+  systems will be considered.<span style='mso-spacerun:yes'>  </span></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text955'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text955'><span lang=HR>An algorithm for an exhaustive generation of universal
+  quantum error-correction </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text955'><span lang=HR>codes will be considered.<span
+  style='mso-spacerun:yes'>  </span></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text955'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text955'><span lang=HR>Grid technology and its contribution to the project
+  will be evaluated. &nbsp;&nbsp; </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text955'><span lang=HR><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0000E8030000070054006500780074003900350035000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text955'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text955'></span><b style='mso-bidi-font-weight:normal'><span
+  lang=HR><o:p>&nbsp;</o:p></span></b></p>
+  </div>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.0pt;text-indent:-17.0pt'><span
+lang=HR><o:p>&nbsp;</o:p></span></p>
+
+<span lang=HR style='font-size:10.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+"Times New Roman";mso-ansi-language:HR;mso-fareast-language:HR;mso-bidi-language:
+AR-SA'><br clear=all style='mso-special-character:line-break;page-break-before:
+always'>
+</span>
+
+<p class=MsoNormal style='margin-left:17.0pt;text-indent:-17.0pt'><span
+lang=HR style='font-size:3.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal style='margin-left:17.0pt;text-indent:-17.0pt'><span
+lang=HR>10.0</span><b style='mso-bidi-font-weight:normal'><span lang=HR
+style='font-size:14.0pt;mso-bidi-font-size:10.0pt'> </span></b><b
+style='mso-bidi-font-weight:normal'><span lang=EN-AU style='font-size:14.0pt;
+mso-bidi-font-size:10.0pt;mso-ansi-language:EN-AU'><a name=state>PRESENT STATE, CONTRIBUTION
+AND COMPETENCY OF <br>
+<span style='mso-spacerun:yes'> </span>RESEARCHER</a></span></b><b
+style='mso-bidi-font-weight:normal'><span lang=HR style='font-size:14.0pt;
+mso-bidi-font-size:10.0pt'><o:p></o:p></span></b></p>
+
+<p class=MsoNormal style='margin-left:17.0pt;text-indent:-17.0pt'><span
+lang=HR><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=681
+ style='width:510.55pt;margin-left:5.15pt;border-collapse:collapse;mso-padding-alt:
+ 0cm 5.15pt 0cm 5.15pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:18.35pt'>
+  <td width=47 style='width:35.2pt;padding:0cm 5.15pt 0cm 5.15pt;height:18.35pt'>
+  <p class=MsoNormal><span lang=HR>10.1<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+  </td>
+  <td width=634 style='width:475.35pt;padding:0cm 5.15pt 0cm 5.15pt;height:
+  18.35pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-AU
+  style='mso-ansi-language:EN-AU'>Previous discoveries </span></b><span
+  lang=HR>(2 500 </span><span lang=EN-AU style='mso-ansi-language:EN-AU'>characters</span><span
+  lang=HR>)<b style='mso-bidi-font-weight:normal'>:<o:p></o:p></b></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:4.0cm'>
+  <td width=681 colspan=2 valign=top style='width:510.55pt;padding:0cm 5.15pt 0cm 5.15pt;
+  height:4.0cm'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=text101></a><!--[if supportFields]><span
+  style='mso-bookmark:text101'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:text101'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:text101'><span lang=HR>&nbsp;We will consider previous
+  discoveries in </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR>1. Quantum algorithms</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR>2. Quantum algebras and theoretical description of
+  quantum systems</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR>3. Quantum error correction</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR>4. Quantum experiments</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR>1.</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR>Practically all known quantum algorithms are based on
+  Fourier transforms. [1] Therefore<span style='mso-spacerun:yes'>  </span>D.
+  S. Abrams and S. Lloyd, Phys. Rev. Lett. 79, 2586, (1997) and C. Zalka, Proc.
+  Roy. Soc. London A, 454, 313 (1998) designed first algorithms for finding
+  eigenvalues and eigenvectors of simple unitary operators under particular
+  restrictions. They have shown the algorithms provide an exponential speed
+  increase compared to the standard way of solving such problems on a classical
+  computer. We will generalize their approach to elaborate on Fourier
+  transforms algorithms for atom states used in quantum computation
+  experiments.</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR>2.</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR>It is known that no additional universal quantum
+  algebra is needed for quantum gates themselves. [1] However, such algebra
+  would enable us to implement any Schrodinger equation directly into a quantum
+  computer. To obtain the algebra will take a Hilbert lattice approach. [G.
+  Kalmbach, Measures and Hilbert Lattices, Singapore, World Scientific, 1986]
+  We rely on new classes of algebras directly corresponding to quantum states
+  and properties of Hilbert spaces. [6,11,22,27]</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR>3. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR>If we encode a single qubit in the state of
+  superposition by means of other entangled qubits whose sequence corresponds
+  to classical codewords, we will be able to use classical error correction
+  applied to a superposition of such quantum codewords. [A. Steane, PRL, 77,
+  793 (1996), A. R. Calderbank and P. W. Shor, PRA, 54, 1098 (1996)] We will
+  use our previouos dicovery of an algorithm for exhaustive generation of
+  Kochen-Specker vectors [3,12,13,14] to obtain algorithms for generating
+  quantum error-correction codes. Our final goal is to obtain an algorithm for
+  exhaustive generation of maximally efficient error-correction codes. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR>4. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR>We will use the previous discoveries of photon
+  entanglements [C. H. Bennett, Phys. Rev. Lett. 70, 1895 (1993); M. Zukowski
+  at al., Phys. Rev. Lett. 71, 4287 (1993); Pavicic, M., Phys. Rev. A 50, 3486
+  (1994); Pavicic, M. and J. Summhammer,<span style='mso-spacerun:yes'> 
+  </span>Phys. Rev. Lett. 73, 3191 (1994); Pavicic, M., J. Opt. Soc. Am. B 12,
+  821 (1995)]. We will also use previous discoveries of the resonator
+  interaction-free measurement and its control of atomic states and superposition.
+  [Pavicic, M., Phys. Lett. A 223, 241 (1996); Paul, H. and Pavicic, M., J.
+  Opt. Soc. Am. B 14, 1275 (1997)]</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text101'><span lang=HR><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0000C4090000070074006500780074003100300031000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:text101'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:text101'></span><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  </div>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=HR style='font-size:3.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=681
+ style='width:510.55pt;margin-left:5.15pt;border-collapse:collapse;mso-padding-alt:
+ 0cm 5.15pt 0cm 5.15pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:14.75pt'>
+  <td width=47 style='width:35.2pt;padding:0cm 5.15pt 0cm 5.15pt;height:14.75pt'><b
+  style='mso-bidi-font-weight:normal'><span lang=HR style='font-size:14.0pt;
+  mso-bidi-font-size:10.0pt;font-family:"Times New Roman";mso-fareast-font-family:
+  "Times New Roman";mso-ansi-language:HR;mso-fareast-language:HR;mso-bidi-language:
+  AR-SA'><br clear=all style='page-break-before:always'>
+  </span></b>
+  <p class=MsoNormal><span lang=HR>10.2<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+  </td>
+  <td width=634 style='width:475.35pt;padding:0cm 5.15pt 0cm 5.15pt;height:
+  14.75pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-AU
+  style='mso-ansi-language:EN-AU'>Continued previous research </span></b><span
+  lang=HR>(2 500 </span><span lang=EN-AU style='mso-ansi-language:EN-AU'>characters</span><span
+  lang=HR>)<b style='mso-bidi-font-weight:normal'>:<o:p></o:p></b></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:4.0cm'>
+  <td width=681 colspan=2 valign=top style='width:510.55pt;padding:0cm 5.15pt 0cm 5.15pt;
+  height:4.0cm'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=text102></a><!--[if supportFields]><span
+  style='mso-bookmark:text102'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:text102'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:text102'><span lang=HR>&nbsp;&nbsp;&nbsp;This project
+  benefits from previous research made within several multi-disciplinary
+  projects. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>In particular the projects</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>Quantum Information Theory, No 0082222, (2002-2006)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>Quantum Information and Quantum Communication, No
+  082006, (1996-2002)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>Algebraico-Probabilistic Structures of Quantum
+  Mechanics, No. 1-03-176. (1990-1996)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>led by M. Pavicic, </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>the project </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>Matter under Extreme Conditions, No. 0098042
+  (2002-2006)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>led by S.D. Bosanac </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>and projects </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>Research on Static and Dynamic Properties of Molecules,
+  No. 00980605 (1996-2002)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>Development and applications of models in chemistry;
+  No. 1-07-159 (1990-1996)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>S.D. Bosanac has taken part in. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>Of the results obtained in these projects we are going
+  to use </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>(1) Our previous discovery of the theory of two- and
+  four-photon entanglement and teleportation [Pavicic, M., Phys.<span
+  style='mso-spacerun:yes'>  </span>Rev. 50, 3486 (1994); Pavicic, M. and J.
+  Summhammer,<span style='mso-spacerun:yes'>  </span>Phys. Rev. Lett. 73, 3191
+  (1994); Pavicic, M., J. Opt. Soc. Am. B 12, 821 (1995)] independently of C.
+  H. Bennett, Phys. Rev. Lett. 70, 1895 (1993) and M. Zukowski at al., Phys.
+  Rev. Lett. 71, 4287 (1993).</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>(2) Our previous discovery of the resonator
+  interaction-free measurement as well as its control of atomic states and
+  superposition. [Pavicic, M., Phys. Lett. A 223, 241 (1996); Paul, H. and
+  Pavicic, M., J.Opt. Soc. Am. B 14, 1275 (1997)]</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>(3) Our previous discovery of exhaustive generation of
+  arbitrary sets of Kochen-Specker quantum states (states that cannot be given
+  a classical valuation or interpretation). [3,12,13,14] </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>(4) Our previous discovery of classes of quantum
+  algebras describing properties of the Hilbert space. [22]</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>(5) Numerous results from the field of quantum
+  algebras, Hilbert lattices, and Hilbert spaces. [7,11,22,24,27,29]</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>(6) Our previous unification of the dynamics of
+  quantum particles and electromagnetic fields. [2]</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>The project will also benefit from many original model
+  designs and numerical solutions put forward by our researcher K. Fresl within
+  the previous projects he has taken part in:</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>Application of Numerical Models in Repair of
+  Historical Constructions, No. 0082229 (2002-2006)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>Containers for granular materials, No. 082009<span
+  style='mso-spacerun:yes'>  </span>(1996-2002)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>Design and Optimisation of Civil Engineering
+  Structures, No. 2-11-74 (1990-1996)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR>&nbsp;</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text102'><span lang=HR><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0000C4090000070074006500780074003100300032000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:text102'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:text102'></span><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  </div>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal style='margin-left:17.0pt;text-indent:-17.0pt'><span
+lang=HR style='font-size:3.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=680
+ style='width:18.0cm;margin-left:5.15pt;border-collapse:collapse;mso-padding-alt:
+ 0cm 5.15pt 0cm 5.15pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:19.65pt'>
+  <td width=47 style='width:35.45pt;padding:0cm 5.15pt 0cm 5.15pt;height:19.65pt'>
+  <p class=MsoNormal><span lang=HR>10.3<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+  </td>
+  <td width=633 style='width:474.85pt;padding:0cm 5.15pt 0cm 5.15pt;height:
+  19.65pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-AU
+  style='mso-ansi-language:EN-AU'>Response and impact (quotes, applications,
+  patents) of previous research </span></b><span lang=HR>(2 500 </span><span
+  lang=EN-AU style='mso-ansi-language:EN-AU'>characters</span><span lang=HR>)<b
+  style='mso-bidi-font-weight:normal'>:<o:p></o:p></b></span></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:4.0cm'>
+  <td width=680 colspan=2 valign=top style='width:18.0cm;padding:0cm 5.15pt 0cm 5.15pt;
+  height:4.0cm'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=text103></a><!--[if supportFields]><span
+  style='mso-bookmark:text103'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:text103'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:text103'><span lang=HR>&nbsp;&nbsp;The papers written by
+  M. Pavicic and S.D. Bosanac under the first six projects were cited 881 times
+  according to the Science Citation Index Expanded. We estimate that between
+  400 and 500 citations are relevant for the present project. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>31 papers relevant for the present project were
+  reviewed in Mathematical Review (MathSciNet Full, American Mathematical
+  Society)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>A number of papers and books reviewed results of M.
+  Pavicic and S.D. Bosanac<span style='mso-spacerun:yes'>  </span>at length. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>We single out the following responses </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>P. Hariharan and B.C. Sanders, </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><span style='mso-spacerun:yes'>      </span>Quantum
+  Phenomena in Optical Interferometry, in </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><span style='mso-spacerun:yes'>      </span>Progress
+  in Optics XXXVI (Ed. E. Wolf), Elsevier,</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><span style='mso-spacerun:yes'>      </span>51-130
+  (1996), II.6.5, p.106-108.</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>in a separate section reviewed the following three
+  papers of ours (discovery of polarization entanglement of photons that were
+  originally unpolarized and a discovery of the entanglement of photons that
+  nowhere previously interacted): </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>·<span style='mso-tab-count:1'>               </span>Pavicic,
+  M., Spin Correlated Interferometry for Polarized and Unpolarized Photons on a
+  Beam Splitter, Phys. Rev. A 50, 3486 (1994)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>·<span style='mso-tab-count:1'>               </span>Pavicic,
+  M. and J. Summhammer, Interferometry with Two Pairs of Spin Correlated
+  Photons, Phys. Rev. Lett. 73, 3191 (1994)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>·<span style='mso-tab-count:1'>               </span>Pavicic,
+  M., Spin-Correlated Interferometry with Beam Splitters: Preselection of
+  Spin-Correlated Photons, J. Opt. Soc. Am. B 12, 821 (1995)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>C. Bruce, </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><span style='mso-spacerun:yes'>     
+  </span>Schrodinger's Rabbits: the Many worlds of quantum,</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><span style='mso-spacerun:yes'>      </span>Joseph
+  Henry Press, Washington, DC (2004), pp. 148-154</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>in a separate section presented and discussed our
+  resonator interaction-free experiments from</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>·<span style='mso-tab-count:1'>               </span>Paul,
+  H. and Pavicic, M., Nonclassical Interaction-Free Detection of Objects in a
+  Monolithic Total-Internal-Reflection Resonator, J. Opt. Soc. Am. B 14, 1275
+  (1997)</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><span style='mso-spacerun:yes'> </span></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>Eric Schechter, </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><span style='mso-spacerun:yes'>      </span>Classical
+  and Nonclassical Logics: An Introduction to the </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><span style='mso-spacerun:yes'>     
+  </span>Mathematics of<span style='mso-spacerun:yes'>   </span>Propositions,
+  Princeton University Press, </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><span style='mso-spacerun:yes'>      </span>Princeton,
+  2005, pp. 272</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>in a separate section presented and discussed our
+  results in the field of classical logic by means of our Hexagon model from </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><span style='mso-spacerun:yes'> </span></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>·<span style='mso-tab-count:1'>               </span>[29]
+  Pavi&#269;i&#263;, Mladen; Megill, Norman D. Non-Orthomodular Models for Both
+  Standard Quantum Logic and Standard Classical Logic: Repercussions for
+  Quantum Computers, Helv. Phys. Acta. 71 (1999) 189-210</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR>&nbsp;&nbsp;&nbsp;&nbsp;</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text103'><span lang=HR><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF0000C4090000070074006500780074003100300033000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:text103'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:text103'></span><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  </div>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=HR style='font-size:3.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=680
+ style='width:18.0cm;margin-left:5.15pt;border-collapse:collapse;mso-padding-alt:
+ 0cm 5.15pt 0cm 5.15pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;height:19.65pt'>
+  <td width=47 valign=top style='width:35.45pt;padding:0cm 5.15pt 0cm 5.15pt;
+  height:19.65pt'>
+  <p class=MsoNormal><span lang=HR>10.4<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+  </td>
+  <td width=633 style='width:474.85pt;padding:0cm 5.15pt 0cm 5.15pt;height:
+  19.65pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-AU
+  style='mso-ansi-language:EN-AU'>Inclusion of scientific novices in research
+  and measures for autonomy of young assistants in the project <br>
+  </span></b><span lang=HR>(10 000 </span><span lang=EN-AU style='mso-ansi-language:
+  EN-AU'>characters)<b style='mso-bidi-font-weight:normal'>:</b></span><b
+  style='mso-bidi-font-weight:normal'><span lang=HR><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;mso-yfti-lastrow:yes;height:4.0cm'>
+  <td width=680 colspan=2 valign=top style='width:18.0cm;padding:0cm 5.15pt 0cm 5.15pt;
+  height:4.0cm'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=text104></a><!--[if supportFields]><span
+  style='mso-bookmark:text104'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:text104'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:text104'><span lang=HR>There is a foreign co-worker,
+  Norman Dwight Megill, on the project who is doing his PhD thesis by working
+  on the project under supervision of the head of this project at the
+  Department of Physics, Faculty of Sciences, University of Zagreb. He
+  graduated electrical engineering from MIT and the Ministry of Science,
+  Education, and Sport of Croatia has recognized his diploma. He was a
+  co-worker of the head of this project at his previous two projects but we
+  propose that he be taken as a kind of a scientific novice in the sense of
+  getting some financial support if possible. He would be given an office and
+  access to necessary facilities at the Faculty of Civil Engineering,
+  University of Zagreb, whenever he would come to Zagreb to work on his PhD
+  thesis entitled Algebraic Modelling of Quantum Mechanical Equations in the
+  Finite and Infinite Dimensional Hilbert Spaces. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text104'><span lang=HR><o:p>&nbsp;</o:p></span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text104'><span lang=HR>We also want to take a Croatian novice who would finish
+  his PhD while working on the project. He/she would be needed for carrying
+  calculations required for testing physical models and designing experiment.
+  Therefore he/she should be a physicist who is at home with programming in C
+  and numerical calculation. He/she would obtain a PhD in physics. He/she will
+  be given a great deal of autonomy and an opportunity to take part in writing
+  papers for the project. </span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  text104'><span lang=HR><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF000010270000070074006500780074003100300034000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:text104'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:text104'></span><span lang=HR><o:p>&nbsp;</o:p></span></p>
+  </div>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=HR style='font-size:3.0pt'><o:p>&nbsp;</o:p></span></p>
+
+<table class=MsoNormalTable border=0 cellspacing=0 cellpadding=0 width=680
+ style='width:18.0cm;margin-left:5.4pt;border-collapse:collapse;mso-padding-alt:
+ 0cm 5.4pt 0cm 5.4pt'>
+ <tr style='mso-yfti-irow:0;mso-yfti-firstrow:yes;page-break-inside:avoid;
+  height:24.35pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:24.35pt'>
+  <p class=MsoNormal><span lang=HR>10.5<b style='mso-bidi-font-weight:normal'><o:p></o:p></b></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:24.35pt'>
+  <p class=MsoNormal><b style='mso-bidi-font-weight:normal'><span lang=EN-AU
+  style='mso-ansi-language:EN-AU'>List of 30 most significant scientific works
+  of all researchers on this project over the last 5 years <br>
+  </span></b><span lang=HR>(350 </span><span lang=EN-AU style='mso-ansi-language:
+  EN-AU'>characters)<b style='mso-bidi-font-weight:normal'>:</b></span><b
+  style='mso-bidi-font-weight:normal'><span lang=HR style='font-size:12.0pt;
+  mso-bidi-font-size:10.0pt'><o:p></o:p></span></b></p>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:1;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.1<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text956></a><!--[if supportFields]><span
+  style='mso-bookmark:Text956'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text956'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text956'><span lang=HR>Pavi&#269;i&#263;, Mladen, Quantum
+  computation and quantum communication: Theory and Experiments.New York,<span
+  style='mso-spacerun:yes'>  </span>Springer, 2005<!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900350036000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text956'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text956'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:2;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.2<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text957></a><!--[if supportFields]><span
+  style='mso-bookmark:Text957'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text957'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text957'><span lang=HR>Bosanac, Slobodan Danko, Dynamics
+  of particles and the electromagnetic field . Singapur : World Scientific,
+  2005 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900350037000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text957'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text957'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:3;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.3<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text958></a><!--[if supportFields]><span
+  style='mso-bookmark:Text958'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text958'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text958'><span lang=HR>Pavi&#269;i&#263;, Mladen; Merlet,
+  Jean-Pierre; McKay, Brendan D.; Megill, Norman D., Kochen-Specker
+  Vectors.<span style='mso-spacerun:yes'>  </span>Journal of Physics A (Math.,
+  Gen.). 38 (2005)<span style='mso-spacerun:yes'>  </span>1577-1592 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900350038000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text958'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text958'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:4;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.4<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text959></a><!--[if supportFields]><span
+  style='mso-bookmark:Text959'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text959'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text959'><span lang=HR>Megill, Norman D.;
+  Pavi&#269;i&#263;, Mladen, Deduction, Ordering, and Operations in Quantum
+  Logic.<span style='mso-spacerun:yes'>  </span>Foundations of physics. 32
+  (2002) 357-387 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900350039000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text959'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text959'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:5;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.5<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text960></a><!--[if supportFields]><span
+  style='mso-bookmark:Text960'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text960'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text960'><span lang=HR>Babi&#263;, Darko; Bosanac,
+  Slobodan Danko; Došli&#263;, Na&#273;a, Proton transfer in malonaldehyde: a
+  model three-dimensional study.<span style='mso-spacerun:yes'> 
+  </span>Chemical Physics Letters. 358 (2002) 337-343<!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900360030000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text960'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text960'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:6;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.6<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text961></a><!--[if supportFields]><span
+  style='mso-bookmark:Text961'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text961'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text961'><span lang=HR>Megill, Norman D.;
+  Pavi&#269;i&#263;, Mladen, Equivalences, Identities, Symmetric Differences,
+  and Congruences in Orthomodular Lattices. International Journal of
+  Theoretical Physics. 42 (2003) 2797-2805 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900360031000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text961'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text961'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:7;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.7<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text962></a><!--[if supportFields]><span
+  style='mso-bookmark:Text962'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text962'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text962'><span lang=HR>Megill, Norman D.;
+  Pavi&#269;i&#263;, Mladen, Quantum Implication Algebras. International
+  Journal of Theoretical Physics. 42 (2003) , 12; 2807-2822 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900360032000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text962'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text962'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:8;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.8<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text963></a><!--[if supportFields]><span
+  style='mso-bookmark:Text963'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text963'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text963'><span lang=HR>Murrell, JN; Wright, TG; Bosanac,
+  Slobodan. A search for bound levels of the van der waals molecules:
+  H-2(a(3)Sigma+(+)(u)), HeH(X-2 Sigma(+)), LiH(a(3)Sigma(+)) and LiHe(X-2
+  Sigma(+)). Theochem-Journal of Molecular Structure. 591 (2002)<span
+  style='mso-spacerun:yes'>  </span>1-9<!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900360033000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text963'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text963'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:9;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.9<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text964></a><!--[if supportFields]><span
+  style='mso-bookmark:Text964'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text964'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text964'><span lang=HR>Bosanac, Slobodan Danko, The spin.
+  Fortschritte der Physik-Progress of Physics. 49 (2001) 1223-1246 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900360034000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text964'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text964'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:10;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.10<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text965></a><!--[if supportFields]><span
+  style='mso-bookmark:Text965'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text965'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text965'><span lang=HR>Bosanac, Slobodan Danko.General
+  classical solution for dynamics of charges with radiation reaction. Journal
+  of Physics A-Mathematical &amp; General. 34 (2001) 473-490 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900360035000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text965'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text965'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:11;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.11<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text966></a><!--[if supportFields]><span
+  style='mso-bookmark:Text966'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text966'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text966'><span lang=HR>Megill, Norman D.;
+  Pavi&#269;i&#263;, Mladen, Orthomodular Lattices and a Quantum Algebra.
+  International Journal of Theoretical Physics. 40 (2001) 1387-1410 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900360036000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text966'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text966'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:12;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.12<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text967></a><!--[if supportFields]><span
+  style='mso-bookmark:Text967'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text967'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text967'><span lang=HR>Pavi&#269;i&#263;, Mladen.
+  Kochen-Specker Algorithms for Qubits,<span style='mso-spacerun:yes'> 
+  </span>in The 7th International Conference on Quantum Communication,
+  Measurement and Computing held in Glasgow, United Kingdom, 25-29 July 2004.
+  Melville NY, U.S.A. : American Institute of Physics, 2004. 195-198 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900360037000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text967'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text967'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:13;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.13<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text968></a><!--[if supportFields]><span
+  style='mso-bookmark:Text968'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text968'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text968'><span lang=HR>Pavicic, M. - Merlet, J-P. -
+  Megill, N.D.,<span style='mso-spacerun:yes'>  </span>Exhaustive enumeration
+  of Kochen-Specker vector systems, RR5388 Rapport de recherche de l'INRIA -
+  Sophia Antipolis, 39 pages - Novembre 2004<!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900360038000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text968'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text968'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:14;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.14<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text969></a><!--[if supportFields]><span
+  style='mso-bookmark:Text969'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text969'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text969'><span lang=HR>Pavi&#269;i&#263;, Mladen. Quantum
+  Computers, Discrete Space, and Entanglement,<span style='mso-spacerun:yes'> 
+  </span>SCI 2002, The 6th World Multiconference on Systemics, Cybernetics, and
+  Informatics, Volume XVII, Orlando, Florida, U. S. A. : International
+  Institute of Informatics and Systemics, 2002. 65-70<span
+  style='mso-spacerun:yes'>  </span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900360039000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text969'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text969'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:15;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.15<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text970></a><!--[if supportFields]><span
+  style='mso-bookmark:Text970'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text970'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text970'><span lang=HR>Babi&#263;, Darko; Bosanac,
+  Slobodan; Došli&#263;, Na&#273;a.Nuclear tunneling in malonaldehyde: a model
+  three dimensional study, Math/Chem/Comp '2002.The 17th Dubrovnik
+  international cource &amp; conference on the interfaces among mathematics,
+  chemistry and computer sciences. 2002.<!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900370030000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text970'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text970'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:16;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.16<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text971></a><!--[if supportFields]><span
+  style='mso-bookmark:Text971'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text971'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text971'><span lang=HR>Lazarevi&#263;, Damir; Dvornik,
+  Josip; Fresl, Krešimir. Contact Detection Algorithm for Discrete Element
+  Analysis, KoG 6 (2002) 29-40 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900370031000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text971'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text971'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:17;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.17<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text972></a><!--[if supportFields]><span
+  style='mso-bookmark:Text972'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text972'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text972'><span lang=HR>Fresl, Krešimir. Domain Analysis
+  for the Programming Library for Meshless Methods in Fracturing Solids, Proc.
+  4th Int. Conf. on Discontinuous Deformation Analysis, (Ed. N.
+  Bi&#263;ani&#263;), University of Glasgow, Glasgow, UK, 2001, 171-192<!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900370032000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text972'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text972'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:18;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.18<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text973></a><!--[if supportFields]><span
+  style='mso-bookmark:Text973'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text973'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text973'><span lang=HR>Dvornik, Josip; Lazarevi&#263;,
+  Damir; Fresl, Krešimir. The Fractal Nature of the Form Finding equations
+  Computational mechanics in the UK, 11th ACME - UK 2003 / Wheel, Marcus A.
+  (ed.). Glasgow : University of Strathclyde, 2003. 201-204<span
+  style='mso-spacerun:yes'>  </span><!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900370033000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text973'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text973'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:19;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.19<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text974></a><!--[if supportFields]><span
+  style='mso-bookmark:Text974'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text974'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text974'><span lang=HR>Fresl, Krešimir; Lazarevi&#263;,
+  Damir; Dvornik, Josip. Some generic and metaprogramming techniques for the
+  partition of unity methods<span style='mso-spacerun:yes'> 
+  </span>Computational mechanics in the UK, 11th ACME - UK 2003 / Wheel, Marcus
+  A. (ed).</span></span></p>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><span style='mso-bookmark:
+  Text974'><span lang=HR>Glasgow : University of Strathclyde, 2003. 169-172 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900370034000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text974'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text974'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:20;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.20<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text975></a><!--[if supportFields]><span
+  style='mso-bookmark:Text975'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text975'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text975'><span lang=HR>Werner, Heinrich; Lazarevi&#263;,
+  Damir; Fresl, Krešimir. Comparison of the Exact Rotational-Symmetric Mindlin
+  Plate Solutions with FEM Solutions Defined on a Rectangular Domain , 12th
+  Association of Computational Mechanics in Engineering Annual Conference /
+  Thomas, H. R. ; Rees, S. (ed.).Cardiff, UK, 2004. 17-20 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900370035000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text975'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text975'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:21;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.21<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text976></a><!--[if supportFields]><span
+  style='mso-bookmark:Text976'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text976'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text976'><span lang=HR>Pavi&#269;i&#263;, Mladen. Quantum
+  Computer Logic in Scientific Dialogue in South-Eastern Europe on New
+  Technologies Abstracts / Limberg, Gerrit (ed). Bonn, Gernmany, Alexander von
+  Humboldt-Stiftung, 2002. 30 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900370036000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text976'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text976'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:22;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.22<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text977></a><!--[if supportFields]><span
+  style='mso-bookmark:Text977'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text977'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text977'><span lang=HR>Megill, Norman D.;
+  Pavi&#269;i&#263;, Mladen. Equations, States, and Lattices of
+  Infinite-Dimensional Hilbert Spaces. International Journal of Theoretical
+  Physics. 39 (2000)<span style='mso-spacerun:yes'>  </span>2337-2379<!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900370037000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text977'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text977'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:23;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.23<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text978></a><!--[if supportFields]><span
+  style='mso-bookmark:Text978'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text978'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text978'><span lang=HR>Pavi&#269;i&#263;, Mladen. Quantum
+  Logic for Quantum Computers. International Journal of Theoretical Physics. 39
+  (2000)<span style='mso-spacerun:yes'>  </span>813-825 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900370038000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text978'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text978'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:24;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.24<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text979></a><!--[if supportFields]><span
+  style='mso-bookmark:Text979'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text979'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text979'><span lang=HR>Pavi&#269;i&#263;, Mladen. Quantum
+  Simulators and Quantum Repeaters. Fortschritte der Physik - Progress of
+  Physics. 48 (2000) 497-503<!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900370039000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text979'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text979'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:25;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.25<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text980></a><!--[if supportFields]><span
+  style='mso-bookmark:Text980'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text980'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text980'><span lang=HR>Klipa, Nenad; Bosanac, Slobodan.
+  Quantum effects from the classical principles. International journal of
+  theoretical physics, group theory, and nonlinear optics. 7 (2000) 15-62 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900380030000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text980'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text980'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:26;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.26<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text981></a><!--[if supportFields]><span
+  style='mso-bookmark:Text981'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text981'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text981'><span lang=HR>McKay, Brendan D.; Megill, Norman
+  D.; Pavi&#269;i&#263;, Mladen. Algorithms for Greechie Diagrams.
+  International Journal of Theoretical Physics. 39 (2000)<span
+  style='mso-spacerun:yes'>  </span>2381-2406 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900380031000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text981'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text981'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:27;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.27<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text982></a><!--[if supportFields]><span
+  style='mso-bookmark:Text982'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text982'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text982'><span lang=HR>Pavi&#269;i&#263;, Mladen. Quantum
+  Logic for Genuine Quantum Simulators, in<span style='mso-spacerun:yes'> 
+  </span>Quantum Computing, 26-27 April 2000, Orlando, USA, Proceedings of SPIE
+  Vol. 4047 / Donkor, Erik ; Pirich, Andrew R. (ed).Bellingham, WA, USA : SPIE
+  - The International Society for Optical Engineering, 2000. 90-96 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900380032000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text982'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text982'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:28;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.28<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text983></a><!--[if supportFields]><span
+  style='mso-bookmark:Text983'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text983'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text983'><span lang=HR>Pavi&#269;i&#263;, Mladen. Quantum
+  Mechanics for Universal Quantum Computers.Brijuni Conference VII Book of
+  Abstracts / Bosanac, S. D. ; Došli&#263;, N. (ur.). Zagreb : Institut
+  Ru&#273;er Boškovi&#269;, 2000. 36<!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900380033000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text983'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text983'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:29;page-break-inside:avoid;height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.29<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text984></a><!--[if supportFields]><span
+  style='mso-bookmark:Text984'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text984'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text984'><span lang=HR>Pavi&#269;i&#263;, Mladen; Megill,
+  Norman D.Non-Orthomodular Models for Both Standard Quantum Logic and Standard
+  Classical Logic: Repercussions for Quantum Computers. Helvetica Physica Acta.
+  71 (1999) 189-210 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900380034000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text984'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text984'></span></p>
+  </div>
+  </td>
+ </tr>
+ <tr style='mso-yfti-irow:30;mso-yfti-lastrow:yes;page-break-inside:avoid;
+  height:18.15pt'>
+  <td width=57 valign=top style='width:42.55pt;padding:0cm 5.4pt 0cm 5.4pt;
+  height:18.15pt'>
+  <p class=MsoNormal align=right style='text-align:right'><span lang=HR
+  style='font-size:9.0pt'>10.5.30<o:p></o:p></span></p>
+  </td>
+  <td width=624 style='width:467.75pt;padding:0cm 5.4pt 0cm 5.4pt;height:18.15pt'>
+  <div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+  mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt'>
+  <p class=Style1 style='border:none;mso-border-alt:solid windowtext .75pt;
+  padding:0cm;mso-padding-alt:1.0pt 1.0pt 1.0pt 1.0pt'><a name=Text985></a><!--[if supportFields]><span
+  style='mso-bookmark:Text985'></span><span style='mso-element:field-begin'></span><span
+  style='mso-bookmark:Text985'><span lang=HR><span
+  style='mso-spacerun:yes'> </span>FORMTEXT <span style='mso-element:field-separator'></span></span></span><![endif]--><span
+  style='mso-bookmark:Text985'><span lang=HR>Belchior, J.C.; Braga, J.P.;
+  Bosanac, Slobodan D. State-to-state quantum three-dimensional rotational
+  total cross sections from two-dimensional close-coupled equations. Journal of
+  physics B : atomic, molecular and optical physics. 32 (1999) ; 1723-1731 <!--[if gte mso 9]><xml>
+   <w:data>FFFFFFFF00005E010000070054006500780074003900380035000000000000000000000000000000000000000000000000000000</w:data>
+  </xml><![endif]--></span></span><!--[if supportFields]><span
+  style='mso-bookmark:Text985'></span><span style='mso-element:field-end'></span><![endif]--><span
+  style='mso-bookmark:Text985'></span></p>
+  </div>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal><span lang=HR><o:p>&nbsp;</o:p></span></p>
+
+<p class=MsoNormal><span lang=HR><o:p>&nbsp;</o:p></span></p>
+
+<div style='mso-element:para-border-div;border:solid windowtext 1.0pt;
+mso-border-alt:solid windowtext .75pt;padding:1.0pt 1.0pt 1.0pt 1.0pt;
+background:#F2F2F2;mso-shading:windowtext;mso-pattern:gray-5 auto'>
+
+</div>
+
+</body>
+
+</html>

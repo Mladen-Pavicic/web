@@ -1,0 +1,4214 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<title>Mladen Pavicic, QUANTUM COMPUTATION AND QUANTUM COMMUNICATION:
+Theory and Experiments, Springer, New York (2005), M. Pavicic, Pavicic, M., 
+Pavicic, Mladen</title>
+
+<!-- Background white, links green (unvisited), blue (visited), red (active) -->
+ <body
+  BGCOLOR="#FFFFFF"
+  TEXT="#000000"
+  LINK="#005300"
+  VLINK="#000080"
+  ALINK="#FF0000"
+ >
+
+<hr>
+
+<H3 ALIGN="CENTER">ALL-IN-ONE HTML VERSION - COPYRIGHTED MATERIAL</H3>
+
+<P></P><HR>
+
+
+<H3 ALIGN="CENTER"><a name=title>T I T L E &nbsp; &nbsp; P A G E</i></a></H3>
+
+<H3 ALIGN="LEFT">QUANTUM COMPUTATION AND QUANTUM COMMUNICATION:
+Theory and Experiments</i></a></H3>
+
+<H3 ALIGN="LEFT">
+<a href="http://m3k.grad.hr/pavicic" target="_blank">Mladen Pavi&#269;i&#263; 
+<img src="aaaaaa.jpg" align="left" width=170 height=25> 
+</a> 
+</H3>
+
+<br>
+
+<H3 ALIGN="LEFT">
+<a href="http://www.unizg.hr/homepage" target="_blank"><b><i>
+University of Zagreb, Zagreb, Croatia</i></b></a>
+</h3>
+
+<H3 ALIGN="LEFT"><a href="http://www.springer.com/sgw/cda/frontpage/0,11855,4-40109-22-74053369-0,00.html" target="_blank">Springer</a></H3>
+
+<hr>
+
+<H3 ALIGN="CENTER"><a name=copyright>C O P Y R I G H T &nbsp; &nbsp; P A G E</i></a></H3>
+
+<BR>
+
+Mladen Pavicic 
+<br>
+
+<br>
+
+University of Zagreb, Croatia
+
+<br>
+<br>
+
+Consulting Editor: D. R. Vij 
+
+<br>
+<br>
+
+Library of Congress Cataloging-in-Publication Data 
+
+<br>
+<br>
+
+Pavicic, Mladen.
+
+<blockquote>
+Quantum computation and quantum communication : theory and experiments 
+</blockquote>
+<blockquote>
+Mladen Pavicic. 
+</blockquote>
+<blockquote><blockquote>
+p. cm. 
+</blockquote></blockquote>
+<blockquote><blockquote>
+Includes bibliographical references. 
+</blockquote></blockquote>
+
+<br>
+<br>
+
+ISBN 10 0-387-24412-3
+<br>
+ISBN 13 978-0387-24412-9
+<br>
+ISBN 0-387-28900-2 (e-book)
+<blockquote>
+1. Quantum computers 2. Quantum theory. I. Title
+</blockquote>
+
+<br>
+<br>
+
+QA76.889.P38 2005 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2005051725
+
+<br><br><br>
+
+&#169; 2006 Springer Science+Business Media, Inc.
+<br>
+All rights reserved. This work may not not be translated or 
+copied in whole or in part without the written permission 
+of the publisher (Springer Science+Business Media, Inc., 
+233 Spring Street, New York, NY 10013, USA), except for brief 
+excerpts in connection with reviews or scholarly analysis. 
+Use in connection with any form of information storage and 
+retrieval, electronic adaptation, computer software, or by 
+similar or dissimilar methodology now known or hereafter 
+developed is forbidden.
+<br>
+The use in this publication of trade names, trademarks, service 
+marks and similar terms, even if they are not identified as such, 
+is not to be taken as an expression of opinion as to whether or
+not they are subject to proprietary rights.
+
+<br><br>
+
+Printed in the United States of America  
+
+<br><br>
+
+9 8 7 6 5 4 3 2 1  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPIN 11051145
+
+<br><br>
+
+springeronline.com
+
+
+<br><br>
+
+<hr>
+
+<H3 ALIGN="CENTER"><a name=dedication>D E D I C A T I O N</a></H3>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Dedicated to the reader. 
+
+
+<br><br>
+
+<hr>
+
+<H3 ALIGN="CENTER"><a name=contents>C O N T E N T S</a></H3>
+
+
+<blockquote><blockquote>
+  Dedication v
+</blockquote></blockquote>
+<blockquote><blockquote>
+  Preface ix
+</blockquote></blockquote>
+<blockquote><blockquote>
+  Acknowledgments xi
+</blockquote></blockquote>
+<blockquote><blockquote>
+  Introduction xiii
+</blockquote></blockquote>
+<blockquote>
+1. BITS AND QUBITS: THEORY AND ITS IMPLEMENTATION 1
+</blockquote>
+<blockquote><blockquote>
+    1.1 The Turing Machine vs. a Computing Machine 1 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.2 Definition of a Turing Machine 2 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.3 Turing Computability 4 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.4 Bit Computability: Boolean Algebra 7 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.5 Bit Implementation: Transistors and Their Limits 9 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.6 Irreversible Bits: Logic Gates 12 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.7 Reversible Gates 14 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.8 Quantum Bits: Qubits 17 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.9 Flying Qubits and Circular Polarization 20 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.10 Superposition of Qubits 22 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.11 Bra-Ket Qubit Formalism 24 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.12 Operators 26 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.13 Detecting Qubits 27 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.14 Quantum Gates and Circuits 29 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.15 Qubit Computation and E-Business 31 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.16 Numbers and Bits 36 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.17 Entangled Qubits 39 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.18 General Single Qubit Formalism 45 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.19 Other Qubits and Universal Gates 51 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.20 Teleportation of Copies and the No-Cloning Theorem 56 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.21 Quantum Cryptography 64 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.22 Quantum Error Correction 72 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    1.23 Unconditional Security of Quantum Cryptography 81 
+</blockquote></blockquote>
+<blockquote>
+2. EXPERIMENTS 87
+</blockquote>
+<blockquote><blockquote>
+    2.1 Technological Candidates for Quantum Computers 87 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    2.2 Zeeman Effects 88 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    2.3 Liquid-State Nuclear Magnetic Resonance 94 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    2.4 Silicon-Based Nuclear Spins 99 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    2.5 Ion Traps 109 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    2.6 Future Experiments 123 
+</blockquote></blockquote>
+<blockquote><blockquote>
+    2.7 Quantum Communication Implementation 125 
+</blockquote></blockquote>
+<blockquote>
+3. PERSPECTIVES 135
+</blockquote>
+<blockquote><blockquote>
+    3.1 Quantum Network 137 
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+         3.1.1 Laser 138 
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+         3.1.2 One-Atom Laser and Atom-Cavity Coupling 139 
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+         3.1.3 Single Photons on Demand 140 
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+         3.1.4 Laser Dark States 142 
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+         3.1.5 Cavity Dark States 144 
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+         3.1.6 Dark-State Teleportation 146 
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+         3.1.7 Quantum Repeaters 151 
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+    3.2 Quantum--Classical Coupling 159 
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+         3.2.1 Interaction-Free Computation 159 
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+         3.2.2 Kochen--Specker Setups 167 
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+    3.3 Quantum Algorithms 173 
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+         3.3.1 Quantum Coin---Deutsch's Algorithm 173 
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+         3.3.2 Deutsch-Jozsa and Bernstein-Vazirani Algorithms 176 
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+         3.3.3 Shor's Algorithm 180 
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+         3.3.4 Quantum Simulators 186 
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+    3.4 Quantum Turing Machines vs. Quantum Algebra 190 
+</blockquote></blockquote>
+<blockquote>
+  REFERENCES 199 
+</blockquote>
+<blockquote>
+  INDEX 211
+</blockquote>
+<blockquote>
+  ON THE AUTHOR 223
+</blockquote>
+
+<br>
+
+<hr>
+
+<H3 ALIGN="CENTER"><a name=preface>P r e f a c e</a></H3>
+
+The attraction of quantum computation and quantum communication 
+theory and experiments lies in the fact that we engineer 
+both them themselves and the quantum systems they treat.           
+This approach has turned out to be very resilient.                          
+Driven by the final goal of calculating exponentially 
+faster and communicating infinitely more securely than 
+we do today, as soon as we encounter a limitation 
+in either a theory or experiment, a new idea around the no-go 
+emerges. As soon as the decoherence "demon" threatened
+the first computation models, quantum error correction 
+theory was formulated and applied not only to computation 
+theory but also to communication theory to make it 
+unconditionally secure. As soon as liquid-state nuclear magnetic 
+resonance experiments started to approach their limits, 
+solid-based nuclear spin experiments - the Kane 
+computer - came in. As soon as it was proved that it is theoretically 
+impossible to completely distinguish photon Bell states, three 
+new approaches appeared: hyperentanglement, the use of 
+continuous variables, and the Knill-Laflamme-Milburn proposal.  
+There are many more such examples. 
+
+<br><br>
+What facilitated all these breakthroughs is the fact that at the   
+present stage of development of quantum computation and            
+communication, we deal with elementary quantum systems consisting  
+of several two-level systems. The complexity of handling and       
+controlling such simple systems in a laboratory has turned out     
+to be tremendous, but the basic physical models we follow and      
+calculate for the systems themselves are not equally intricate.    
+We could say that the theory of the field leads                    
+the experiments in a particular way-with each new model          
+we put forward and apply in the laboratory, we also build up       
+and widen the theory itself. Therefore, we cannot just proceed     
+with assembling quantum computers and quantum networks. We also    
+have to use mathematical models to understand the physics of each  
+step on the road to our goal.                                      
+
+<br><br>
+As a consequence, both mathematics and physics are equally         
+essential for any approach in the field and therefore for this     
+book as well. The mathematics used in the book is a tool, but      
+an indispensable tool because the physics of quantum               
+computation and communication theory and their experiments         
+cannot be grasped without good mathematical models. When we        
+describe an experiment many times, we may get used to it, but      
+this does not mean we are more at home with the principles and     
+models behind it. This is why I have chosen to make this book an   
+interplay between mathematics and physics. The idea of the book    
+is to present those details that are used the most often both in   
+theory and experiment and to dispense with many inessential ones.  
+Also, the book is not conceived as a textbook, at least not        
+as a primary one, but more as a guide to a better understanding    
+of theory and experiments by coming back to the same concepts      
+in different models and elaborations. Clear physical ideas make    
+any formalism easy.                                                
+
+<br><br>
+Mladen Pavicic
+<br><br>
+
+<hr>
+
+<br>
+<H3 ALIGN="CENTER"><a name=introduction>I n t r o d u c t i o n</a></H3>
+
+
+Two predictions are cited particularly often 
+whenever one talks or writes about the history or future of 
+computing. One of these is more and more wrong, and the other 
+is less and less right, and they both teach us how to use
+theoretical opportunities to find new technologies.
+
+<br><br>
+The first prediction, a beloved opening of speeches and 
+papers, was made by the head of the electromagnetic 
+relay calculator at Harvard, Howard Aiken, in 1956: "If it 
+should turn out that the basic logics of a machine designed 
+for the numerical solution of differential equations coincide 
+with the logics of a machine intended to make bills for a 
+department store, I would regard this as the most amazing 
+coincidence that I have ever encountered" [Anonymous, 1997]
+
+<br><br>
+The amazing "coincidence" did happen and happens more 
+and more every day, tempting us to consider it  
+a part of the history of computers that took its own 
+unexpected course ("Only six electronic digital computers 
+would be required to satisfy the computing needs of the 
+entire United States," Howard Aiken said in 1947): 
+a program and a machine, software and hardware, 
+were interwoven at the beginning and then became more and 
+more separated. At least it seems so when we look at the 
+development of computer designs since Charles Babbage's 
+1840s Analytical Engine. A program on punched cards or 
+tapes and a machine for which the specific cards were 
+made look inseparable, in contrast to today's programs 
+which we move throughout the World Wide Web and compile 
+and execute on virtually any computer. 
+
+<br><br>
+Yet Alan Mathison Turing (and also Alonzo Church, 
+Stephen Cole Kleene, and Emil Post independently at the 
+same time) had already proved in 1936 that the only possible 
+course the history could have taken was the one it in fact 
+took. Turing used what we now also cite often and call 
+a <i>Turing machine</i> to prove that only the simplest 
+calculus, such as a propositional algebra with a 
+Boolean evaluation (true, false) and its main model a 
+0-1 Boolean algebra, is computable, i.e., effectively calculable
+[Turing 1936; Turing, 1937]. He (and others) also proved 
+that real numbers are not computable, that there exists no 
+algorithm with the help of which we can decide for every 
+arithmetical sentence in finitely many steps whether it is 
+true or false, etc. In other words, from the very start we 
+only had Boolean algebra at our disposal, and once  
+hardware was developed that could handle classical logic 
+operations - such implementations of logic operations 
+are called <i> logic gates</i> - the universal classical 
+computer was born. The "only" thing one had to develop 
+were "digital" algorithms and programs for all possible 
+applications, i.e., the software for a universal computer. 
+Everything - solving nonlinear differential equations, 
+3D modeling, speech recognition, and "making bills for 
+a department store" - had to be reduced to a Boolean 
+language. Since such a reduction imposes ever-growing        
+speed and memory requirements upon the hardware, until       
+mid-2002 we were witnessed quite the opposite situation      
+than half a century ago: the software lagged behind          
+the hardware, following the Wirth's law: "Software gets     
+slower faster than hardware gets faster." Will this         
+computing history repeat itself with quantum computers?      
+Will quantum hardware start to advance faster than quantum   
+software (quantum algorithms) in the near future? In this    
+book we shall try to learn how close we are to answering     
+these questions.                                             
+
+<br><br>
+The second prediction is known as <i> Moore's Law</i>,    
+or better yet, Moore's laws, since there are many 
+versions and varieties of the several formulations made 
+by Gordon Moore of the Intel Corporation. One widespread 
+rendering of the law, "The number of transistors on 
+a single integrated-circuit chip doubles every 18 months" 
+[Birnbaum and Williams, 2000], does not correspond to the 
+historical data which show 26 months [Brenner, 2001]. Moore 
+himself commented. "I never said 18 months. I said one year 
+[in 1965], and then two years [in 1975]. One of my Intel 
+colleagues changed it from the complexity of the chips to 
+the performance of computers and decided that not only did 
+you get a benefit from the doubling every two years but we 
+were able to increase the clock frequency, too, so computer 
+performance was actually doubling every 18 months. I guess 
+that's a corollary of Moore's Law. 
+Moore's Law has been the name given to everything that 
+changes exponentially in the industry... If Al Gore 
+invented the Internet, I invented the exponential" 
+[Yang, 2000]
+
+<br><br>
+And this "exponential" element is what is essential for our 
+development and what quantum computers are about. 
+Apparently everything underlying the development of 
+technology and society grows exponentially: research, information, 
+production and organization complexity, and above all, 
+the costs of keeping pace. So only an 
+exponential increase of our computational and processing 
+power and an exponential decrease of computer cost per 
+processed bit could support such a development. 
+Therefore, Moore's law was been kept as a guideline in the            
+computer industry in past three decades and it has supported          
+a global development during this period.                              
+
+<br><br>
+Gates in today's computers are switched on and off by about 1000 
+electrons. In 2010, the exponential Moore's Law would require 
+that only about 10 electrons do the job. Miniaturization cannot 
+go much further than that. It is true that many other possible 
+roads could still keep up the pace for a few more years: 
+insulating layers can be reduced in their thickness from the 
+present 25 atoms to 4 or 5 atoms (wires connecting transistors 
+in a chip already occupy more than 25% of its space); computing 
+power can be increased by designing processors so as to contain 
+execution units that process multiple instructions within one cycle; 
+processors can rely on parallel compiling technology and use 
+innovative software; and finally, chips can eventually get bigger 
+by using reversible gates to avoid overheating. Still, by 2020 or 
+2025 computing technology will hit the quantum barrier, and if we 
+want to support the growth of our technology and science beyond 
+that point in time, we need to find a substitute for exponentially 
+rising classical computational power by then. Actually, 
+the exponential increase of the clock speed of processors (CPUs) 
+already became linear in 2002 (see Fig. 3.1, p. 135), 
+and an extensive patching activity onto classical hardware and 
+software is currently under way in order to compensate for this 
+lack of an exponential increase in speed (see p. 136). 
+
+<br><br>
+Now that both Wirth's and Moore's laws are coming to an end,           
+we should draw a moral from them. Wirth's law taught us that       
+classical hardware development has prompted ever new software,     
+and Moore's law taught us that this hardware development has       
+followed an exponential trend of speed, memory, and lately         
+of number of processors (multiple cores, multiple processors,      
+clusters). Such an approach to computation will apparently         
+change completely in the quantum realm. Quantum hardware is        
+exponential in itself, and if we eventually succeed in making      
+functional scalable quantum computers, we will dispense with       
+the need for a steadily growing quantum hardware                   
+development - to make a quantum computer faster means to           
+scale it up linearly or polynomially. We will also dispense        
+with writing ever new software for faster and faster hardware.     
+Once developed, quantum software (quantum algorithms) will         
+simply scale up as we scale - and therefore speed up - quantum     
+hardware.                                                          
+
+<br><br>
+The "exponential" is built into quantum hardware from its very   
+first <i>qu</i>antum <i>bit</i> or <i>qubit</i>. Qubits, physically  
+supported by single atoms, electrons, or photons, can superpose    
+and entangle themselves so as to support an arbitrary number of    
+states per unit. Recently devised algorithms - quantum             
+software - relying on the exponential feature of quantum           
+hardware have explicitly demonstrated how one can reduce           
+important problems that are assumed to be exponentially complex,   
+to polynomially complex tasks for quantum computers. This has      
+opened a vast new interdisciplinary field of quantum computation   
+and communication theories, together called quantum information    
+theory, which along with its experimental verifications are        
+already taught at many universities and have resulted in several   
+very successful textbooks.                                         
+
+<br><br>
+The target of these courses, seminars, and textbooks is to teach   
+and familiarize students and scientists with this new field - in   
+which new research projects will keep opening for decades to       
+come - and to help integrate the theory and experiments of         
+quantum computation and communication into a would-be quantum      
+network implementation. The goal of the book in front of the       
+reader is the same; however, it allows her or him to digest the    
+field "by reading." That means that there will be no homework    
+and no exercises. Instead, most of the required details are        
+elaborated within the main body of the book, and a polynomial      
+complexity of reading is intended, optimally in one run.           
+
+<br><br>
+So, a few words about the reader. She or he is expected to be         
+familiar with higher mathematics and the basics of physics - in     
+particular, quantum physics. The reader could be any former student 
+who graduated in the technical or natural sciences, although an         
+undergraduate student might also find many if not all sections    
+of the book digestible. Students as well as specialists in the  
+field might also find the nutshell approach of the book helpful and  
+stimulating.   
+
+<br><br>
+
+<hr>
+
+<br>
+<H3 ALIGN="LEFT"><a name=chapter-1>Chater 1</a></H3>
+
+<H3 ALIGN="LEFT">BITS AND QUBITS: THEORY AND ITS IMPLEMENTATION</H3>
+
+<br>
+
+In 1936 several authors showed, in effect, that if a 
+function is effectively calculable, then it is Turing computable 
+and, of course, vice versa 
+[Church, 1936c; Turing, 1936; Turing, 1937; Church, 1936a; 
+Church, 1936b; Kleene, 1936; Post, 1936].
+Turing concluded: 
+
+<blockquote>
+We do not need to have an infinity of different 
+machines doing different jobs. A single one will suffice. 
+The engineering problem of producing various machines for 
+various jobs is replaced by the office work of "programming" 
+the universal machine to do these jobs
+</blockquote>
+
+This statement does not mean that Turing envisioned the 
+"universal computer" we have today, although he was well 
+acquainted with the project of breaking the cryptographic 
+codes of German messages carried out on the Colossus 
+(the British "computer" at Bletchley Park, which operated 
+from 1943 until the 1950s). 
+His <i>universal Turing machine</i> is a "universal 
+computer" only in the sense that it keeps to the standard 
+digital (classical, 0-1) implementation, i.e., to the  
+<i>bi</i>nary digi<i>ts</i>, 
+or <i>bits</i>, of today's hardware. 
+
+<br>
+
+<H3 ALIGN="LEFT"><a name=section-1-1>1.1 The Turing Machine vs. 
+a Computing Machine</a></h3>
+
+The software used by  any classical computer  
+must be based on what a Turing machine 
+can confirm to be calculable, recursive, and decidable. 
+A historical problem with the development of computers 
+was that there were few calculus categories  of the latter 
+kind. The only types of calculus that Turing machines can 
+show to be calculable are the simplest algebras with the 
+simplest evaluations, such as propositional calculus with 
+Boolean (true-false) evaluation, or 0-1 Boolean algebra. 
+It can be shown that even the simplest propositional 
+calculus with a nonordered evaluation
+[Pavicic and Megill, 1999] or simplest 
+arithmetic with natural numbers [Hermes, 1969] is not 
+calculable simply because such types of algebra are 
+neither recursive nor decidable nor calculable. 
+Directly, a Turing machine can only be used to <i> prove</i> 
+that no mathematics we know from primary school 
+can be literally run on it.  
+
+<br><br>
+ Turing machines, or any equivalent mathematical algorithms, 
+are essential in order to decide whether a chosen problem 
+is calculable or not, but we do not use them to write down 
+a new program for, say, 3D modeling or speech recognition.   
+Still, since there are many references to the Turing machine in 
+the literature on quantum computing, let us provide some 
+details [Hermes, 1969]. In doing so, we bear 
+in mind that Turing machines and all related concepts are 
+"concepts of pure mathematics. It is however very suggestive to 
+choose a technico-physical terminology suggested by the mental 
+image of a machine" [Hermes, 1969, p.31]. 
+
+<br><br>
+The Turing machine is neither today's "universal" 
+computing machine - generally called a computer - nor a 
+generator of new algorithms for the latter machine. 
+Instead, it is simply a mathematical procedure to check
+whether a chosen algebra and/or calculus can or cannot be 
+implemented into a computer. To show this, we 
+present some details of the procedure. The details often 
+appear in the literature without being put into the 
+context of a final outcome and so are just left hanging,  
+giving the impression of being building blocks for a computer, 
+or an algorithm to be carried out on one. On the other hand, 
+the notion of the classical Turing machine is rather important 
+for understanding the role that the quantum Turing machine has in 
+the theory of quantum computation.     
+
+
+<br><br>
+
+<hr>
+
+<br>
+<H3 ALIGN="CENTER"><a name=index>I N D E X</a></H3>
+
+
+<blockquote>
+    A-gate, 103
+</blockquote>
+<blockquote>
+    adiabatic passage, 144
+</blockquote>
+<blockquote>
+    algebra
+</blockquote>
+<blockquote><blockquote>
+       modular, 193
+</blockquote></blockquote>
+<blockquote>
+    algorithm
+</blockquote>
+<blockquote><blockquote>
+       Bernstein-Vazirani, 31, 179
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Deutsch's, 31, 173
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Deutsch-Jozsa, 31, 176
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          exponential speedup, 178
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       eigenvalue
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          exponential speedup, 186
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          exponential time, 186
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       Euclid's, 180
+</blockquote></blockquote>
+<blockquote><blockquote>
+       field sieve, 180
+</blockquote></blockquote>
+<blockquote><blockquote>
+       general number field sieve, 35
+</blockquote></blockquote>
+<blockquote><blockquote>
+       GNFS, 35, 180
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Grover's, 31, 186
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Kochen--Specker, 168
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          statistical exponential speedup, 171
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       MMP diagram, 168
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Shor's, 31, 35, 36, 64, 98, 137, 180, 181
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          exponential speedup, 181
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          exponential time, 181
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          NMR, 98, 180, 183
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       Simon's, 31, 180
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          exponential speedup, 180
+</blockquote></blockquote></blockquote>
+<blockquote>
+    Alice
+</blockquote>
+<blockquote><blockquote>
+       classical, 65
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 68, 131
+</blockquote></blockquote>
+<blockquote>
+    alkali-metal atoms, 147
+</blockquote>
+<blockquote>
+    all-optical, 124
+</blockquote>
+<blockquote><blockquote>
+       CNOT gate, 153
+</blockquote></blockquote>
+<blockquote>
+    ancilla, 78
+</blockquote>
+<blockquote>
+    AND
+</blockquote>
+<blockquote><blockquote>
+       classical, 8
+</blockquote></blockquote>
+<blockquote>
+    angular
+</blockquote>
+<blockquote><blockquote>
+       momentum
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          electron, 91, 100
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          nuclear, 147
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum number, 89, 147
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          total, 147
+</blockquote></blockquote></blockquote>
+<blockquote>
+    annihilation operator, 40, 59, 111
+</blockquote>
+<blockquote>
+    atom
+</blockquote>
+<blockquote><blockquote>
+       interference, 163
+</blockquote></blockquote>
+<blockquote><blockquote>
+       lattice, 195
+</blockquote></blockquote>
+<blockquote>
+    atom-cavity coupling, 140, 145
+</blockquote>
+<blockquote><blockquote>
+       constant, 145
+</blockquote></blockquote>
+<blockquote>
+    atomic
+</blockquote>
+<blockquote><blockquote>
+       lattice, 195
+</blockquote></blockquote>
+<blockquote>
+    atomic dipole matrix element, 114
+</blockquote>
+<blockquote>
+    B92 protocol, 81, 82
+</blockquote>
+<blockquote>
+    balanced function, 174
+</blockquote>
+<blockquote>
+    bandwidth, 33
+</blockquote>
+<blockquote>
+    barrier
+</blockquote>
+<blockquote><blockquote>
+       oxide, 10
+</blockquote></blockquote>
+<blockquote><blockquote>
+       transistor, 10
+</blockquote></blockquote>
+<blockquote>
+    BB84 protocol, 69, 82
+</blockquote>
+<blockquote>
+    BBN Technologies, 125
+</blockquote>
+<blockquote>
+    BCNOT gate, 153
+</blockquote>
+<blockquote>
+    beam splitter, 23
+</blockquote>
+<blockquote><blockquote>
+       polarizing, 150
+</blockquote></blockquote>
+<blockquote>
+    Bell
+</blockquote>
+<blockquote><blockquote>
+       inequalities, 167
+</blockquote></blockquote>
+<blockquote><blockquote>
+       state, 43, 62, 154
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          decomposition, 156
+</blockquote></blockquote></blockquote>
+<blockquote>
+    Bennett-Brassard protocol, 69
+</blockquote>
+<blockquote>
+    Bernstein-Vazirani algorithm, 31, 179
+</blockquote>
+<blockquote>
+    binormality, 6
+</blockquote>
+<blockquote>
+    birefringent
+</blockquote>
+<blockquote><blockquote>
+       plates, 129
+</blockquote></blockquote>
+<blockquote><blockquote>
+       prism, 40
+</blockquote></blockquote>
+<blockquote>
+    bit, 1
+</blockquote>
+<blockquote><blockquote>
+       train
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Kane computer, 107
+</blockquote></blockquote></blockquote>
+<blockquote>
+    bit-flip, 72
+</blockquote>
+<blockquote><blockquote>
+       correction, 80
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 76
+</blockquote></blockquote>
+<blockquote>
+    bits, 17
+</blockquote>
+<blockquote>
+    Bloch sphere, 51
+</blockquote>
+<blockquote>
+    blue sideband frequency, 121
+</blockquote>
+<blockquote>
+    Bob
+</blockquote>
+<blockquote><blockquote>
+       classical, 65
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 68, 131
+</blockquote></blockquote>
+<blockquote>
+    Bohr magneton, 89
+</blockquote>
+<blockquote>
+    Boolean
+</blockquote>
+<blockquote><blockquote>
+       algebra, xiii, 2, 7, 193
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          axioms for, 8
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          single axiom for, 9
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       circuit, 7
+</blockquote></blockquote>
+<blockquote><blockquote>
+       operation, 12
+</blockquote></blockquote>
+<blockquote>
+    bra vector, 24
+</blockquote>
+<blockquote>
+    bra-ket notation, 20
+</blockquote>
+<blockquote>
+    bracket, 25
+</blockquote>
+<blockquote>
+    Calderbank-Shor-Steane code, 76
+</blockquote>
+<blockquote>
+    carrier frequency, 121
+</blockquote>
+<blockquote>
+    cat
+</blockquote>
+<blockquote><blockquote>
+       Schrodinger, 57
+</blockquote></blockquote>
+<blockquote>
+    cavity, 145
+</blockquote>
+<blockquote><blockquote>
+       dark state, 146
+</blockquote></blockquote>
+<blockquote><blockquote>
+       optical, 138, 140, 163
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          spherical mirror, 140
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       QED, 88, 124
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum electrodynamics, 88
+</blockquote></blockquote>
+<blockquote>
+    CC-U gate
+</blockquote>
+<blockquote><blockquote>
+       quantum, 55
+</blockquote></blockquote>
+<blockquote>
+    CCNOT gate
+</blockquote>
+<blockquote><blockquote>
+       classical
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          reversible, 16
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 77
+</blockquote></blockquote>
+<blockquote>
+    central processing unit, 14
+</blockquote>
+<blockquote>
+    cesium, 147
+</blockquote>
+<blockquote>
+    check matrix, 74
+</blockquote>
+<blockquote>
+    Church's thesis, 6
+</blockquote>
+<blockquote>
+    circuit
+</blockquote>
+<blockquote><blockquote>
+       Boolean, 7
+</blockquote></blockquote>
+<blockquote><blockquote>
+       classical, 14
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          integrated, 135
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          reversible, 16, 54
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       CMOS, 10
+</blockquote></blockquote>
+<blockquote><blockquote>
+       NMOS, 10
+</blockquote></blockquote>
+<blockquote><blockquote>
+       PMOS, 10
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 30, 32, 52, 55--57, 77--80, 122, 153, 176, 182, 191
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          diagram, 32, 182
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          interaction-free, 166
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum logic, 61
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          size, 30
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       transistor, 12
+</blockquote></blockquote>
+<blockquote>
+    circular polarization, 20
+</blockquote>
+<blockquote><blockquote>
+       left-hand, 21
+</blockquote></blockquote>
+<blockquote><blockquote>
+       right-hand, 21
+</blockquote></blockquote>
+<blockquote>
+    classical
+</blockquote>
+<blockquote><blockquote>
+       circuit
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          integrated, 135
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          reversible, 16
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       cryptography, 65
+</blockquote></blockquote>
+<blockquote><blockquote>
+       logic, 194
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          completeness, 194
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          soundness, 194
+</blockquote></blockquote></blockquote>
+<blockquote>
+    clock speed
+</blockquote>
+<blockquote><blockquote>
+       classical, xv, 135
+</blockquote></blockquote>
+<blockquote>
+    cloned state, 58
+</blockquote>
+<blockquote>
+    closed subspace, 26
+</blockquote>
+<blockquote>
+    CNOT gate
+</blockquote>
+<blockquote><blockquote>
+       all-optical, 153
+</blockquote></blockquote>
+<blockquote><blockquote>
+       bilateral, 153
+</blockquote></blockquote>
+<blockquote><blockquote>
+       classical
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          reversible, 15
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       f-, 174
+</blockquote></blockquote>
+<blockquote><blockquote>
+       interaction-free, 160
+</blockquote></blockquote>
+<blockquote><blockquote>
+       pseudo, 160
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 55
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          ion trap, 122
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Kane, 107, 108
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          NMR, 98
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          silicon-based spin, 107, 108
+</blockquote></blockquote></blockquote>
+<blockquote>
+    code, 73
+</blockquote>
+<blockquote>
+    codeword, 73
+</blockquote>
+<blockquote>
+    coherence
+</blockquote>
+<blockquote><blockquote>
+       length
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          laser, 33
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       time
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          laser, 33
+</blockquote></blockquote></blockquote>
+<blockquote>
+    coincidence probability, 61, 62
+</blockquote>
+<blockquote>
+    collection efficiency, 128, 138
+</blockquote>
+<blockquote>
+    completeness
+</blockquote>
+<blockquote><blockquote>
+       lattice, 195
+</blockquote></blockquote>
+<blockquote>
+    complex numbers
+</blockquote>
+<blockquote><blockquote>
+       field of, 191, 196
+</blockquote></blockquote>
+<blockquote>
+    complexity
+</blockquote>
+<blockquote><blockquote>
+       exponential, 35
+</blockquote></blockquote>
+<blockquote><blockquote>
+       subexponential, 35, 180
+</blockquote></blockquote>
+<blockquote><blockquote>
+       super-polynomial, 180
+</blockquote></blockquote>
+<blockquote>
+    composite Hilbert space, 136
+</blockquote>
+<blockquote>
+    computer
+</blockquote>
+<blockquote><blockquote>
+       human, 4, 6
+</blockquote></blockquote>
+<blockquote>
+    computing
+</blockquote>
+<blockquote><blockquote>
+       green, 15
+</blockquote></blockquote>
+<blockquote><blockquote>
+       physical, 34
+</blockquote></blockquote>
+<blockquote><blockquote>
+       tape, 3
+</blockquote></blockquote>
+<blockquote>
+    continued fraction expansion, 185
+</blockquote>
+<blockquote>
+    continuous
+</blockquote>
+<blockquote><blockquote>
+       quantum
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          computer, 194
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       variables, 194
+</blockquote></blockquote>
+<blockquote>
+    continuous wave laser, 33
+</blockquote>
+<blockquote>
+    control qubit, 51
+</blockquote>
+<blockquote>
+    controlled-controlled-U gate
+</blockquote>
+<blockquote><blockquote>
+       quantum, 55
+</blockquote></blockquote>
+<blockquote>
+    controlled-controlled-NOT gate
+</blockquote>
+<blockquote><blockquote>
+       classical
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          reversible, 16
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 77
+</blockquote></blockquote>
+<blockquote>
+    controlled-NOT gate
+</blockquote>
+<blockquote><blockquote>
+       classical
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          reversible, 15
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 55
+</blockquote></blockquote>
+<blockquote>
+    cooling
+</blockquote>
+<blockquote><blockquote>
+       laser
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Doppler, 111
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Sisyphus, 111, 119
+</blockquote></blockquote></blockquote>
+<blockquote>
+    copied state, 58
+</blockquote>
+<blockquote>
+    coprime, 180
+</blockquote>
+<blockquote>
+    coset, 84
+</blockquote>
+<blockquote>
+    Coulomb
+</blockquote>
+<blockquote><blockquote>
+       potential, 195
+</blockquote></blockquote>
+<blockquote><blockquote>
+       repulsion, 110
+</blockquote></blockquote>
+<blockquote>
+    countable orthonormal basis, 26
+</blockquote>
+<blockquote>
+    counterfactual computation, 166
+</blockquote>
+<blockquote>
+    coupler, 156
+</blockquote>
+<blockquote><blockquote>
+       fiber, 81, 132
+</blockquote></blockquote>
+<blockquote>
+    coupling constant, 98
+</blockquote>
+<blockquote>
+    CPU
+</blockquote>
+<blockquote><blockquote>
+       classical, xv, 14, 135
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 137
+</blockquote></blockquote>
+<blockquote>
+    creation operator, 40
+</blockquote>
+<blockquote>
+    cryptography
+</blockquote>
+<blockquote><blockquote>
+       classical, 65
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 36, 64, 69
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          continuous variables, 126
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          entangled pairs, 126, 128
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          free space transmission, 126
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          phase-coding, 81
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          roadmap, 126
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          single-photon sources, 126, 127
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          weak laser pulses, 126
+</blockquote></blockquote></blockquote>
+<blockquote>
+    CSS code, 76
+</blockquote>
+<blockquote>
+    CW laser, 33
+</blockquote>
+<blockquote>
+    dark
+</blockquote>
+<blockquote><blockquote>
+       counts, 127
+</blockquote></blockquote>
+<blockquote><blockquote>
+       state, 143, 145, 147
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          cavity, 146
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          mixing angle, 143
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          teleportation, 147
+</blockquote></blockquote></blockquote>
+<blockquote>
+    DARPA quantum network, 125
+</blockquote>
+<blockquote>
+    decidability, 6
+</blockquote>
+<blockquote>
+    decoherence, 123
+</blockquote>
+<blockquote>
+    delay
+</blockquote>
+<blockquote><blockquote>
+       gate, 38
+</blockquote></blockquote>
+<blockquote>
+    demand
+</blockquote>
+<blockquote><blockquote>
+       photons on, 127
+</blockquote></blockquote>
+<blockquote>
+    density
+</blockquote>
+<blockquote><blockquote>
+       matrix, 47
+</blockquote></blockquote>
+<blockquote><blockquote>
+       operator, 28
+</blockquote></blockquote>
+<blockquote>
+    detection, 27
+</blockquote>
+<blockquote>
+    deterministic
+</blockquote>
+<blockquote><blockquote>
+       transition function
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Turing machine, 4
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       Turing machine, 4
+</blockquote></blockquote>
+<blockquote>
+    Deutsch's algorithm, 31, 173
+</blockquote>
+<blockquote>
+    Deutsch-Jozsa algorithm, 31, 176
+</blockquote>
+<blockquote><blockquote>
+       exponential speedup, 178
+</blockquote></blockquote>
+<blockquote>
+    diagram
+</blockquote>
+<blockquote><blockquote>
+       MMP, 168
+</blockquote></blockquote>
+<blockquote>
+    diode laser, 126
+</blockquote>
+<blockquote>
+    dipole
+</blockquote>
+<blockquote><blockquote>
+       approximation, 114, 116
+</blockquote></blockquote>
+<blockquote><blockquote>
+       matrix element
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          atomic, 114
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       moment
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          electric, 145
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          magnetic, 89
+</blockquote></blockquote></blockquote>
+<blockquote>
+    Dirac's bra-ket notation, 20
+</blockquote>
+<blockquote>
+    discrete Fourier transform, 173
+</blockquote>
+<blockquote>
+    distributive lattice, 193
+</blockquote>
+<blockquote>
+    distributivity, 193
+</blockquote>
+<blockquote>
+    divergenceless field, 21
+</blockquote>
+<blockquote>
+    DiVincenzo Criteria, 124
+</blockquote>
+<blockquote>
+    donor
+</blockquote>
+<blockquote><blockquote>
+       phosphorus, 102
+</blockquote></blockquote>
+<blockquote>
+    dopant, 9
+</blockquote>
+<blockquote>
+    Doppler laser cooling, 111
+</blockquote>
+<blockquote>
+    down-conversion, 128
+</blockquote>
+<blockquote><blockquote>
+       type-I, 130
+</blockquote></blockquote>
+<blockquote><blockquote>
+       type-II, 130
+</blockquote></blockquote>
+<blockquote>
+    Earnshaw's theorem, 110
+</blockquote>
+<blockquote>
+    eavesdropping
+</blockquote>
+<blockquote><blockquote>
+       quantum, 70
+</blockquote></blockquote>
+<blockquote>
+    edge, 168
+</blockquote>
+<blockquote>
+    eigenfunction, 26
+</blockquote>
+<blockquote>
+    eigenket, 26
+</blockquote>
+<blockquote>
+    eigenvalue, 26, 186
+</blockquote>
+<blockquote><blockquote>
+       algorithm
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          exponential speedup, 186
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          exponential time, 186
+</blockquote></blockquote></blockquote>
+<blockquote>
+    eigenvector, 26, 186
+</blockquote>
+<blockquote>
+    Einstein-Podolsky-Rosen pair, 44
+</blockquote>
+<blockquote>
+    electric dipole moment, 145
+</blockquote>
+<blockquote>
+    electric-field vector, 18
+</blockquote>
+<blockquote>
+    electron
+</blockquote>
+<blockquote><blockquote>
+       angular
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          momentum, 100
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       angular momentum, 91
+</blockquote></blockquote>
+<blockquote><blockquote>
+       commutation relations, 117
+</blockquote></blockquote>
+<blockquote><blockquote>
+       magnetic
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          moment, 100
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       Planck energy, 93
+</blockquote></blockquote>
+<blockquote><blockquote>
+       single
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          transistor, 12, 105
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       spin, 91, 100
+</blockquote></blockquote>
+<blockquote>
+    empty
+</blockquote>
+<blockquote><blockquote>
+       state, 40
+</blockquote></blockquote>
+<blockquote>
+    entangled
+</blockquote>
+<blockquote><blockquote>
+       pair, 44
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          phase-coding, 132
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          polarization-coding, 131
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       photons, 42, 62
+</blockquote></blockquote>
+<blockquote><blockquote>
+       qubits, 57
+</blockquote></blockquote>
+<blockquote><blockquote>
+       states, 45, 57, 79
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          on demand, 122
+</blockquote></blockquote></blockquote>
+<blockquote>
+    entanglement, 20, 62, 63, 68, 167
+</blockquote>
+<blockquote>
+    EPR pair, 44
+</blockquote>
+<blockquote><blockquote>
+       phase-coding, 132
+</blockquote></blockquote>
+<blockquote><blockquote>
+       polarization-coding, 131
+</blockquote></blockquote>
+<blockquote>
+    equations
+</blockquote>
+<blockquote><blockquote>
+       lattice, 197
+</blockquote></blockquote>
+<blockquote>
+    error
+</blockquote>
+<blockquote><blockquote>
+       correction
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          classical, 72
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Hadamard gate, 77
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum, 76
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       weigh, 75
+</blockquote></blockquote>
+<blockquote>
+    Euclid's algorithm, 180
+</blockquote>
+<blockquote>
+    Euler angles, 48
+</blockquote>
+<blockquote>
+    evaluation according to rule, 5
+</blockquote>
+<blockquote>
+    Eve
+</blockquote>
+<blockquote><blockquote>
+       quantum, 70, 132
+</blockquote></blockquote>
+<blockquote>
+    exponential
+</blockquote>
+<blockquote><blockquote>
+       complexity, 34, 35
+</blockquote></blockquote>
+<blockquote><blockquote>
+       improvement
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum repeater, 159
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       speed increase, 135
+</blockquote></blockquote>
+<blockquote><blockquote>
+       speedup, 39
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Deutsch-Jozsa algorithm, 178
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          eigenvalue algorithm, 186
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Shor's algorithm, 181
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Simon's algorithm, 180
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       statistical speedup
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Kochen--Specker algorithm, 171
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       time, 34, 35
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          eigenvalue algorithm, 186
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Shor's algorithm, 181
+</blockquote></blockquote></blockquote>
+<blockquote>
+    extraordinary ray, 68
+</blockquote>
+<blockquote>
+    f-CNOT gate, 174
+</blockquote>
+<blockquote>
+    Fabry-Perrot resonator, 138
+</blockquote>
+<blockquote>
+    factoring a number, 34, 180
+</blockquote>
+<blockquote>
+    fault-tolerant computation, 80
+</blockquote>
+<blockquote>
+    Fermi
+</blockquote>
+<blockquote><blockquote>
+       operator, 117
+</blockquote></blockquote>
+<blockquote>
+    fiber
+</blockquote>
+<blockquote><blockquote>
+       coupler, 81, 132
+</blockquote></blockquote>
+<blockquote>
+    fictitious magnetic
+</blockquote>
+<blockquote><blockquote>
+       dipole
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          ion trap, 117
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       field
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          ion trap, 117
+</blockquote></blockquote></blockquote>
+<blockquote>
+    field
+</blockquote>
+<blockquote><blockquote>
+       divergenceless, 21
+</blockquote></blockquote>
+<blockquote><blockquote>
+       irrotational, 21
+</blockquote></blockquote>
+<blockquote><blockquote>
+       longitudinal, 21
+</blockquote></blockquote>
+<blockquote><blockquote>
+       of complex numbers, 191, 196
+</blockquote></blockquote>
+<blockquote><blockquote>
+       of quaternions, 191, 196
+</blockquote></blockquote>
+<blockquote><blockquote>
+       of real numbers, 191, 196
+</blockquote></blockquote>
+<blockquote><blockquote>
+       sieve algorithm, 180
+</blockquote></blockquote>
+<blockquote><blockquote>
+       transversal, 21
+</blockquote></blockquote>
+<blockquote>
+    finite dimensional space, 26
+</blockquote>
+<blockquote>
+    Fock
+</blockquote>
+<blockquote><blockquote>
+       space, 40
+</blockquote></blockquote>
+<blockquote><blockquote>
+       state
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          single-photon, 127
+</blockquote></blockquote></blockquote>
+<blockquote>
+    Fourier
+</blockquote>
+<blockquote><blockquote>
+       transform, 186
+</blockquote></blockquote>
+<blockquote>
+    Fourier transform
+</blockquote>
+<blockquote><blockquote>
+       discrete, 173
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 173, 183
+</blockquote></blockquote>
+<blockquote>
+    free space transmission
+</blockquote>
+<blockquote><blockquote>
+       cryptography
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum, 126
+</blockquote></blockquote></blockquote>
+<blockquote>
+    frustrated total internal reflection, 161
+</blockquote>
+<blockquote>
+    FTIR, 161
+</blockquote>
+<blockquote>
+    full adder, 37
+</blockquote>
+<blockquote>
+    gas
+</blockquote>
+<blockquote><blockquote>
+       van der Waals, 190
+</blockquote></blockquote>
+<blockquote>
+    gate
+</blockquote>
+<blockquote><blockquote>
+       A, 103
+</blockquote></blockquote>
+<blockquote><blockquote>
+       BCNOT, 153
+</blockquote></blockquote>
+<blockquote><blockquote>
+       CNOT
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          all-optical, 153
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          bilateral, 153
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          classical reversible, 15
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          interaction-free, 160
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          ion trap, 122
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Kane, 107, 108
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          NMR, 98
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum, 55
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          silicon-based spin, 107, 108
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       delay, 38
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Hadamard, 32, 175, 177, 186
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          ion trap, 121
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          NMR, 98
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       J, 103, 104
+</blockquote></blockquote>
+<blockquote><blockquote>
+       logic
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          classical, 12
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum, 29
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          reversible, 15
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       NOT
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          classical, 11
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          ion trap, 121
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum, 29
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       square root of  NOT, 23, 29
+</blockquote></blockquote>
+<blockquote><blockquote>
+       NMR, 98
+</blockquote></blockquote>
+<blockquote><blockquote>
+       phase, 32
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 17, 23, 29, 108
+</blockquote></blockquote>
+<blockquote><blockquote>
+       reversible
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          classical CNOT, 15
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          universal, 15
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       S, 107
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Toffoli, 16, 54
+</blockquote></blockquote>
+<blockquote><blockquote>
+       universal
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum, 53
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          reversible, 15
+</blockquote></blockquote></blockquote>
+<blockquote>
+    gcd, 180
+</blockquote>
+<blockquote>
+    general
+</blockquote>
+<blockquote><blockquote>
+       number field sieve algorithm, 35, 180
+</blockquote></blockquote>
+<blockquote><blockquote>
+       recursiveness, 5
+</blockquote></blockquote>
+<blockquote>
+    generator matrix, 49
+</blockquote>
+<blockquote>
+    GNFS algorithm, 35, 180
+</blockquote>
+<blockquote>
+    Godel
+</blockquote>
+<blockquote><blockquote>
+       numbers, 6
+</blockquote></blockquote>
+<blockquote>
+    numbering of Turing machines, 6
+</blockquote>
+<blockquote>
+    greatest common divisor, 180
+</blockquote>
+<blockquote>
+    green computing, 15
+</blockquote>
+<blockquote>
+    Grover's algorithm, 31, 186
+</blockquote>
+<blockquote>
+    gyromagnetic factor, 46, 90
+</blockquote>
+<blockquote>
+    Hadamard gate, 32, 175, 177, 186
+</blockquote>
+<blockquote><blockquote>
+       error correction, 77
+</blockquote></blockquote>
+<blockquote><blockquote>
+       ion trap, 121
+</blockquote></blockquote>
+<blockquote><blockquote>
+       NMR, 98
+</blockquote></blockquote>
+<blockquote>
+    half adder, 37
+</blockquote>
+<blockquote>
+    half-wave plate, 22, 149, 166
+</blockquote>
+<blockquote>
+    Hamiltonian
+</blockquote>
+<blockquote><blockquote>
+       harmonic oscillator, 111
+</blockquote></blockquote>
+<blockquote><blockquote>
+       ion trap, 116
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Jaynes-Cummings, 139
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Kane computer, 104
+</blockquote></blockquote>
+<blockquote><blockquote>
+       local, 186
+</blockquote></blockquote>
+<blockquote><blockquote>
+       NMR, 97, 100
+</blockquote></blockquote>
+<blockquote>
+    Hamming
+</blockquote>
+<blockquote><blockquote>
+       code, 73, 76
+</blockquote></blockquote>
+<blockquote><blockquote>
+       codeword, 76
+</blockquote></blockquote>
+<blockquote><blockquote>
+       distance, 73
+</blockquote></blockquote>
+<blockquote><blockquote>
+       rule, 73
+</blockquote></blockquote>
+<blockquote><blockquote>
+       scheme, 73
+</blockquote></blockquote>
+<blockquote>
+    harmonic oscillator, 111
+</blockquote>
+<blockquote><blockquote>
+       Hamiltonian, 111
+</blockquote></blockquote>
+<blockquote>
+    Heisenberg microscope, 164
+</blockquote>
+<blockquote>
+    Hermitian
+</blockquote>
+<blockquote><blockquote>
+       conjugate operator, 26
+</blockquote></blockquote>
+<blockquote><blockquote>
+       operator, 27
+</blockquote></blockquote>
+<blockquote>
+    hidden variable theory, 167
+</blockquote>
+<blockquote>
+    Hilbert
+</blockquote>
+<blockquote><blockquote>
+       lattices, 195
+</blockquote></blockquote>
+<blockquote><blockquote>
+       space, 26
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          n-dimensional, 167
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          composite, 136
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          embedding, 156
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          polarization, 156
+</blockquote></blockquote></blockquote>
+<blockquote>
+    HWP, 22, 166
+</blockquote>
+<blockquote>
+    hyper-entangled quantum state, 156
+</blockquote>
+<blockquote>
+    hyperfine interaction, 100, 103, 147
+</blockquote>
+<blockquote>
+    hyperthreading technology, 136
+</blockquote>
+<blockquote>
+    ID Quantique, 125
+</blockquote>
+<blockquote>
+    idler photon, 129
+</blockquote>
+<blockquote>
+    information theory
+</blockquote>
+<blockquote><blockquote>
+       quantum, 61
+</blockquote></blockquote>
+<blockquote>
+    Intel, 135
+</blockquote>
+<blockquote>
+    interaction
+</blockquote>
+<blockquote><blockquote>
+       picture, 120
+</blockquote></blockquote>
+<blockquote><blockquote>
+       strong, 190
+</blockquote></blockquote>
+<blockquote><blockquote>
+       weak, 190
+</blockquote></blockquote>
+<blockquote>
+    interaction-free
+</blockquote>
+<blockquote><blockquote>
+       CNOT gate, 160
+</blockquote></blockquote>
+<blockquote><blockquote>
+       experiment, 160
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          circuit, 166
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       resonance detection, 163
+</blockquote></blockquote>
+<blockquote>
+    interferometer
+</blockquote>
+<blockquote><blockquote>
+       Mach--Zehnder, 29, 34, 81, 132
+</blockquote></blockquote>
+<blockquote>
+    Internet, 35, 65
+</blockquote>
+<blockquote>
+    interval analysis, 171
+</blockquote>
+<blockquote>
+    inverted population, 138, 140
+</blockquote>
+<blockquote>
+    ion trap, 88, 109
+</blockquote>
+<blockquote><blockquote>
+       computer, 121
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          scalable, 122
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       fictitious magnetic dipole, 117
+</blockquote></blockquote>
+<blockquote><blockquote>
+       fictitious magnetic field, 117
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Hamiltonian, 116
+</blockquote></blockquote>
+<blockquote><blockquote>
+       laser beam, 113
+</blockquote></blockquote>
+<blockquote>
+    irrotational field, 21
+</blockquote>
+<blockquote>
+    isomorphism-free generation of MMP diagrams, 169
+</blockquote>
+<blockquote>
+    J-coupling, 98
+</blockquote>
+<blockquote>
+    J-gate, 103, 104
+</blockquote>
+<blockquote>
+    Jaynes--Cummings
+</blockquote>
+<blockquote><blockquote>
+       Hamiltonian, 139
+</blockquote></blockquote>
+<blockquote><blockquote>
+       model, 116
+</blockquote></blockquote>
+<blockquote>
+    join
+</blockquote>
+<blockquote><blockquote>
+       lattice, 192
+</blockquote></blockquote>
+<blockquote>
+    Jones vectors, 19, 21
+</blockquote>
+<blockquote>
+    Kane
+</blockquote>
+<blockquote><blockquote>
+       CNOT gate, 107
+</blockquote></blockquote>
+<blockquote><blockquote>
+       computer, 103, 106
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          bit train, 107
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Hamiltonian, 104
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          radio frequency magnetic field, 103
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          spin subspace, 106
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       magnetic
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          field, external, 101
+</blockquote></blockquote></blockquote>
+<blockquote>
+    Karnaugh map, 17
+</blockquote>
+<blockquote>
+    ket vector, 20, 24
+</blockquote>
+<blockquote>
+    key
+</blockquote>
+<blockquote><blockquote>
+       distribution, 81
+</blockquote></blockquote>
+<blockquote><blockquote>
+       RSA, 35
+</blockquote></blockquote>
+<blockquote><blockquote>
+       sifted, 71
+</blockquote></blockquote>
+<blockquote>
+    Kochen--Specker
+</blockquote>
+<blockquote><blockquote>
+       algorithm, 168
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          statistical exponential speedup, 171
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       set, 168
+</blockquote></blockquote>
+<blockquote><blockquote>
+       setup, 167
+</blockquote></blockquote>
+<blockquote><blockquote>
+       theorem, 167
+</blockquote></blockquote>
+<blockquote><blockquote>
+       vectors, 168
+</blockquote></blockquote>
+<blockquote>
+    KS
+</blockquote>
+<blockquote><blockquote>
+       algorithms, 168
+</blockquote></blockquote>
+<blockquote><blockquote>
+       set, 168
+</blockquote></blockquote>
+<blockquote><blockquote>
+       setup, 167
+</blockquote></blockquote>
+<blockquote><blockquote>
+       vectors, 168
+</blockquote></blockquote>
+<blockquote>
+    lambda-definability, 5
+</blockquote>
+<blockquote>
+    Lamb--Dicke
+</blockquote>
+<blockquote><blockquote>
+       limit, 119
+</blockquote></blockquote>
+<blockquote><blockquote>
+       parameter, 119
+</blockquote></blockquote>
+<blockquote>
+    Lande factor, 92
+</blockquote>
+<blockquote>
+    Larmor frequency, 93
+</blockquote>
+<blockquote><blockquote>
+       resonance, 103
+</blockquote></blockquote>
+<blockquote>
+    laser, 138
+</blockquote>
+<blockquote><blockquote>
+       beam
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          atom interaction, 113
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          ion trap, 113
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       beam-electron-phonon interaction, 116
+</blockquote></blockquote>
+<blockquote><blockquote>
+       beam-ion interaction, 116
+</blockquote></blockquote>
+<blockquote><blockquote>
+       coherence length, 33
+</blockquote></blockquote>
+<blockquote><blockquote>
+       coherence time, 33
+</blockquote></blockquote>
+<blockquote><blockquote>
+       continuous wave, 33
+</blockquote></blockquote>
+<blockquote><blockquote>
+       cooling, 111, 119
+</blockquote></blockquote>
+<blockquote><blockquote>
+       diode, 126
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          phase-coding, 81
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       Doppler cooling, 111
+</blockquote></blockquote>
+<blockquote><blockquote>
+       one-atom, 139
+</blockquote></blockquote>
+<blockquote><blockquote>
+       pulse
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum cryptography, 126
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       pump beam
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          down-conversion, 130
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       pumping, 63
+</blockquote></blockquote>
+<blockquote>
+    lattice, 96, 192
+</blockquote>
+<blockquote><blockquote>
+       atom, 195
+</blockquote></blockquote>
+<blockquote><blockquote>
+       completeness, 195
+</blockquote></blockquote>
+<blockquote><blockquote>
+       distributive, 193
+</blockquote></blockquote>
+<blockquote><blockquote>
+       equations, 197
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Hilbert, 195
+</blockquote></blockquote>
+<blockquote><blockquote>
+       join, 192
+</blockquote></blockquote>
+<blockquote><blockquote>
+       meet, 192
+</blockquote></blockquote>
+<blockquote><blockquote>
+       modular, 193
+</blockquote></blockquote>
+<blockquote><blockquote>
+       operation, 192
+</blockquote></blockquote>
+<blockquote><blockquote>
+       orthocomplementation, 193
+</blockquote></blockquote>
+<blockquote><blockquote>
+       orthomodular, 193
+</blockquote></blockquote>
+<blockquote><blockquote>
+       superposition, 195
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          principle, 195
+</blockquote></blockquote></blockquote>
+<blockquote>
+    least significant bit, 37
+</blockquote>
+<blockquote>
+    left-hand circular polarization, 21
+</blockquote>
+<blockquote>
+    linear
+</blockquote>
+<blockquote><blockquote>
+       ion trap, 110
+</blockquote></blockquote>
+<blockquote><blockquote>
+       optical elements, 31, 156
+</blockquote></blockquote>
+<blockquote><blockquote>
+       subspace, 27
+</blockquote></blockquote>
+<blockquote>
+    linearization of wave equation, 46
+</blockquote>
+<blockquote>
+    linewidth, 33
+</blockquote>
+<blockquote>
+    local Hamiltonian, 186
+</blockquote>
+<blockquote>
+    logic
+</blockquote>
+<blockquote><blockquote>
+       classical, 194
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          completeness, 194
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          soundness, 194
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       gate
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          classical, 12
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum, 23, 29
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          reversible, 15
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       propositional, 7
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 15, 61
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          completeness, 194
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          proper, 194
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          soundness, 194
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       reversible, 15
+</blockquote></blockquote>
+<blockquote>
+    longitudinal field, 21
+</blockquote>
+<blockquote>
+    LSB, 37
+</blockquote>
+<blockquote>
+    mu-recursiveness, 5
+</blockquote>
+<blockquote>
+    Mach--Zehnder interferometer, 29, 34, 36, 81, 132
+</blockquote>
+<blockquote>
+    MagiQ Technologies, 125
+</blockquote>
+<blockquote>
+    magnetic
+</blockquote>
+<blockquote><blockquote>
+       dipole moment, 89
+</blockquote></blockquote>
+<blockquote><blockquote>
+       fictitious dipole
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          ion trap, 117
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       fictitious field
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          ion trap, 117
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       field
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Kane, external, 101
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          radio frequency, Kane, 103
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          radio frequency, NMR, 96
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Zeeman, external, 88, 90
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Zeeman, inner, 91
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       moment
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          electron, 100
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          nuclear, 100
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       quantum number, 89
+</blockquote></blockquote>
+<blockquote>
+    magneto-optical trap, 163
+</blockquote>
+<blockquote>
+    Malus law, 19, 131
+</blockquote>
+<blockquote>
+    matrix
+</blockquote>
+<blockquote><blockquote>
+       check, 74
+</blockquote></blockquote>
+<blockquote><blockquote>
+       density, 47
+</blockquote></blockquote>
+<blockquote><blockquote>
+       generation, 74
+</blockquote></blockquote>
+<blockquote>
+    MatrixExp, 50, 98
+</blockquote>
+<blockquote>
+    measurement
+</blockquote>
+<blockquote><blockquote>
+       quantum, 27
+</blockquote></blockquote>
+<blockquote>
+    meet
+</blockquote>
+<blockquote><blockquote>
+       lattice, 192
+</blockquote></blockquote>
+<blockquote>
+    microchannel plate detector, 164
+</blockquote>
+<blockquote>
+    mixing angle
+</blockquote>
+<blockquote><blockquote>
+       dark state, 143
+</blockquote></blockquote>
+<blockquote>
+    MMP diagram, 168
+</blockquote>
+<blockquote><blockquote>
+       algorithm, 168
+</blockquote></blockquote>
+<blockquote><blockquote>
+       isomorphism-free generation, 169
+</blockquote></blockquote>
+<blockquote>
+    modular
+</blockquote>
+<blockquote><blockquote>
+       algebra, 193
+</blockquote></blockquote>
+<blockquote><blockquote>
+       lattice, 193
+</blockquote></blockquote>
+<blockquote>
+    modularity, 193
+</blockquote>
+<blockquote>
+    modulo, 8, 74, 78, 174, 181
+</blockquote>
+<blockquote>
+    momentum
+</blockquote>
+<blockquote><blockquote>
+       electromagnetic, 21
+</blockquote></blockquote>
+<blockquote><blockquote>
+       space, 189
+</blockquote></blockquote>
+<blockquote>
+    monolithic total-internal-reflection resonator, 161
+</blockquote>
+<blockquote>
+    Moore's Law, xiv, 135
+</blockquote>
+<blockquote>
+    MOSFET, 9
+</blockquote>
+<blockquote><blockquote>
+       NPN, 9
+</blockquote></blockquote>
+<blockquote><blockquote>
+       PNP, 9
+</blockquote></blockquote>
+<blockquote>
+    most significant bit, 37
+</blockquote>
+<blockquote>
+    MOTIRR, 161
+</blockquote>
+<blockquote>
+    MSB, 37
+</blockquote>
+<blockquote>
+    multicore technology, 136
+</blockquote>
+<blockquote>
+    NAND
+</blockquote>
+<blockquote><blockquote>
+       classical, 8
+</blockquote></blockquote>
+<blockquote>
+    negative absorption, 138
+</blockquote>
+<blockquote>
+    neutral atom, 124
+</blockquote>
+<blockquote>
+    NMOS, 9
+</blockquote>
+<blockquote>
+    NMR, 88, 124, 180
+</blockquote>
+<blockquote><blockquote>
+       square root of NOT gate, 98
+</blockquote></blockquote>
+<blockquote><blockquote>
+       computer, 98, 99
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          radio frequency magnetic field, 96
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       Hadamard gate, 98
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Hamiltonian, 97, 100
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Shor's algorithm, 98, 180, 183
+</blockquote></blockquote>
+<blockquote>
+    no-cloning theorem, 58
+</blockquote>
+<blockquote>
+    nonlinear optics, 128
+</blockquote>
+<blockquote>
+    NOR
+</blockquote>
+<blockquote><blockquote>
+       classical, 8
+</blockquote></blockquote>
+<blockquote>
+    normal algorithm, 6
+</blockquote>
+<blockquote>
+    NOT
+</blockquote>
+<blockquote><blockquote>
+       classical, 8
+</blockquote></blockquote>
+<blockquote><blockquote>
+       gate
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          classical, 11
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          ion trap, 121
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum, 29
+</blockquote></blockquote></blockquote>
+<blockquote>
+    square root of NOT gate, 23, 29
+</blockquote>
+<blockquote>
+    NMR, 98
+</blockquote>
+<blockquote>
+    NPN MOSFET, 9
+</blockquote>
+<blockquote>
+    nuclear
+</blockquote>
+<blockquote><blockquote>
+       fusion, 87
+</blockquote></blockquote>
+<blockquote><blockquote>
+       magnetic
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          moment, 100
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       magnetic resonance, 88, 124
+</blockquote></blockquote>
+<blockquote><blockquote>
+       spin quantum number, 94
+</blockquote></blockquote>
+<blockquote>
+    number
+</blockquote>
+<blockquote><blockquote>
+       field sieve
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          general algorithm, 35
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       operator, 111
+</blockquote></blockquote>
+<blockquote><blockquote>
+       state
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          notation, 117
+</blockquote></blockquote></blockquote>
+<blockquote>
+    one-atom laser, 139
+</blockquote>
+<blockquote>
+    operation
+</blockquote>
+<blockquote><blockquote>
+       Boolean, 12
+</blockquote></blockquote>
+<blockquote><blockquote>
+       lattice, 192
+</blockquote></blockquote>
+<blockquote>
+    operator, 26
+</blockquote>
+<blockquote><blockquote>
+       adjoint, 26
+</blockquote></blockquote>
+<blockquote><blockquote>
+       annihilation, 40, 59
+</blockquote></blockquote>
+<blockquote><blockquote>
+       creation, 40
+</blockquote></blockquote>
+<blockquote><blockquote>
+       density, 28
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Fermi, 117
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Hermitian conjugate, 26
+</blockquote></blockquote>
+<blockquote><blockquote>
+       linear, 26
+</blockquote></blockquote>
+<blockquote><blockquote>
+       projection, 27
+</blockquote></blockquote>
+<blockquote><blockquote>
+       unitary, 27, 186
+</blockquote></blockquote>
+<blockquote>
+    optical
+</blockquote>
+<blockquote><blockquote>
+       cavity, 138--140, 163
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          spherical mirror, 140
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       element
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          linear, 31, 156
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       path difference, 34
+</blockquote></blockquote>
+<blockquote><blockquote>
+       resonator, 138
+</blockquote></blockquote>
+<blockquote>
+    OR
+</blockquote>
+<blockquote><blockquote>
+       classical, 8
+</blockquote></blockquote>
+<blockquote>
+    order, 181
+</blockquote>
+<blockquote>
+    ordinary ray, 68
+</blockquote>
+<blockquote>
+    ortho-isomorphism, 196
+</blockquote>
+<blockquote>
+    orthoautomorphism
+</blockquote>
+<blockquote><blockquote>
+       unitary, 196
+</blockquote></blockquote>
+<blockquote>
+    orthocomplementation, 193
+</blockquote>
+<blockquote>
+    ortholattice, 192
+</blockquote>
+<blockquote>
+    orthomodular
+</blockquote>
+<blockquote><blockquote>
+       lattice, 193
+</blockquote></blockquote>
+<blockquote><blockquote>
+       poset
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          sigma, 193
+</blockquote></blockquote></blockquote>
+<blockquote>
+    orthomodularity, 193
+</blockquote>
+<blockquote>
+    orthonormal basis
+</blockquote>
+<blockquote><blockquote>
+       countable, 26
+</blockquote></blockquote>
+<blockquote>
+    oxide
+</blockquote>
+<blockquote><blockquote>
+       barrier, 10
+</blockquote></blockquote>
+<blockquote>
+    P-doped substrate, 9
+</blockquote>
+<blockquote>
+    parametric
+</blockquote>
+<blockquote><blockquote>
+       down-conversion, 128
+</blockquote></blockquote>
+<blockquote><blockquote>
+       generation, 128
+</blockquote></blockquote>
+<blockquote>
+    parity, 72
+</blockquote>
+<blockquote><blockquote>
+       bit, 72
+</blockquote></blockquote>
+<blockquote>
+    path difference
+</blockquote>
+<blockquote><blockquote>
+       optical, 34
+</blockquote></blockquote>
+<blockquote>
+    Paul trap, 109
+</blockquote>
+<blockquote>
+    Pauli
+</blockquote>
+<blockquote><blockquote>
+       matrices, 46
+</blockquote></blockquote>
+<blockquote><blockquote>
+       problem, 156
+</blockquote></blockquote>
+<blockquote><blockquote>
+       uniqueness, 156
+</blockquote></blockquote>
+<blockquote>
+    Penning trap, 109
+</blockquote>
+<blockquote>
+    phase
+</blockquote>
+<blockquote><blockquote>
+       gate, 32
+</blockquote></blockquote>
+<blockquote><blockquote>
+       retarder, 22
+</blockquote></blockquote>
+<blockquote><blockquote>
+       shift, 18, 76
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          correction, 80
+</blockquote></blockquote></blockquote>
+<blockquote>
+    phase-coding
+</blockquote>
+<blockquote><blockquote>
+       entangled pair, 132
+</blockquote></blockquote>
+<blockquote><blockquote>
+       EPR pair, 132
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum cryptography, 81
+</blockquote></blockquote>
+<blockquote>
+    phonon, 110, 112
+</blockquote>
+<blockquote><blockquote>
+       anticommutation relations, 112
+</blockquote></blockquote>
+<blockquote><blockquote>
+       state, 112
+</blockquote></blockquote>
+<blockquote>
+    phosphorus donor, 102
+</blockquote>
+<blockquote>
+    photon
+</blockquote>
+<blockquote><blockquote>
+       angular momentum, 20
+</blockquote></blockquote>
+<blockquote><blockquote>
+       entangled, 62
+</blockquote></blockquote>
+<blockquote><blockquote>
+       gun, 127
+</blockquote></blockquote>
+<blockquote><blockquote>
+       idler, 129
+</blockquote></blockquote>
+<blockquote><blockquote>
+       on demand, 127, 140
+</blockquote></blockquote>
+<blockquote><blockquote>
+       particle aspect, 18
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Planck energy, 18
+</blockquote></blockquote>
+<blockquote><blockquote>
+       pump, 129
+</blockquote></blockquote>
+<blockquote><blockquote>
+       signal, 129
+</blockquote></blockquote>
+<blockquote><blockquote>
+       total angular momentum, 21
+</blockquote></blockquote>
+<blockquote><blockquote>
+       wave aspect, 18
+</blockquote></blockquote>
+<blockquote>
+    physical computation, 34
+</blockquote>
+<blockquote>
+    pickup coil, 96
+</blockquote>
+<blockquote>
+    Planck energy, 18
+</blockquote>
+<blockquote><blockquote>
+       electron, 93
+</blockquote></blockquote>
+<blockquote><blockquote>
+       photon, 18
+</blockquote></blockquote>
+<blockquote>
+    PMOS, 9
+</blockquote>
+<blockquote>
+    PNP MOSFET, 9
+</blockquote>
+<blockquote>
+    Poisson distribution, 127
+</blockquote>
+<blockquote>
+    polarization, 18
+</blockquote>
+<blockquote><blockquote>
+       circular, 20, 147
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Hilbert space, 156
+</blockquote></blockquote>
+<blockquote><blockquote>
+       linear, 18, 19, 22, 39, 40, 44, 59, 63, 68, 70, 129, 147
+</blockquote></blockquote>
+<blockquote><blockquote>
+       nonlinear, 129
+</blockquote></blockquote>
+<blockquote>
+    polarization-coding
+</blockquote>
+<blockquote><blockquote>
+       entangled pair, 131
+</blockquote></blockquote>
+<blockquote><blockquote>
+       EPR pair, 131
+</blockquote></blockquote>
+<blockquote>
+    polarizing beam splitter, 150
+</blockquote>
+<blockquote>
+    population
+</blockquote>
+<blockquote><blockquote>
+       inversion, 138
+</blockquote></blockquote>
+<blockquote><blockquote>
+       inverted, 140
+</blockquote></blockquote>
+<blockquote>
+    poset
+</blockquote>
+<blockquote><blockquote>
+       orthomodular
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          sigma, 193
+</blockquote></blockquote></blockquote>
+<blockquote>
+    Poynting vector, 19, 21
+</blockquote>
+<blockquote>
+    precession, 96
+</blockquote>
+<blockquote><blockquote>
+       frequency, 97
+</blockquote></blockquote>
+<blockquote>
+    prime
+</blockquote>
+<blockquote><blockquote>
+       relatively, 67, 180
+</blockquote></blockquote>
+<blockquote>
+    privacy amplification, 85
+</blockquote>
+<blockquote>
+    probabilistic
+</blockquote>
+<blockquote><blockquote>
+       device
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum, 20
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       intrinsically
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum measurement, 27
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       transition function
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Turing machine, 190
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       Turing machine, 190
+</blockquote></blockquote>
+<blockquote>
+    probability
+</blockquote>
+<blockquote><blockquote>
+       amplitudes
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum, 27
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       coincidence, 61, 62
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 20, 27, 28
+</blockquote></blockquote>
+<blockquote>
+    projector, 27
+</blockquote>
+<blockquote>
+    propagation vector, 20
+</blockquote>
+<blockquote>
+    propositional logic, 7
+</blockquote>
+<blockquote>
+    protocol
+</blockquote>
+<blockquote><blockquote>
+       B92, 81, 82
+</blockquote></blockquote>
+<blockquote><blockquote>
+       BB84, 69, 82
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Bennett-Brassard, 69
+</blockquote></blockquote>
+<blockquote><blockquote>
+       six-state, 81
+</blockquote></blockquote>
+<blockquote>
+    pseudo CNOT gate, 160
+</blockquote>
+<blockquote>
+    public
+</blockquote>
+<blockquote><blockquote>
+       key cryptography
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          classical, 66
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       key protocol
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          classical, 67
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          RSA, 67
+</blockquote></blockquote></blockquote>
+<blockquote>
+    pump photon, 129
+</blockquote>
+<blockquote>
+    pure state, 28, 40
+</blockquote>
+<blockquote>
+    purification, 153
+</blockquote>
+<blockquote>
+    QED, 90
+</blockquote>
+<blockquote><blockquote>
+       cavity, 88, 124
+</blockquote></blockquote>
+<blockquote>
+    QKD, 125, 127
+</blockquote>
+<blockquote>
+    QND device, 157
+</blockquote>
+<blockquote>
+    quantum
+</blockquote>
+<blockquote><blockquote>
+       bit-flip, 76
+</blockquote></blockquote>
+<blockquote><blockquote>
+       bits, 17
+</blockquote></blockquote>
+<blockquote><blockquote>
+       CCNOT gate, 77
+</blockquote></blockquote>
+<blockquote><blockquote>
+       circuit, 30, 32, 52, 55--57, 77--80, 122, 153, 176, 182, 
+</blockquote></blockquote>
+		191
+<blockquote><blockquote><blockquote>
+          diagram, 32, 182
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          interaction-free, 166
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          quantum logic, 61
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          size, 30
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       coin, 173
+</blockquote></blockquote>
+<blockquote><blockquote>
+       computation
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          roadmap, 124
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       computer
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          cavity quantum electrodynamics (QED), 88
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          continuous, 194
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          ion trap, 121
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Kane, 103
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          NMR, 98
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          silicon-based, 103
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       controlled-controlled-NOT gate, 77
+</blockquote></blockquote>
+<blockquote><blockquote>
+       cryptography, 36, 64, 69
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          continuous variables, 126
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          entangled pairs, 126, 128
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          free space transmission, 126
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          phase-coding, 81
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          roadmap, 126
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          single-photon sources, 126, 127
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          weak laser pulses, 126
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       dot, 128, 152
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Fourier transform, 173, 183
+</blockquote></blockquote>
+<blockquote><blockquote>
+       gate, 17, 23, 29, 108
+</blockquote></blockquote>
+<blockquote><blockquote>
+       information theory, 61
+</blockquote></blockquote>
+<blockquote><blockquote>
+       key distribution, 125
+</blockquote></blockquote>
+<blockquote><blockquote>
+       logic, 15, 61
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          completeness, 194
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          gate, 17, 29
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          proper, 194
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          soundness, 194
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       measurement, 27
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          intrinsically probabilistic, 27
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       network, 20
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          DARPA, 125
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       nondemolition detection device, 157
+</blockquote></blockquote>
+<blockquote><blockquote>
+       number
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          angular momentum, 89, 147
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          magnetic, 147
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       probabilistic device, 20
+</blockquote></blockquote>
+<blockquote><blockquote>
+       probability, 20, 27, 28
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          amplitudes, 27
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       register, 182
+</blockquote></blockquote>
+<blockquote><blockquote>
+       repeater, 151
+</blockquote></blockquote>
+<blockquote><blockquote>
+       transition function
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Turing machine, 190
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       Turing machine, 190
+</blockquote></blockquote>
+<blockquote>
+    quarter-wave plate, 22, 149, 166
+</blockquote>
+<blockquote>
+    quaternions
+</blockquote>
+<blockquote><blockquote>
+       (skew) field of, 191, 196
+</blockquote></blockquote>
+<blockquote>
+    qubit, 19
+</blockquote>
+<blockquote><blockquote>
+       control, 51
+</blockquote></blockquote>
+<blockquote><blockquote>
+       entangled, 57
+</blockquote></blockquote>
+<blockquote><blockquote>
+       flying, 20, 123
+</blockquote></blockquote>
+<blockquote><blockquote>
+       stationary, 20, 123
+</blockquote></blockquote>
+<blockquote><blockquote>
+       target, 51
+</blockquote></blockquote>
+<blockquote>
+    qutrits, 51
+</blockquote>
+<blockquote>
+    QWP, 22, 166
+</blockquote>
+<blockquote>
+    Rabi
+</blockquote>
+<blockquote><blockquote>
+       flopping frequency, 115
+</blockquote></blockquote>
+<blockquote><blockquote>
+       frequency, 115, 119
+</blockquote></blockquote>
+<blockquote>
+    radio-frequency (RF), 96, 103
+</blockquote>
+<blockquote><blockquote>
+       magnetic field
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Kane computer, 103
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          NMR computer, 96
+</blockquote></blockquote></blockquote>
+<blockquote>
+    Raman
+</blockquote>
+<blockquote><blockquote>
+       adiabatic passage
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          stimulated, 144
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       scheme, 113
+</blockquote></blockquote>
+<blockquote>
+    ray
+</blockquote>
+<blockquote><blockquote>
+       extraordinary, 68
+</blockquote></blockquote>
+<blockquote><blockquote>
+       ordinary, 68
+</blockquote></blockquote>
+<blockquote>
+    real numbers
+</blockquote>
+<blockquote><blockquote>
+       field of, 191, 196
+</blockquote></blockquote>
+<blockquote>
+    reckonability, 5
+</blockquote>
+<blockquote>
+    red sideband frequency, 121
+</blockquote>
+<blockquote>
+    reflectance, 41
+</blockquote>
+<blockquote>
+    reflection coefficient, 41
+</blockquote>
+<blockquote>
+    reflectivity, 161
+</blockquote>
+<blockquote>
+    register
+</blockquote>
+<blockquote><blockquote>
+       quantum, 182
+</blockquote></blockquote>
+<blockquote>
+    relatively prime numbers, 67, 180
+</blockquote>
+<blockquote>
+    resonance
+</blockquote>
+<blockquote><blockquote>
+       interaction-free detection, 163
+</blockquote></blockquote>
+<blockquote>
+    resonant pulses, 96
+</blockquote>
+<blockquote>
+    resonator, 161
+</blockquote>
+<blockquote><blockquote>
+       Fabry-Perrot, 138
+</blockquote></blockquote>
+<blockquote><blockquote>
+       optical, 138
+</blockquote></blockquote>
+<blockquote><blockquote>
+       total-internal-reflection
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          monolithic, 161
+</blockquote></blockquote></blockquote>
+<blockquote>
+    reversible
+</blockquote>
+<blockquote><blockquote>
+       circuit, 16, 54
+</blockquote></blockquote>
+<blockquote><blockquote>
+       logic, 15
+</blockquote></blockquote>
+<blockquote><blockquote>
+       logic gate, 15
+</blockquote></blockquote>
+<blockquote><blockquote>
+       universal gate, 15
+</blockquote></blockquote>
+<blockquote>
+    RF, 96, 103
+</blockquote>
+<blockquote><blockquote>
+       coil, 96
+</blockquote></blockquote>
+<blockquote><blockquote>
+       electric field, 110
+</blockquote></blockquote>
+<blockquote><blockquote>
+       field, 103
+</blockquote></blockquote>
+<blockquote><blockquote>
+       generator, 96
+</blockquote></blockquote>
+<blockquote><blockquote>
+       pulses, 96
+</blockquote></blockquote>
+<blockquote><blockquote>
+       signals, 96
+</blockquote></blockquote>
+<blockquote>
+    right-hand circular polarization, 21
+</blockquote>
+<blockquote>
+    Ritt's characteristic set calculations, 171
+</blockquote>
+<blockquote>
+    roadmap
+</blockquote>
+<blockquote><blockquote>
+       quantum computation, 124
+</blockquote></blockquote>
+<blockquote><blockquote>
+       quantum cryptography, 126
+</blockquote></blockquote>
+<blockquote>
+    rotating wave approximation, 115
+</blockquote>
+<blockquote>
+    round-trip, 161
+</blockquote>
+<blockquote>
+    RSA
+</blockquote>
+<blockquote><blockquote>
+       key, 35
+</blockquote></blockquote>
+<blockquote><blockquote>
+       public key protocol, 67
+</blockquote></blockquote>
+<blockquote>
+    rubidium, 148, 165
+</blockquote>
+<blockquote>
+    S-gate, 107
+</blockquote>
+<blockquote>
+    sigma-orthomodular poset, 193
+</blockquote>
+<blockquote>
+    scalable
+</blockquote>
+<blockquote><blockquote>
+       ion trap computer, 122
+</blockquote></blockquote>
+<blockquote>
+    Schrodinger
+</blockquote>
+<blockquote><blockquote>
+       cat states, 57
+</blockquote></blockquote>
+<blockquote><blockquote>
+       equation, 114, 136, 142, 187, 197
+</blockquote></blockquote>
+<blockquote><blockquote>
+       picture, 120
+</blockquote></blockquote>
+<blockquote>
+    selection frequency, 162
+</blockquote>
+<blockquote>
+    semiconductor, 9
+</blockquote>
+<blockquote><blockquote>
+       Si, 103
+</blockquote></blockquote>
+<blockquote>
+    separable subspace, 26
+</blockquote>
+<blockquote>
+    SET, 12, 105
+</blockquote>
+<blockquote>
+    Sheffer stroke, 7
+</blockquote>
+<blockquote>
+    Shor's algorithm, 31, 35, 36, 64, 98, 137, 180, 181
+</blockquote>
+<blockquote><blockquote>
+       exponential speedup, 181
+</blockquote></blockquote>
+<blockquote><blockquote>
+       exponential time, 181
+</blockquote></blockquote>
+<blockquote><blockquote>
+       NMR, 98, 180, 183
+</blockquote></blockquote>
+<blockquote>
+    Si semiconductor, 103
+</blockquote>
+<blockquote>
+    Si substrate, 103
+</blockquote>
+<blockquote>
+    sideband frequency, 121
+</blockquote>
+<blockquote>
+    sifted key, 71
+</blockquote>
+<blockquote>
+    signal photon, 129
+</blockquote>
+<blockquote>
+    silicon-based nuclear spins, 88, 100
+</blockquote>
+<blockquote>
+    Simon's algorithm, 31, 180
+</blockquote>
+<blockquote><blockquote>
+       exponential speedup, 180
+</blockquote></blockquote>
+<blockquote>
+    single-electron transistor, 12, 105
+</blockquote>
+<blockquote>
+    single-photon
+</blockquote>
+<blockquote><blockquote>
+       detector, 126
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Fock state, 127
+</blockquote></blockquote>
+<blockquote>
+    singlet state, 43, 62
+</blockquote>
+<blockquote><blockquote>
+       maximal, 153
+</blockquote></blockquote>
+<blockquote><blockquote>
+       nonmaximal, 153
+</blockquote></blockquote>
+<blockquote>
+    Sisyphus cooling, 111, 119
+</blockquote>
+<blockquote>
+    six-state protocol, 81
+</blockquote>
+<blockquote>
+    size of a quantum circuit, 30
+</blockquote>
+<blockquote>
+    SO(3) group, 47
+</blockquote>
+<blockquote>
+    solid state, 124
+</blockquote>
+<blockquote>
+    space
+</blockquote>
+<blockquote><blockquote>
+       finite dimensional, 26
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Fock, 40
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Hilbert
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          n-dimensional, 167
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          composite, 136
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          embedding, 156
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          polarization, 156
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       spin, 48
+</blockquote></blockquote>
+<blockquote><blockquote>
+       vector, 24
+</blockquote></blockquote>
+<blockquote>
+    special
+</blockquote>
+<blockquote><blockquote>
+       2-dimensional unitary group, 47
+</blockquote></blockquote>
+<blockquote><blockquote>
+       orthogonal 3-dimensional rotation group, 47
+</blockquote></blockquote>
+<blockquote>
+    spherical mirror
+</blockquote>
+<blockquote><blockquote>
+       optical cavity, 140
+</blockquote></blockquote>
+<blockquote>
+    spin
+</blockquote>
+<blockquote><blockquote>
+       electron, 91, 100
+</blockquote></blockquote>
+<blockquote><blockquote>
+       space, 48
+</blockquote></blockquote>
+<blockquote><blockquote>
+       subspace
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Kane computer, 106
+</blockquote></blockquote></blockquote>
+<blockquote>
+    spin-orbit interaction, 91, 102, 147
+</blockquote>
+<blockquote>
+    state
+</blockquote>
+<blockquote><blockquote>
+       Bell, 154
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          decomposition, 156
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       cloned, 58
+</blockquote></blockquote>
+<blockquote><blockquote>
+       copied, 58
+</blockquote></blockquote>
+<blockquote><blockquote>
+       dark, 143, 145, 147
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          cavity, 146
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          teleportation, 147
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       empty, 40
+</blockquote></blockquote>
+<blockquote><blockquote>
+       entangled, 45, 57, 79
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          on demand, 122
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       Fock
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          single-photon, 127
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       hyper-entangled, 156
+</blockquote></blockquote>
+<blockquote><blockquote>
+       metastable, 138
+</blockquote></blockquote>
+<blockquote><blockquote>
+       number, 117
+</blockquote></blockquote>
+<blockquote><blockquote>
+       pure, 28, 40
+</blockquote></blockquote>
+<blockquote><blockquote>
+       singlet, 43, 62
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          maximal, 153
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          nonmaximal, 153
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       teleported, 64
+</blockquote></blockquote>
+<blockquote><blockquote>
+       triplet, 62, 131
+</blockquote></blockquote>
+<blockquote><blockquote>
+       unknown, 58, 137
+</blockquote></blockquote>
+<blockquote><blockquote>
+       vacuum, 40, 117
+</blockquote></blockquote>
+<blockquote>
+    stimulated Raman adiabatic passage, 144
+</blockquote>
+<blockquote>
+    STIRAP, 144, 146, 149
+</blockquote>
+<blockquote>
+    Stokes
+</blockquote>
+<blockquote><blockquote>
+       laser, 144
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          beam, 143
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          field, 144
+</blockquote></blockquote></blockquote>
+<blockquote>
+    strong
+</blockquote>
+<blockquote><blockquote>
+       interaction, 190
+</blockquote></blockquote>
+<blockquote>
+    SU(2) group, 47
+</blockquote>
+<blockquote>
+    subexponential
+</blockquote>
+<blockquote><blockquote>
+       complexity, 35, 180
+</blockquote></blockquote>
+<blockquote>
+    subspace
+</blockquote>
+<blockquote><blockquote>
+       closed, 26
+</blockquote></blockquote>
+<blockquote><blockquote>
+       linear, 27
+</blockquote></blockquote>
+<blockquote><blockquote>
+       separable, 26
+</blockquote></blockquote>
+<blockquote><blockquote>
+       spin
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Kane computer, 106
+</blockquote></blockquote></blockquote>
+<blockquote>
+    substrate, 9
+</blockquote>
+<blockquote><blockquote>
+       Si, 103
+</blockquote></blockquote>
+<blockquote>
+    super-polynomial complexity, 180
+</blockquote>
+<blockquote>
+    superconducting, 124
+</blockquote>
+<blockquote>
+    superposition, 20, 22, 24, 167
+</blockquote>
+<blockquote><blockquote>
+       lattice, 195
+</blockquote></blockquote>
+<blockquote><blockquote>
+       principle
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          lattice, 195
+</blockquote></blockquote></blockquote>
+<blockquote>
+    swapper, 156
+</blockquote>
+<blockquote>
+    syndrome, 75
+</blockquote>
+<blockquote>
+    tally, 4
+</blockquote>
+<blockquote>
+    target qubit, 51
+</blockquote>
+<blockquote>
+    teleportation, 61, 63, 68, 150, 151
+</blockquote>
+<blockquote><blockquote>
+       deterministic, 122
+</blockquote></blockquote>
+<blockquote>
+    teleported state, 64
+</blockquote>
+<blockquote>
+    tensor product, 40
+</blockquote>
+<blockquote>
+    Toffoli gate, 16, 54
+</blockquote>
+<blockquote>
+    tokamak, 87
+</blockquote>
+<blockquote>
+    total-internal-reflection resonator
+</blockquote>
+<blockquote><blockquote>
+       monolithic, 161
+</blockquote></blockquote>
+<blockquote>
+    transistor, 9
+</blockquote>
+<blockquote><blockquote>
+       barrier, 10
+</blockquote></blockquote>
+<blockquote><blockquote>
+       channel, 9
+</blockquote></blockquote>
+<blockquote><blockquote>
+       circuit, 12
+</blockquote></blockquote>
+<blockquote><blockquote>
+       single electron, 12, 105
+</blockquote></blockquote>
+<blockquote>
+    transition function
+</blockquote>
+<blockquote><blockquote>
+       deterministic
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Turing machine, 4
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       probabilistic
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Turing machine, 190
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       quantum
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Turing machine, 190
+</blockquote></blockquote></blockquote>
+<blockquote>
+    transmission coefficient, 41
+</blockquote>
+<blockquote>
+    transmittance, 41
+</blockquote>
+<blockquote>
+    transversal field, 21
+</blockquote>
+<blockquote>
+    trapped ion, 109, 124
+</blockquote>
+<blockquote><blockquote>
+       computer, 109
+</blockquote></blockquote>
+<blockquote>
+    trial divisions, 34
+</blockquote>
+<blockquote>
+    trichloroethylene, 97
+</blockquote>
+<blockquote>
+    triplet state, 62, 131
+</blockquote>
+<blockquote>
+    truth table, 8
+</blockquote>
+<blockquote>
+    tunneling
+</blockquote>
+<blockquote><blockquote>
+       resonator, 161
+</blockquote></blockquote>
+<blockquote>
+    Turing machine, 1
+</blockquote>
+<blockquote><blockquote>
+       deterministic, 4
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          transition function, 4
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       Godel numbering of, 6
+</blockquote></blockquote>
+<blockquote><blockquote>
+       probabilistic, 190
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          transition function, 190
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       quantum, 190
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          transition function, 190
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       universal, 7
+</blockquote></blockquote>
+<blockquote>
+    Turing-computable, 5
+</blockquote>
+<blockquote>
+    type-I down-conversion, 130
+</blockquote>
+<blockquote>
+    type-II down-conversion, 130
+</blockquote>
+<blockquote>
+    unconditional security of quantum cryptography, ix, 72, 83, 126
+</blockquote>
+<blockquote>
+    unitary
+</blockquote>
+<blockquote><blockquote>
+       orthoautomorphism, 196
+</blockquote></blockquote>
+<blockquote>
+    unitary operator, 27, 186
+</blockquote>
+<blockquote>
+    universal
+</blockquote>
+<blockquote><blockquote>
+       quantum gate, 53
+</blockquote></blockquote>
+<blockquote><blockquote>
+       reversible gate, 15
+</blockquote></blockquote>
+<blockquote><blockquote>
+       Turing machine, 7
+</blockquote></blockquote>
+<blockquote>
+    unknown state, 58, 137
+</blockquote>
+<blockquote>
+    vacuum
+</blockquote>
+<blockquote><blockquote>
+       state, 40, 117
+</blockquote></blockquote>
+<blockquote>
+    van der Waals gas, 190
+</blockquote>
+<blockquote>
+    vector
+</blockquote>
+<blockquote><blockquote>
+       space, 24
+</blockquote></blockquote>
+<blockquote>
+    vertex, 168
+</blockquote>
+<blockquote>
+    wave
+</blockquote>
+<blockquote><blockquote>
+       approximation
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          rotating, 115
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       equation
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          linearization, 46
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       vector, 20
+</blockquote></blockquote>
+<blockquote>
+    weak
+</blockquote>
+<blockquote><blockquote>
+       interaction, 190
+</blockquote></blockquote>
+<blockquote>
+    Weierstrass solid immersion lenses, 128
+</blockquote>
+<blockquote>
+    welcher Weg, 164
+</blockquote>
+<blockquote>
+    which way, 164
+</blockquote>
+<blockquote>
+    winner (would be quantum computer), 124
+</blockquote>
+<blockquote>
+    XOR, 8, 65, 72, 74, 85, 174
+</blockquote>
+<blockquote>
+    Zeeman
+</blockquote>
+<blockquote><blockquote>
+       effect
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          anomalous, 88
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          normal, 88
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          nuclear, 95
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       magnetic
+</blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          field, external, 88, 90
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          field, inner, 91
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote><blockquote>
+          Hamiltonian part, 104
+</blockquote></blockquote></blockquote>
+<blockquote><blockquote>
+       splitting, 90, 142
+</blockquote></blockquote>
+<blockquote><blockquote>
+       sublevels, 147
+</blockquote></blockquote>
+
+<hr>
+<br>
+<H3 ALIGN="CENTER"><a name=author>ON THE AUTHOR</a></H3>
+
+Pavicic, Mladen [From MARQUISE <i>Who's Who in Science 
+and Engineering</i>, 4th Ed., 1998-1999 and <i>Who's Who in the 
+World</i>, 17th, 2000]  Physicist, educator; b. Zagreb, 
+Croatia; PhD in Physics, 1986; main asst. Univ. Zagreb, 1982-89, 
+asst. prof., 1990-95, assoc. prof., 1996-2000,
+full prof., 2001- ; head sci. project Ministry of Sci., Zagreb, 
+1991-96; head sci. project <i>Quantum Computation and Quantum 
+Communication</i>, Ministry of Sci., Zagreb, 1996-2001, head 
+sci. project <i> Quantum Information Theory</i>, Ministry of Sci., 
+Educ., and Sport, Zagreb, 2001-. Author: <i> Solved Problems in 
+Physics</i>, 1982, 2nd edit., 1984; articles to prof. journals: 
+<i>Phys. Rev. Lett.; Phys. Rev. A, D; J. Opt. Soc. Am. B; 
+Opt. Commun.; J. Phys. A; Phys. Lett. A; Helv. Phys. Acta; 
+Forschr. Phys.; Found. Phys.; Int. J. Theor. Phys.;</i>  etc.; 
+Grantee Alexander von Humboldt Found., Germany, Univ. Cologne, Germany, 
+1988-90; Tech. Univ. Berlin, Germany, 1993; Humboldt Univ. Berlin, 
+Germany, 1995; Grantee Fulbright Senior Scholar Research/Lect., 
+USA, Univ. Maryland Baltimore County,  UMBC, Baltimore, USA, 
+1999-2000;  French Ministry Sci., Univ. Reims, France, 1992; 
+Austrian Ministry Sci., Atom-Inst. of Austr. Univ., Vienna, 
+Austria, 1993, 94, 95, 97; Max-Planck Gesel., Germany, 
+Humboldt Univ. Berlin, Germany, 1996; E. Schrodinger Inst., 
+Vienna, Austria, 2000; Mem. Int. Quantum Structures 
+Assn. (co-founder, nominating com. 1992-94), USA; Croatian
+Humboldt-Club (president, 2002-); Croatian Phys. Soc.; European 
+Phys. Soc.; Am. Phys. Soc.; Opt. Soc. Am.; Achievements include 
+proof of Pauli nonuniqueness for real states, 
+discovery of polarization correlation between beams of unpolarized 
+light, discovery of polarization entanglement of two unpolarized 
+photons that nowhere interacted, discovery of a nondistributive 
+model for classical logic, co-discovery of a nonorthomodular model 
+for quantum logic, co-formulation of a resonator interaction-free 
+detection, discovery of an interaction free destruction of atom 
+interference pattern, and co-discovery of exhaustive algorithms 
+for generating arbitrary Kochen-Specker vectors. 
+
+<hr>
+<br>
+<H3 ALIGN="CENTER"><a name=back>BACK COVER (EDITORIAL REVIEW)</a></H3>
+
+<H3 ALIGN="LEFT">QUANTUM COMPUTATION AND QUANTUM COMMUNICATION:
+Theory and Experiments</i></a></H3>
+
+<H3 ALIGN="LEFT">
+<a href="http://m3k.grad.hr/pavicic" target="_blank">Mladen Pavicic</a>
+</a></H3>
+
+
+The field of quantum computing has experienced rapid development and many different experimental and theoretical groups have emerged worldwide.This book presents the key elements of quantum computation and communication theories and their implementation in an easy-to-read manner for readers coming from physics, mathematics and computer science backgrounds. Integrating both theoretical aspects and experimental verifications of developing quantum computers, the author explains why particular mathematical methods, physical models and realistic implementations might provide critical steps towards achieving the final goal - constructing quantum computers and quantum networks. The book serves as an excellent introduction for new researchers and also provides a useful review for specialists in the field.
+
+<br>
+
+<H3 ALIGN="LEFT"><a href="http://www.springer.com"  target="_blank">
+Springer</a></H3>
+
+<H3 ALIGN="LEFT"><a href="http://www.springeronline.com" target="_blank">
+springeronline.com</a></H3>
+
+<br>
+
+ISBN 0-387-24412-3
+
+<br>
+<br>
+
+<hr>
+
+</body>
+</HTML>
+
+
+
+

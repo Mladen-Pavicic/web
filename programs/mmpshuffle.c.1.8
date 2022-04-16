@@ -1,0 +1,2386 @@
+/* mmpshuffle.c */
+#define VERSION "1.8 24-Mar-2018"
+/* 1.8 24-Mar-2018 nm - fix bug that confused atom name "{" with the "{" that
+   surrounds vector components */
+/* 1.7 27-Nov-2017 nm - set MMPPrefix to empty string if there is no prefix */
+/* 1.6 18-May-2017 nm - take out "#if", "#ifdef" surrounding fflush(stdout) */
+/* 1.5 26-Apr-2017 nm - add fflush(stdout) after all printf statements */
+/* 1.4 14-Jan-2017 nm - change atom names of vector assignment suffix
+   whenever names are changed in the MMP */
+/* 1.3 8-Oct-2016 nm - added -fill (add missing vertices) to use with
+   output of vectorfind.c.  Also, keep any informational prefix and suffix
+   (blocks/atoms, pass/fail/timeout, vector assignment, etc.) intact. */
+/* 1.2 5-Apr-2016 nm - increased MAX_BLOCKS to 3000 */
+/* 1.1 23-Jan-2014 nm - linput() now allows unlimited input line length */
+/* 1.0 25-Dec-2013 nm - initial version derived from mmpstrip.c 0.7 */
+
+/* To run this program, type:
+      mmpshuffle < inpfile > outfile
+   where
+      inpfile = input file with MMP diagrams in Brendan McKay's format
+      outfile = output file MMP diagrams reformatted according to options
+   See  mmpshuffle --help  for more options and explanation.
+*/
+
+/*****************************************************************************/
+/*       Copyright (C) 2014  NORMAN D. MEGILL  <nm at alum.mit.edu>          */
+/*             License terms:  GNU General Public License                    */
+/*****************************************************************************/
+
+
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <time.h>
+#include <ctype.h>
+#include <math.h>
+#include <limits.h>
+#include <unistd.h>  /* For getpid; not part of C standard */
+
+/***********************************************************************/
+/************ Start of "vstring" header stuff **************************/
+/************ Do not touch anything in this section ********************/
+/***********************************************************************/
+typedef char* vstring;
+
+/* String assignment - MUST be used to assign vstrings */
+void let(vstring *target,vstring source);
+/* String concatenation - last argument MUST be NULL */
+vstring cat(vstring string1,...);
+
+/* Emulate BASIC linput statement; returns NULL if EOF */
+/* Note that linput assigns target string with let(&target,...) */
+  /*
+    BASIC:  linput "what";a$
+    c:      linput(NULL,"what?",&a);
+
+    BASIC:  linput #1,a$                        (error trap on EOF)
+    c:      if (!linput(file1,NULL,&a)) break;  (break on EOF)
+
+  */
+/*vstring linput(FILE *stream,vstring ask,vstring *target);*/
+int linput(FILE *stream, const char* ask, vstring *target);
+
+/* Emulation of BASIC string functions */
+vstring seg(vstring sin, long p1, long p2);
+vstring mid(vstring sin, long p, long l);
+vstring left(vstring sin, long n);
+vstring right(vstring sin, long n);
+vstring edit(vstring sin, long control);
+vstring space(long n);
+vstring string(long n, char c);
+vstring chr(long n);
+vstring xlate(vstring sin, vstring control);
+vstring date(void);
+vstring time_(void);
+vstring num(double x);
+vstring num1(double x);
+vstring str(double x);
+long len(vstring s);
+long instr(long start, vstring sin, vstring s);
+long rinstr(vstring string1, vstring string2);
+long ascii_(vstring c);
+double val(vstring s);
+/* Emulation of PROGRESS string functions added 11/25/98 */
+vstring entry(long element, vstring list);
+long lookup(vstring expression, vstring list);
+long numEntries(vstring list);
+long entryPosition(long element, vstring list);
+/* Print to log file as well as terminal if fplog opened */
+void print2(char* fmt,...);
+FILE *fplog = NULL;
+/* Opens files with error message; opens output files with
+   backup of previous version.   Mode must be "r" or "w". */
+FILE *fSafeOpen(vstring fileName, vstring mode);
+/* Bug check error */
+void bug(int bugNum);
+/* End of functions you should call directly */
+
+
+/* Do not call the ones below directly */
+/******* Special pupose routines for better
+      memory allocation (use with caution) *******/
+/* Make string have temporary allocation to be released by next let() */
+/* Warning:  after makeTempAlloc() is called, the vstring may NOT be
+   assigned again with let() */
+void makeTempAlloc(vstring s);   /* Make string have temporary allocation to be
+                                    released by next let() */
+#define MAX_ALLOC_STACK 100
+int tempAllocStackTop=0;        /* Top of stack for tempAlloc functon */
+int startTempAllocStack=0;      /* Where to start freeing temporary allocation
+                                    when let() is called (normally 0, except in
+                                    special nested vstring functions) */
+char *tempAllocStack[MAX_ALLOC_STACK];
+
+
+/*****************************************************************************/
+/*********************** End of "vstring" header stuff ***********************/
+/*****************************************************************************/
+
+/* Constants */
+
+/* Mapping for MMP diagram atoms */
+#define ATOM_MAP "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs" \
+    "tuvwxyz!\"#$%&'()*-/:;<=>?@[\\]^_`{|}~"
+/* Maximum number of atoms - increase as needed, at expense of memory */
+#define MAX_ATOMS 1000
+/* Maximum number of blocks - increase as needed, at expense of memory */
+#define MAX_BLOCKS 3000
+/* Minimum block size */
+#define MIN_BLOCK_SIZE 2
+/* Maximum block size - increase as needed, at expense of memory */
+#define MAX_BLOCK_SIZE 10
+
+/* Global variables */
+char oneLineDisplay = 0;
+char verboseMode = 0;
+char noErrorCheck = 0;
+long lattices = 0;
+
+long atomMapLen;
+long block[MAX_BLOCKS + 1][MAX_BLOCK_SIZE + 1];
+long blockSize[MAX_BLOCKS + 1];
+long blocks;
+long atoms = 0; /* Careful - make sure it's assigned before using */
+long maxAtom;  /* Largest atom used (may be >atoms if gaps) */
+vstring MMPSuffix = "";
+
+
+/* Prototypes */
+vstring parseMMP(vstring inputDiagram, char normalize);
+vstring buildMMP(long blocks, long *blockSize,
+    long (*block)[MAX_BLOCK_SIZE + 1], char *aTOM_MAP,
+    long atomMapLen);
+
+vstring vectorRemap(vstring MMPSuffix, long *atomRemap, long maxAt);
+                                              /* 14-Jan-2017 nm */
+vstring extendedAtomName(long atom);
+long extendedAtomNumber(vstring sAtom);
+void shuffle(long *card, long cards);
+unsigned long getSeed(void);
+unsigned long mix3(unsigned long a, unsigned long b, unsigned long c);
+
+
+
+
+/******************** Main program *******************************************/
+
+int main(int argc, char *argv[])
+{
+
+  /* Integer variable declarations */
+
+  /* This is how you declare some strings you want to work with */
+  /* They MUST be initialized to the empty string, never to anything else */
+  vstring str1 = "";
+  vstring str2 = "";
+  long i, j, k, p, q, b;
+  long arg;
+  long outCount = 0;
+
+  /* To temporarily save the diagram */
+  static long saveBlock[MAX_BLOCKS + 1][MAX_BLOCK_SIZE + 1];
+  long saveBlockSize[MAX_BLOCKS + 1];
+
+  vstring inputMMP = "";
+  vstring newMMP = "";
+  vstring outMMP = "";
+  vstring MMPPrefix = ""; /* 8-Oct-2016 nm */
+  /* vstring MMPSuffix = ""; */ /* 8-Oct-2016 nm */ /* 14-Jan-2017 now global */
+
+  char userRandom = 0;
+  long randomCount = 1; /* Defaults to 1 for non -r options */
+  long mmpCount;
+  long randomMap[MAX_BLOCKS + 1];
+  long unsigned randomSeed;
+
+  char userNormalizeBefore = 0; /* Don't normalize input by default */
+  char userNormalizeAfter = 0; /* Don't normalize output by default */
+  char userFillInMissingAtoms = 0;
+  char userReverse = 0;
+
+  char atomUsed[MAX_ATOMS + 1]; /* For -fill */ /* 8-Oct-2016 nm */
+
+
+  /* The largest long double that seems to work with +1 is
+     2^53-1 = 9007199254740991 (9 quadrillion) */
+
+
+  /* if (strlen(ATOM_MAP) != MAX_ATOMS) bug(1); */
+  atomMapLen = (long)strlen(ATOM_MAP); /* Do here to speed up its reuse */
+
+
+  for (arg = 1; arg < argc; arg++) {
+    let(&str1, ""); /* Purge left() etc. vstring alloc. in previous pass */
+    if (!strcmp(argv[arg], "-opp")) {
+      userReverse = 1;
+    } else if (!strcmp(left(argv[arg], 2), "-r")) {
+      userRandom = 1;
+      let(&str1, right(argv[arg], 3));
+      p = instr(1, str1, "s");
+      if (p != 0) {
+        randomSeed = (long unsigned)val(right(str1, p + 1));
+        let(&str1, left(str1, p - 1));
+      } else {
+        randomSeed = getSeed();
+      }
+      if (str1[0]) {
+        randomCount = (long)val(str1);
+      } else {
+        randomCount = 1;
+      }
+      fprintf(stderr, "Seed for pseudo-random number generator = %lu\n",
+          randomSeed);
+      if (/*randomSeed < 0 ||*/ randomSeed > RAND_MAX) {
+        fprintf(stderr, "?Error: random seed must be 0 through %lu\n",
+            (unsigned long)RAND_MAX);
+        exit(1);
+      }
+      srand((unsigned int)randomSeed);
+    } else if (!strcmp(argv[arg], "-nb")) {
+      userNormalizeBefore = 1;  /* Normalization of input */
+    } else if (!strcmp(argv[arg], "-na")) {
+      userNormalizeAfter = 1;  /* Normalization of output */
+    } else if (!strcmp(argv[arg], "-fill")) {
+      userFillInMissingAtoms = 1;  /* Add missing vertices */
+    } else if (!strcmp(argv[arg], "--help")) {
+printf("mmpshuffle.c  Version %s\n", VERSION);
+printf("To run this program, type:\n");
+printf(
+"   mmpshuffle [-opp] [-r[<n>][s<seed>]] [-n] < inpfile > outfile\n");
+printf("where:\n");
+printf(
+"   -opp = put edges and vertices in opposite (reverse) order.\n");
+printf(
+"   -r[<n>][s<seed>] = for each input diagram, generate <n> output diagrams\n");
+printf(
+"       with randomized order of edges and randomized order of vertices\n");
+printf(
+"       within each edge.  If <n> is omitted, it will default to 1 (i.e.\n");
+printf(
+"       one output diagram will be generated for each input diagram).  The\n");
+printf(
+"       <seed> may be from 0 to %lu inclusive.  If s<seed> is omitted,\n",
+    (unsigned long)RAND_MAX);
+printf(
+"       a random seed will be used.  E.g. -r2s0 will produce two different,\n");
+printf(
+"       repeatable randomizations of each input diagram, and -r will produce\n");
+printf(
+"       one nonrepeatable randomization of each input diagram.\n");
+printf(
+"   -nb = normalize each input line _before_ shuffling (name vertices in\n");
+printf(
+"       order by first appearance, with no gaps in vertex numbering).  May\n");
+printf(
+"       be used with any other option or by itself.  With no other options,\n");
+printf(
+"       -nb will return the input MMP renumbered with no gaps and no\n");
+printf(
+"       and no shuffling.\n");
+printf(
+"   -na = like -nb, except normalize _after_ shuffling, so that each output\n");
+printf(
+"       diagram will have vertices numbered in order by first appearance.\n");
+printf(
+"   -fill = fills in missing vertices so that all edges are the same size\n");
+printf(
+"       (i.e. have the same dimension).  Retains any informational prefix\n");
+printf(
+"       and suffix fields such as with vectorfind.c output.\n");
+printf(
+"   Without any options, the program outputs the input MMP unchanged.\n");
+printf(
+"   In all cases, any informational prefix and suffix (such as vertex.\n");
+printf(
+"   and suffix count) is kept intact.\n");
+printf("For this help message, type:  mmpshuffle --help\n");
+printf("\n");
+printf(
+"Description:  This program reformats input MMPs according to the options\n");
+printf(
+"selected.  The MMP input file notation is the same as for Greechie\n");
+printf(
+"diagrams described in the help for the program latticeg.c\n");
+printf("\n");
+printf("Example of use:\n");
+printf("  ./mmpshuffle -opp < test.mmp\n");
+printf("where test.mmp contains the line:\n");
+printf("  1234,4567,789.\n");
+printf("The output will be:\n");
+printf("  987,7654,4321.\n");
+      goto return_point;
+    } else {
+      fprintf(stderr,
+"?Error:  Unrecognized option \"%s\".  Type \"mmpshuffle --help\" for usage\n",
+          argv[arg]);
+      exit(1);
+    }
+  }
+
+  /*
+  if (userRandom && userReverse) {
+    fprintf(stderr,
+"?Error: you may not specify both -opp and -r<n>s<seed>.\n");
+    exit(1);
+  }
+  */
+
+
+  while (1) {
+
+    /* Get line from standard input */
+    if (linput(NULL, NULL, &inputMMP) == 0) break; /* 0 means EOF */
+    /* Clean off carriage return (for Windows files under Cygwin) */
+    let(&inputMMP, edit(inputMMP, 4));
+    lattices++;
+
+    /* Get any prefix i.e. part of line before last space and any
+       suffix i.e. part of line after "." */
+    p = 0;
+    while (1) {  /* Find last space */
+      q = instr(p + 1, inputMMP, " ");
+      if (q == 0) break;
+      p = q;
+    }
+    q = instr(p + 1, inputMMP, "."); /* End of MMP, just before suffix */
+    if (q == 0) {
+      fprintf(stderr, "?Error: MMP #%ld doesn't end with period.\n", lattices);
+    }
+    if (p != 0) {
+      let(&MMPPrefix, left(inputMMP, p));
+    } else {
+      let(&MMPPrefix, "");
+    }
+    let(&MMPSuffix, right(inputMMP, q + 1));
+    let(&inputMMP, seg(inputMMP, p + 1, q));
+
+
+    let(&newMMP, "");
+    newMMP = parseMMP(inputMMP,
+        userNormalizeBefore /* normalize if user asked */);
+
+    /* If -opp specified, reverse the input MMP */
+    if (userReverse) {
+      /* Save the input diagram */
+      for (i = 1; i <= blocks; i++) {
+        saveBlockSize[i] = blockSize[i];
+        for (j = 1; j <= saveBlockSize[i]; j++) {
+          saveBlock[i][j] = block[i][j];
+        }
+      }
+      /* Reverse the input diagram */
+      for (i = 1; i <= blocks; i++) {
+        blockSize[blocks - i + 1] = saveBlockSize[i];
+        for (j = 1; j <= saveBlockSize[i]; j++) {
+          block[blocks - i + 1][saveBlockSize[i] - j + 1]
+              = saveBlock[i][j];
+        }
+      }
+      let(&newMMP, "");
+      newMMP = buildMMP(blocks, blockSize, block, ATOM_MAP, atomMapLen);
+
+      /* Print the output line */
+      if (userNormalizeAfter) {
+        let(&outMMP, "");
+        outMMP = parseMMP(newMMP,
+            userNormalizeAfter /* normalize if user asked */);
+        printf("%s\n", cat(MMPPrefix, outMMP, MMPSuffix, NULL));
+      } else {
+        printf("%s\n", cat(MMPPrefix, newMMP, MMPSuffix, NULL));
+      }
+      fflush(stdout);
+      outCount++;
+
+    }
+
+
+    if (userRandom) {
+
+      for (mmpCount = 1; mmpCount <= randomCount; mmpCount++) {
+
+        /* Initialize the block map used for -r */
+        for (i = 1; i <= blocks; i++) {
+           /* For normal use, map is transparent (identity map) */
+           randomMap[i] = i;
+        }
+        shuffle(randomMap, blocks);
+
+        /* Save the input diagram */
+        for (i = 1; i <= blocks; i++) {
+          saveBlockSize[i] = blockSize[i];
+          for (j = 1; j <= saveBlockSize[i]; j++) {
+            saveBlock[i][j] = block[i][j];
+          }
+        }
+        /* Shuffle the input diagram's blocks */
+        for (i = 1; i <= blocks; i++) {
+          blockSize[randomMap[i]] = saveBlockSize[i];
+          for (j = 1; j <= saveBlockSize[i]; j++) {
+            block[randomMap[i]][j] = saveBlock[i][j];
+          }
+        }
+
+        /* For each block, randomize the atoms inside the block */
+        for (i = 1; i <= blocks; i++) {
+          /* Initialize the random map for one block */
+          for (j = 1; j <= blockSize[i]; j++) {
+             /* For normal use, map is transparent (identity map) */
+             randomMap[j] = j;
+          }
+          shuffle(randomMap, blockSize[i]);
+          /* Save the block's atoms */
+          for (j = 1; j <= blockSize[i]; j++) {
+            saveBlock[i][j] = block[i][j];
+          }
+          /* Shuffle the atoms in the block */
+          for (j = 1; j <= blockSize[i]; j++) {
+            block[i][randomMap[j]] = saveBlock[i][j];
+          }
+        } /* next i (block) */
+
+
+        let(&newMMP, "");
+        newMMP = buildMMP(blocks, blockSize, block, ATOM_MAP, atomMapLen);
+        /* Print all but the last output lines */
+        if (userNormalizeAfter) {
+          let(&outMMP, "");
+          outMMP = parseMMP(newMMP,
+              userNormalizeAfter /* normalize if user asked */);
+          printf("%s\n", cat(MMPPrefix, outMMP, MMPSuffix, NULL));
+        } else {
+          printf("%s\n", cat(MMPPrefix, newMMP, MMPSuffix, NULL));
+        }
+        fflush(stdout);
+        outCount++;
+      } /* next mmpCount */
+    } /* end if userRandom */
+
+
+    /* 6-Oct-2016 nm */
+    if (userFillInMissingAtoms) {
+      b = 0;
+      /* Get the largest block size */
+      for (i = 1; i <= blocks; i++) {
+        if (b < blockSize[i]) b = blockSize[i];
+      }
+
+      /* Get which atoms are used */
+      for (i = 1; i <= MAX_ATOMS; i++) {
+        atomUsed[i] = 0;
+      }
+      for (i = 1; i <= blocks; i++) {
+        for (j = 1; j <= blockSize[i]; j++) {
+          atomUsed[block[i][j]] = 1;
+        }
+      }
+
+      /* Fill in smaller blocks with unused atoms */
+      for (i = 1; i <= blocks; i++) {
+        j = blockSize[i];
+        for (j = blockSize[i] + 1; j <= b; j++) {
+          p = 0;
+          for (k = 1; k <= MAX_ATOMS; k++) {
+            if (atomUsed[k] == 0) {
+              atomUsed[k] = 1;
+              block[i][j] = k;
+              if (k > maxAtom) maxAtom = k;
+              break;
+            }
+          }
+
+          /* For 3-dim, the isolated atom is usually the middle.
+             For better cosmetics (closer to original diagram),
+             swap the 3rd and 2nd atom.  The if block below may be
+             removed without side effects. */
+          if (b == 3 && j == 3) {
+            k = block[i][3];
+            block[i][3] = block[i][2];
+            block[i][2] = k;
+          }
+
+        }
+        blockSize[i] = b;
+      }
+
+      /* Print the output line */
+      let(&newMMP, "");
+      newMMP = buildMMP(blocks, blockSize, block, ATOM_MAP, atomMapLen);
+      if (userNormalizeAfter) {
+        let(&outMMP, "");
+        outMMP = parseMMP(newMMP,
+            userNormalizeAfter /* normalize if user asked */);
+        printf("%s\n", cat(MMPPrefix, outMMP, MMPSuffix, NULL));
+      } else {
+        printf("%s\n", cat(MMPPrefix, newMMP, MMPSuffix, NULL));
+      }
+      fflush(stdout);
+      outCount++;
+    } /* if (userFillInMissingAtoms) */
+
+    /* If none of -r, -opp, -fill specified, pass input to output (possibly
+       normalizing) */
+    if (!userReverse && !userRandom && !userFillInMissingAtoms) {
+      /* Print the output line */
+      if (userNormalizeAfter) {
+        let(&outMMP, "");
+        outMMP = parseMMP(newMMP,
+            userNormalizeAfter /* normalize if user asked */);
+        printf("%s\n", cat(MMPPrefix, outMMP, MMPSuffix, NULL));
+      } else {
+        printf("%s\n", cat(MMPPrefix, newMMP, MMPSuffix, NULL));
+      }
+      fflush(stdout);
+      outCount++;
+    }
+
+
+  } /* end while 1 (scan of input file) */
+
+  if (userRandom) {
+    fprintf(stderr,
+        "mmpshuffle: %ld input line(s) generated %ld output line(s).\n",
+        lattices, outCount);
+  }
+
+ return_point:
+  /* Deallocate vstring memory */
+  let(&str1, "");
+  let(&str2, "");
+  let(&inputMMP, "");
+  let(&newMMP, "");
+  let(&outMMP, "");
+
+  return 0;
+} /* End of main() */
+
+
+/* 22-Jan-2014 nm - taken from mmpshuffle.c */
+/* Parse an MMP diagram into globals:  blocks, blockSize[], block[][],
+   atoms, maxAtom */
+/* Depends on globals ATOM_MAP, atomMapLen */
+/* Caller must deallocate returned string. */
+/* 14-Jan-2017 nm - This function also renumbers the vector assignments
+   (from vecfind.c) in the global string MMPSuffix, if it isn't empty.
+   The function vectorRemap called by this function does the work. */
+vstring parseMMP(vstring inputDiagram /* MMP diagram */,
+    char normalize /* 0=don't, 1=do normalize output diagram */) {
+  long i, j, k, m, n;
+  vstring jptr;
+  long extendedNotationIncr; /* For + notation */
+  long extendedNotationOffset; /* For + notation */
+  /*vstring atomRemap = "";*/ /* To fill in atom gaps */
+  long atomRemap[MAX_ATOMS + 1]; /* To fill in atom gaps */
+  char atomUsed[MAX_ATOMS + 1]; /* To count actual atoms */
+  /*vstring inputDiagram = "";*/
+  vstring str1 = "";
+  vstring outputDiagram = "";
+  vstring newMMPSuffix = ""; /* 13-Jan-2013 nm */
+
+  /* extendedNotationIncr = strlen(ATOM_MAP); */ /* For + notation */
+  extendedNotationIncr = atomMapLen; /*  For + notation (faster than strlen) */
+
+  /*let(&inputDiagram, glattice);*/
+  /*let(&inputDiagram, edit(glattice, 2));*/ /* Remove spaces */
+
+  n = (long)strlen(inputDiagram);
+
+  if (!noErrorCheck) {
+    /* The calling routine should ensure this */
+    if (strchr(inputDiagram, ' ') != NULL) bug(14);
+/*D*//*printf("%s\n",inputDiagram);*/
+/*D*//*printf("n %ld\n",n);        */
+
+    /* inputDiagram can't be a blank line */
+    if (inputDiagram[0] == 0) {
+      fprintf(stderr, "#%ld: %s\n", lattices, inputDiagram);
+      fprintf(stderr, "?Error: Blank lines are not allowed\n");
+      exit(1);
+    }
+
+    /* inputDiagram must have ending period for new (Brendan) compact standard */
+    if (inputDiagram[n - 1] != '.') {
+      fprintf(stderr, "#%ld: %s\n", lattices, inputDiagram);
+      fprintf(stderr, "?Error: Last character should be a period\n");
+      exit(1);
+    }
+
+    /* if (instr(1, left(inputDiagram, n - 1), ".") != 0) { */
+    if (strchr(inputDiagram, '.') != inputDiagram + n - 1) {
+      fprintf(stderr, "#%ld: %s\n", lattices, inputDiagram);
+      fprintf(stderr, "?Error: Period can only be last character\n");
+      exit(1);
+    }
+    if (n == 1) {
+      fprintf(stderr, "#%ld: %s\n", lattices, inputDiagram);
+      fprintf(stderr, "?Error: Diagram must have at least one block\n");
+      exit(1);
+    }
+  }
+
+  maxAtom = 0;
+  blocks = 1;
+  blockSize[blocks] = 0;
+  extendedNotationOffset = 0; /* For + notation */
+  for (i = 0; i < n; i++) {
+    if (inputDiagram[i] == ',' || inputDiagram[i] == '.') {
+      /* End of block */
+      if (blockSize[blocks] < MIN_BLOCK_SIZE) {
+        fprintf(stderr, "#%ld: %s\n", lattices, inputDiagram);
+        fprintf(stderr,
+            "?Error: Block %ld has %ld atoms, but minimum block size is %ld\n",
+             blocks, blockSize[blocks], (long)MIN_BLOCK_SIZE);
+        exit(1);
+      }
+      if (inputDiagram[i] == ',') {
+        /* Start of new block */
+        blocks++;
+        if (blocks > MAX_BLOCKS) {
+          fprintf(stderr, "#%ld: %s\n", lattices, inputDiagram);
+          fprintf(stderr,
+   "?Error: Maximum blocks allowed is %ld.  Increase MAX_BLOCKS in program.\n",
+                (long)MAX_BLOCKS);
+          exit(1);
+        }
+        blockSize[blocks] = 0;
+      }
+      continue;
+    }
+
+    if (inputDiagram[i] == '+') {
+      /* Process the extended notation
+         12...9A...Za...`{|}~+1+2...+|+}+~++1...++~+++1....
+         From 23-Apr-2009 email to Mladen:
+           "If in the far future we get to say 10000 atoms, that would be
+           around 100 +'s per atom, obviously extremely inefficient.  But,
+           we still have "0" unused, and can have an alternate (and
+           compatible) notation where "0" is the start of a decimal number,
+           with some non-digit, say ".", terminating it.  I'll leave a
+           comment to that effect in the latticeg.c file, for when it
+           becomes a problem for a future generation" */
+      extendedNotationOffset += extendedNotationIncr;
+      continue;
+    }
+
+    /* Get the atom number */
+    /*j = instr(1, ATOM_MAP, chr(inputDiagram[i]));*/
+    /*let(&str1, "");*/ /* Deallocate chr call */
+    jptr = strchr(ATOM_MAP, inputDiagram[i]);
+    if (jptr == NULL) {
+      fprintf(stderr, "#%ld: %s\n", lattices, inputDiagram);
+      fprintf(stderr, "?Error: Illegal character '%c' in diagram\n",
+          inputDiagram[i]);
+      exit(1);
+    }
+    j = jptr - ATOM_MAP + 1; /* Atom number */
+    j += extendedNotationOffset; /* For + notation */
+    extendedNotationOffset = 0; /* For + notation - initialize for next atom */
+    blockSize[blocks]++;
+    if (blockSize[blocks] > MAX_BLOCK_SIZE) {
+      fprintf(stderr, "#%ld: %s\n", lattices, inputDiagram);
+      fprintf(stderr,
+           "?Error: Block %ld has %ld atoms, but maximum block size is %ld \n",
+           blocks, blockSize[blocks], (long)MAX_BLOCK_SIZE);
+      exit(1);
+    }
+    /* Assign the atom */
+    block[blocks][blockSize[blocks]] = j;
+    if (j > maxAtom) maxAtom = j; /* Maximum atom number */
+  } /* next i */
+
+
+  if (!noErrorCheck) {
+    for (i = 1; i <= blocks; i++) {
+      for (j = 1; j <= blockSize[i] - 1; j++) {
+        for (k = j + 1; k <= blockSize[i]; k++) {
+          if (block[i][j] == block[i][k]) {
+            fprintf(stderr, "#%ld: %s\n", lattices, inputDiagram);
+            fprintf(stderr,
+                "?Error: Duplicate atom numbers in a block\n");
+            exit(1);
+          }
+        }
+      }
+    }
+  }
+
+  /* Prevent compiler unused variable warnings due to stripped code below */
+  /* let(&atomRemap, ""); */
+  let(&str1, "");
+
+
+  /********* Start of canonical atom renaming section *******/
+
+  /* Count gaps in atom numbering */
+  for (i = 1; i <= maxAtom; i++) {
+    atomUsed[i] = 0;
+  }
+
+  /*let(&atomUsed, string(maxAtom + 1, '0'));*/ /* obsolete */
+  for (i = 1; i <= blocks; i++) {
+    for (j = 1; j <= blockSize[i]; j++) {
+      atomUsed[block[i][j]] = 1;
+    }
+  }
+  n = 0; /* Number of gaps in atom numbering */
+  for (i = 1; i <= maxAtom; i++) {
+    if (atomUsed[i] == 0) n++;
+  }
+  atoms = maxAtom - n; /* True number of atoms, even if gaps */
+  if (normalize) { /* Don't skip renumbering */
+    /***/
+    /* If there are gaps, remap the atoms to fill in the gaps */
+    if (n > 0) {
+      /* 25-Sep-2009 This is taken from states.c, where atomRemap is
+         wideString */
+      /* It must be changed to wideString for > 127 (?) atoms */
+      /* if (atoms >= 127) bug(15); */ /* Need to switch to wideString */
+      /* 19-Apr-2010 We now use an array from atomRemap so we don't
+         need the wideString stuff */
+      /* (Here is the intended use of atomRemap[]) */
+      /*let(&atomRemap, string(atoms + 1, '?'));*/ /*old*/
+      /*for (i = 1; i <= maxAtom; i++) atomRemap[i] = '?';*/
+      for (i = 1; i <= maxAtom; i++) atomRemap[i] = -1;  /* 14-Jan-2017 nm */
+                                             /* -1 means a gap at that point */
+      j = 0;
+      for (i = 1; i <= maxAtom; i++) {
+        if (atomUsed[i] == 1) {
+          j++; /* Atom is used */
+          atomRemap[i] = j;
+        }
+      }
+
+
+      /* 14-Jan-2017 nm */
+      /* Normalize the vector assignments in the MMP suffix, if any */
+      /* Note that we must call vectorRemap() _before_ changing maxAtoms
+         to atoms */
+      if (MMPSuffix[0] != 0) {
+        let(&newMMPSuffix, "");
+        newMMPSuffix = vectorRemap(MMPSuffix, atomRemap, maxAtom);
+        let(&MMPSuffix, newMMPSuffix);
+        let(&newMMPSuffix, "");
+      }
+
+
+      if (maxAtom - j != n) bug(16); /* Sanity check */
+      maxAtom = j; /* True number of atoms, with no gaps */
+      if (maxAtom != atoms) bug(19);
+      for (i = 1; i <= blocks; i++) {
+        for (j = 1; j <= blockSize[i]; j++) {
+          block[i][j] = atomRemap[block[i][j]];
+        }
+      }
+      /*let(&atomRemap, "");*/ /* Deallocate memory */
+    }
+    /***/
+    /* Renumber the atoms starting at 1 from left to right */
+    /* This will make sort | uniq find more duplicates to ignore */
+    /* See wideString warning above */
+    /*let(&atomRemap, string(atoms + 1, 127));*/
+    for (i = 1; i <= maxAtom; i++) atomRemap[i] = -1; /* -1 = "not an atom" */
+    k = 0;
+    for (i = 1; i <= blocks; i++) {
+      for (j = 1; j <= blockSize[i]; j++) {
+        /* if (atomRemap[block[i][j]] == 127) { */
+        if (atomRemap[block[i][j]] == -1) {
+          k++;
+          /* if (k == 127) bug(17); */
+          atomRemap[block[i][j]] = k;
+        }
+        block[i][j] = atomRemap[block[i][j]];
+      }
+    }
+    /* let(&atomRemap, ""); */
+    n = 1;  /* Force the diagram to be rewritten below */
+
+
+
+    /* 14-Jan-2017 nm */
+    /* Normalize the vector assignments in the MMP suffix, if any */
+    if (MMPSuffix[0] != 0) {
+      let(&newMMPSuffix, "");
+      newMMPSuffix = vectorRemap(MMPSuffix, atomRemap, maxAtom);
+      let(&MMPSuffix, newMMPSuffix);
+      let(&newMMPSuffix, "");
+    }
+
+
+
+  } /* if normalize */
+
+
+  /* 14-Jan-2017 nm */
+  /* The purpose of thsi vectorRemap() call is to strip off any
+     unused vector assignments in the suffix */
+  /* We do this all of the time even if we don't use -na or -nb,
+     in order to strip off any unused vector assignments (due to
+     e.g. mmpstrip) */
+  /* We are not remapping here (that was done above), so just create
+     an identity function for atomRemap[] */
+  for (i = 1; i <= maxAtom; i++) atomRemap[i] = -1; /* -1 = not used */
+  for (i = 1; i <= blocks; i++) { /* Map each used one to itself */
+    for (j = 1; j <= blockSize[i]; j++) {
+      atomRemap[block[i][j]] = block[i][j];
+    }
+  }
+  if (MMPSuffix[0] != 0) {
+    let(&newMMPSuffix, "");
+    newMMPSuffix = vectorRemap(MMPSuffix, atomRemap, maxAtom);
+    let(&MMPSuffix, newMMPSuffix);
+    let(&newMMPSuffix, "");
+  }
+
+
+  /********* End of canonical atom renaming section *******/
+
+  if (!normalize) n = 0; /* Skip renumbering below */
+
+  /* This is the global greechie diagram for use wherever
+     we want to print it out. */
+  /* if (instr(1, inputDiagram, ".") == 0 */
+  if (strchr(inputDiagram, '.') == NULL
+                          /* No period - assume old standard:  3-atom blocks */
+         || n > 0) {
+             /* Also, if there are atom numbering gaps, rewrite the diagram. */
+    /* First, compute the size of the new diagram */
+    m = 0;
+    for (i = 1; i <= blocks; i++) {
+      for (j = 1; j <= blockSize[i]; j++) {
+        k = block[i][j];
+        while (k > atomMapLen) {
+          /* Handle extended notation */
+          m++;
+          k -= atomMapLen;
+        }
+        m++;
+      }
+      m++;
+    }
+    let(&outputDiagram, space(m)); /* Preallocate string to computed size */
+    /* Next, fill in the characters */
+    m = 0;
+    for (i = 1; i <= blocks; i++) {
+      for (j = 1; j <= blockSize[i]; j++) {
+        k = block[i][j];
+        while (k > atomMapLen) {
+          /* Handle extended notation */
+          outputDiagram[m] = '+';
+          m++;
+          k -= atomMapLen;
+        }
+        outputDiagram[m] = ATOM_MAP[k - 1];
+        m++;
+      }
+      if (i < blocks) {
+        outputDiagram[m] = ',';
+        m++;
+      } else {
+        outputDiagram[m] = '.';
+        m++;
+      }
+    }
+    if (outputDiagram[m] != 0) bug(18); /* Must be end of string */
+  } else {
+    /* It is already in the new compact form */
+    let(&outputDiagram, inputDiagram);
+  }
+
+  /* Deallocate strings */
+  let(&str1, "");
+  /*let(&inputDiagram, "");*/
+
+  /* The caller must deallocate outputDiagram */
+  return outputDiagram;
+} /* parseMMP */
+
+
+/* 22-Jan-2014 nm - taken from mmpshuffle.c */
+/* Build an MMP diagram from input:  blocks, blockSize[], block[][],
+   ATOM_MAP, and atomMapLen */
+/* User must deallocate returned string */
+vstring buildMMP(long blocks_, long *blockSize_,
+    long (*block_)[MAX_BLOCK_SIZE + 1], char *aTOM_MAP,
+    long atomMapLen_) {
+  long m, b, ba, a, extendedNotationIncr;
+  vstring newMMP = "";
+  /* extendedNotationIncr = strlen(aTOM_MAP); */ /* For + notation */
+  extendedNotationIncr = atomMapLen_; /*  For + notation (faster than strlen) */
+  /* First, we compute the size of the new MMP diagram */
+  m = 0; /* Pointer to MMP diagram character */
+  for (b = 1; b <= blocks_; b++) {
+    for (ba = 1; ba <= blockSize_[b]; ba++) {
+      a = block_[b][ba]; /* Atom in block */
+      while (a > extendedNotationIncr) {
+        /* Handle extended notation */
+        m++;
+        a -= extendedNotationIncr;
+      }
+      m++;
+    }
+    m++;
+  }
+  let(&newMMP, space(m)); /* Preallocate string to computed size */
+  /* Next, fill in the characters */
+  m = 0;  /* Pointer to MMP diagram character */
+  for (b = 1; b <= blocks_; b++) {
+    for (ba = 1; ba <= blockSize_[b]; ba++) {
+      a = block_[b][ba]; /* Atom */
+      while (a > extendedNotationIncr) {
+        /* Handle extended notation */
+        if (newMMP[m] != ' ') bug(206);
+        newMMP[m] = '+';
+        m++;
+        a -= extendedNotationIncr;
+      }
+      if (newMMP[m] != ' ') bug(207);
+      newMMP[m] = aTOM_MAP[a - 1];
+      m++;
+    }
+    if (newMMP[m] != ' ') bug(208);
+    newMMP[m] = ',';
+    m++;
+  }
+  if (newMMP[m] != 0) bug(210); /* Should be end of string */
+  if (m == 0) bug(212);
+  if (newMMP[m - 1] != ',') bug(213);
+  newMMP[m - 1] = '.';
+     /* This global is updated for possible later use so we don't have to
+        call parseMMP again, but the other block_[] structure entries
+        are NOT valid! */
+  return newMMP; /* Caller must deallocate */
+} /* buildMMP */
+
+
+
+/* 14-Jan-2017 nm */
+/* Renumber vector assignments - normally called from MMPParse() */
+/* The caller must deallocate returned string. */
+/* Note:  atoms '{', '+{', '++{', etc. are assumed to have been changed
+   to '.', '+.', '++.', etc. in MMPSuffx, and '.' in place of '{' is also used
+   in the regenerated output suffix. */
+vstring vectorRemap(vstring MMPSuffx, long *atomRemap, long maxAt)
+{
+  vstring outSuffix = ""; /* The return string */
+  vstring atomName = ""; /* Holds atom name */
+  vstring sVec = "";  /* Holds vector assigned to it */
+  vstring newAtomName = "";
+  long p, q, i, atomNum;
+  long newAtomNum = 0;
+
+  if (MMPSuffx[0] == 0) {
+    let(&outSuffix, "");
+    goto VEC_RETURN_POINT;  /* Suffix is empty */
+  }
+
+  i = (long)strlen(MMPSuffx);
+  if (MMPSuffx[0] != '{' || MMPSuffx[i - 1] != '}') {
+    fprintf(stderr,
+  "#%ld The vector assignment suffix is not surrounded by \"'{\" and \"}\".\n",
+        lattices);
+    exit(1);
+  }
+
+  let(&outSuffix, "{");  /* Start constructed output assignment */
+  /* Modified code from vecfind.c below */
+  /* Get vectors from the MMP suffix */
+  p = 1;  q = 0;
+  while (1) {
+    /* p = instr(p + 1, MMPSuffx, "{"); */
+    /* Ensure correct match when atom is "{" */
+    p = instr(p + 1, MMPSuffx, "={"); /* 24-Mar-2018 */
+    if (p == 0) break;
+    p++; /* 24-Mar-2018 nm */
+
+    /* Get the atom (vertex) the vector is assigned to */
+    if (q == 0) {
+      /* Get atom name prefix in front of the vector */
+      /* The "A=" in "A={0,0,1},++2={0,1,0}..." */
+      let(&atomName, seg(MMPSuffx, 2, p - 1));
+    } else {
+      /* Get atom name prefix in front of the vector */
+      /* The ",++2=" in "1={0,0,1},++2={0,1,0}..." */
+      let(&atomName, seg(MMPSuffx, q + 1, p - 1));
+      if (atomName[0] != 0) {
+          /* If it is a "pass", there is no assignment (and no comma) */
+        if (atomName[0] != ',') {
+          fprintf(stderr,
+              "#%ld ?Error: Expected ',' at position %ld in %s\n",
+              lattices, q + 1, MMPSuffx);
+          /* Don't try to recover if pre-assignment corrupted */
+          exit(1);
+        }
+      } else {
+        /* 14-Jan-2017 nm The {{0,0,1},{0,1,0},...} form is no longer allowed */
+        fprintf(stderr,
+"#%ld ?Error: Suffix assignments must be of the form A={0,0,1} etc.\n", lattices);
+        fprintf(stderr, "#%ld     at position %ld in %s\n",
+            lattices, q + 1, MMPSuffx);
+        /* Don't try to recover if pre-assignment corrupted */
+        exit(1);
+      }
+      /* Strip comma */
+      if (atomName[0] == ',' && strlen(atomName) > 2) {
+        let(&atomName, right(atomName, 2));
+      }
+    } /* if (q == 0) else */
+
+    q = instr(p + 1, MMPSuffx, "}");
+    if (q == 0) break;
+    let(&sVec, seg(MMPSuffx, p, q));
+
+    i = (long)strlen(atomName);
+    if (atomName[i - 1] != '=') {
+      fprintf(stderr, "#%ld ?Error: Expected '=' at position %ld in %s\n",
+          lattices, q + i, MMPSuffx);
+      /* Don't try to recover if pre-assignment corrupted */
+      exit(1);
+    }
+    /* Strip off '=' */
+    let(&atomName, left(atomName, i - 1));
+    if (atomName[0] == 0) {
+      fprintf(stderr,
+    "#%ld ?Error: Vertex name too short (empty string) at position %ld in %s\n",
+          lattices, p - 2, MMPSuffx);
+      exit(1);
+    }
+    if (atomName[i - 2] == '.') {
+      /* If atom name is '.', assume we changed it from "{" to prevent
+         parsing ambiguity */
+      atomName[i - 2] = '{';
+    }
+
+    /* Remap the atomName */
+    atomNum = extendedAtomNumber(atomName);
+    /*
+    if (atomNum > maxAt || atomNum < 1) {
+      fprintf(stderr,
+          "#%ld ?Error: Vertex %s (in vector suffix) is not in MMP diagram)\n",
+          lattices, atomName);
+      exit(1);
+    }
+    newAtomNum = atomRemap[atomNum];
+    if (newAtomNum <= 0) {
+      fprintf(stderr,
+          "#%ld ?Error: Vertex %s (in vector suffix) isn't in MMP diagram)\n",
+          lattices, atomName);
+      exit(1);
+    }
+    */
+
+    newAtomNum = 0;
+    if (atomNum <= maxAt && atomNum > 0) {
+      newAtomNum = atomRemap[atomNum];
+    }
+
+    /* When an assigned atom isn't in the MMP, we just ignore it and don't
+       put it into the final list */
+    if (atomNum <= maxAt && atomNum > 0 && newAtomNum > 0) {
+
+      let(&newAtomName, "");
+      newAtomName = extendedAtomName(newAtomNum);
+
+      /* If new name has "{", change it to illegal "." to prevent ambiguity */
+      i = (long)strlen(newAtomName);
+      if (newAtomName[i - 1] == '{') {
+        newAtomName[i - 1] = '.';
+      }
+
+      let(&outSuffix, cat(outSuffix,
+          (strlen(outSuffix) > 1) ? "," : "",
+          newAtomName, "=", sVec, NULL));
+    }
+
+  } /* while (1) */
+
+
+  let(&outSuffix, cat(outSuffix, "}", NULL)); /* End constructed output */
+
+ VEC_RETURN_POINT:
+  let(&atomName, "");
+  let(&sVec, "");
+  let(&newAtomName, "");
+  return outSuffix;
+} /* vectorRemap */
+
+
+/* 22-Jan-2014 nm - taken from states01.c */
+/* Get the extended notation name of a single atom */
+/* The user must deallocate the output string */
+/* This function is inefficient but is not expected to be used often;
+   if it is, it can be rewritten to implement the buildMMP algorithm
+   directly. */
+vstring extendedAtomName(long atom) {
+  long block_[2][MAX_BLOCK_SIZE + 1];
+  long blockSize_[2];
+  long blocks_ = 1;
+  vstring newMMP = "";
+  blockSize_[1] = 1;
+  block_[1][1] = atom;
+  /* Build the new MMP diagram */
+  /* New 25-Dec-2013 */
+  let(&newMMP, "");
+  newMMP = buildMMP(blocks_, blockSize_, block_, ATOM_MAP, atomMapLen);
+  let(&newMMP, left(newMMP, (long)strlen(newMMP) - 1)); /* Remove period */
+  return newMMP;
+} /* extendedAtomName */
+
+
+/* 14-Jan-2017 nm - taken from vecfind.c */
+/* Returns atom number corresponding to string such as "A", "++3", etc. */
+long extendedAtomNumber(vstring atomStr)
+{
+  long extendedNotationOffset = 0; /* For + notation */
+  long extendedNotationIncr; /* For + notation */
+  long j = 0;
+  long i, slen;
+  vstring jptr; /* Use as pointer only */
+
+  /* extendedNotationIncr = strlen(ATOM_MAP); */ /* For + notation */
+  extendedNotationIncr = atomMapLen; /* Use global var (faster than strlen) */
+  slen = (long)strlen(atomStr);
+  for (i = 0; i < slen; i++) {
+    if (atomStr[i] == '+') {
+      /* Process the extended notation
+         12...9A...Za...`{|}~+1+2...+|+}+~++1...++~+++1....
+         From 23-Apr-2009 email to Mladen:
+           "If in the far future we get to say 10000 atoms, that would be
+           around 100 +'s per atom, obviously extremely inefficient.  But,
+           we still have "0" unused, and can have an alternate (and
+           compatible) notation where "0" is the start of a decimal number,
+           with some non-digit, say ".", terminating it.  I'll leave a
+           comment to that effect in the latticeg.c file, for when it
+           becomes a problem for a future generation" */
+      extendedNotationOffset += extendedNotationIncr;
+      continue;
+    }
+
+    if (i < slen - 1) {
+      fprintf(stderr,
+          "#%ld: ?Error: vertex \"%s\" isn't in the form [+...+]<char>\n",
+          lattices, atomStr);
+      exit(1);
+    }
+
+    /* Get the atom number */
+    /*j = instr(1, ATOM_MAP, chr(atomStr[i]));*/
+    /*let(&str1, "");*/ /* Deallocate chr call */
+    jptr = strchr(ATOM_MAP, atomStr[i]);
+    if (jptr == NULL) {
+      fprintf(stderr, "#%ld: %s\n", lattices, atomStr);
+      fprintf(stderr, "?Error: Illegal character '%c' in diagram\n",
+          atomStr[i]);
+      exit(1);
+    }
+    j = jptr - ATOM_MAP + 1; /* Atom number */
+    j += extendedNotationOffset; /* For + notation */
+  } /* next i */
+  return j;
+} /* extendedAtomNumber */
+
+
+
+/* Shuffle a deck of cards, 1 through cards */
+void shuffle(long *card, long cards) {
+  long r, a, i;
+  for (i = 1; i < cards; i++) {
+    /* Get a random number from i through cards */
+    r = rand() % (cards - i + 1) + i;
+    if (r < 1 || r > cards) bug(20);
+    /* Swap ith card with rth card */
+    a = card[i];
+    card[i] = card[r];
+    card[r] = a;
+  }
+}
+
+
+/* Get a random seed */
+unsigned long getSeed(void) {
+  unsigned long seed;
+  static unsigned long offset = 0;
+  seed = mix3((unsigned long)(clock()) + offset,
+       (unsigned long)(time(NULL)), (unsigned long)(getpid()));
+  offset++; /* Ensure a different result next time this is called */
+  if (seed > RAND_MAX) seed = seed % RAND_MAX;
+  if (seed > RAND_MAX /* || seed < 0 */) {
+    fprintf(stderr, "seed = %lu  RAND_MAX = %lu\n",
+        seed, (unsigned long)RAND_MAX);
+    bug(21);
+  }
+  return seed;
+}
+
+/* http://www.concentric.net/~Ttwang/tech/inthash.htm
+   Public domain code */
+unsigned long mix3(unsigned long a, unsigned long b, unsigned long c)
+{
+    a = a - b;  a = a - c;  a = a ^ (c >> 13);
+    b = b - c;  b = b - a;  b = b ^ (a << 8);
+    c = c - a;  c = c - b;  c = c ^ (b >> 13);
+    a = a - b;  a = a - c;  a = a ^ (c >> 12);
+    b = b - c;  b = b - a;  b = b ^ (a << 16);
+    c = c - a;  c = c - b;  c = c ^ (b >> 5);
+    a = a - b;  a = a - c;  a = a ^ (c >> 3);
+    b = b - c;  b = b - a;  b = b ^ (a << 10);
+    c = c - a;  c = c - b;  c = c ^ (b >> 15);
+    return c;
+}
+
+
+/******************* End of main program ********************************/
+
+
+/***********************************************************************/
+/************ Start of "vstring" body stuff ****************************/
+/************ Do not touch anything from here to end of program ********/
+/***********************************************************************/
+
+/*****************************************************************************/
+/*       Copyright (C) 1999  NORMAN D. MEGILL  <nm at alum.mit.edu>          */
+/*             License terms:  GNU General Public License                    */
+/*****************************************************************************/
+
+/**************************************************************************
+
+Variable-length string handler
+------------------------------
+
+     This collection of string-handling functions emulate most of the
+string functions of VMS BASIC.  The objects manipulated by these functions
+are strings of a special type called 'vstring' which
+have no pre-defined upper length limit but are dynamically allocated
+and deallocated as needed.  To use the vstring functions within a program,
+all vstrings must be initially set to the null string when declared or
+before first used, for example:
+
+        vstring string1 = "";
+        vstring stringArray[] = {"","",""};
+
+        vstring bigArray[100][10]; /- Must be initialized before using -/
+        int i,j;
+        for (i=0; i<100; i++)
+          for (j=0; j<10; j++)
+            bigArray[i][j] = ""; /- Initialize -/
+
+
+     After initialization, vstrings should be assigned with the 'let(&'
+function only; for example the statements
+
+        let(&string1,"abc");
+        let(&string1,string2);
+        let(&string1,left(string2,3));
+
+all assign the second argument to 'string1'.  The 'let(&' function must
+not be used to initialize a vstring for the first time.
+
+     The 'cat' function emulates the '+' concatenation operator in BASIC.
+It has a variable number of arguments, and the last argument should always
+be NULL.  For example,
+
+        let(&string1,cat("abc","def",NULL));
+
+assigns "abcdef" to 'string1'.  Warning: 0 will work instead of NULL on the
+VAX but not on the Macintosh, so always use NULL.
+
+     All other functions are generally used exactly like their BASIC
+equivalents.  For example, the BASIC statement
+
+        let string1$=left$("def",len(right$("xxx",2)))+"ghi"+string2$
+
+is emulated in c as
+
+        let(&string1,cat(left("def",len(right("xxx",2))),"ghi",string2,NULL));
+
+Note that ANSI c does not allow "$" as part of an identifier
+name, so the names in c have had the "$" suffix removed.
+
+     The string arguments of the vstring functions may be either standard c
+strings or vstrings (except that the first argument of the 'let(&' function
+must be a vstring).  The standard c string functions may use vstrings or
+vstring functions as their string arguments, as long as the vstring variable
+itself (which is a char * pointer) is not modified and no attempt is made to
+increase the length of a vstring.  Caution must be excercised when
+assigning standard c string pointers to vstrings or the results of
+vstring functions, as the memory space may be deallocated when the
+'le(&t' function is next executed.  For example,
+
+        char *stdstr; /- A standard c string pointer -/
+         ...
+        stdstr=left("abc",2);  /- DO NOT DO THIS -/
+
+will assign "ab" to 'stdstr', but this assignment will be lost when the
+next 'let(&' function is executed.  To be safe, use 'strcpy':
+
+        char stdstr1[80]; /- A fixed length standard c string -/
+         ...
+        strcpy(stdstr1,left("abc",2));
+
+Here, of course, the user must ensure that the string copied to 'stdstr1'
+does not exceed 79 characters in length.  IT IS SAFEST NOT TO USE ANY
+STANDARD C STRING FUNCTIONS WITH VSTRINGS OR VSTRING FUNCTIONS UNLESS YOU
+REALLY UNDERSTAND WHAT YOU ARE DOING.
+
+     The vstring functions ('left', 'right', 'cat', etc.) allocate temporary
+memory whenever they are called.  This temporary memory is deallocated
+whenever a 'let(&' assignment is made.  The user should be aware of this
+when using vstring functions outside of 'let(&' assignments; for example
+
+        for (i=0; i<10000; i++)
+          print2("%s\n",left(string1,70));
+
+will allocate another 70 bytes or so of memory each 'left' call
+and eventually overflow the temporary string stack.
+If necessary, dummy 'let(&' assignments can be made periodically to clear
+this temporary memory:
+
+        for (i=0; i<10000; i++)
+          {
+          print2("%s\n",left(string1,70));
+          let(&dummy,"");
+          }
+
+It should be noted that the 'linput' function assigns its target string
+with 'let(&' and thus has the same deallocation effect as 'let(&'.
+
+************************************************************************/
+
+
+static void freeTempAlloc(void)
+{
+  /* All memory previously allocated with tempAlloc is deallocated. */
+  /* EXCEPT:  When startTempAllocStack != 0, the freeing will start at
+     startTempAllocStack. */
+  int i;
+  for (i = startTempAllocStack; i < tempAllocStackTop; i++) {
+    free(tempAllocStack[i]);
+  }
+  tempAllocStackTop = startTempAllocStack;
+} /* freeTempAlloc */
+
+
+static void pushTempAlloc(void *mem)
+{
+  if (tempAllocStackTop >= (MAX_ALLOC_STACK-1)) {
+    printf("*** FATAL ERROR ***  Temporary string stack overflow\n");
+    fflush(stdout);
+    bug(2201);
+  }
+  tempAllocStack[tempAllocStackTop++] = mem;
+} /* pushTempAlloc */
+
+
+static void* tempAlloc(long size)  /* String memory allocation/deallocation */
+{
+  void* memptr = malloc((size_t)size);
+  if (!memptr || size == 0) {
+    printf("*** FATAL ERROR ***  Temporary string allocation failed\n");
+    fflush(stdout);
+    bug(2202);
+  }
+  pushTempAlloc(memptr);
+  return memptr;
+} /* tempAlloc */
+
+
+/* Make string have temporary allocation to be released by next let() */
+/* Warning:  after makeTempAlloc() is called, the vstring may NOT be
+   assigned again with let() */
+void makeTempAlloc(vstring s)
+{
+  pushTempAlloc(s);
+} /* makeTempAlloc */
+
+
+/* 8-Jul-2013 Wolf Lammen - rewritten to simplify it */
+void let(vstring *target, vstring source)        /* String assignment */
+/* This function must ALWAYS be called to make assignment to */
+/* a vstring in order for the memory cleanup routines, etc. */
+/* to work properly.  If a vstring has never been assigned before, */
+/* it is the user's responsibility to initialize it to "" (the */
+/* null string). */
+{
+
+  size_t sourceLength = strlen(source);  /* Save its length */
+  size_t targetLength = strlen(*target); /* Save its length */
+  if (targetLength < sourceLength) { /* Old string has not enough room for new one */
+    /* Free old string space and allocate new space */
+    if (targetLength)
+      free(*target);  /* Free old space */
+    *target = malloc(sourceLength + 1); /* Allocate new space */
+    if (!*target) {
+      printf("*** FATAL ERROR ***  String memory couldn't be allocated\n");
+      fflush(stdout);
+      bug(2204);
+    }
+  }
+  if (sourceLength) {
+    strcpy(*target, source);
+  } else {
+    /* Empty strings could still be temporaries, so always assign a constant */
+    if (targetLength) {
+      free(*target);
+    }
+    *target= "";
+  }
+
+  freeTempAlloc(); /* Free up temporary strings used in expression computation */
+
+} /* let */
+
+vstring cat(vstring string1,...)        /* String concatenation */
+#define MAX_CAT_ARGS 50
+{
+  va_list ap;   /* Declare list incrementer */
+  vstring arg[MAX_CAT_ARGS];    /* Array to store arguments */
+  size_t argPos[MAX_CAT_ARGS]; /* Array of argument positions in result */
+  vstring result;
+  int i;
+  int numArgs = 0;        /* Define "last argument" */
+
+  size_t pos = 0;
+  char* curArg = string1;
+
+  va_start(ap, string1); /* Begin the session */
+  do {
+        /* User-provided argument list must terminate with 0 */
+    if (numArgs >= MAX_CAT_ARGS) {
+      printf("*** FATAL ERROR ***  Too many cat() arguments\n");
+      fflush(stdout);
+      bug(2206);
+    }
+    arg[numArgs] = curArg;
+    argPos[numArgs] = pos;
+    pos += strlen(curArg);
+  } while (++numArgs, (curArg = va_arg(ap,char *)) != 0);
+  va_end(ap);           /* End var args session */
+
+  /* Allocate the memory for it */
+  result = tempAlloc((long)pos+1);
+  /* Move the strings into the newly allocated area */
+  for (i = 0; i < numArgs; ++i)
+    strcpy(result + argPos[i], arg[i]);
+  return result;
+} /* cat */
+
+
+/* 20-Oct-2013 Wolf Lammen - allow unlimited input line lengths */
+/* Input a line from the user or from a file */
+/* Returns 1 if a (possibly empty) line was successfully read, 0 if EOF */
+int linput(FILE *stream, const char* ask, vstring *target)
+{                           /* Note: "vstring *target" means "char **target" */
+  /*
+    BASIC:  linput "what"; a$
+    c:      linput(NULL, "what?", &a);
+
+    BASIC:  linput #1, a$                         (error trap on EOF)
+    c:      if (!linput(file1, NULL, &a)) break;  (break on EOF)
+
+  */
+  /* This function prints a prompt (if 'ask' is not NULL), gets a line from
+    the stream, and assigns it to target using the let(&...) function.
+    0 is returned when end-of-file is encountered.  The vstring
+    *target MUST be initialized to "" or previously assigned by let(&...)
+    before using it in linput. */
+  char f[10001]; /* Read in chunks up to 10000 characters */
+  int result = 0;
+  int eol_found = 0;
+  if (ask) {
+    printf("%s", ask);
+    fflush(stdout);
+  }
+  if (stream == NULL) stream = stdin;
+  while (!eol_found && fgets(f, sizeof(f), stream))
+  {
+    size_t endpos = strlen(f) - 1;
+    eol_found = (f[endpos] == '\n');
+    /* If the last line in the file has no newline, eol_found will be 0 here.
+       The fgets() above will return 0 and prevent another loop iteration. */
+    if (eol_found)
+      f[endpos] = 0; /* The return string will have any newline stripped. */
+    if (result)
+      /* Append additional parts of the line to *target */
+      /* The let() reallocates *target and copies the concatenation of the
+         old *target and the additional input f[] to it */
+      let(target /* = &(*target) */, cat(*target, f, NULL));
+    else
+      /* This is the first time through the loop, and normally
+         the only one unless the input line overflows f[] */
+      let(target, f);  /* Allocate *target and copy f to it */
+    result = 1;
+  }
+  return result;
+} /* linput */
+
+
+/* Find out the length of a string */
+long len(vstring s)
+{
+  return ((long)strlen(s));
+} /* len */
+
+
+/* Extract sin from character position start to stop into sout */
+vstring seg(vstring sin, long start, long stop)
+{
+  if (start < 1) start = 1;
+  return mid(sin, start, stop - start + 1);
+} /* seg */
+
+
+/* Extract sin from character position start for length len */
+vstring mid(vstring sin, long start, long length)
+{
+  vstring sout;
+  if (start < 1) start = 1;
+  if (length < 0) length = 0;
+  sout=tempAlloc(length + 1);
+  strncpy(sout,sin + start - 1, (size_t)length);
+  sout[length] = 0;
+  return (sout);
+} /* mid */
+
+
+/* Extract leftmost n characters */
+vstring left(vstring sin,long n)
+{
+  return mid(sin, 1, n);
+} /* left */
+
+
+/* Extract after character n */
+vstring right(vstring sin, long n)
+{
+  return seg(sin, n, (long)(strlen(sin)));
+} /* right */
+
+
+
+/* Emulate VMS BASIC edit$ command */
+vstring edit(vstring sin,long control)
+#define isblank_(c) ((c==' ') || (c=='\t'))
+    /* 11-Sep-2009 nm Added _ to fix '"isblank" redefined' compiler warning */
+{
+  /* EDIT$ (from VMS BASIC manual)
+       Syntax:  str-vbl = EDIT$(str-exp, int-exp)
+       Values   Effect
+       1        Trim parity bits
+       2        Discard all spaces and tabs
+       4        Discard characters: CR, LF, FF, ESC, RUBOUT, and NULL
+       8        Discard leading spaces and tabs
+       16       Reduce spaces and tabs to one space
+       32       Convert lowercase to uppercase
+       64       Convert [ to ( and ] to )
+       128      Discard trailing spaces and tabs
+       256      Do not alter characters inside quotes
+
+       (non-BASIC extensions)
+       512      Convert uppercase to lowercase
+       1024     Tab the line (convert spaces to equivalent tabs)
+       2048     Untab the line (convert tabs to equivalent spaces)
+       4096     Convert VT220 screen print frame graphics to -,|,+ characters
+
+       (Added 10/24/03:)
+       8192     Discard CR only (to assist DOS-to-Unix conversion)
+  */
+  vstring sout;
+  long i, j, k, m;
+  int last_char_is_blank;
+  int trim_flag, discardctrl_flag, bracket_flag, quote_flag, case_flag;
+  int alldiscard_flag, leaddiscard_flag, traildiscard_flag, reduce_flag;
+  int processing_inside_quote=0;
+  int lowercase_flag, tab_flag, untab_flag, screen_flag, discardcr_flag;
+  unsigned char graphicsChar;
+
+  /* Set up the flags */
+  trim_flag = control & 1;
+  alldiscard_flag = control & 2;
+  discardctrl_flag = control & 4;
+  leaddiscard_flag = control & 8;
+  reduce_flag = control & 16;
+  case_flag = control & 32;
+  bracket_flag = control & 64;
+  traildiscard_flag = control & 128;
+  quote_flag = control & 256;
+
+  /* Non-BASIC extensions */
+  lowercase_flag = control & 512;
+  tab_flag = control & 1024;
+  untab_flag = control & 2048;
+  screen_flag = control & 4096; /* Convert VT220 screen prints to |,-,+
+                                   format */
+  discardcr_flag = control & 8192; /* Discard CR's */
+
+  /* Copy string */
+  i = (long)strlen(sin) + 1;
+  if (untab_flag) i = i * 7; /* Allow for max possible length */
+  sout=tempAlloc(i);
+  strcpy(sout,sin);
+
+  /* Discard leading space/tab */
+  i=0;
+  if (leaddiscard_flag)
+    while ((sout[i] != 0) && isblank_(sout[i]))
+      sout[i++] = 0;
+
+  /* Main processing loop */
+  while (sout[i] != 0) {
+
+    /* Alter characters inside quotes ? */
+    if (quote_flag && ((sout[i] == '"') || (sout[i] == '\'')))
+       processing_inside_quote = ~ processing_inside_quote;
+    if (processing_inside_quote) {
+       /* Skip the rest of the code and continue to process next character */
+       i++; continue;
+    }
+
+    /* Discard all space/tab */
+    if ((alldiscard_flag) && isblank_(sout[i]))
+        sout[i] = 0;
+
+    /* Trim parity (eighth?) bit */
+    if (trim_flag)
+       sout[i] = sout[i] & 0x7F;
+
+    /* Discard CR,LF,FF,ESC,BS */
+    if ((discardctrl_flag) && (
+         (sout[i] == '\015') || /* CR  */
+         (sout[i] == '\012') || /* LF  */
+         (sout[i] == '\014') || /* FF  */
+         (sout[i] == '\033') || /* ESC */
+         /*(sout[i] == '\032') ||*/ /* ^Z */ /* DIFFERENCE won't work w/ this */
+         (sout[i] == '\010')))  /* BS  */
+      sout[i] = 0;
+
+    /* Discard CR */
+    if ((discardcr_flag) && (
+         (sout[i] == '\015')))  /* CR  */
+      sout[i] = 0;
+
+    /* Convert lowercase to uppercase */
+    /*
+    if ((case_flag) && (islower(sout[i])))
+       sout[i] = toupper(sout[i]);
+    */
+    /* 13-Jun-2009 nm The upper/lower case C functions have odd behavior
+       with characters > 127, at least in lcc.  So this was rewritten to
+       not use them. */
+    if ((case_flag) && (sout[i] >= 'a' && sout[i] <= 'z'))
+       sout[i] = (char)(sout[i] - ('a' - 'A'));
+
+    /* Convert [] to () */
+    if ((bracket_flag) && (sout[i] == '['))
+       sout[i] = '(';
+    if ((bracket_flag) && (sout[i] == ']'))
+       sout[i] = ')';
+
+    /* Convert uppercase to lowercase */
+    /*
+    if ((lowercase_flag) && (isupper(sout[i])))
+       sout[i] = tolower(sout[i]);
+    */
+    /* 13-Jun-2009 nm The upper/lower case C functions have odd behavior
+       with characters > 127, at least in lcc.  So this was rewritten to
+       not use them. */
+    if ((lowercase_flag) && (sout[i] >= 'A' && sout[i] <= 'Z'))
+       sout[i] = (char)(sout[i] + ('a' - 'A'));
+
+    /* Convert VT220 screen print frame graphics to +,|,- */
+    if (screen_flag) {
+      graphicsChar = (unsigned char)sout[i]; /* Need unsigned char for >127 */
+      /* vt220 */
+      if (graphicsChar >= 234 && graphicsChar <= 237) sout[i] = '+';
+      if (graphicsChar == 241) sout[i] = '-';
+      if (graphicsChar == 248) sout[i] = '|';
+      if (graphicsChar == 166) sout[i] = '|';
+      /* vt100 */
+      if (graphicsChar == 218 /*up left*/ || graphicsChar == 217 /*lo r*/
+          || graphicsChar == 191 /*up r*/ || graphicsChar == 192 /*lo l*/)
+        sout[i] = '+';
+      if (graphicsChar == 196) sout[i] = '-';
+      if (graphicsChar == 179) sout[i] = '|';
+    }
+
+    /* Process next character */
+    i++;
+  }
+  /* sout[i]=0 is the last character at this point */
+
+  /* Clean up the deleted characters */
+  for (j = 0, k = 0; j <= i; j++)
+    if (sout[j]!=0) sout[k++]=sout[j];
+  sout[k] = 0;
+  /* sout[k] = 0 is the last character at this point */
+
+  /* Discard trailing space/tab */
+  if (traildiscard_flag) {
+    --k;
+    while ((k >= 0) && isblank_(sout[k])) --k;
+    sout[++k] = 0;
+  }
+
+  /* Reduce multiple space/tab to a single space */
+  if (reduce_flag) {
+    i = j = last_char_is_blank = 0;
+    while (i <= k - 1) {
+      if (!isblank_(sout[i])) {
+        sout[j++] = sout[i++];
+        last_char_is_blank = 0;
+      } else {
+        if (!last_char_is_blank)
+          sout[j++]=' '; /* Insert a space at the first occurrence of a blank */
+        last_char_is_blank = 1; /* Register that a blank is found */
+        i++; /* Process next character */
+      }
+    }
+    sout[j] = 0;
+  }
+
+  /* Untab the line */
+  if (untab_flag || tab_flag) {
+
+    /*
+    DEF FNUNTAB$(L$)      ! UNTAB LINE L$
+    I9%=1%
+    I9%=INSTR(I9%,L$,CHR$(9%))
+    WHILE I9%
+      L$=LEFT(L$,I9%-1%)+SPACE$(8%-((I9%-1%) AND 7%))+RIGHT(L$,I9%+1%)
+      I9%=INSTR(I9%,L$,CHR$(9%))
+    NEXT
+    FNUNTAB$=L$
+    FNEND
+    */
+
+    /***** old code (doesn't handle multiple lines)
+    k = (long)strlen(sout);
+    for (i = 1; i <= k; i++) {
+      if (sout[i - 1] != '\t') continue;
+      for (j = k; j >= i; j--) {
+        sout[j + 8 - ((i - 1) & 7) - 1] = sout[j];
+      }
+      for (j = i; j < i + 8 - ((i - 1) & 7); j++) {
+        sout[j - 1] = ' ';
+      }
+      k = k + 8 - ((i - 1) & 7);
+    }
+    *****/
+
+    /* Untab string containing multiple lines */ /* 9-Jul-2011 nm */
+    /* (Currently this is needed by outputStatement() in mmpars.c) */
+    k = (long)strlen(sout);
+    m = 0;  /* Position on line relative to last '\n' */
+    for (i = 1; i <= k; i++) {
+      if (sout[i - 1] == '\n') {
+        m = 0;
+        continue;
+      }
+      m++; /* Should equal i for one-line string */
+      if (sout[i - 1] != '\t') continue;
+      for (j = k; j >= i; j--) {
+        sout[j + 8 - ((m - 1) & 7) - 1] = sout[j];
+      }
+      for (j = i; j < i + 8 - ((m - 1) & 7); j++) {
+        sout[j - 1] = ' ';
+      }
+      k = k + 8 - ((m - 1) & 7);
+    }
+  }
+
+  /* Tab the line */
+  /* (Note that this does not [yet?] handle string with multiple lines) */
+  if (tab_flag) {
+
+    /*
+    DEF FNTAB$(L$)        ! TAB LINE L$
+    I9%=0%
+    FOR I9%=8% STEP 8% WHILE I9%<LEN(L$)
+      J9%=I9%
+      J9%=J9%-1% UNTIL ASCII(MID(L$,J9%,1%))<>32% OR J9%=I9%-8%
+      IF J9%<=I9%-2% THEN
+        L$=LEFT(L$,J9%)+CHR$(9%)+RIGHT(L$,I9%+1%)
+        I9%=J9%+1%
+      END IF
+    NEXT I9%
+    FNTAB$=L$
+    FNEND
+    */
+
+    k = (long)strlen(sout);
+    for (i = 8; i < k; i = i + 8) {
+      j = i;
+
+      /* 26-May-2016 nm */
+      /* gcc m*.c -o metamath.exe -O2 -Wall was giving:
+             mmvstr.c:285:9: warning: assuming signed overflow does not occur
+             when assuming that (X - c) <= X is always true [-Wstrict-overflow]
+         Here we trick gcc into turning off this optimization by moving
+         the computation of i - 2 here, then referencing m instead of i - 2
+         below.  Note that if "m = i - 2" is moved _after_ the "while", the
+         error message returns. */
+      m = i - 2;
+
+      while (sout[j - 1] == ' ' && j > i - 8) j--;
+      /*if (j <= i - 2) {*/
+      if (j <= m) {  /* 25-May-2016 nm */
+        sout[j] = '\t';
+        j = i;
+        while (sout[j - 1] == ' ' && j > i - 8 + 1) {
+          sout[j - 1] = 0;
+          j--;
+        }
+      }
+    }
+    i = k;
+    /* sout[i]=0 is the last character at this point */
+    /* Clean up the deleted characters */
+    for (j = 0, k = 0; j <= i; j++)
+      if (sout[j] != 0) sout[k++] = sout[j];
+    sout[k] = 0;
+    /* sout[k] = 0 is the last character at this point */
+  }
+
+  return (sout);
+} /* edit */
+
+
+/* Return a string of the same character */
+vstring string(long n, char c)
+{
+  vstring sout;
+  long j = 0;
+  if (n < 0) n = 0;
+  sout=tempAlloc(n + 1);
+  while (j < n) sout[j++] = c;
+  sout[j] = 0;
+  return (sout);
+} /* string */
+
+
+/* Return a string of spaces */
+vstring space(long n)
+{
+  return (string(n, ' '));
+} /* space */
+
+
+/* Return a character given its ASCII value */
+vstring chr(long n)
+{
+  vstring sout;
+  sout = tempAlloc(2);
+  sout[0] = (char)(n & 0xFF);
+  sout[1] = 0;
+  return(sout);
+} /* chr */
+
+
+/* Search for string2 in string1 starting at start_position */
+/* If there is no match, 0 is returned */
+/* If string2 is "", (length of the string) + 1 is returned */
+long instr(long start_position, vstring string1, vstring string2)
+{
+  char *sp1, *sp2;
+  long ls1, ls2;
+  long found = 0;
+  if (start_position < 1) start_position = 1;
+  ls1 = (long)strlen(string1);
+  ls2 = (long)strlen(string2);
+  if (start_position > ls1) start_position = ls1 + 1;
+  sp1 = string1 + start_position - 1;
+  while ((sp2 = strchr(sp1, string2[0])) != 0) {
+    if (strncmp(sp2, string2, (size_t)ls2) == 0) {
+      found = sp2 - string1 + 1;
+      break;
+    } else
+      sp1 = sp2 + 1;
+  }
+  return (found);
+} /* instr */
+
+
+/* 12-Jun-2011 nm Added rinstr */
+/* Search for _last_ occurrence of string2 in string1 */
+/* 1 = 1st string character; 0 = not found */
+/* ??? Future - this could be made more efficient by searching directly,
+   backwards from end of string1 */
+long rinstr(vstring string1, vstring string2)
+{
+  long pos = 0;
+  long savePos = 0;
+
+  while (1) {  /* Scan until substring no longer found */
+    pos = instr(pos + 1, string1, string2);
+    if (!pos) break;
+    savePos = pos;
+  }
+  return (savePos);
+} /* rinstr */
+
+
+/* Translate string in sin to sout based on table.
+   Table must be 256 characters long!! <- not true anymore? */
+vstring xlate(vstring sin,vstring table)
+{
+  vstring sout;
+  long len_table, len_sin;
+  long i, j;
+  long table_entry;
+  char m;
+  len_sin = (long)strlen(sin);
+  len_table = (long)strlen(table);
+  sout = tempAlloc(len_sin+1);
+  for (i = j = 0; i < len_sin; i++)
+  {
+    table_entry = 0x000000FF & (long)sin[i];
+    if (table_entry < len_table)
+      if ((m = table[table_entry])!='\0')
+        sout[j++] = m;
+  }
+  sout[j]='\0';
+  return (sout);
+} /* xlate */
+
+
+/* Returns the ascii value of a character */
+long ascii_(vstring c)
+{
+  return ((long)c[0]);
+} /* ascii_ */
+
+
+/* Returns the floating-point value of a numeric string */
+double val(vstring s)
+{
+  double v = 0;
+  char signFound = 0;
+  double power = 1.0;
+  long i;
+  for (i = (long)strlen(s); i >= 0; i--) {
+    switch (s[i]) {
+      case '.':
+        v = v / power;
+        power = 1.0;
+        break;
+      case '-':
+        signFound = 1;
+        break;
+      case '0': case '1': case '2': case '3': case '4':
+      case '5': case '6': case '7': case '8': case '9':
+        v = v + ((double)(s[i] - '0')) * power;
+        power = 10.0 * power;
+        break;
+    }
+  }
+  if (signFound) v = - v;
+  return v;
+  /*
+  return (atof(s));
+  */
+} /* val */
+
+
+/* Returns current date as an ASCII string */
+vstring date()
+{
+  vstring sout;
+  struct tm *time_structure;
+  time_t time_val;
+  char *month[12];
+
+  /* (Aggregrate initialization is not portable) */
+  /* (It must be done explicitly for portability) */
+  month[0] = "Jan";
+  month[1] = "Feb";
+  month[2] = "Mar";
+  month[3] = "Apr";
+  month[4] = "May";
+  month[5] = "Jun";
+  month[6] = "Jul";
+  month[7] = "Aug";
+  month[8] = "Sep";
+  month[9] = "Oct";
+  month[10] = "Nov";
+  month[11] = "Dec";
+
+  time(&time_val); /* Retrieve time */
+  time_structure = localtime(&time_val); /* Translate to time structure */
+  sout = tempAlloc(12);
+  /* "%02d" means leading zeros with min. field width of 2 */
+  /* sprintf(sout,"%d-%s-%02d", */
+  sprintf(sout,"%d-%s-%04d", /* 10-Apr-06 nm 4-digit year */
+      time_structure->tm_mday,
+      month[time_structure->tm_mon],
+      /* time_structure->tm_year); */ /* old */
+      /* (int)((time_structure->tm_year) % 100)); */ /* Y2K */
+      (int)((time_structure->tm_year) + 1900)); /* 10-Apr-06 nm 4-digit yr */
+  return(sout);
+} /* date */
+
+
+/* Return current time as an ASCII string */
+vstring time_()
+{
+  vstring sout;
+  struct tm *time_structure;
+  time_t time_val;
+  int i;
+  char *format;
+  char *format1 = "%d:%d %s";
+  char *format2 = "%d:0%d %s";
+  char *am_pm[2];
+  /* (Aggregrate initialization is not portable) */
+  /* (It must be done explicitly for portability) */
+  am_pm[0] = "AM";
+  am_pm[1] = "PM";
+
+  time(&time_val); /* Retrieve time */
+  time_structure = localtime(&time_val); /* Translate to time structure */
+  if (time_structure->tm_hour >= 12)
+    i = 1;
+  else
+    i = 0;
+  if (time_structure->tm_hour > 12)
+    time_structure->tm_hour -= 12;
+  if (time_structure->tm_hour == 0)
+    time_structure->tm_hour = 12;
+  sout = tempAlloc(12);
+  if (time_structure->tm_min >= 10)
+    format = format1;
+  else
+    format = format2;
+  sprintf(sout,format,
+      time_structure->tm_hour,
+      time_structure->tm_min,
+      am_pm[i]);
+  return(sout);
+} /* time */
+
+
+/* Return a number as an ASCII string */
+vstring str(double f)
+{
+  /* This function converts a floating point number to a string in the */
+  /* same way that %f in printf does, except that trailing zeroes after */
+  /* the one after the decimal point are stripped; e.g., it returns 7 */
+  /* instead of 7.000000000000000. */
+  vstring s;
+  long i;
+  s = tempAlloc(50);
+  sprintf(s,"%f", f);
+  if (strchr(s, '.') != 0) { /* The string has a period in it */
+    for (i = (long)strlen(s) - 1; i > 0; i--) {  /* Scan string backwards */
+      if (s[i] != '0') break; /* 1st non-zero digit */
+      s[i] = 0; /* Delete the trailing 0 */
+    }
+    if (s[i] == '.') s[i] = 0; /* Delete trailing period */
+  }
+  return (s);
+} /* str */
+
+
+/* Return a number as an ASCII string */
+/* (This may have differed slightly from str() in BASIC but I forgot how.
+   It should be considered deprecated.) */
+vstring num1(double f)
+{
+  return (str(f));
+} /* num1 */
+
+
+/* Return a number as an ASCII string surrounded by spaces */
+/* (This should be considered deprecated.) */
+vstring num(double f)
+{
+  return (cat(" ",str(f)," ",NULL));
+} /* num */
+
+
+
+/*** NEW FUNCTIONS ADDED 11/25/98 ***/
+
+/* Emulate PROGRESS "entry" and related string functions */
+/* (PROGRESS is a 4-GL database language) */
+
+/* A "list" is a string of comma-separated elements.  Example:
+   "a,b,c" has 3 elements.  "a,b,c," has 4 elements; the last element is
+   an empty string.  ",," has 3 elements; each is an empty string.
+   In "a,b,c", the entry numbers of the elements are 1, 2 and 3 (i.e.
+   the entry numbers start a 1, not 0). */
+
+/* Returns a character string entry from a comma-separated
+   list based on an integer position. */
+/* If element is less than 1 or greater than number of elements
+   in the list, a null string is returned. */
+vstring entry(long element, vstring list)
+{
+  vstring sout;
+  long commaCount, lastComma, i, length;
+  if (element < 1) return ("");
+  lastComma = -1;
+  commaCount = 0;
+  i = 0;
+  while (list[i] != 0) {
+    if (list[i] == ',') {
+      commaCount++;
+      if (commaCount == element) {
+        break;
+      }
+      lastComma = i;
+    }
+    i++;
+  }
+  if (list[i] == 0) commaCount++;
+  if (element > commaCount) return ("");
+  length = i - lastComma - 1;
+  if (length < 1) return ("");
+  sout = tempAlloc(length + 1);
+  strncpy(sout, list + lastComma + 1, (size_t)length);
+  sout[length] = 0;
+  return (sout);
+}
+
+/* Emulate PROGRESS lookup function */
+/* Returns an integer giving the first position of an expression
+   in a comma-separated list. Returns a 0 if the expression
+   is not in the list. */
+long lookup(vstring expression, vstring list)
+{
+  long i, exprNum, exprPos;
+  char match;
+
+  match = 1;
+  i = 0;
+  exprNum = 0;
+  exprPos = 0;
+  while (list[i] != 0) {
+    if (list[i] == ',') {
+      exprNum++;
+      if (match) {
+        if (expression[exprPos] == 0) return exprNum;
+      }
+      exprPos = 0;
+      match = 1;
+      i++;
+      continue;
+    }
+    if (match) {
+      if (expression[exprPos] != list[i]) match = 0;
+    }
+    i++;
+    exprPos++;
+  }
+  exprNum++;
+  if (match) {
+    if (expression[exprPos] == 0) return exprNum;
+  }
+  return 0;
+}
+
+
+/* Emulate PROGRESS num-entries function */
+/* Returns the number of items in a comma-separated list.  If the
+   list is the empty string, return 0. */
+long numEntries(vstring list)
+{
+  long i, commaCount;
+  if (list[0] == 0) {
+    commaCount = -1; /* 26-Apr-2006 nm Return 0 if list empty */
+  } else {
+    commaCount = 0;
+    i = 0;
+    while (list[i] != 0) {
+      if (list[i] == ',') commaCount++;
+      i++;
+    }
+  }
+  return (commaCount + 1);
+}
+
+/* Returns the character position of the start of the
+   element in a list - useful for manipulating
+   the list string directly.  1 means the first string
+   character. */
+/* If element is less than 1 or greater than number of elements
+   in the list, a 0 is returned.  If entry is null, a 0 is
+   returned. */
+long entryPosition(long element, vstring list)
+{
+  long commaCount, lastComma, i;
+  if (element < 1) return 0;
+  lastComma = -1;
+  commaCount = 0;
+  i = 0;
+  while (list[i] != 0) {
+    if (list[i] == ',') {
+      commaCount++;
+      if (commaCount == element) {
+        break;
+      }
+      lastComma = i;
+    }
+    i++;
+  }
+  if (list[i] == 0) {
+    if (i == 0) return 0;
+    if (list[i - 1] == ',') return 0;
+    commaCount++;
+  }
+  if (element > commaCount) return (0);
+  if (list[lastComma + 1] == ',') return 0;
+  return (lastComma + 2);
+}
+
+
+void print2(char* fmt,...)
+{
+  /* This performs the same operations as printf, except that if a log file is
+    open, the characters will also be printed to the log file. */
+  va_list ap;
+  char printBuffer[10001];
+
+  va_start(ap, fmt);
+  vsprintf(printBuffer, fmt, ap); /* Put formatted string into buffer */
+  va_end(ap);
+
+  printf("%s", printBuffer); /* Terminal */
+
+  if (fplog != NULL) {
+    fprintf(fplog, "%s", printBuffer);  /* Print to log file */
+  }
+  return;
+}
+
+
+/* Bug check */
+void bug(int bugNum)
+{
+  /*print2("?Error: Program bug # %d\n", bugNum);*/
+  fprintf(stderr, "?Error: Program bug # %d\n", bugNum);
+  exit(0);
+}
+
+
+/* Opens files with error message; opens output files with
+   backup of previous version.   Mode must be "r" or "w". */
+FILE *fSafeOpen(vstring fileName, vstring mode)
+{
+  FILE *fp;
+  vstring prefix = "";
+  vstring postfix = "";
+  vstring bakName = "";
+  vstring newBakName = "";
+  long v;
+
+  if (!strcmp(mode, "r")) {
+    fp = fopen(fileName, "r");
+    if (!fp) {
+      print2("?Sorry, couldn't open the file \"%s\".\n", fileName);
+    }
+    return (fp);
+  }
+
+  if (!strcmp(mode, "w")) {
+    /* See if the file already exists. */
+    fp = fopen(fileName, "r");
+
+    if (fp) {
+      fclose(fp);
+
+#define VERSIONS 9
+      /* The file exists.  Rename it. */
+
+#if defined __WATCOMC__ /* MSDOS */
+      /* Make sure file name before extension is 8 chars or less */
+      i = instr(1, fileName, ".");
+      if (i) {
+        let(&prefix, left(fileName, i - 1));
+        let(&postfix, right(fileName, i));
+      } else {
+        let(&prefix, fileName);
+        let(&postfix, "");
+      }
+      let(&prefix, cat(left(prefix, 5), "~", NULL));
+      let(&postfix, cat("~", postfix, NULL));
+      if (0) goto skip_backup; /* Prevent compiler warning */
+
+#elif defined __GNUC__ /* Assume unix */
+      let(&prefix, cat(fileName, "~", NULL));
+      let(&postfix, "");
+
+#elif defined THINK_C /* Assume Macintosh */
+      let(&prefix, cat(fileName, "~", NULL));
+      let(&postfix, "");
+
+#elif defined VAXC /* Assume VMS */
+      /* For debugging on VMS: */
+      /* let(&prefix, cat(fileName, "-", NULL));
+         let(&postfix, "-"); */
+      /* Normal: */
+      goto skip_backup;
+
+#else /* Unknown; assume unix standard */
+      /*if (1) goto skip_backup;*/  /* [if no backup desired] */
+      let(&prefix, cat(fileName, "~", NULL));
+      let(&postfix, "");
+
+#endif
+
+
+      /* See if the lowest version already exists. */
+      let(&bakName, cat(prefix, str(1), postfix, NULL));
+      fp = fopen(bakName, "r");
+      if (fp) {
+        fclose(fp);
+        /* The lowest version already exists; rename all to lower versions. */
+
+        /* If version VERSIONS exists, delete it. */
+        let(&bakName, cat(prefix, str(VERSIONS), postfix, NULL));
+        fp = fopen(bakName, "r");
+        if (fp) {
+          fclose(fp);
+          remove(bakName);
+        }
+
+        for (v = VERSIONS - 1; v >= 1; v--) {
+          let(&bakName, cat(prefix, str((double)v), postfix, NULL));
+          fp = fopen(bakName, "r");
+          if (!fp) continue;
+          fclose(fp);
+          let(&newBakName, cat(prefix, str((double)v + 1), postfix, NULL));
+          rename(bakName, newBakName);
+        }
+
+      }
+      let(&bakName, cat(prefix, str(1), postfix, NULL));
+      rename(fileName, bakName);
+
+      /***
+      printLongLine(cat("The file \"", fileName,
+          "\" already exists.  The old file is being renamed to \"",
+          bakName, "\".", NULL), "  ", " ");
+      ***/
+    } /* End if file already exists */
+   /*skip_backup:*/
+
+    fp = fopen(fileName, "w");
+    if (!fp) {
+      print2("?Sorry, couldn't open the file \"%s\".\n", fileName);
+    }
+
+    let(&prefix, "");
+    let(&postfix, "");
+    let(&bakName, "");
+    let(&newBakName, "");
+
+    return (fp);
+  } /* End if mode = "w" */
+
+  bug(1510); /* Illegal mode */
+  return(NULL);
+
+}
+
+/***********************************************************************/
+/************ End of "vstring" body stuff ******************************/
+/***********************************************************************/

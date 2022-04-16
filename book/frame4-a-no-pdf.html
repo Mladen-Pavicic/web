@@ -1,0 +1,3197 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<title>Mladen Pavicic, QUANTUM COMPUTATION AND QUANTUM COMMUNICATION:
+Theory and Experiments, Springer, New York (2005), M. Pavicic, Pavicic, M., 
+Pavicic, Mladen</title>
+
+<!-- Background white, links green (unvisited), blue (visited), red (active) -->
+ <body
+  BGCOLOR="#FFFFFF"
+  TEXT="#000000"
+  LINK="#005300"
+  VLINK="#000080"
+  ALINK="#FF0000"
+ >
+
+<hr>
+
+<H3 ALIGN="CENTER">COPYRIGHTED MATERIAL</H3>
+
+<P></P><HR>
+
+
+<H3 ALIGN="CENTER"><a name=title>T I T L E &nbsp; &nbsp; P A G E</i></a></H3>
+
+<H3 ALIGN="LEFT"><a href="http://m3k.grad.hr/pavicic/book/">QUANTUM 
+COMPUTATION AND QUANTUM COMMUNICATION:
+Theory and Experiments</a></i></a></H3>
+
+<H3 ALIGN="LEFT">
+<a href="http://m3k.grad.hr/pavicic" target="_blank">
+<img src="aaaaaa-pdf.jpg" align="left" width=150 height=21> 
+(Mladen Pavicic)
+</a> 
+</H3>
+
+<br>
+
+<H3 ALIGN="LEFT">
+<a href="http://www.unizg.hr/homepage" target="_blank"><b><i>
+University of Zagreb, Zagreb, Croatia</i></b></a>
+</h3>
+
+<H3 ALIGN="LEFT"><a href="http://www.springer.com/sgw/cda/frontpage/0,11855,4-40109-22-74053369-0,00.html" target="_blank">Springer</a></H3>
+
+<hr>
+
+<H3 ALIGN="CENTER"><a name=copyright>C O P Y R I G H T &nbsp; &nbsp; P A G E</i></a></H3>
+
+<BR>
+
+Mladen Pavicic 
+<br>
+
+<br>
+
+University of Zagreb, Croatia
+
+<br>
+<br>
+
+Consulting Editor: D. R. Vij 
+
+<br>
+<br>
+
+Library of Congress Cataloging-in-Publication Data 
+
+<br>
+<br>
+
+Pavicic, Mladen.
+
+&nbsp;&nbsp;&nbsp;&nbsp; Quantum computation and quantum communication : theory and experiments 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; Mladen Pavicic. 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; p. cm. 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; Includes bibliographical references. 
+<br>
+
+<br>
+<br>
+
+ISBN 10 0-387-24412-3
+<br>
+ISBN 13 978-0387-24412-9
+<br>
+ISBN 0-387-28900-2 (e-book)
+&nbsp;&nbsp;&nbsp;&nbsp; 1. Quantum computers 2. Quantum theory. I. Title
+<br>
+
+<br>
+<br>
+
+QA76.889.P38 2005 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+2005051725
+
+<br><br><br>
+
+&#169; 2006 Springer Science+Business Media, Inc.
+<br>
+All rights reserved. This work may not not be translated or 
+copied in whole or in part without the written permission 
+of the publisher (Springer Science+Business Media, Inc., 
+233 Spring Street, New York, NY 10013, USA), except for brief 
+excerpts in connection with reviews or scholarly analysis. 
+Use in connection with any form of information storage and 
+retrieval, electronic adaptation, computer software, or by 
+similar or dissimilar methodology now known or hereafter 
+developed is forbidden.
+<br>
+The use in this publication of trade names, trademarks, service 
+marks and similar terms, even if they are not identified as such, 
+is not to be taken as an expression of opinion as to whether or
+not they are subject to proprietary rights.
+
+<br><br>
+
+Printed in the United States of America  
+
+<br><br>
+
+9 8 7 6 5 4 3 2 1  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SPIN 11051145
+
+<br><br>
+
+springeronline.com
+
+
+<br><br>
+
+<hr>
+
+<H3 ALIGN="CENTER"><a name=dedication>D E D I C A T I O N</a></H3>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Dedicated to the reader. 
+
+
+<br><br>
+
+<hr>
+
+<H3 ALIGN="CENTER"><a name=contents>C O N T E N T S</a></H3>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   Dedication v
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   Preface ix
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   Acknowledgments xi
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;   Introduction xiii
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 1. BITS AND QUBITS: THEORY AND ITS IMPLEMENTATION 1
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.1 The Turing Machine vs. a Computing Machine 1 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.2 Definition of a Turing Machine 2 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.3 Turing Computability 4 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.4 Bit Computability: Boolean Algebra 7 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.5 Bit Implementation: Transistors and Their Limits 9 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.6 Irreversible Bits: Logic Gates 12 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.7 Reversible Gates 14 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.8 Quantum Bits: Qubits 17 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.9 Flying Qubits and Circular Polarization 20 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.10 Superposition of Qubits 22 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.11 Bra-Ket Qubit Formalism 24 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.12 Operators 26 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.13 Detecting Qubits 27 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.14 Quantum Gates and Circuits 29 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.15 Qubit Computation and E-Business 31 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.16 Numbers and Bits 36 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.17 Entangled Qubits 39 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.18 General Single Qubit Formalism 45 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.19 Other Qubits and Universal Gates 51 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.20 Teleportation of Copies and the No-Cloning Theorem 56 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.21 Quantum Cryptography 64 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.22 Quantum Error Correction 72 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     1.23 Unconditional Security of Quantum Cryptography 81 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 2. EXPERIMENTS 87
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     2.1 Technological Candidates for Quantum Computers 87 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     2.2 Zeeman Effects 88 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     2.3 Liquid-State Nuclear Magnetic Resonance 94 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     2.4 Silicon-Based Nuclear Spins 99 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     2.5 Ion Traps 109 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     2.6 Future Experiments 123 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     2.7 Quantum Communication Implementation 125 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; 3. PERSPECTIVES 135
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     3.1 Quantum Network 137 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          3.1.1 Laser 138 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          3.1.2 One-Atom Laser and Atom-Cavity Coupling 139 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;         3.1.3 Single Photons on Demand 140 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;         3.1.4 Laser Dark States 142 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;         3.1.5 Cavity Dark States 144 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;         3.1.6 Dark-State Teleportation 146 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;         3.1.7 Quantum Repeaters 151 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     3.2 Quantum--Classical Coupling 159 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;         3.2.1 Interaction-Free Computation 159 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;         3.2.2 Kochen--Specker Setups 167 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     3.3 Quantum Algorithms 173 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;         3.3.1 Quantum Coin---Deutsch's Algorithm 173 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;         3.3.2 Deutsch-Jozsa and Bernstein-Vazirani Algorithms 176 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;         3.3.3 Shor's Algorithm 180 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;         3.3.4 Quantum Simulators 186 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;     3.4 Quantum Turing Machines vs. Quantum Algebra 190 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;   REFERENCES 199 
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;   INDEX 211
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;   ON THE AUTHOR 223
+<br>
+
+<br>
+
+<hr>
+
+<H3 ALIGN="CENTER"><a name=preface>P r e f a c e</a></H3>
+
+The attraction of quantum computation and quantum communication 
+theory and experiments lies in the fact that we engineer 
+both them themselves and the quantum systems they treat.           
+This approach has turned out to be very resilient.                          
+Driven by the final goal of calculating exponentially 
+faster and communicating infinitely more securely than 
+we do today, as soon as we encounter a limitation 
+in either a theory or experiment, a new idea around the no-go 
+emerges. As soon as the decoherence "demon" threatened
+the first computation models, quantum error correction 
+theory was formulated and applied not only to computation 
+theory but also to communication theory to make it 
+unconditionally secure. As soon as liquid-state nuclear magnetic 
+resonance experiments started to approach their limits, 
+solid-based nuclear spin experiments - the Kane 
+computer - came in. As soon as it was proved that it is theoretically 
+impossible to completely distinguish photon Bell states, three 
+new approaches appeared: hyperentanglement, the use of 
+continuous variables, and the Knill-Laflamme-Milburn proposal.  
+There are many more such examples. 
+
+<br><br>
+What facilitated all these breakthroughs is the fact that at the   
+present stage of development of quantum computation and            
+communication, we deal with elementary quantum systems consisting  
+of several two-level systems. The complexity of handling and       
+controlling such simple systems in a laboratory has turned out     
+to be tremendous, but the basic physical models we follow and      
+calculate for the systems themselves are not equally intricate.    
+We could say that the theory of the field leads                    
+the experiments in a particular way-with each new model          
+we put forward and apply in the laboratory, we also build up       
+and widen the theory itself. Therefore, we cannot just proceed     
+with assembling quantum computers and quantum networks. We also    
+have to use mathematical models to understand the physics of each  
+step on the road to our goal.                                      
+
+<br><br>
+As a consequence, both mathematics and physics are equally         
+essential for any approach in the field and therefore for this     
+book as well. The mathematics used in the book is a tool, but      
+an indispensable tool because the physics of quantum               
+computation and communication theory and their experiments         
+cannot be grasped without good mathematical models. When we        
+describe an experiment many times, we may get used to it, but      
+this does not mean we are more at home with the principles and     
+models behind it. This is why I have chosen to make this book an   
+interplay between mathematics and physics. The idea of the book    
+is to present those details that are used the most often both in   
+theory and experiment and to dispense with many inessential ones.  
+Also, the book is not conceived as a textbook, at least not        
+as a primary one, but more as a guide to a better understanding    
+of theory and experiments by coming back to the same concepts      
+in different models and elaborations. Clear physical ideas make    
+any formalism easy.                                                
+
+<br><br>
+Mladen Pavicic
+<br><br>
+
+<hr>
+
+<br>
+<H3 ALIGN="CENTER"><a name=introduction>I n t r o d u c t i o n</a></H3>
+
+
+Two predictions are cited particularly often 
+whenever one talks or writes about the history or future of 
+computing. One of these is more and more wrong, and the other 
+is less and less right, and they both teach us how to use
+theoretical opportunities to find new technologies.
+
+<br><br>
+The first prediction, a beloved opening of speeches and 
+papers, was made by the head of the electromagnetic 
+relay calculator at Harvard, Howard Aiken, in 1956: "If it 
+should turn out that the basic logics of a machine designed 
+for the numerical solution of differential equations coincide 
+with the logics of a machine intended to make bills for a 
+department store, I would regard this as the most amazing 
+coincidence that I have ever encountered" [Anonymous, 1997]
+
+<br><br>
+The amazing "coincidence" did happen and happens more 
+and more every day, tempting us to consider it  
+a part of the history of computers that took its own 
+unexpected course ("Only six electronic digital computers 
+would be required to satisfy the computing needs of the 
+entire United States," Howard Aiken said in 1947): 
+a program and a machine, software and hardware, 
+were interwoven at the beginning and then became more and 
+more separated. At least it seems so when we look at the 
+development of computer designs since Charles Babbage's 
+1840s Analytical Engine. A program on punched cards or 
+tapes and a machine for which the specific cards were 
+made look inseparable, in contrast to today's programs 
+which we move throughout the World Wide Web and compile 
+and execute on virtually any computer. 
+
+<br><br>
+Yet Alan Mathison Turing (and also Alonzo Church, 
+Stephen Cole Kleene, and Emil Post independently at the 
+same time) had already proved in 1936 that the only possible 
+course the history could have taken was the one it in fact 
+took. Turing used what we now also cite often and call 
+a <i>Turing machine</i> to prove that only the simplest 
+calculus, such as a propositional algebra with a 
+Boolean evaluation (true, false) and its main model a 
+0-1 Boolean algebra, is computable, i.e., effectively calculable
+[Turing 1936; Turing, 1937]. He (and others) also proved 
+that real numbers are not computable, that there exists no 
+algorithm with the help of which we can decide for every 
+arithmetical sentence in finitely many steps whether it is 
+true or false, etc. In other words, from the very start we 
+only had Boolean algebra at our disposal, and once  
+hardware was developed that could handle classical logic 
+operations - such implementations of logic operations 
+are called <i> logic gates</i> - the universal classical 
+computer was born. The "only" thing one had to develop 
+were "digital" algorithms and programs for all possible 
+applications, i.e., the software for a universal computer. 
+Everything - solving nonlinear differential equations, 
+3D modeling, speech recognition, and "making bills for 
+a department store" - had to be reduced to a Boolean 
+language. Since such a reduction imposes ever-growing        
+speed and memory requirements upon the hardware, until       
+mid-2002 we were witnessed quite the opposite situation      
+than half a century ago: the software lagged behind          
+the hardware, following the Wirth's law: "Software gets     
+slower faster than hardware gets faster." Will this         
+computing history repeat itself with quantum computers?      
+Will quantum hardware start to advance faster than quantum   
+software (quantum algorithms) in the near future? In this    
+book we shall try to learn how close we are to answering     
+these questions.                                             
+
+<br><br>
+The second prediction is known as <i> Moore's Law</i>,    
+or better yet, Moore's laws, since there are many 
+versions and varieties of the several formulations made 
+by Gordon Moore of the Intel Corporation. One widespread 
+rendering of the law, "The number of transistors on 
+a single integrated-circuit chip doubles every 18 months" 
+[Birnbaum and Williams, 2000], does not correspond to the 
+historical data which show 26 months [Brenner, 2001]. Moore 
+himself commented. "I never said 18 months. I said one year 
+[in 1965], and then two years [in 1975]. One of my Intel 
+colleagues changed it from the complexity of the chips to 
+the performance of computers and decided that not only did 
+you get a benefit from the doubling every two years but we 
+were able to increase the clock frequency, too, so computer 
+performance was actually doubling every 18 months. I guess 
+that's a corollary of Moore's Law. 
+Moore's Law has been the name given to everything that 
+changes exponentially in the industry... If Al Gore 
+invented the Internet, I invented the exponential" 
+[Yang, 2000]
+
+<br><br>
+And this "exponential" element is what is essential for our 
+development and what quantum computers are about. 
+Apparently everything underlying the development of 
+technology and society grows exponentially: research, information, 
+production and organization complexity, and above all, 
+the costs of keeping pace. So only an 
+exponential increase of our computational and processing 
+power and an exponential decrease of computer cost per 
+processed bit could support such a development. 
+Therefore, Moore's law was been kept as a guideline in the            
+computer industry in past three decades and it has supported          
+a global development during this period.                              
+
+<br><br>
+Gates in today's computers are switched on and off by about 1000 
+electrons. In 2010, the exponential Moore's Law would require 
+that only about 10 electrons do the job. Miniaturization cannot 
+go much further than that. It is true that many other possible 
+roads could still keep up the pace for a few more years: 
+insulating layers can be reduced in their thickness from the 
+present 25 atoms to 4 or 5 atoms (wires connecting transistors 
+in a chip already occupy more than 25% of its space); computing 
+power can be increased by designing processors so as to contain 
+execution units that process multiple instructions within one cycle; 
+processors can rely on parallel compiling technology and use 
+innovative software; and finally, chips can eventually get bigger 
+by using reversible gates to avoid overheating. Still, by 2020 or 
+2025 computing technology will hit the quantum barrier, and if we 
+want to support the growth of our technology and science beyond 
+that point in time, we need to find a substitute for exponentially 
+rising classical computational power by then. Actually, 
+the exponential increase of the clock speed of processors (CPUs) 
+already became linear in 2002 (see Fig. 3.1, p. 135), 
+and an extensive patching activity onto classical hardware and 
+software is currently under way in order to compensate for this 
+lack of an exponential increase in speed (see p. 136). 
+
+<br><br>
+Now that both Wirth's and Moore's laws are coming to an end,           
+we should draw a moral from them. Wirth's law taught us that       
+classical hardware development has prompted ever new software,     
+and Moore's law taught us that this hardware development has       
+followed an exponential trend of speed, memory, and lately         
+of number of processors (multiple cores, multiple processors,      
+clusters). Such an approach to computation will apparently         
+change completely in the quantum realm. Quantum hardware is        
+exponential in itself, and if we eventually succeed in making      
+functional scalable quantum computers, we will dispense with       
+the need for a steadily growing quantum hardware                   
+development - to make a quantum computer faster means to           
+scale it up linearly or polynomially. We will also dispense        
+with writing ever new software for faster and faster hardware.     
+Once developed, quantum software (quantum algorithms) will         
+simply scale up as we scale - and therefore speed up - quantum     
+hardware.                                                          
+
+<br><br>
+The "exponential" is built into quantum hardware from its very   
+first <i>qu</i>antum <i>bit</i> or <i>qubit</i>. Qubits, physically  
+supported by single atoms, electrons, or photons, can superpose    
+and entangle themselves so as to support an arbitrary number of    
+states per unit. Recently devised algorithms - quantum             
+software - relying on the exponential feature of quantum           
+hardware have explicitly demonstrated how one can reduce           
+important problems that are assumed to be exponentially complex,   
+to polynomially complex tasks for quantum computers. This has      
+opened a vast new interdisciplinary field of quantum computation   
+and communication theories, together called quantum information    
+theory, which along with its experimental verifications are        
+already taught at many universities and have resulted in several   
+very successful textbooks.                                         
+
+<br><br>
+The target of these courses, seminars, and textbooks is to teach   
+and familiarize students and scientists with this new field - in   
+which new research projects will keep opening for decades to       
+come - and to help integrate the theory and experiments of         
+quantum computation and communication into a would-be quantum      
+network implementation. The goal of the book in front of the       
+reader is the same; however, it allows her or him to digest the    
+field "by reading." That means that there will be no homework    
+and no exercises. Instead, most of the required details are        
+elaborated within the main body of the book, and a polynomial      
+complexity of reading is intended, optimally in one run.           
+
+<br><br>
+So, a few words about the reader. She or he is expected to be         
+familiar with higher mathematics and the basics of physics - in     
+particular, quantum physics. The reader could be any former student 
+who graduated in the technical or natural sciences, although an         
+undergraduate student might also find many if not all sections    
+of the book digestible. Students as well as specialists in the  
+field might also find the nutshell approach of the book helpful and  
+stimulating.   
+
+<br><br>
+
+<hr>
+
+<br>
+<H3 ALIGN="LEFT"><a name=chapter-1>Chapter 1</a></H3>
+
+<H3 ALIGN="LEFT">BITS AND QUBITS: THEORY AND ITS IMPLEMENTATION</H3>
+
+<br>
+
+In 1936 several authors showed, in effect, that if a 
+function is effectively calculable, then it is Turing computable 
+and, of course, vice versa 
+[Church, 1936c; Turing, 1936; Turing, 1937; Church, 1936a; 
+Church, 1936b; Kleene, 1936; Post, 1936].
+Turing concluded: 
+
+&nbsp;&nbsp;&nbsp;&nbsp; We do not need to have an infinity of different 
+machines doing different jobs. A single one will suffice. 
+The engineering problem of producing various machines for 
+various jobs is replaced by the office work of "programming" 
+the universal machine to do these jobs
+<br>
+
+This statement does not mean that Turing envisioned the 
+"universal computer" we have today, although he was well 
+acquainted with the project of breaking the cryptographic 
+codes of German messages carried out on the Colossus 
+(the British "computer" at Bletchley Park, which operated 
+from 1943 until the 1950s). 
+His <i>universal Turing machine</i> is a "universal 
+computer" only in the sense that it keeps to the standard 
+digital (classical, 0-1) implementation, i.e., to the  
+<i>bi</i>nary digi<i>ts</i>, 
+or <i>bits</i>, of today's hardware. 
+
+<br>
+
+<H3 ALIGN="LEFT"><a name=section-1-1>1.1 The Turing Machine vs. 
+a Computing Machine</a></h3>
+
+The software used by  any classical computer  
+must be based on what a Turing machine 
+can confirm to be calculable, recursive, and decidable. 
+A historical problem with the development of computers 
+was that there were few calculus categories  of the latter 
+kind. The only types of calculus that Turing machines can 
+show to be calculable are the simplest algebras with the 
+simplest evaluations, such as propositional calculus with 
+Boolean (true-false) evaluation, or 0-1 Boolean algebra. 
+It can be shown that even the simplest propositional 
+calculus with a nonordered evaluation
+[Pavicic and Megill, 1999] or simplest 
+arithmetic with natural numbers [Hermes, 1969] is not 
+calculable simply because such types of algebra are 
+neither recursive nor decidable nor calculable. 
+Directly, a Turing machine can only be used to <i> prove</i> 
+that no mathematics we know from primary school 
+can be literally run on it.  
+
+<br><br>
+ Turing machines, or any equivalent mathematical algorithms, 
+are essential in order to decide whether a chosen problem 
+is calculable or not, but we do not use them to write down 
+a new program for, say, 3D modeling or speech recognition.   
+Still, since there are many references to the Turing machine in 
+the literature on quantum computing, let us provide some 
+details [Hermes, 1969]. In doing so, we bear 
+in mind that Turing machines and all related concepts are 
+"concepts of pure mathematics. It is however very suggestive to 
+choose a technico-physical terminology suggested by the mental 
+image of a machine" [Hermes, 1969, p.31]. 
+
+<br><br>
+The Turing machine is neither today's "universal" 
+computing machine - generally called a computer - nor a 
+generator of new algorithms for the latter machine. 
+Instead, it is simply a mathematical procedure to check
+whether a chosen algebra and/or calculus can or cannot be 
+implemented into a computer. To show this, we 
+present some details of the procedure. The details often 
+appear in the literature without being put into the 
+context of a final outcome and so are just left hanging,  
+giving the impression of being building blocks for a computer, 
+or an algorithm to be carried out on one. On the other hand, 
+the notion of the classical Turing machine is rather important 
+for understanding the role that the quantum Turing machine has in 
+the theory of quantum computation.     
+
+
+<br><br>
+
+<hr>
+
+<br>
+<H3 ALIGN="CENTER"><a name=index>I N D E X</a></H3>
+
+
+&nbsp;&nbsp;&nbsp;&nbsp;     A-gate, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     adiabatic passage, 144
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     algebra
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        modular, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     algorithm
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Bernstein-Vazirani, 31, 179
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Deutsch's, 31, 173
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Deutsch-Jozsa, 31, 176
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          exponential speedup, 178
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        eigenvalue
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          exponential speedup, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          exponential time, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Euclid's, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        field sieve, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        general number field sieve, 35
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        GNFS, 35, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Grover's, 31, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Kochen--Specker, 168
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          statistical exponential speedup, 171
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        MMP diagram, 168
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Shor's, 31, 35, 36, 64, 98, 137, 180, 181
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          exponential speedup, 181
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          exponential time, 181
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          NMR, 98, 180, 183
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Simon's, 31, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          exponential speedup, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Alice
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical, 65
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 68, 131
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     alkali-metal atoms, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     all-optical, 124
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        CNOT gate, 153
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     ancilla, 78
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     AND
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical, 8
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     angular
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        momentum
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          electron, 91, 100
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          nuclear, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum number, 89, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          total, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     annihilation operator, 40, 59, 111
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     atom
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        interference, 163
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        lattice, 195
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     atom-cavity coupling, 140, 145
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        constant, 145
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     atomic
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        lattice, 195
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     atomic dipole matrix element, 114
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     B92 protocol, 81, 82
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     balanced function, 174
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     bandwidth, 33
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     barrier
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        oxide, 10
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        transistor, 10
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     BB84 protocol, 69, 82
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     BBN Technologies, 125
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     BCNOT gate, 153
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     beam splitter, 23
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        polarizing, 150
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Bell
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        inequalities, 167
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        state, 43, 62, 154
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          decomposition, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Bennett-Brassard protocol, 69
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Bernstein-Vazirani algorithm, 31, 179
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     binormality, 6
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     birefringent
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        plates, 129
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        prism, 40
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     bit, 1
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        train
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Kane computer, 107
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     bit-flip, 72
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        correction, 80
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 76
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     bits, 17
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Bloch sphere, 51
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     blue sideband frequency, 121
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Bob
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical, 65
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 68, 131
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Bohr magneton, 89
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Boolean
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        algebra, xiii, 2, 7, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          axioms for, 8
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          single axiom for, 9
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        circuit, 7
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        operation, 12
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     bra vector, 24
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     bra-ket notation, 20
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     bracket, 25
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Calderbank-Shor-Steane code, 76
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     carrier frequency, 121
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     cat
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Schrodinger, 57
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     cavity, 145
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        dark state, 146
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        optical, 138, 140, 163
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          spherical mirror, 140
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        QED, 88, 124
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum electrodynamics, 88
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     CC-U gate
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 55
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     CCNOT gate
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          reversible, 16
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 77
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     central processing unit, 14
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     cesium, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     check matrix, 74
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Church's thesis, 6
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     circuit
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Boolean, 7
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical, 14
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          integrated, 135
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          reversible, 16, 54
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        CMOS, 10
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        NMOS, 10
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        PMOS, 10
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 30, 32, 52, 55--57, 77--80, 122, 153, 176, 182, 191
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          diagram, 32, 182
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          interaction-free, 166
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum logic, 61
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          size, 30
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        transistor, 12
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     circular polarization, 20
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        left-hand, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        right-hand, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     classical
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        circuit
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          integrated, 135
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          reversible, 16
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        cryptography, 65
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        logic, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          completeness, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          soundness, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     clock speed
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical, xv, 135
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     cloned state, 58
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     closed subspace, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     CNOT gate
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        all-optical, 153
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        bilateral, 153
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          reversible, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        f-, 174
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        interaction-free, 160
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        pseudo, 160
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 55
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          ion trap, 122
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Kane, 107, 108
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          NMR, 98
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          silicon-based spin, 107, 108
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     code, 73
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     codeword, 73
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     coherence
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        length
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          laser, 33
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        time
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          laser, 33
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     coincidence probability, 61, 62
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     collection efficiency, 128, 138
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     completeness
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        lattice, 195
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     complex numbers
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        field of, 191, 196
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     complexity
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        exponential, 35
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        subexponential, 35, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        super-polynomial, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     composite Hilbert space, 136
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     computer
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        human, 4, 6
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     computing
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        green, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        physical, 34
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        tape, 3
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     continued fraction expansion, 185
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     continuous
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          computer, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        variables, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     continuous wave laser, 33
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     control qubit, 51
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     controlled-controlled-U gate
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 55
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     controlled-controlled-NOT gate
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          reversible, 16
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 77
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     controlled-NOT gate
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          reversible, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 55
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     cooling
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        laser
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Doppler, 111
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Sisyphus, 111, 119
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     copied state, 58
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     coprime, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     coset, 84
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Coulomb
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        potential, 195
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        repulsion, 110
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     countable orthonormal basis, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     counterfactual computation, 166
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     coupler, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        fiber, 81, 132
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     coupling constant, 98
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     CPU
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical, xv, 14, 135
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 137
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     creation operator, 40
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     cryptography
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical, 65
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 36, 64, 69
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          continuous variables, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          entangled pairs, 126, 128
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          free space transmission, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          phase-coding, 81
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          roadmap, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          single-photon sources, 126, 127
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          weak laser pulses, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     CSS code, 76
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     CW laser, 33
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     dark
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        counts, 127
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        state, 143, 145, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          cavity, 146
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          mixing angle, 143
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          teleportation, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     DARPA quantum network, 125
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     decidability, 6
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     decoherence, 123
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     delay
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        gate, 38
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     demand
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        photons on, 127
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     density
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        matrix, 47
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        operator, 28
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     detection, 27
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     deterministic
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        transition function
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Turing machine, 4
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Turing machine, 4
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Deutsch's algorithm, 31, 173
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Deutsch-Jozsa algorithm, 31, 176
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        exponential speedup, 178
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     diagram
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        MMP, 168
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     diode laser, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     dipole
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        approximation, 114, 116
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        matrix element
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          atomic, 114
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        moment
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          electric, 145
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          magnetic, 89
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Dirac's bra-ket notation, 20
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     discrete Fourier transform, 173
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     distributive lattice, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     distributivity, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     divergenceless field, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     DiVincenzo Criteria, 124
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     donor
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        phosphorus, 102
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     dopant, 9
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Doppler laser cooling, 111
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     down-conversion, 128
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        type-I, 130
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        type-II, 130
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Earnshaw's theorem, 110
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     eavesdropping
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 70
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     edge, 168
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     eigenfunction, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     eigenket, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     eigenvalue, 26, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        algorithm
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          exponential speedup, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          exponential time, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     eigenvector, 26, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Einstein-Podolsky-Rosen pair, 44
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     electric dipole moment, 145
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     electric-field vector, 18
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     electron
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        angular
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          momentum, 100
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        angular momentum, 91
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        commutation relations, 117
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        magnetic
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          moment, 100
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Planck energy, 93
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        single
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          transistor, 12, 105
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        spin, 91, 100
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     empty
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        state, 40
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     entangled
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        pair, 44
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          phase-coding, 132
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          polarization-coding, 131
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        photons, 42, 62
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        qubits, 57
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        states, 45, 57, 79
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          on demand, 122
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     entanglement, 20, 62, 63, 68, 167
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     EPR pair, 44
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        phase-coding, 132
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        polarization-coding, 131
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     equations
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        lattice, 197
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     error
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        correction
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          classical, 72
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Hadamard gate, 77
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum, 76
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        weigh, 75
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Euclid's algorithm, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Euler angles, 48
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     evaluation according to rule, 5
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Eve
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 70, 132
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     exponential
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        complexity, 34, 35
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        improvement
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum repeater, 159
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        speed increase, 135
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        speedup, 39
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Deutsch-Jozsa algorithm, 178
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          eigenvalue algorithm, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Shor's algorithm, 181
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Simon's algorithm, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        statistical speedup
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Kochen--Specker algorithm, 171
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        time, 34, 35
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          eigenvalue algorithm, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Shor's algorithm, 181
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     extraordinary ray, 68
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     f-CNOT gate, 174
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Fabry-Perrot resonator, 138
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     factoring a number, 34, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     fault-tolerant computation, 80
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Fermi
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        operator, 117
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     fiber
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        coupler, 81, 132
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     fictitious magnetic
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        dipole
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          ion trap, 117
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        field
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          ion trap, 117
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     field
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        divergenceless, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        irrotational, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        longitudinal, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        of complex numbers, 191, 196
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        of quaternions, 191, 196
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        of real numbers, 191, 196
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        sieve algorithm, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        transversal, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     finite dimensional space, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Fock
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        space, 40
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        state
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          single-photon, 127
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Fourier
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        transform, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Fourier transform
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        discrete, 173
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 173, 183
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     free space transmission
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        cryptography
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     frustrated total internal reflection, 161
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     FTIR, 161
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     full adder, 37
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     gas
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        van der Waals, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     gate
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        A, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        BCNOT, 153
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        CNOT
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          all-optical, 153
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          bilateral, 153
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          classical reversible, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          interaction-free, 160
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          ion trap, 122
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Kane, 107, 108
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          NMR, 98
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum, 55
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          silicon-based spin, 107, 108
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        delay, 38
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Hadamard, 32, 175, 177, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          ion trap, 121
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          NMR, 98
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        J, 103, 104
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        logic
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          classical, 12
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum, 29
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          reversible, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        NOT
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          classical, 11
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          ion trap, 121
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum, 29
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        square root of  NOT, 23, 29
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        NMR, 98
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        phase, 32
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 17, 23, 29, 108
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        reversible
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          classical CNOT, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          universal, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        S, 107
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Toffoli, 16, 54
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        universal
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum, 53
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          reversible, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     gcd, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     general
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        number field sieve algorithm, 35, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        recursiveness, 5
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     generator matrix, 49
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     GNFS algorithm, 35, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Godel
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        numbers, 6
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     numbering of Turing machines, 6
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     greatest common divisor, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     green computing, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Grover's algorithm, 31, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     gyromagnetic factor, 46, 90
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Hadamard gate, 32, 175, 177, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        error correction, 77
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        ion trap, 121
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        NMR, 98
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     half adder, 37
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     half-wave plate, 22, 149, 166
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Hamiltonian
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        harmonic oscillator, 111
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        ion trap, 116
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Jaynes-Cummings, 139
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Kane computer, 104
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        local, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        NMR, 97, 100
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Hamming
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        code, 73, 76
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        codeword, 76
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        distance, 73
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        rule, 73
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        scheme, 73
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     harmonic oscillator, 111
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Hamiltonian, 111
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Heisenberg microscope, 164
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Hermitian
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        conjugate operator, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        operator, 27
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     hidden variable theory, 167
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Hilbert
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        lattices, 195
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        space, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          n-dimensional, 167
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          composite, 136
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          embedding, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          polarization, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     HWP, 22, 166
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     hyper-entangled quantum state, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     hyperfine interaction, 100, 103, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     hyperthreading technology, 136
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     ID Quantique, 125
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     idler photon, 129
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     information theory
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 61
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Intel, 135
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     interaction
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        picture, 120
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        strong, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        weak, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     interaction-free
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        CNOT gate, 160
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        experiment, 160
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          circuit, 166
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        resonance detection, 163
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     interferometer
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Mach--Zehnder, 29, 34, 81, 132
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Internet, 35, 65
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     interval analysis, 171
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     inverted population, 138, 140
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     ion trap, 88, 109
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        computer, 121
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          scalable, 122
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        fictitious magnetic dipole, 117
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        fictitious magnetic field, 117
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Hamiltonian, 116
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        laser beam, 113
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     irrotational field, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     isomorphism-free generation of MMP diagrams, 169
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     J-coupling, 98
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     J-gate, 103, 104
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Jaynes--Cummings
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Hamiltonian, 139
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        model, 116
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     join
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        lattice, 192
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Jones vectors, 19, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Kane
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        CNOT gate, 107
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        computer, 103, 106
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          bit train, 107
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Hamiltonian, 104
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          radio frequency magnetic field, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          spin subspace, 106
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        magnetic
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          field, external, 101
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Karnaugh map, 17
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     ket vector, 20, 24
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     key
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        distribution, 81
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        RSA, 35
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        sifted, 71
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Kochen--Specker
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        algorithm, 168
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          statistical exponential speedup, 171
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        set, 168
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        setup, 167
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        theorem, 167
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        vectors, 168
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     KS
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        algorithms, 168
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        set, 168
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        setup, 167
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        vectors, 168
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     lambda-definability, 5
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Lamb--Dicke
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        limit, 119
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        parameter, 119
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Lande factor, 92
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Larmor frequency, 93
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        resonance, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     laser, 138
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        beam
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          atom interaction, 113
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          ion trap, 113
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        beam-electron-phonon interaction, 116
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        beam-ion interaction, 116
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        coherence length, 33
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        coherence time, 33
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        continuous wave, 33
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        cooling, 111, 119
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        diode, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          phase-coding, 81
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Doppler cooling, 111
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        one-atom, 139
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        pulse
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum cryptography, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        pump beam
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          down-conversion, 130
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        pumping, 63
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     lattice, 96, 192
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        atom, 195
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        completeness, 195
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        distributive, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        equations, 197
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Hilbert, 195
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        join, 192
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        meet, 192
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        modular, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        operation, 192
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        orthocomplementation, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        orthomodular, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        superposition, 195
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          principle, 195
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     least significant bit, 37
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     left-hand circular polarization, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     linear
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        ion trap, 110
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        optical elements, 31, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        subspace, 27
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     linearization of wave equation, 46
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     linewidth, 33
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     local Hamiltonian, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     logic
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          completeness, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          soundness, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        gate
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          classical, 12
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum, 23, 29
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          reversible, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        propositional, 7
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 15, 61
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          completeness, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          proper, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          soundness, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        reversible, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     longitudinal field, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     LSB, 37
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     mu-recursiveness, 5
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Mach--Zehnder interferometer, 29, 34, 36, 81, 132
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     MagiQ Technologies, 125
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     magnetic
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        dipole moment, 89
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        fictitious dipole
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          ion trap, 117
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        fictitious field
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          ion trap, 117
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        field
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Kane, external, 101
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          radio frequency, Kane, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          radio frequency, NMR, 96
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Zeeman, external, 88, 90
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Zeeman, inner, 91
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        moment
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          electron, 100
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          nuclear, 100
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum number, 89
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     magneto-optical trap, 163
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Malus law, 19, 131
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     matrix
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        check, 74
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        density, 47
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        generation, 74
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     MatrixExp, 50, 98
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     measurement
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 27
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     meet
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        lattice, 192
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     microchannel plate detector, 164
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     mixing angle
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        dark state, 143
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     MMP diagram, 168
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        algorithm, 168
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        isomorphism-free generation, 169
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     modular
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        algebra, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        lattice, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     modularity, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     modulo, 8, 74, 78, 174, 181
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     momentum
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        electromagnetic, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        space, 189
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     monolithic total-internal-reflection resonator, 161
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Moore's Law, xiv, 135
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     MOSFET, 9
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        NPN, 9
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        PNP, 9
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     most significant bit, 37
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     MOTIRR, 161
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     MSB, 37
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     multicore technology, 136
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     NAND
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical, 8
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     negative absorption, 138
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     neutral atom, 124
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     NMOS, 9
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     NMR, 88, 124, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        square root of NOT gate, 98
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        computer, 98, 99
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          radio frequency magnetic field, 96
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Hadamard gate, 98
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Hamiltonian, 97, 100
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Shor's algorithm, 98, 180, 183
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     no-cloning theorem, 58
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     nonlinear optics, 128
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     NOR
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical, 8
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     normal algorithm, 6
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     NOT
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical, 8
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        gate
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          classical, 11
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          ion trap, 121
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum, 29
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     square root of NOT gate, 23, 29
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     NMR, 98
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     NPN MOSFET, 9
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     nuclear
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        fusion, 87
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        magnetic
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          moment, 100
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        magnetic resonance, 88, 124
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        spin quantum number, 94
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     number
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        field sieve
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          general algorithm, 35
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        operator, 111
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        state
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          notation, 117
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     one-atom laser, 139
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     operation
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Boolean, 12
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        lattice, 192
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     operator, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        adjoint, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        annihilation, 40, 59
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        creation, 40
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        density, 28
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Fermi, 117
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Hermitian conjugate, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        linear, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        projection, 27
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        unitary, 27, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     optical
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        cavity, 138--140, 163
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          spherical mirror, 140
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        element
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          linear, 31, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        path difference, 34
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        resonator, 138
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     OR
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        classical, 8
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     order, 181
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     ordinary ray, 68
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     ortho-isomorphism, 196
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     orthoautomorphism
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        unitary, 196
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     orthocomplementation, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     ortholattice, 192
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     orthomodular
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        lattice, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        poset
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          sigma, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     orthomodularity, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     orthonormal basis
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        countable, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     oxide
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        barrier, 10
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     P-doped substrate, 9
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     parametric
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        down-conversion, 128
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        generation, 128
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     parity, 72
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        bit, 72
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     path difference
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        optical, 34
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Paul trap, 109
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Pauli
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        matrices, 46
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        problem, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        uniqueness, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Penning trap, 109
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     phase
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        gate, 32
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        retarder, 22
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        shift, 18, 76
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          correction, 80
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     phase-coding
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        entangled pair, 132
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        EPR pair, 132
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum cryptography, 81
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     phonon, 110, 112
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        anticommutation relations, 112
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        state, 112
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     phosphorus donor, 102
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     photon
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        angular momentum, 20
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        entangled, 62
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        gun, 127
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        idler, 129
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        on demand, 127, 140
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        particle aspect, 18
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Planck energy, 18
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        pump, 129
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        signal, 129
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        total angular momentum, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        wave aspect, 18
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     physical computation, 34
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     pickup coil, 96
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Planck energy, 18
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        electron, 93
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        photon, 18
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     PMOS, 9
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     PNP MOSFET, 9
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Poisson distribution, 127
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     polarization, 18
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        circular, 20, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Hilbert space, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        linear, 18, 19, 22, 39, 40, 44, 59, 63, 68, 70, 129, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        nonlinear, 129
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     polarization-coding
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        entangled pair, 131
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        EPR pair, 131
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     polarizing beam splitter, 150
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     population
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        inversion, 138
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        inverted, 140
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     poset
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        orthomodular
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          sigma, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Poynting vector, 19, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     precession, 96
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        frequency, 97
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     prime
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        relatively, 67, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     privacy amplification, 85
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     probabilistic
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        device
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum, 20
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        intrinsically
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum measurement, 27
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        transition function
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Turing machine, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Turing machine, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     probability
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        amplitudes
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum, 27
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        coincidence, 61, 62
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 20, 27, 28
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     projector, 27
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     propagation vector, 20
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     propositional logic, 7
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     protocol
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        B92, 81, 82
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        BB84, 69, 82
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Bennett-Brassard, 69
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        six-state, 81
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     pseudo CNOT gate, 160
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     public
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        key cryptography
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          classical, 66
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        key protocol
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          classical, 67
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          RSA, 67
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     pump photon, 129
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     pure state, 28, 40
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     purification, 153
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     QED, 90
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        cavity, 88, 124
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     QKD, 125, 127
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     QND device, 157
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     quantum
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        bit-flip, 76
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        bits, 17
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        CCNOT gate, 77
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        circuit, 30, 32, 52, 55--57, 77--80, 122, 153, 176, 182, 
+<br>
+		191
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          diagram, 32, 182
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          interaction-free, 166
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          quantum logic, 61
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          size, 30
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        coin, 173
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        computation
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          roadmap, 124
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        computer
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          cavity quantum electrodynamics (QED), 88
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          continuous, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          ion trap, 121
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Kane, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          NMR, 98
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          silicon-based, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        controlled-controlled-NOT gate, 77
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        cryptography, 36, 64, 69
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          continuous variables, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          entangled pairs, 126, 128
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          free space transmission, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          phase-coding, 81
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          roadmap, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          single-photon sources, 126, 127
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          weak laser pulses, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        dot, 128, 152
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Fourier transform, 173, 183
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        gate, 17, 23, 29, 108
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        information theory, 61
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        key distribution, 125
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        logic, 15, 61
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          completeness, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          gate, 17, 29
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          proper, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          soundness, 194
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        measurement, 27
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          intrinsically probabilistic, 27
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        network, 20
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          DARPA, 125
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        nondemolition detection device, 157
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        number
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          angular momentum, 89, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          magnetic, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        probabilistic device, 20
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        probability, 20, 27, 28
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          amplitudes, 27
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        register, 182
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        repeater, 151
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        transition function
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Turing machine, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Turing machine, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     quarter-wave plate, 22, 149, 166
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     quaternions
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        (skew) field of, 191, 196
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     qubit, 19
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        control, 51
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        entangled, 57
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        flying, 20, 123
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        stationary, 20, 123
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        target, 51
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     qutrits, 51
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     QWP, 22, 166
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Rabi
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        flopping frequency, 115
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        frequency, 115, 119
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     radio-frequency (RF), 96, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        magnetic field
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Kane computer, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          NMR computer, 96
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Raman
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        adiabatic passage
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          stimulated, 144
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        scheme, 113
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     ray
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        extraordinary, 68
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        ordinary, 68
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     real numbers
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        field of, 191, 196
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     reckonability, 5
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     red sideband frequency, 121
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     reflectance, 41
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     reflection coefficient, 41
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     reflectivity, 161
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     register
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 182
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     relatively prime numbers, 67, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     resonance
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        interaction-free detection, 163
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     resonant pulses, 96
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     resonator, 161
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Fabry-Perrot, 138
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        optical, 138
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        total-internal-reflection
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          monolithic, 161
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     reversible
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        circuit, 16, 54
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        logic, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        logic gate, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        universal gate, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     RF, 96, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        coil, 96
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        electric field, 110
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        field, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        generator, 96
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        pulses, 96
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        signals, 96
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     right-hand circular polarization, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Ritt's characteristic set calculations, 171
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     roadmap
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum computation, 124
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum cryptography, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     rotating wave approximation, 115
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     round-trip, 161
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     RSA
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        key, 35
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        public key protocol, 67
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     rubidium, 148, 165
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     S-gate, 107
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     sigma-orthomodular poset, 193
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     scalable
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        ion trap computer, 122
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Schrodinger
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        cat states, 57
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        equation, 114, 136, 142, 187, 197
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        picture, 120
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     selection frequency, 162
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     semiconductor, 9
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Si, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     separable subspace, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     SET, 12, 105
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Sheffer stroke, 7
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Shor's algorithm, 31, 35, 36, 64, 98, 137, 180, 181
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        exponential speedup, 181
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        exponential time, 181
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        NMR, 98, 180, 183
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Si semiconductor, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Si substrate, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     sideband frequency, 121
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     sifted key, 71
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     signal photon, 129
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     silicon-based nuclear spins, 88, 100
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Simon's algorithm, 31, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        exponential speedup, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     single-electron transistor, 12, 105
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     single-photon
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        detector, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Fock state, 127
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     singlet state, 43, 62
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        maximal, 153
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        nonmaximal, 153
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Sisyphus cooling, 111, 119
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     six-state protocol, 81
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     size of a quantum circuit, 30
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     SO(3) group, 47
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     solid state, 124
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     space
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        finite dimensional, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Fock, 40
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Hilbert
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          n-dimensional, 167
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          composite, 136
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          embedding, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          polarization, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        spin, 48
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        vector, 24
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     special
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        2-dimensional unitary group, 47
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        orthogonal 3-dimensional rotation group, 47
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     spherical mirror
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        optical cavity, 140
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     spin
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        electron, 91, 100
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        space, 48
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        subspace
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Kane computer, 106
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     spin-orbit interaction, 91, 102, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     state
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Bell, 154
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          decomposition, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        cloned, 58
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        copied, 58
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        dark, 143, 145, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          cavity, 146
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          teleportation, 147
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        empty, 40
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        entangled, 45, 57, 79
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          on demand, 122
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Fock
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          single-photon, 127
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        hyper-entangled, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        metastable, 138
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        number, 117
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        pure, 28, 40
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        singlet, 43, 62
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          maximal, 153
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          nonmaximal, 153
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        teleported, 64
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        triplet, 62, 131
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        unknown, 58, 137
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        vacuum, 40, 117
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     stimulated Raman adiabatic passage, 144
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     STIRAP, 144, 146, 149
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Stokes
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        laser, 144
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          beam, 143
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          field, 144
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     strong
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        interaction, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     SU(2) group, 47
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     subexponential
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        complexity, 35, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     subspace
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        closed, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        linear, 27
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        separable, 26
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        spin
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Kane computer, 106
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     substrate, 9
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Si, 103
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     super-polynomial complexity, 180
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     superconducting, 124
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     superposition, 20, 22, 24, 167
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        lattice, 195
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        principle
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          lattice, 195
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     swapper, 156
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     syndrome, 75
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     tally, 4
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     target qubit, 51
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     teleportation, 61, 63, 68, 150, 151
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        deterministic, 122
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     teleported state, 64
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     tensor product, 40
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Toffoli gate, 16, 54
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     tokamak, 87
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     total-internal-reflection resonator
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        monolithic, 161
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     transistor, 9
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        barrier, 10
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        channel, 9
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        circuit, 12
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        single electron, 12, 105
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     transition function
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        deterministic
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Turing machine, 4
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        probabilistic
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Turing machine, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Turing machine, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     transmission coefficient, 41
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     transmittance, 41
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     transversal field, 21
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     trapped ion, 109, 124
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        computer, 109
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     trial divisions, 34
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     trichloroethylene, 97
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     triplet state, 62, 131
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     truth table, 8
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     tunneling
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        resonator, 161
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Turing machine, 1
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        deterministic, 4
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          transition function, 4
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Godel numbering of, 6
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        probabilistic, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          transition function, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          transition function, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        universal, 7
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Turing-computable, 5
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     type-I down-conversion, 130
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     type-II down-conversion, 130
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     unconditional security of quantum cryptography, ix, 72, 83, 126
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     unitary
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        orthoautomorphism, 196
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     unitary operator, 27, 186
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     universal
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        quantum gate, 53
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        reversible gate, 15
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        Turing machine, 7
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     unknown state, 58, 137
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     vacuum
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        state, 40, 117
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     van der Waals gas, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     vector
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        space, 24
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     vertex, 168
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     wave
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        approximation
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          rotating, 115
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        equation
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          linearization, 46
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        vector, 20
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     weak
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        interaction, 190
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Weierstrass solid immersion lenses, 128
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     welcher Weg, 164
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     which way, 164
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     winner (would be quantum computer), 124
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     XOR, 8, 65, 72, 74, 85, 174
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;     Zeeman
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        effect
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          anomalous, 88
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          normal, 88
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          nuclear, 95
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        magnetic
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          field, external, 88, 90
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          field, inner, 91
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;          Hamiltonian part, 104
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        splitting, 90, 142
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;        sublevels, 147
+<br>
+
+<hr>
+<br>
+<H3 ALIGN="CENTER"><a name=author>ON THE AUTHOR</a></H3>
+
+Pavicic, Mladen [From MARQUISE <i>Who's Who in Science 
+and Engineering</i>, 4th Ed., 1998-1999 and <i>Who's Who in the 
+World</i>, 17th, 2000]  Physicist, educator; b. Zagreb, 
+Croatia; PhD in Physics, 1986; main asst. Univ. Zagreb, 1982-89, 
+asst. prof., 1990-95, assoc. prof., 1996-2000,
+full prof., 2001- ; head sci. project Ministry of Sci., Zagreb, 
+1991-96; head sci. project <i>Quantum Computation and Quantum 
+Communication</i>, Ministry of Sci., Zagreb, 1996-2001, head 
+sci. project <i> Quantum Information Theory</i>, Ministry of Sci., 
+Educ., and Sport, Zagreb, 2001-. Author: <i> Solved Problems in 
+Physics</i>, 1982, 2nd edit., 1984; articles to prof. journals: 
+<i>Phys. Rev. Lett.; Phys. Rev. A, D; J. Opt. Soc. Am. B; 
+Opt. Commun.; J. Phys. A; Phys. Lett. A; Helv. Phys. Acta; 
+Forschr. Phys.; Found. Phys.; Int. J. Theor. Phys.;</i>  etc.; 
+Grantee Alexander von Humboldt Found., Germany, Univ. Cologne, Germany, 
+1988-90; Tech. Univ. Berlin, Germany, 1993; Humboldt Univ. Berlin, 
+Germany, 1995; Grantee Fulbright Senior Scholar Research/Lect., 
+USA, Univ. Maryland Baltimore County,  UMBC, Baltimore, USA, 
+1999-2000;  French Ministry Sci., Univ. Reims, France, 1992; 
+Austrian Ministry Sci., Atom-Inst. of Austr. Univ., Vienna, 
+Austria, 1993, 94, 95, 97; Max-Planck Gesel., Germany, 
+Humboldt Univ. Berlin, Germany, 1996; E. Schrodinger Inst., 
+Vienna, Austria, 2000; Mem. Int. Quantum Structures 
+Assn. (co-founder, nominating com. 1992-94), USA; Croatian
+Humboldt-Club (president, 2002-); Croatian Phys. Soc.; European 
+Phys. Soc.; Am. Phys. Soc.; Opt. Soc. Am.; Achievements include 
+proof of Pauli nonuniqueness for real states, 
+discovery of polarization correlation between beams of unpolarized 
+light, discovery of polarization entanglement of two unpolarized 
+photons that nowhere interacted, discovery of a nondistributive 
+model for classical logic, co-discovery of a nonorthomodular model 
+for quantum logic, co-formulation of a resonator interaction-free 
+detection, discovery of an interaction free destruction of atom 
+interference pattern, and co-discovery of exhaustive algorithms 
+for generating arbitrary Kochen-Specker vectors. 
+
+<hr>
+<br>
+<H3 ALIGN="CENTER"><a name=back>BACK COVER (EDITORIAL REVIEW)</a></H3>
+
+<H3 ALIGN="LEFT">QUANTUM COMPUTATION AND QUANTUM COMMUNICATION:
+Theory and Experiments</i></a></H3>
+
+<H3 ALIGN="LEFT">
+<a href="http://m3k.grad.hr/pavicic" target="_blank">Mladen Pavicic</a>
+</a></H3>
+
+
+The field of quantum computing has experienced rapid development and many different experimental and theoretical groups have emerged worldwide.This book presents the key elements of quantum computation and communication theories and their implementation in an easy-to-read manner for readers coming from physics, mathematics and computer science backgrounds. Integrating both theoretical aspects and experimental verifications of developing quantum computers, the author explains why particular mathematical methods, physical models and realistic implementations might provide critical steps towards achieving the final goal - constructing quantum computers and quantum networks. The book serves as an excellent introduction for new researchers and also provides a useful review for specialists in the field.
+
+<br>
+
+<H3 ALIGN="LEFT"><a href="http://www.springer.com"  target="_blank">
+Springer</a></H3>
+
+<H3 ALIGN="LEFT"><a href="http://www.springeronline.com" target="_blank">
+springeronline.com</a></H3>
+
+<br>
+
+ISBN 0-387-24412-3
+
+<br>
+<br>
+
+<hr>
+
+<H2 ALIGN="CENTER">Misprints (Errata)</h2>
+
+p. 22, the lower row of the matrix given by Eq. (1.14) 
+should read:
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p22.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 22, the line above Eq. (1.16) should read: 
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p22a1.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 22, the second line above Eq. (1.17) should read: 
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p22b.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 114, the line below Eq. (2.67) should read:
+
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p114.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 114, 5th line from bottom should read:
+
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p114a.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 114, 2nd line from bottom should read: 
+
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p114b.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 115, the line above Eq. (2.68) should read: 
+
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p115.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 136, 11th line from the top should read:
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p136.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 139, the first half of the 8th line from
+bottom should read:
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p1391.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 147, Eq. (3.19) should read:
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p147a1.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 147, Eq. (3.20) should read:
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p147b1.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 147,  the 5th line from bottom should read:
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p147c1.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 148, the 1st line of the caption of Figure 3.6 
+should read:
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p148a1.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 148, the 9th line from bottom should read:
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p148b1.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 149, Eq. (3.25) should read:
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p1491.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+    
+p. 151, Eq. (3.33) should read:
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p1511.png">
+</blockquote><br>
+    
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 166, the 3rd line of the caption of Figure 3.16 
+should read:
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p1661.png">
+</blockquote><br>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 166, the 5th line of the caption of Figure 3.16 
+should read:
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p166a1.png">
+</blockquote>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 167, the last line of the 2nd paragraph should read:
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p1671.png">
+</blockquote>
+
+<blockquote>
+&nbsp;
+</blockquote>
+
+p. 197, Eq. (3.127) should read:
+<blockquote>
+&nbsp;&nbsp;&nbsp;&nbsp; <img src="p1971.png">
+</blockquote>
+
+<br><hr> 
+
+</body>
+</HTML>
+
+
+
+

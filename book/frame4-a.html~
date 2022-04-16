@@ -1,0 +1,3126 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=iso-8859-1">
+<title>Mladen Pavicic, QUANTUM COMPUTATION AND QUANTUM COMMUNICATION:
+Theory and Experiments, Springer, New York (2005), M. Pavicic, Pavicic, M., 
+Pavicic, Mladen</title>
+<meta name="description" content="Mladen Pavicic, QUANTUM COMPUTATION AND QUANTUM COMMUNICATION: Theory and Experiments, Springer, New York (2005) - Look Inside - Search Inside : Title Page, Copyright Page, Contents, Preface, Introduction, Chapter 1, Index, On the Author, Editorial Review">
+<meta name="keywords" content="quantum computation, quantum communication, quantum computer, qubit, quantum gate, quantum cryptography, quantum error-correction, Liquid-State Nuclear Magnetic Resonance, NMR computer, Silicon-Based Nuclear Spin Computer, Kane computer, Ion Trap Computer, Quantum Repeaters, quantum teleportation, Kochen--Specker Setup, Interaction-Free Computation, Deutsch's Algorithm, Deutsch-Jozsa Algorithm, Bernstein-Vazirani Algorithm, Shor's Algorithm, Quantum Simulator, Quantum Turing Machines, Turing Machines, Quantum Algebra, Entanglement, Entangled Qubits, Springer">
+
+
+<!-- Background white, links green (unvisited), blue (visited), red (active) -->
+ <body
+  BGCOLOR="#FFFFFF"
+  TEXT="#000000"
+  LINK="#005300"
+  VLINK="#000080"
+  ALINK="#FF0000"
+ >
+
+<hr>
+
+<a href="http://m3k.grad.hr/pavicic/book/" target="_blank">FRAME VERSION WITH INDEX AND JPEGs</a>
+(in case you do not see the frames)
+
+<P></P><HR>
+
+<H2 ALIGN="CENTER"><a href="mathrev.html" target="_blank">American Mathematical Society Review of the Book</a></h2>
+
+<P></P><HR>
+
+<H3 ALIGN="CENTER">ALL-IN-ONE HTML VERSION - COPYRIGHTED MATERIAL</H3>
+
+<P></P><HR>
+
+<H3 ALIGN="CENTER"><a name=title>T I T L E <IMG vspace=0 hspace=10 SRC="dot_clear.gif">P A G E</i></a></H3>
+
+<H3 ALIGN="LEFT"><i>
+<a href="http://www.springer.com/sgw/cda/frontpage/0,11855,4-40109-22-74053369-0,00.html" target="_blank">
+QUANTUM COMPUTATION AND QUANTUM COMMUNICATION:
+Theory and Experiments</i></a></H3>
+
+<H3 ALIGN="LEFT">
+<a href="http://m3k.grad.hr/pavicic" target="_blank">Mladen Pavi&#269;i&#263; 
+<img src="aaaaaa.jpg" align="left" width=170 height=25> 
+</a> 
+</H3>
+
+<br>
+
+<H3 ALIGN="LEFT">
+<a href="http://www.unizg.hr/homepage" target="_blank"><b><i>
+University of Zagreb, Zagreb, Croatia</i></b></a>
+</h3>
+
+<H3 ALIGN="LEFT"><a href="http://www.springer.com/sgw/cda/frontpage/0,11855,4-40109-22-74053369-0,00.html" target="_blank">Springer</a></H3>
+
+<hr>
+
+<H3 ALIGN="CENTER"><a name=copyright>C O P Y R I G H T <IMG vspace=0 hspace=10 SRC="dot_clear.gif">P A G E</i></a></H3>
+
+<BR>
+
+Mladen Pavicic 
+<br>
+
+<br>
+
+University of Zagreb, Croatia
+
+<br>
+<br>
+
+Consulting Editor: D. R. Vij 
+
+<br>
+<br>
+
+Library of Congress Cataloging-in-Publication Data 
+
+<br>
+<br>
+
+Pavicic, Mladen.
+
+<BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif">
+Quantum computation and quantum communication : theory and experiments 
+<BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif">
+Mladen Pavicic. 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+p. cm. 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+Includes bibliographical references. 
+
+<br>
+<br>
+
+ISBN 10 0-387-24412-3
+<br>
+ISBN 13 978-0387-24412-9
+<br>
+ISBN 0-387-28900-2 (e-book)
+<BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif">
+1. Quantum computers 2. Quantum theory. I. Title
+
+<br>
+<br>
+
+QA76.889.P38 2005 <IMG vspace=0 hspace=300 SRC="dot_clear.gif">
+2005051725
+
+<br><br><br>
+
+&#169; 2006 Springer Science+Business Media, Inc.
+<br>
+All rights reserved. This work may not not be translated or 
+copied in whole or in part without the written permission 
+of the publisher (Springer Science+Business Media, Inc., 
+233 Spring Street, New York, NY 10013, USA), except for brief 
+excerpts in connection with reviews or scholarly analysis. 
+Use in connection with any form of information storage and 
+retrieval, electronic adaptation, computer software, or by 
+similar or dissimilar methodology now known or hereafter 
+developed is forbidden.
+<br>
+The use in this publication of trade names, trademarks, service 
+marks and similar terms, even if they are not identified as such, 
+is not to be taken as an expression of opinion as to whether or
+not they are subject to proprietary rights.
+
+<br><br>
+
+Printed in the United States of America  
+
+<br><br>
+
+9 8 7 6 5 4 3 2 1   <IMG vspace=0 hspace=40 SRC="dot_clear.gif">
+SPIN 11051145
+
+<br><br>
+
+springeronline.com
+
+
+<br><br>
+
+<hr>
+
+<H3 ALIGN="CENTER"><a name=dedication>D E D I C A T I O N</a></H3>
+
+
+
+<BR><IMG vspace=0 hspace=200 SRC="dot_clear.gif">
+Dedicated to the reader. 
+
+<br><br><br>
+
+<hr>
+
+<H3 ALIGN="CENTER"><a name=contents>C O N T E N T S</a></H3>
+
+
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+  Dedication v
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+  Preface ix
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+  Acknowledgments xi
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+  Introduction xiii
+<BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif">
+1. BITS AND QUBITS: THEORY AND ITS IMPLEMENTATION 1
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.1 The Turing Machine vs. a Computing Machine 1 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.2 Definition of a Turing Machine 2 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.3 Turing Computability 4 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.4 Bit Computability: Boolean Algebra 7 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.5 Bit Implementation: Transistors and Their Limits 9 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.6 Irreversible Bits: Logic Gates 12 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.7 Reversible Gates 14 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.8 Quantum Bits: Qubits 17 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.9 Flying Qubits and Circular Polarization 20 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.10 Superposition of Qubits 22 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.11 Bra-Ket Qubit Formalism 24 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.12 Operators 26 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.13 Detecting Qubits 27 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.14 Quantum Gates and Circuits 29 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.15 Qubit Computation and E-Business 31 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.16 Numbers and Bits 36 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.17 Entangled Qubits 39 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.18 General Single Qubit Formalism 45 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.19 Other Qubits and Universal Gates 51 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.20 Teleportation of Copies and the No-Cloning Theorem 56 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.21 Quantum Cryptography 64 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.22 Quantum Error Correction 72 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    1.23 Unconditional Security of Quantum Cryptography 81 
+<BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif">
+2. EXPERIMENTS 87
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    2.1 Technological Candidates for Quantum Computers 87 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    2.2 Zeeman Effects 88 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    2.3 Liquid-State Nuclear Magnetic Resonance 94 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    2.4 Silicon-Based Nuclear Spins 99 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    2.5 Ion Traps 109 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    2.6 Future Experiments 123 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    2.7 Quantum Communication Implementation 125 
+<BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif">
+3. PERSPECTIVES 135
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    3.1 Quantum Network 137 
+<BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif">
+         3.1.1 Laser 138 
+<BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif">
+         3.1.2 One-Atom Laser and Atom-Cavity Coupling 139 
+<BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif">
+         3.1.3 Single Photons on Demand 140 
+<BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif">
+         3.1.4 Laser Dark States 142 
+<BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif">
+         3.1.5 Cavity Dark States 144 
+<BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif">
+         3.1.6 Dark-State Teleportation 146 
+<BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif">
+         3.1.7 Quantum Repeaters 151 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    3.2 Quantum--Classical Coupling 159 
+<BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif">
+         3.2.1 Interaction-Free Computation 159 
+<BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif">
+         3.2.2 Kochen--Specker Setups 167 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    3.3 Quantum Algorithms 173 
+<BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif">
+         3.3.1 Quantum Coin---Deutsch's Algorithm 173 
+<BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif">
+         3.3.2 Deutsch-Jozsa and Bernstein-Vazirani Algorithms 176 
+<BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif">
+         3.3.3 Shor's Algorithm 180 
+<BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif">
+         3.3.4 Quantum Simulators 186 
+<BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif">
+    3.4 Quantum Turing Machines vs. Quantum Algebra 190 
+<BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif">
+  REFERENCES 199 
+<BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif">
+  INDEX 211
+<BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif">
+  ON THE AUTHOR 223
+
+<br>
+
+<hr>
+
+<H3 ALIGN="CENTER"><a name=preface>P r e f a c e</a></H3>
+
+The attraction of quantum computation and quantum communication 
+theory and experiments lies in the fact that we engineer 
+both them themselves and the quantum systems they treat.           
+This approach has turned out to be very resilient.                          
+Driven by the final goal of calculating exponentially 
+faster and communicating infinitely more securely than 
+we do today, as soon as we encounter a limitation 
+in either a theory or experiment, a new idea around the no-go 
+emerges. As soon as the decoherence "demon" threatened
+the first computation models, quantum error correction 
+theory was formulated and applied not only to computation 
+theory but also to communication theory to make it 
+unconditionally secure. As soon as liquid-state nuclear magnetic 
+resonance experiments started to approach their limits, 
+solid-based nuclear spin experiments - the Kane 
+computer - came in. As soon as it was proved that it is theoretically 
+impossible to completely distinguish photon Bell states, three 
+new approaches appeared: hyperentanglement, the use of 
+continuous variables, and the Knill-Laflamme-Milburn proposal.  
+There are many more such examples. 
+
+<br><br>
+What facilitated all these breakthroughs is the fact that at the   
+present stage of development of quantum computation and            
+communication, we deal with elementary quantum systems consisting  
+of several two-level systems. The complexity of handling and       
+controlling such simple systems in a laboratory has turned out     
+to be tremendous, but the basic physical models we follow and      
+calculate for the systems themselves are not equally intricate.    
+We could say that the theory of the field leads                    
+the experiments in a particular way-with each new model          
+we put forward and apply in the laboratory, we also build up       
+and widen the theory itself. Therefore, we cannot just proceed     
+with assembling quantum computers and quantum networks. We also    
+have to use mathematical models to understand the physics of each  
+step on the road to our goal.                                      
+
+<br><br>
+As a consequence, both mathematics and physics are equally         
+essential for any approach in the field and therefore for this     
+book as well. The mathematics used in the book is a tool, but      
+an indispensable tool because the physics of quantum               
+computation and communication theory and their experiments         
+cannot be grasped without good mathematical models. When we        
+describe an experiment many times, we may get used to it, but      
+this does not mean we are more at home with the principles and     
+models behind it. This is why I have chosen to make this book an   
+interplay between mathematics and physics. The idea of the book    
+is to present those details that are used the most often both in   
+theory and experiment and to dispense with many inessential ones.  
+Also, the book is not conceived as a textbook, at least not        
+as a primary one, but more as a guide to a better understanding    
+of theory and experiments by coming back to the same concepts      
+in different models and elaborations. Clear physical ideas make    
+any formalism easy.                                                
+
+<br><br>
+Mladen Pavicic
+<br><br>
+
+<hr>
+
+<br>
+<H3 ALIGN="CENTER"><a name=introduction>I n t r o d u c t i o n</a></H3>
+
+
+Two predictions are cited particularly often 
+whenever one talks or writes about the history or future of 
+computing. One of these is more and more wrong, and the other 
+is less and less right, and they both teach us how to use
+theoretical opportunities to find new technologies.
+
+<br><br>
+The first prediction, a beloved opening of speeches and 
+papers, was made by the head of the electromagnetic 
+relay calculator at Harvard, Howard Aiken, in 1956: "If it 
+should turn out that the basic logics of a machine designed 
+for the numerical solution of differential equations coincide 
+with the logics of a machine intended to make bills for a 
+department store, I would regard this as the most amazing 
+coincidence that I have ever encountered" [Anonymous, 1997]
+
+<br><br>
+The amazing "coincidence" did happen and happens more 
+and more every day, tempting us to consider it  
+a part of the history of computers that took its own 
+unexpected course ("Only six electronic digital computers 
+would be required to satisfy the computing needs of the 
+entire United States," Howard Aiken said in 1947): 
+a program and a machine, software and hardware, 
+were interwoven at the beginning and then became more and 
+more separated. At least it seems so when we look at the 
+development of computer designs since Charles Babbage's 
+1840s Analytical Engine. A program on punched cards or 
+tapes and a machine for which the specific cards were 
+made look inseparable, in contrast to today's programs 
+which we move throughout the World Wide Web and compile 
+and execute on virtually any computer. 
+
+<br><br>
+Yet Alan Mathison Turing (and also Alonzo Church, 
+Stephen Cole Kleene, and Emil Post independently at the 
+same time) had already proved in 1936 that the only possible 
+course the history could have taken was the one it in fact 
+took. Turing used what we now also cite often and call 
+a <i>Turing machine</i> to prove that only the simplest 
+calculus, such as a propositional algebra with a 
+Boolean evaluation (true, false) and its main model a 
+0-1 Boolean algebra, is computable, i.e., effectively calculable
+[Turing 1936; Turing, 1937]. He (and others) also proved 
+that real numbers are not computable, that there exists no 
+algorithm with the help of which we can decide for every 
+arithmetical sentence in finitely many steps whether it is 
+true or false, etc. In other words, from the very start we 
+only had Boolean algebra at our disposal, and once  
+hardware was developed that could handle classical logic 
+operations - such implementations of logic operations 
+are called <i> logic gates</i> - the universal classical 
+computer was born. The "only" thing one had to develop 
+were "digital" algorithms and programs for all possible 
+applications, i.e., the software for a universal computer. 
+Everything - solving nonlinear differential equations, 
+3D modeling, speech recognition, and "making bills for 
+a department store" - had to be reduced to a Boolean 
+language. Since such a reduction imposes ever-growing        
+speed and memory requirements upon the hardware, until       
+mid-2002 we were witnessed quite the opposite situation      
+than half a century ago: the software lagged behind          
+the hardware, following the Wirth's law: "Software gets     
+slower faster than hardware gets faster." Will this         
+computing history repeat itself with quantum computers?      
+Will quantum hardware start to advance faster than quantum   
+software (quantum algorithms) in the near future? In this    
+book we shall try to learn how close we are to answering     
+these questions.                                             
+
+<br><br>
+The second prediction is known as <i> Moore's Law</i>,    
+or better yet, Moore's laws, since there are many 
+versions and varieties of the several formulations made 
+by Gordon Moore of the Intel Corporation. One widespread 
+rendering of the law, "The number of transistors on 
+a single integrated-circuit chip doubles every 18 months" 
+[Birnbaum and Williams, 2000], does not correspond to the 
+historical data which show 26 months [Brenner, 2001]. Moore 
+himself commented. "I never said 18 months. I said one year 
+[in 1965], and then two years [in 1975]. One of my Intel 
+colleagues changed it from the complexity of the chips to 
+the performance of computers and decided that not only did 
+you get a benefit from the doubling every two years but we 
+were able to increase the clock frequency, too, so computer 
+performance was actually doubling every 18 months. I guess 
+that's a corollary of Moore's Law. 
+Moore's Law has been the name given to everything that 
+changes exponentially in the industry... If Al Gore 
+invented the Internet, I invented the exponential" 
+[Yang, 2000]
+
+<br><br>
+And this "exponential" element is what is essential for our 
+development and what quantum computers are about. 
+Apparently everything underlying the development of 
+technology and society grows exponentially: research, information, 
+production and organization complexity, and above all, 
+the costs of keeping pace. So only an 
+exponential increase of our computational and processing 
+power and an exponential decrease of computer cost per 
+processed bit could support such a development. 
+Therefore, Moore's law was been kept as a guideline in the            
+computer industry in past three decades and it has supported          
+a global development during this period.                              
+
+<br><br>
+Gates in today's computers are switched on and off by about 1000 
+electrons. In 2010, the exponential Moore's Law would require 
+that only about 10 electrons do the job. Miniaturization cannot 
+go much further than that. It is true that many other possible 
+roads could still keep up the pace for a few more years: 
+insulating layers can be reduced in their thickness from the 
+present 25 atoms to 4 or 5 atoms (wires connecting transistors 
+in a chip already occupy more than 25% of its space); computing 
+power can be increased by designing processors so as to contain 
+execution units that process multiple instructions within one cycle; 
+processors can rely on parallel compiling technology and use 
+innovative software; and finally, chips can eventually get bigger 
+by using reversible gates to avoid overheating. Still, by 2020 or 
+2025 computing technology will hit the quantum barrier, and if we 
+want to support the growth of our technology and science beyond 
+that point in time, we need to find a substitute for exponentially 
+rising classical computational power by then. Actually, 
+the exponential increase of the clock speed of processors (CPUs) 
+already became linear in 2002 (see Fig. 3.1, p. 135), 
+and an extensive patching activity onto classical hardware and 
+software is currently under way in order to compensate for this 
+lack of an exponential increase in speed (see p. 136). 
+
+<br><br>
+Now that both Wirth's and Moore's laws are coming to an end,           
+we should draw a moral from them. Wirth's law taught us that       
+classical hardware development has prompted ever new software,     
+and Moore's law taught us that this hardware development has       
+followed an exponential trend of speed, memory, and lately         
+of number of processors (multiple cores, multiple processors,      
+clusters). Such an approach to computation will apparently         
+change completely in the quantum realm. Quantum hardware is        
+exponential in itself, and if we eventually succeed in making      
+functional scalable quantum computers, we will dispense with       
+the need for a steadily growing quantum hardware                   
+development - to make a quantum computer faster means to           
+scale it up linearly or polynomially. We will also dispense        
+with writing ever new software for faster and faster hardware.     
+Once developed, quantum software (quantum algorithms) will         
+simply scale up as we scale - and therefore speed up - quantum     
+hardware.                                                          
+
+<br><br>
+The "exponential" is built into quantum hardware from its very   
+first <i>qu</i>antum <i>bit</i> or <i>qubit</i>. Qubits, physically  
+supported by single atoms, electrons, or photons, can superpose    
+and entangle themselves so as to support an arbitrary number of    
+states per unit. Recently devised algorithms - quantum             
+software - relying on the exponential feature of quantum           
+hardware have explicitly demonstrated how one can reduce           
+important problems that are assumed to be exponentially complex,   
+to polynomially complex tasks for quantum computers. This has      
+opened a vast new interdisciplinary field of quantum computation   
+and communication theories, together called quantum information    
+theory, which along with its experimental verifications are        
+already taught at many universities and have resulted in several   
+very successful textbooks.                                         
+
+<br><br>
+The target of these courses, seminars, and textbooks is to teach   
+and familiarize students and scientists with this new field - in   
+which new research projects will keep opening for decades to       
+come - and to help integrate the theory and experiments of         
+quantum computation and communication into a would-be quantum      
+network implementation. The goal of the book in front of the       
+reader is the same; however, it allows her or him to digest the    
+field "by reading." That means that there will be no homework    
+and no exercises. Instead, most of the required details are        
+elaborated within the main body of the book, and a polynomial      
+complexity of reading is intended, optimally in one run.           
+
+<br><br>
+So, a few words about the reader. She or he is expected to be         
+familiar with higher mathematics and the basics of physics - in     
+particular, quantum physics. The reader could be any former student 
+who graduated in the technical or natural sciences, although an         
+undergraduate student might also find many if not all sections    
+of the book digestible. Students as well as specialists in the  
+field might also find the nutshell approach of the book helpful and  
+stimulating.   
+
+<br><br>
+
+<hr>
+
+<br>
+<H3 ALIGN="LEFT"><a name=chapter-1>Chapter 1</a></H3>
+
+<H3 ALIGN="LEFT">BITS AND QUBITS: THEORY AND ITS IMPLEMENTATION</H3>
+
+<br>
+
+In 1936 several authors showed, in effect, that if a 
+function is effectively calculable, then it is Turing computable 
+and, of course, vice versa 
+[Church, 1936c; Turing, 1936; Turing, 1937; Church, 1936a; 
+Church, 1936b; Kleene, 1936; Post, 1936].
+Turing concluded: 
+
+<blockquote>
+We do not need to have an infinity of different 
+machines doing different jobs. A single one will suffice. 
+The engineering problem of producing various machines for 
+various jobs is replaced by the office work of "programming" 
+the universal machine to do these jobs
+</blockquote>
+
+This statement does not mean that Turing envisioned the 
+"universal computer" we have today, although he was well 
+acquainted with the project of breaking the cryptographic 
+codes of German messages carried out on the Colossus 
+(the British "computer" at Bletchley Park, which operated 
+from 1943 until the 1950s). 
+His <i>universal Turing machine</i> is a "universal 
+computer" only in the sense that it keeps to the standard 
+digital (classical, 0-1) implementation, i.e., to the  
+<i>bi</i>nary digi<i>ts</i>, 
+or <i>bits</i>, of today's hardware. 
+
+<br>
+
+<H3 ALIGN="LEFT"><a name=section-1-1>1.1 The Turing Machine vs. 
+a Computing Machine</a></h3>
+
+The software used by  any classical computer  
+must be based on what a Turing machine 
+can confirm to be calculable, recursive, and decidable. 
+A historical problem with the development of computers 
+was that there were few calculus categories  of the latter 
+kind. The only types of calculus that Turing machines can 
+show to be calculable are the simplest algebras with the 
+simplest evaluations, such as propositional calculus with 
+Boolean (true-false) evaluation, or 0-1 Boolean algebra. 
+It can be shown that even the simplest propositional 
+calculus with a nonordered evaluation
+[Pavicic and Megill, 1999] or simplest 
+arithmetic with natural numbers [Hermes, 1969] is not 
+calculable simply because such types of algebra are 
+neither recursive nor decidable nor calculable. 
+Directly, a Turing machine can only be used to <i> prove</i> 
+that no mathematics we know from primary school 
+can be literally run on it.  
+
+<br><br>
+ Turing machines, or any equivalent mathematical algorithms, 
+are essential in order to decide whether a chosen problem 
+is calculable or not, but we do not use them to write down 
+a new program for, say, 3D modeling or speech recognition.   
+Still, since there are many references to the Turing machine in 
+the literature on quantum computing, let us provide some 
+details [Hermes, 1969]. In doing so, we bear 
+in mind that Turing machines and all related concepts are 
+"concepts of pure mathematics. It is however very suggestive to 
+choose a technico-physical terminology suggested by the mental 
+image of a machine" [Hermes, 1969, p.31]. 
+
+<br><br>
+The Turing machine is neither today's "universal" 
+computing machine - generally called a computer - nor a 
+generator of new algorithms for the latter machine. 
+Instead, it is simply a mathematical procedure to check
+whether a chosen algebra and/or calculus can or cannot be 
+implemented into a computer. To show this, we 
+present some details of the procedure. The details often 
+appear in the literature without being put into the 
+context of a final outcome and so are just left hanging,  
+giving the impression of being building blocks for a computer, 
+or an algorithm to be carried out on one. On the other hand, 
+the notion of the classical Turing machine is rather important 
+for understanding the role that the quantum Turing machine has in 
+the theory of quantum computation.     
+
+
+<br><br>
+
+<hr>
+
+<br>
+<H3 ALIGN="CENTER"><a name=index>I N D E X</a></H3>
+
+
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    A-gate, 103
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    adiabatic passage, 144
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    algebra
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       modular, 193
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    algorithm
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Bernstein-Vazirani, 31, 179
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Deutsch's, 31, 173
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Deutsch-Jozsa, 31, 176
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          exponential speedup, 178
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       eigenvalue
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          exponential speedup, 186
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          exponential time, 186
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Euclid's, 180
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       field sieve, 180
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       general number field sieve, 35
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       GNFS, 35, 180
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Grover's, 31, 186
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Kochen--Specker, 168
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          statistical exponential speedup, 171
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       MMP diagram, 168
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Shor's, 31, 35, 36, 64, 98, 137, 180, 181
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          exponential speedup, 181
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          exponential time, 181
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          NMR, 98, 180, 183
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Simon's, 31, 180
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          exponential speedup, 180
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Alice
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical, 65
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 68, 131
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    alkali-metal atoms, 147
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    all-optical, 124
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       CNOT gate, 153
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    ancilla, 78
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    AND
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical, 8
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    angular
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       momentum
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          electron, 91, 100
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          nuclear, 147
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum number, 89, 147
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          total, 147
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    annihilation operator, 40, 59, 111
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    atom
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       interference, 163
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       lattice, 195
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    atom-cavity coupling, 140, 145
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       constant, 145
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    atomic
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       lattice, 195
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    atomic dipole matrix element, 114
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    B92 protocol, 81, 82
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    balanced function, 174
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    bandwidth, 33
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    barrier
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       oxide, 10
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       transistor, 10
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    BB84 protocol, 69, 82
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    BBN Technologies, 125
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    BCNOT gate, 153
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    beam splitter, 23
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       polarizing, 150
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Bell
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       inequalities, 167
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       state, 43, 62, 154
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          decomposition, 156
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Bennett-Brassard protocol, 69
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Bernstein-Vazirani algorithm, 31, 179
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    binormality, 6
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    birefringent
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       plates, 129
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       prism, 40
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    bit, 1
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       train
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Kane computer, 107
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    bit-flip, 72
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       correction, 80
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 76
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    bits, 17
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Bloch sphere, 51
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    blue sideband frequency, 121
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Bob
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical, 65
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 68, 131
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Bohr magneton, 89
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Boolean
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       algebra, xiii, 2, 7, 193
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          axioms for, 8
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          single axiom for, 9
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       circuit, 7
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       operation, 12
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    bra vector, 24
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    bra-ket notation, 20
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    bracket, 25
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Calderbank-Shor-Steane code, 76
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    carrier frequency, 121
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    cat
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Schrodinger, 57
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    cavity, 145
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       dark state, 146
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       optical, 138, 140, 163
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          spherical mirror, 140
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       QED, 88, 124
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum electrodynamics, 88
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    CC-U gate
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 55
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    CCNOT gate
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          reversible, 16
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 77
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    central processing unit, 14
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    cesium, 147
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    check matrix, 74
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Church's thesis, 6
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    circuit
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Boolean, 7
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical, 14
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          integrated, 135
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          reversible, 16, 54
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       CMOS, 10
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       NMOS, 10
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       PMOS, 10
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 30, 32, 52, 55--57, 77--80, 122, 153, 176, 182, 191
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          diagram, 32, 182
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          interaction-free, 166
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum logic, 61
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          size, 30
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       transistor, 12
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    circular polarization, 20
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       left-hand, 21
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       right-hand, 21
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    classical
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       circuit
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          integrated, 135
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          reversible, 16
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       cryptography, 65
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       logic, 194
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          completeness, 194
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          soundness, 194
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    clock speed
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical, xv, 135
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    cloned state, 58
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    closed subspace, 26
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    CNOT gate
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       all-optical, 153
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       bilateral, 153
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          reversible, 15
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       f-, 174
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       interaction-free, 160
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       pseudo, 160
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 55
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          ion trap, 122
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Kane, 107, 108
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          NMR, 98
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          silicon-based spin, 107, 108
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    code, 73
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    codeword, 73
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    coherence
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       length
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          laser, 33
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       time
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          laser, 33
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    coincidence probability, 61, 62
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    collection efficiency, 128, 138
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    completeness
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       lattice, 195
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    complex numbers
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       field of, 191, 196
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    complexity
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       exponential, 35
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       subexponential, 35, 180
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       super-polynomial, 180
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    composite Hilbert space, 136
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    computer
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       human, 4, 6
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    computing
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       green, 15
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       physical, 34
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       tape, 3
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    continued fraction expansion, 185
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    continuous
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          computer, 194
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       variables, 194
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    continuous wave laser, 33
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    control qubit, 51
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    controlled-controlled-U gate
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 55
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    controlled-controlled-NOT gate
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          reversible, 16
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 77
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    controlled-NOT gate
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          reversible, 15
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 55
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    cooling
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       laser
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Doppler, 111
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Sisyphus, 111, 119
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    copied state, 58
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    coprime, 180
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    coset, 84
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Coulomb
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       potential, 195
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       repulsion, 110
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    countable orthonormal basis, 26
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    counterfactual computation, 166
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    coupler, 156
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       fiber, 81, 132
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    coupling constant, 98
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    CPU
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical, xv, 14, 135
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 137
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    creation operator, 40
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    cryptography
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical, 65
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 36, 64, 69
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          continuous variables, 126
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          entangled pairs, 126, 128
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          free space transmission, 126
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          phase-coding, 81
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          roadmap, 126
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          single-photon sources, 126, 127
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          weak laser pulses, 126
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    CSS code, 76
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    CW laser, 33
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    dark
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       counts, 127
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       state, 143, 145, 147
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          cavity, 146
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          mixing angle, 143
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          teleportation, 147
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    DARPA quantum network, 125
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    decidability, 6
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    decoherence, 123
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    delay
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       gate, 38
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    demand
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       photons on, 127
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    density
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       matrix, 47
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       operator, 28
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    detection, 27
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    deterministic
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       transition function
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Turing machine, 4
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Turing machine, 4
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Deutsch's algorithm, 31, 173
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Deutsch-Jozsa algorithm, 31, 176
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       exponential speedup, 178
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    diagram
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       MMP, 168
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    diode laser, 126
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    dipole
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       approximation, 114, 116
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       matrix element
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          atomic, 114
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       moment
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          electric, 145
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          magnetic, 89
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Dirac's bra-ket notation, 20
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    discrete Fourier transform, 173
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    distributive lattice, 193
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    distributivity, 193
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    divergenceless field, 21
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    DiVincenzo Criteria, 124
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    donor
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       phosphorus, 102
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    dopant, 9
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Doppler laser cooling, 111
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    down-conversion, 128
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       type-I, 130
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       type-II, 130
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Earnshaw's theorem, 110
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    eavesdropping
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 70
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    edge, 168
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    eigenfunction, 26
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    eigenket, 26
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    eigenvalue, 26, 186
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       algorithm
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          exponential speedup, 186
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          exponential time, 186
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    eigenvector, 26, 186
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Einstein-Podolsky-Rosen pair, 44
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    electric dipole moment, 145
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    electric-field vector, 18
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    electron
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       angular
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          momentum, 100
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       angular momentum, 91
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       commutation relations, 117
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       magnetic
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          moment, 100
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Planck energy, 93
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       single
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          transistor, 12, 105
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       spin, 91, 100
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    empty
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       state, 40
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    entangled
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       pair, 44
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          phase-coding, 132
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          polarization-coding, 131
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       photons, 42, 62
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       qubits, 57
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       states, 45, 57, 79
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          on demand, 122
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    entanglement, 20, 62, 63, 68, 167
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    EPR pair, 44
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       phase-coding, 132
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       polarization-coding, 131
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    equations
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       lattice, 197
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    error
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       correction
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          classical, 72
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Hadamard gate, 77
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum, 76
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       weigh, 75
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Euclid's algorithm, 180
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Euler angles, 48
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    evaluation according to rule, 5
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Eve
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 70, 132
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    exponential
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       complexity, 34, 35
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       improvement
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum repeater, 159
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       speed increase, 135
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       speedup, 39
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Deutsch-Jozsa algorithm, 178
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          eigenvalue algorithm, 186
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Shor's algorithm, 181
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Simon's algorithm, 180
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       statistical speedup
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Kochen--Specker algorithm, 171
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       time, 34, 35
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          eigenvalue algorithm, 186
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Shor's algorithm, 181
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    extraordinary ray, 68
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    f-CNOT gate, 174
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Fabry-Perrot resonator, 138
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    factoring a number, 34, 180
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    fault-tolerant computation, 80
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Fermi
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       operator, 117
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    fiber
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       coupler, 81, 132
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    fictitious magnetic
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       dipole
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          ion trap, 117
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       field
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          ion trap, 117
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    field
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       divergenceless, 21
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       irrotational, 21
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       longitudinal, 21
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       of complex numbers, 191, 196
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       of quaternions, 191, 196
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       of real numbers, 191, 196
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       sieve algorithm, 180
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       transversal, 21
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    finite dimensional space, 26
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Fock
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       space, 40
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       state
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          single-photon, 127
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Fourier
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       transform, 186
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Fourier transform
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       discrete, 173
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 173, 183
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    free space transmission
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       cryptography
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum, 126
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    frustrated total internal reflection, 161
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    FTIR, 161
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    full adder, 37
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    gas
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       van der Waals, 190
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    gate
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       A, 103
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       BCNOT, 153
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       CNOT
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          all-optical, 153
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          bilateral, 153
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          classical reversible, 15
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          interaction-free, 160
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          ion trap, 122
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Kane, 107, 108
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          NMR, 98
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum, 55
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          silicon-based spin, 107, 108
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       delay, 38
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Hadamard, 32, 175, 177, 186
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          ion trap, 121
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          NMR, 98
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       J, 103, 104
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       logic
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          classical, 12
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum, 29
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          reversible, 15
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       NOT
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          classical, 11
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          ion trap, 121
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum, 29
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       square root of  NOT, 23, 29
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       NMR, 98
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       phase, 32
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 17, 23, 29, 108
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       reversible
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          classical CNOT, 15
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          universal, 15
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       S, 107
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Toffoli, 16, 54
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       universal
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum, 53
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          reversible, 15
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    gcd, 180
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    general
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       number field sieve algorithm, 35, 180
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       recursiveness, 5
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    generator matrix, 49
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    GNFS algorithm, 35, 180
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Godel
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       numbers, 6
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    numbering of Turing machines, 6
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    greatest common divisor, 180
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    green computing, 15
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Grover's algorithm, 31, 186
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    gyromagnetic factor, 46, 90
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Hadamard gate, 32, 175, 177, 186
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       error correction, 77
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       ion trap, 121
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       NMR, 98
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    half adder, 37
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    half-wave plate, 22, 149, 166
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Hamiltonian
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       harmonic oscillator, 111
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       ion trap, 116
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Jaynes-Cummings, 139
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Kane computer, 104
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       local, 186
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       NMR, 97, 100
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Hamming
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       code, 73, 76
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       codeword, 76
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       distance, 73
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       rule, 73
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       scheme, 73
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    harmonic oscillator, 111
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Hamiltonian, 111
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Heisenberg microscope, 164
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Hermitian
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       conjugate operator, 26
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       operator, 27
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    hidden variable theory, 167
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Hilbert
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       lattices, 195
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       space, 26
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          n-dimensional, 167
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          composite, 136
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          embedding, 156
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          polarization, 156
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    HWP, 22, 166
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    hyper-entangled quantum state, 156
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    hyperfine interaction, 100, 103, 147
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    hyperthreading technology, 136
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    ID Quantique, 125
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    idler photon, 129
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    information theory
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 61
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Intel, 135
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    interaction
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       picture, 120
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       strong, 190
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       weak, 190
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    interaction-free
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       CNOT gate, 160
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       experiment, 160
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          circuit, 166
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       resonance detection, 163
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    interferometer
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Mach--Zehnder, 29, 34, 81, 132
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Internet, 35, 65
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    interval analysis, 171
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    inverted population, 138, 140
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    ion trap, 88, 109
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       computer, 121
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          scalable, 122
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       fictitious magnetic dipole, 117
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       fictitious magnetic field, 117
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Hamiltonian, 116
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       laser beam, 113
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    irrotational field, 21
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    isomorphism-free generation of MMP diagrams, 169
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    J-coupling, 98
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    J-gate, 103, 104
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Jaynes--Cummings
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Hamiltonian, 139
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       model, 116
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    join
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       lattice, 192
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Jones vectors, 19, 21
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Kane
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       CNOT gate, 107
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       computer, 103, 106
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          bit train, 107
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Hamiltonian, 104
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          radio frequency magnetic field, 103
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          spin subspace, 106
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       magnetic
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          field, external, 101
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Karnaugh map, 17
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    ket vector, 20, 24
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    key
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       distribution, 81
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       RSA, 35
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       sifted, 71
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Kochen--Specker
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       algorithm, 168
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          statistical exponential speedup, 171
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       set, 168
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       setup, 167
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       theorem, 167
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       vectors, 168
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    KS
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       algorithms, 168
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       set, 168
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       setup, 167
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       vectors, 168
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    lambda-definability, 5
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Lamb--Dicke
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       limit, 119
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       parameter, 119
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Lande factor, 92
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Larmor frequency, 93
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       resonance, 103
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    laser, 138
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       beam
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          atom interaction, 113
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          ion trap, 113
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       beam-electron-phonon interaction, 116
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       beam-ion interaction, 116
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       coherence length, 33
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       coherence time, 33
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       continuous wave, 33
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       cooling, 111, 119
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       diode, 126
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          phase-coding, 81
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Doppler cooling, 111
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       one-atom, 139
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       pulse
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum cryptography, 126
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       pump beam
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          down-conversion, 130
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       pumping, 63
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    lattice, 96, 192
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       atom, 195
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       completeness, 195
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       distributive, 193
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       equations, 197
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Hilbert, 195
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       join, 192
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       meet, 192
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       modular, 193
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       operation, 192
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       orthocomplementation, 193
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       orthomodular, 193
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       superposition, 195
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          principle, 195
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    least significant bit, 37
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    left-hand circular polarization, 21
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    linear
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       ion trap, 110
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       optical elements, 31, 156
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       subspace, 27
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    linearization of wave equation, 46
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    linewidth, 33
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    local Hamiltonian, 186
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    logic
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical, 194
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          completeness, 194
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          soundness, 194
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       gate
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          classical, 12
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum, 23, 29
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          reversible, 15
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       propositional, 7
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 15, 61
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          completeness, 194
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          proper, 194
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          soundness, 194
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       reversible, 15
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    longitudinal field, 21
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    LSB, 37
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    mu-recursiveness, 5
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Mach--Zehnder interferometer, 29, 34, 36, 81, 132
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    MagiQ Technologies, 125
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    magnetic
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       dipole moment, 89
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       fictitious dipole
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          ion trap, 117
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       fictitious field
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          ion trap, 117
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       field
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Kane, external, 101
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          radio frequency, Kane, 103
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          radio frequency, NMR, 96
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Zeeman, external, 88, 90
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Zeeman, inner, 91
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       moment
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          electron, 100
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          nuclear, 100
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum number, 89
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    magneto-optical trap, 163
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Malus law, 19, 131
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    matrix
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       check, 74
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       density, 47
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       generation, 74
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    MatrixExp, 50, 98
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    measurement
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 27
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    meet
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       lattice, 192
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    microchannel plate detector, 164
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    mixing angle
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       dark state, 143
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    MMP diagram, 168
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       algorithm, 168
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       isomorphism-free generation, 169
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    modular
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       algebra, 193
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       lattice, 193
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    modularity, 193
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    modulo, 8, 74, 78, 174, 181
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    momentum
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       electromagnetic, 21
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       space, 189
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    monolithic total-internal-reflection resonator, 161
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Moore's Law, xiv, 135
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    MOSFET, 9
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       NPN, 9
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       PNP, 9
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    most significant bit, 37
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    MOTIRR, 161
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    MSB, 37
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    multicore technology, 136
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    NAND
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical, 8
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    negative absorption, 138
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    neutral atom, 124
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    NMOS, 9
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    NMR, 88, 124, 180
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       square root of NOT gate, 98
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       computer, 98, 99
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          radio frequency magnetic field, 96
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Hadamard gate, 98
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Hamiltonian, 97, 100
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Shor's algorithm, 98, 180, 183
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    no-cloning theorem, 58
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    nonlinear optics, 128
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    NOR
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical, 8
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    normal algorithm, 6
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    NOT
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical, 8
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       gate
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          classical, 11
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          ion trap, 121
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum, 29
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    square root of NOT gate, 23, 29
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    NMR, 98
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    NPN MOSFET, 9
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    nuclear
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       fusion, 87
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       magnetic
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          moment, 100
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       magnetic resonance, 88, 124
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       spin quantum number, 94
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    number
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       field sieve
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          general algorithm, 35
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       operator, 111
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       state
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          notation, 117
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    one-atom laser, 139
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    operation
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Boolean, 12
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       lattice, 192
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    operator, 26
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       adjoint, 26
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       annihilation, 40, 59
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       creation, 40
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       density, 28
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Fermi, 117
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Hermitian conjugate, 26
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       linear, 26
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       projection, 27
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       unitary, 27, 186
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    optical
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       cavity, 138--140, 163
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          spherical mirror, 140
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       element
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          linear, 31, 156
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       path difference, 34
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       resonator, 138
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    OR
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       classical, 8
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    order, 181
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    ordinary ray, 68
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    ortho-isomorphism, 196
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    orthoautomorphism
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       unitary, 196
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    orthocomplementation, 193
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    ortholattice, 192
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    orthomodular
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       lattice, 193
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       poset
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          sigma, 193
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    orthomodularity, 193
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    orthonormal basis
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       countable, 26
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    oxide
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       barrier, 10
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    P-doped substrate, 9
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    parametric
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       down-conversion, 128
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       generation, 128
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    parity, 72
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       bit, 72
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    path difference
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       optical, 34
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Paul trap, 109
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Pauli
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       matrices, 46
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       problem, 156
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       uniqueness, 156
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Penning trap, 109
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    phase
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       gate, 32
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       retarder, 22
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       shift, 18, 76
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          correction, 80
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    phase-coding
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       entangled pair, 132
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       EPR pair, 132
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum cryptography, 81
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    phonon, 110, 112
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       anticommutation relations, 112
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       state, 112
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    phosphorus donor, 102
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    photon
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       angular momentum, 20
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       entangled, 62
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       gun, 127
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       idler, 129
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       on demand, 127, 140
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       particle aspect, 18
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Planck energy, 18
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       pump, 129
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       signal, 129
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       total angular momentum, 21
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       wave aspect, 18
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    physical computation, 34
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    pickup coil, 96
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Planck energy, 18
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       electron, 93
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       photon, 18
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    PMOS, 9
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    PNP MOSFET, 9
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Poisson distribution, 127
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    polarization, 18
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       circular, 20, 147
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Hilbert space, 156
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       linear, 18, 19, 22, 39, 40, 44, 59, 63, 68, 70, 129, 147
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       nonlinear, 129
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    polarization-coding
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       entangled pair, 131
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       EPR pair, 131
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    polarizing beam splitter, 150
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    population
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       inversion, 138
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       inverted, 140
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    poset
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       orthomodular
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          sigma, 193
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Poynting vector, 19, 21
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    precession, 96
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       frequency, 97
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    prime
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       relatively, 67, 180
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    privacy amplification, 85
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    probabilistic
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       device
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum, 20
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       intrinsically
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum measurement, 27
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       transition function
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Turing machine, 190
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Turing machine, 190
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    probability
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       amplitudes
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum, 27
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       coincidence, 61, 62
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 20, 27, 28
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    projector, 27
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    propagation vector, 20
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    propositional logic, 7
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    protocol
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       B92, 81, 82
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       BB84, 69, 82
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Bennett-Brassard, 69
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       six-state, 81
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    pseudo CNOT gate, 160
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    public
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       key cryptography
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          classical, 66
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       key protocol
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          classical, 67
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          RSA, 67
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    pump photon, 129
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    pure state, 28, 40
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    purification, 153
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    QED, 90
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       cavity, 88, 124
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    QKD, 125, 127
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    QND device, 157
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    quantum
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       bit-flip, 76
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       bits, 17
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       CCNOT gate, 77
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       circuit, 30, 32, 52, 55--57, 77--80, 122, 153, 176, 182, 
+		191
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          diagram, 32, 182
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          interaction-free, 166
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          quantum logic, 61
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          size, 30
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       coin, 173
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       computation
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          roadmap, 124
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       computer
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          cavity quantum electrodynamics (QED), 88
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          continuous, 194
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          ion trap, 121
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Kane, 103
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          NMR, 98
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          silicon-based, 103
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       controlled-controlled-NOT gate, 77
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       cryptography, 36, 64, 69
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          continuous variables, 126
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          entangled pairs, 126, 128
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          free space transmission, 126
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          phase-coding, 81
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          roadmap, 126
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          single-photon sources, 126, 127
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          weak laser pulses, 126
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       dot, 128, 152
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Fourier transform, 173, 183
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       gate, 17, 23, 29, 108
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       information theory, 61
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       key distribution, 125
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       logic, 15, 61
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          completeness, 194
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          gate, 17, 29
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          proper, 194
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          soundness, 194
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       measurement, 27
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          intrinsically probabilistic, 27
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       network, 20
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          DARPA, 125
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       nondemolition detection device, 157
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       number
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          angular momentum, 89, 147
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          magnetic, 147
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       probabilistic device, 20
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       probability, 20, 27, 28
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          amplitudes, 27
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       register, 182
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       repeater, 151
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       transition function
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Turing machine, 190
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Turing machine, 190
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    quarter-wave plate, 22, 149, 166
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    quaternions
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       (skew) field of, 191, 196
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    qubit, 19
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       control, 51
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       entangled, 57
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       flying, 20, 123
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       stationary, 20, 123
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       target, 51
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    qutrits, 51
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    QWP, 22, 166
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Rabi
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       flopping frequency, 115
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       frequency, 115, 119
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    radio-frequency (RF), 96, 103
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       magnetic field
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Kane computer, 103
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          NMR computer, 96
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Raman
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       adiabatic passage
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          stimulated, 144
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       scheme, 113
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    ray
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       extraordinary, 68
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       ordinary, 68
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    real numbers
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       field of, 191, 196
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    reckonability, 5
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    red sideband frequency, 121
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    reflectance, 41
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    reflection coefficient, 41
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    reflectivity, 161
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    register
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 182
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    relatively prime numbers, 67, 180
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    resonance
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       interaction-free detection, 163
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    resonant pulses, 96
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    resonator, 161
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Fabry-Perrot, 138
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       optical, 138
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       total-internal-reflection
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          monolithic, 161
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    reversible
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       circuit, 16, 54
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       logic, 15
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       logic gate, 15
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       universal gate, 15
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    RF, 96, 103
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       coil, 96
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       electric field, 110
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       field, 103
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       generator, 96
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       pulses, 96
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       signals, 96
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    right-hand circular polarization, 21
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Ritt's characteristic set calculations, 171
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    roadmap
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum computation, 124
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum cryptography, 126
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    rotating wave approximation, 115
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    round-trip, 161
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    RSA
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       key, 35
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       public key protocol, 67
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    rubidium, 148, 165
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    S-gate, 107
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    sigma-orthomodular poset, 193
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    scalable
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       ion trap computer, 122
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Schrodinger
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       cat states, 57
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       equation, 114, 136, 142, 187, 197
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       picture, 120
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    selection frequency, 162
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    semiconductor, 9
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Si, 103
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    separable subspace, 26
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    SET, 12, 105
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Sheffer stroke, 7
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Shor's algorithm, 31, 35, 36, 64, 98, 137, 180, 181
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       exponential speedup, 181
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       exponential time, 181
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       NMR, 98, 180, 183
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Si semiconductor, 103
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Si substrate, 103
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    sideband frequency, 121
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    sifted key, 71
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    signal photon, 129
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    silicon-based nuclear spins, 88, 100
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Simon's algorithm, 31, 180
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       exponential speedup, 180
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    single-electron transistor, 12, 105
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    single-photon
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       detector, 126
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Fock state, 127
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    singlet state, 43, 62
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       maximal, 153
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       nonmaximal, 153
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Sisyphus cooling, 111, 119
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    six-state protocol, 81
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    size of a quantum circuit, 30
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    SO(3) group, 47
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    solid state, 124
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    space
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       finite dimensional, 26
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Fock, 40
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Hilbert
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          n-dimensional, 167
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          composite, 136
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          embedding, 156
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          polarization, 156
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       spin, 48
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       vector, 24
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    special
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       2-dimensional unitary group, 47
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       orthogonal 3-dimensional rotation group, 47
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    spherical mirror
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       optical cavity, 140
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    spin
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       electron, 91, 100
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       space, 48
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       subspace
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Kane computer, 106
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    spin-orbit interaction, 91, 102, 147
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    state
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Bell, 154
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          decomposition, 156
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       cloned, 58
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       copied, 58
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       dark, 143, 145, 147
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          cavity, 146
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          teleportation, 147
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       empty, 40
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       entangled, 45, 57, 79
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          on demand, 122
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Fock
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          single-photon, 127
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       hyper-entangled, 156
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       metastable, 138
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       number, 117
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       pure, 28, 40
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       singlet, 43, 62
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          maximal, 153
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          nonmaximal, 153
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       teleported, 64
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       triplet, 62, 131
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       unknown, 58, 137
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       vacuum, 40, 117
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    stimulated Raman adiabatic passage, 144
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    STIRAP, 144, 146, 149
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Stokes
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       laser, 144
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          beam, 143
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          field, 144
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    strong
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       interaction, 190
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    SU(2) group, 47
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    subexponential
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       complexity, 35, 180
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    subspace
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       closed, 26
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       linear, 27
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       separable, 26
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       spin
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Kane computer, 106
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    substrate, 9
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Si, 103
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    super-polynomial complexity, 180
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    superconducting, 124
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    superposition, 20, 22, 24, 167
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       lattice, 195
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       principle
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          lattice, 195
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    swapper, 156
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    syndrome, 75
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    tally, 4
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    target qubit, 51
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    teleportation, 61, 63, 68, 150, 151
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       deterministic, 122
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    teleported state, 64
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    tensor product, 40
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Toffoli gate, 16, 54
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    tokamak, 87
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    total-internal-reflection resonator
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       monolithic, 161
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    transistor, 9
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       barrier, 10
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       channel, 9
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       circuit, 12
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       single electron, 12, 105
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    transition function
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       deterministic
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Turing machine, 4
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       probabilistic
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Turing machine, 190
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Turing machine, 190
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    transmission coefficient, 41
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    transmittance, 41
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    transversal field, 21
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    trapped ion, 109, 124
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       computer, 109
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    trial divisions, 34
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    trichloroethylene, 97
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    triplet state, 62, 131
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    truth table, 8
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    tunneling
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       resonator, 161
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Turing machine, 1
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       deterministic, 4
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          transition function, 4
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Godel numbering of, 6
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       probabilistic, 190
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          transition function, 190
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum, 190
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          transition function, 190
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       universal, 7
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Turing-computable, 5
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    type-I down-conversion, 130
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    type-II down-conversion, 130
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    unconditional security of quantum cryptography, ix, 72, 83, 126
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    unitary
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       orthoautomorphism, 196
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    unitary operator, 27, 186
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    universal
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       quantum gate, 53
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       reversible gate, 15
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       Turing machine, 7
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    unknown state, 58, 137
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    vacuum
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       state, 40, 117
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    van der Waals gas, 190
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    vector
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       space, 24
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    vertex, 168
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    wave
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       approximation
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          rotating, 115
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       equation
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          linearization, 46
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       vector, 20
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    weak
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       interaction, 190
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Weierstrass solid immersion lenses, 128
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    welcher Weg, 164
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    which way, 164
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    winner (would be quantum computer), 124
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    XOR, 8, 65, 72, 74, 85, 174
+  <BR><IMG vspace=0 hspace=8 SRC="dot_clear.gif"> 
+    Zeeman
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       effect
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          anomalous, 88
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          normal, 88
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          nuclear, 95
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       magnetic
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          field, external, 88, 90
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          field, inner, 91
+       <BR><IMG vspace=0 hspace=24 SRC="dot_clear.gif"> 
+          Hamiltonian part, 104
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       splitting, 90, 142
+    <BR><IMG vspace=0 hspace=16 SRC="dot_clear.gif"> 
+       sublevels, 147
+
+<hr>
+<br>
+<H3 ALIGN="CENTER"><a name=author>ON THE AUTHOR</a></H3>
+
+Pavicic, Mladen [From MARQUISE <i>Who's Who in Science 
+and Engineering</i>, 4th Ed., 1998-1999 and <i>Who's Who in the 
+World</i>, 17th, 2000]  Physicist, educator; b. Zagreb, 
+Croatia; PhD in Physics, 1986; main asst. Univ. Zagreb, 1982-89, 
+asst. prof., 1990-95, assoc. prof., 1996-2000,
+full prof., 2001- ; head sci. project Ministry of Sci., Zagreb, 
+1991-96; head sci. project <i>Quantum Computation and Quantum 
+Communication</i>, Ministry of Sci., Zagreb, 1996-2001, head 
+sci. project <i> Quantum Information Theory</i>, Ministry of Sci., 
+Educ., and Sport, Zagreb, 2001-. Author: <i> Solved Problems in 
+Physics</i>, 1982, 2nd edit., 1984; articles to prof. journals: 
+<i>Phys. Rev. Lett.; Phys. Rev. A, D; J. Opt. Soc. Am. B; 
+Opt. Commun.; J. Phys. A; Phys. Lett. A; Helv. Phys. Acta; 
+Forschr. Phys.; Found. Phys.; Int. J. Theor. Phys.;</i>  etc.; 
+Grantee Alexander von Humboldt Found., Germany, Univ. Cologne, Germany, 
+1988-90; Tech. Univ. Berlin, Germany, 1993; Humboldt Univ. Berlin, 
+Germany, 1995; Grantee Fulbright Senior Scholar Research/Lect., 
+USA, Univ. Maryland Baltimore County,  UMBC, Baltimore, USA, 
+1999-2000;  French Ministry Sci., Univ. Reims, France, 1992; 
+Austrian Ministry Sci., Atom-Inst. of Austr. Univ., Vienna, 
+Austria, 1993, 94, 95, 97; Max-Planck Gesel., Germany, 
+Humboldt Univ. Berlin, Germany, 1996; E. Schrodinger Inst., 
+Vienna, Austria, 2000; Mem. Int. Quantum Structures 
+Assn. (co-founder, nominating com. 1992-94), USA; Croatian
+Humboldt-Club (president, 2002-); Croatian Phys. Soc.; European 
+Phys. Soc.; Am. Phys. Soc.; Opt. Soc. Am.; Achievements include 
+proof of Pauli nonuniqueness for real states, 
+discovery of polarization correlation between beams of unpolarized 
+light, discovery of polarization entanglement of two unpolarized 
+photons that nowhere interacted, discovery of a nondistributive 
+model for classical logic, co-discovery of a nonorthomodular model 
+for quantum logic, co-formulation of a resonator interaction-free 
+detection, discovery of an interaction free destruction of atom 
+interference pattern, and co-discovery of exhaustive algorithms 
+for generating arbitrary Kochen-Specker vectors. 
+
+<hr>
+<br>
+<H3 ALIGN="CENTER"><a name=back>BACK COVER (EDITORIAL REVIEW)</a></H3>
+
+<H3 ALIGN="LEFT">QUANTUM COMPUTATION AND QUANTUM COMMUNICATION:
+Theory and Experiments</i></a></H3>
+
+<H3 ALIGN="LEFT">
+<a href="http://m3k.grad.hr/pavicic" target="_blank">Mladen Pavicic</a>
+</a></H3>
+
+
+The field of quantum computing has experienced rapid development and many different experimental and theoretical groups have emerged worldwide.This book presents the key elements of quantum computation and communication theories and their implementation in an easy-to-read manner for readers coming from physics, mathematics and computer science backgrounds. Integrating both theoretical aspects and experimental verifications of developing quantum computers, the author explains why particular mathematical methods, physical models and realistic implementations might provide critical steps towards achieving the final goal - constructing quantum computers and quantum networks. The book serves as an excellent introduction for new researchers and also provides a useful review for specialists in the field.
+
+<br>
+
+<H3 ALIGN="LEFT"><a href="http://www.springer.com"  target="_blank">
+Springer</a></H3>
+
+<H3 ALIGN="LEFT"><a href="http://www.springeronline.com" target="_blank">
+springeronline.com</a></H3>
+
+<br>
+
+ISBN 0-387-24412-3
+
+<br>
+<br>
+
+<hr>
+
+<H2 ALIGN="CENTER"><a name=misprints>Misprints (Errata)</a></h2>
+
+p. 22, the line above Eq. (1.16) should read: 
+
+<blockquote>
+<img src="p22a.png">
+</blockquote>
+
+p. 22, the second line above Eq. (1.17) should read: 
+
+<blockquote>
+<img src="p22b.png">
+</blockquote>
+
+p. 114, the line below Eq. (2.67) should read: 
+
+<blockquote>
+<img src="p114a.png">
+</blockquote>
+
+p. 114, 2nd line from bottom should read: 
+
+<blockquote>
+<img src="p114b.png">
+</blockquote>
+
+p. 115, the line above Eq. (2.68) should read: 
+
+<blockquote>
+<img src="p115.png">
+</blockquote>
+
+p. 136, 11th line from the top should read:
+
+<blockquote>
+<img src="p136.png">
+</blockquote>
+
+p. 139, the first half of the 8th line from
+bottom should read:
+
+<blockquote>
+<img src="p1391.png">
+</blockquote>
+
+p. 147, Eq. (3.19) should read:
+
+<blockquote>
+<img src="p147a1.png">
+</blockquote>
+
+p. 147, Eq. (3.20) should read:
+
+<blockquote>
+<img src="p147b1.png">
+</blockquote>
+
+p. 147,  the 5th line from bottom should read:
+
+<blockquote>
+<img src="p147c1.png">
+</blockquote>
+
+p. 148, the 1st line of the caption of Figure 3.6 
+should read:
+
+<blockquote>
+<img src="p148a1.png">
+</blockquote>
+
+p. 148, the 9th line from bottom should read:
+
+<blockquote>
+<img src="p148b1.png">
+</blockquote>
+
+p. 149, Eq. (3.25) should read:
+
+<blockquote>
+<img src="p1491.png">
+</blockquote>
+    
+p. 151, Eq. (3.33) should read:
+
+<blockquote>
+<img src="p1511.png">
+</blockquote>
+    
+
+p. 166, the 3rd line of the caption of Figure 3.16 
+should read:
+
+<blockquote>
+<img src="p1661.png">
+</blockquote>
+
+p. 166, the 5th line of the caption of Figure 3.16 
+should read:
+
+<blockquote>
+<img src="p166a1.png">
+</blockquote>
+
+p. 167, the last line of the 2nd paragraph should read:
+
+<blockquote>
+<img src="p1671.png">
+</blockquote>
+
+
+p. 197, Eq. (3.127) should read:
+
+<blockquote>
+<img src="p1971.png">
+</blockquote>
+   
+<br><hr> 
+
+</body>
+</HTML>
+
+
+
+

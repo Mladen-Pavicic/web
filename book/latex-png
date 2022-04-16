@@ -1,0 +1,10 @@
+cat > tmp.tex <<EOF
+\magnification=1440 
+\hsize=17cm
+\parindent=0pt
+\nopagenumbers
+Eqs. (2.66) and (2.67) read [Demtr\"oder, 1996, 2.6.6] 
+\bye
+EOF
+tex tmp
+dvipng tmp

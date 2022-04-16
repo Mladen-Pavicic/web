@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+
+<title>Mladen Pavicic, Physics Letters A Graphics Slides, Feb 2016 
+</title>
+<!-- Background white, links green (unvisited), blue (visited), red (active) -->
+ <body
+  BGCOLOR="#FFFFFF"
+  TEXT="#000000"
+  LINK="#005300"
+  VLINK="#000080"
+  ALINK="#FF0000"
+ >
+
+<style>
+body {font-family:Arial, Helvetica, sans-serif; font-size:12px;}
+
+.fadein { position:relative; height:332px; width:500px; }
+.fadein img { position:absolute; left:0; top:0; }
+
+.fadelinks, .faderandom { position:relative; height:332px; width:500px; }
+.fadelinks > *, .faderandom > * { position:absolute; left:0; top:0; display:block; }
+
+.multipleslides { position:relative; height:332px; width:500px; float:left; }
+.multipleslides > * { position:absolute; left:0; top:0; display:block; }
+</style>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script>
+$(function(){
+	$('.fadein img:gt(0)').hide();
+	setInterval(function(){$('.fadein :first-child').fadeOut().next('img').fadeIn().end().appendTo('.fadein');}, 3000);
+});
+</script>
+
+<div class="fadein">
+<img src="a-01.jpg">
+<img src="a-02.jpg">
+<img src="a-10.jpg">
+<img src="a-11.jpg">
+<img src="a-20.jpg">
+<img src="a-21.jpg">
+<img src="a-30.jpg">
+<img src="a-31.jpg">
+<img src="a-40.jpg">
+<img src="a-41.jpg">
+<img src="a-50.jpg">
+<img src="a-51.jpg">
+</div>
+
+
+</HTML>
+

@@ -1,0 +1,2237 @@
+﻿
+
+GRAĐEVINSKI FAKULTET SVEUČILIŠTA U ZAGREBU 
+	 10 000 ZAGREB, KAČIĆEVA 26
+TEL. 01/46 39 121
+FAX 01/48 28 051
+
+
+
+
+
+
+POSLIJEDIPLOMSKI 
+SPECIJALISTIČKI STUDIJ
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+POŽARNO INŽENJERSTVO
+
+
+
+
+
+
+
+Zagreb, 2008. godina
+
+
+SPECIJALISTIČKI STUDIJ POŽARNO INŽENJERSTVO
+
+
+1.1UVOD
+
+Približavanje Hrvatske Europskoj Uniji ubrzalo je i primjenu europske regulative u području projektiranja i građenja, a u okviru toga i proces jasnijeg definiranja općih principa u dijelu projektiranja i građenja u području zaštite od požara. Usklađivanje tehničke regulative iz svih područja, pa tako i područja zaštite od požara, obveza je koju je Hrvatska preuzela potpisivanjem Sporazuma o stabilizaciji i pridruživanju između Republike Hrvatske i Europske unije (29.listopada 2001.godine). Europski dokument Smjernice Vijeća Europe (Council Directive 89/106/EEC ) još je 1998. godine utvrdio odrednice o usklađivanju tehničkog i upravnog zakonodavstva država članica koje se odnosi na građevinske proizvode. Smjernica je propisala i šest bitnih zahtjeva za građevinu od kojih je zaštita od požara detaljno razrađena u najopsežnijem dokumentu (Temeljni dokument broj 2: - Zaštita od požara).
+ 
+Djelovanje požara na građevinske objekte kao "novo" precizno definirano "opterećenje" izjednačeno je u europskoj zakonskoj i tehničkoj regulativi s ostalim, do sada uobičajenim opterećenjima građevine. Spomenuta činjenica posljedica je svakodnevnih ljudskih i materijalnih gubitaka koje izaziva ovo "opterećenje" na građevinu. 
+U razvijenijim europskim zemljama (primjerice Njemačka, Engleska) svake godine pogine u požaru od 700 do 800 ljudi, a materijalna šteta na objektima kreće se oko dvije milijarde Eura. Prema podacima Svjetskog statističkog centra u Ženevi, požari svake godine oštete svjetsko gospodarstvo za cca 1% bruto nacionalnog dohotka. Slično stanje je i u Hrvatskoj gdje svake godine pogine u požarima od 30 do 40 ljudi, a šteta na građevinskim objektima doseže vrijednost i do 40 – 50 milijuna Eura.
+Požare je, dakako, vrlo teško spriječiti, pa jedino što preostaje je projektirati i graditi objekte na način koji omogućuje ostvarenje zahtjeva iz europske i hrvatske regulative. Članak broj 8. Zakona o gradnji koji je prenesen iz europske regulative propisuje da se objekt mora tako projektirati i graditi da se u slučaju požara:
+očuva nosivost konstrukcije tijekom određenog vremena,
+spriječi širenje vatre i dima unutar građevine,
+spriječi širenje vatre na susjedne građevine,
+osigura da stanari mogu neozlijeđeno napustiti građevinu, odnosno da se na drugi način omogući njihovo spašavanje,
+omogući sigurnost spasilačke ekipe.
+
+Ovi zahtjevi mogu se, osim preko regulative kojom se propisuju elementi požarne zaštite objekata, rješavati i inženjerskim metodama što je regulirano točkom 2.3. Temeljnog europskog dokumenta iz područja zaštite od požara.
+Te metode izučavaju se u okviru poslijediplomskog specijalističkog studija Požarno inženjerstvo na Sveučilištu u Zagrebu na Građevinskom fakultetu, a obuhvaćaju primjenu znanstvenih metoda pri definiranju zahtjeva i proračunu požarne sigurnosti objekata. To se, prije svega, odnosi na proračun širenja požara (vatre i dima), kako u pojedinoj prostoriji  tako i proračun širenja na druge prostorije i širenje požara izvan objekta na susjedne građevine. 
+
+U drugoj fazi to obuhvaća:
+proračun i procjenu djelovanja topline i dima na ljude i građevinu,
+izračun otpornosti na požar konstrukcijskih elemenata građevine,
+ocjenu i proračun ponašanja građevinskih materijala u smislu njihove zapaljivosti, širenja plamena, isijavanja topline, razvoja dima i toksičnih plinova,
+
+proračune evakuacijskih vremena i ocjenu ponašanja ljudi u požaru te, odabire odgovarajućih evakuacijskih modela, 
+proračune i odabir aktivnih sustava za dojavu i gašenje požara (vatrodojava, sustavi za automatsko gašenje požara, sustavi za odvođenje dima i toplina) te,
+razvoj računalnih modela i metodologije analize rizika.
+
+Osnovni cilj poslijediplomskog specijalističkog studija Požarno inženjerstvo je razvoj znanstvenih metoda kojim bi se došlo do objektivnije ocjene djelovanja požara na ljude i građevine u konkretnoj situaciji, a time i povećanja sigurnosti osoba i objekata. Pri tome je od bitnog značaja utvrđivanje granice tzv. prihvatljivog i realnog rizika i s tim u vezi ekonomičnost primijenjenih mjera. Ovo je posebno vidljivo kad se mjere zaštite od požara, propisane postojećom regulativom usporede s mjerama zaštite od požara koje su određene metodama požarnog inženjerstva. U pravilu je evidentna neselektivnost regulative  u kojoj su određene mjere propisane "po osjećaju" zakonodavca što nerijetko dovodi do pretjerivanja (posebno u dijelu vatrootpornosti konstrukcije) ili do međusobne neusklađenosti zahtjeva unutar istog propisa, a često i između propisa iz područja zaštite od požara u cjelini.
+U tom smislu metode požarnog inženjerstva su konzistentne jer se baziraju na znanstvenim principima te nude najbolja sigurnosna rješenja koja su ujedno i ekonomski prihvatljiva za investitora.
+
+Građevinski fakultet Sveučilišta u Zagrebu je pokretač i voditelj studija, a u izvedbi programa sudjelovat će i nastavnici sljedećih tehničkih fakulteta i instituta: Arhitektonski fakultet Sveučilišta u Zagrebu, Fakultet strojarstva i brodogradnje Sveučilišta u Zagrebu, Građevinsko-arhitektonski fakultet Sveučilišta u Splitu, Visoka škola za sigurnost s pravom javnosti, Zagreb, Institut građevinarstva Hrvatske, Zagreb, i Centra za tehničke sustave i požarno inženjerstvo, Zagreb.
+Studij je koncipiran kao i slični programi u svijetu, npr. programi: 
+Building Materials, Concrete Construction and Fire Protection, Technische University Braunschweig, Institut fur Baustoffe, Massivbau und Brandschutz, Braunschweig, Germany.
+LTH – Institute of Technology at Lund University, Sweeden.
+Master of Engineering in Building Fire safety and Risk Engineering; Victoria University of Wellington, New Zeland.
+Fire Engineering Programme, program University of Canterbury, New Zealand.
+Fire Protection Engineering, program Worcester Polytechnic Institute, Worcester, MA, USA.
+
+1.2OPĆI DIO
+1.2.1Naziv studija: POŽARNO INŽENJERSTVO
+1.2.2Nositelj studija: Građevinski fakultet Sveučilišta u Zagrebu
+1.2.3Trajanje studija: 1 godina
+1.2.4Uvjeti upisa na studij: završen studij iz grupacije fakulteta Tehničke znanosti
+
+1.2.5Nakon završenog studija, polaznik je osposobljen za poslove u graditeljstvu propisane Zakon o prostornom uređenju i gradnji (NN 76/07 i 100/04) i Zakonom o  zaštiti od požara (NN 58/03 i 33/05):
+urbanističko planiranje i arhitektonsko projektiranje prema uvjetima zaštite od požara;
+izrada i revizija elaborata zaštite od požara;
+kontrola glavnih projekata u slučaju djelovanja požara glede mehaničke otpornosti i stabilnosti;
+projektiranje i izvedba adaptacija i prenamjena starih objekata koji ne zadovoljavaju osnovne uvjete zaštite od požara;
+izrada procjene ugroženosti objekata od požara;
+sudsko vještačenje požara;
+projektiranje, proizvodnja i ugradnja opreme i uređaja za zaštitu od požara na građevinama;
+ispitivanje požarnih karakteristika materijala i konstrukcija;
+proizvodnja, ispitivanje i ugradnja materijala za zaštitu od požara na građevinama.
+1.2.6Završetkom studija stječe se akademski naziv: specijalist požarnog inženjerstva.
+
+1.3OPIS PROGRAMA 
+1.3.1Popis obveznih i izbornih predmeta s brojem sati aktivne nastave potrebnih za njihovu izvedbu i brojem ECTS bodova
+
+Red. br.
+Obvezni predmeti
+Ukupno
+sati nastave
+ECTS bodovi
+1.
+TERMODINAMIKA POŽARA
+30
+6
+2.
+PONAŠANJE GRAĐEVINSKIH MATERIJALA I ELEMENATA U POŽARU
+25
+5
+3.
+OSNOVE NOSIVIH KONSTRUKCIJA
+10
+2
+4.
+SIGURNOST NOSIVIH KONSTRUKCIJA U POŽARU
+25
+5
+5.
+ARHITEKTONSKO-GRAĐEVINSKE I URBANISTIČKE MJERE ZAŠTITE OD POŽARA
+30
+6
+6.
+SUSTAVI AKTIVNE ZAŠTITE OD POŽARA
+(hidrantska mreža, sustavi za automatsko gašenje požara, vatrodojavu i odimljavanje)
+30
+6
+Red. br.
+Izborni predmeti
+Ukupno
+sati nastave
+ECTS bodovi
+1.
+MODELIRANJE RAZVOJA POŽARA
+20
+4
+2.
+PONAŠANJE LJUDI U POŽARU
+20
+4
+3.
+REGULATIVA IZ PODRUČJA ZAŠTITE OD POŽARA
+30
+6
+4.
+UPRAVLJANJE RIZICIMA U POŽARU
+20
+4
+5.
+METODOLOGIJA ISTRAŽIVAČKOG RADA
+20
+4
+1.3.2Opis pojedinog predmeta je dan u prilogu I.
+1.3.3 Struktura studija:
+a)Nastava na specijalističkom poslijediplomskom studiju traje dva semestra. Svakom studentu određuje se mentor i tema specijalističke radnje prilikom upisa u drugi semestar studija. Temu specijalističke radnje odobrava Povjerenstvo za izradu specijalističke radnje. 
+b)Student treba postići ukupno 60 ECTS bodova, a od toga treba polaganjem ispita postići 40 ECTS boda. Završnim radom se ostvaruje 20 ECTS bodova.
+c)Uz sve obvezne predmete, potrebno je odabrati još dva predmeta iz skupine izbornih predmeta.
+
+1.3.4Svi obvezni predmeti se mogu izvoditi i na engleskom jeziku.
+1.3.5Studenti koji su prekinuli studij ili su izgubili pravo studiranja moći će ponovnim upisom nastaviti studij nakon zahtjeva kojeg rješava Odbor za provedbu nastave specijalističkog studija Požarno inženjerstvo. 
+1.3.6Kada student položi sve propisane ispite i izradi specijalističku radnju stječe pravo na potvrdu (certifikat) o završenom specijalističkom studiju. Završen specijalistički poslijediplomski studij biti će, također, vrednovan unutar programa cijeloživotnog stručnog obrazovanja (prema Pravilniku o stručnim ispitima i stručnom usavršavanju izdanom od Ministarstva zaštite okoliša i prostornog uređenja NN 24/08).
+1.3.7Početak izrade specijalističke radnje nije uvjetovan svim položenim ispitima. Student mora položiti sve ispite prije predaje specijalističke radnje. Predaja specijalističke radnje i postupak obrane odvija se pred tročlanom komisijom izabranom na Odboru za znanstveni rad Građevinskog fakulteta Sveučilišta u Zagrebu
+1.3.8Maksimalna duljina razdoblja od početka do završetka studiranja je 3 godine.
+
+1.4UVJETI IZVOĐENJA STUDIJA
+1.4.1Mjesta realizacije studijskog programa:
+Predavaonice i laboratoriji Građevinskog fakulteta Sveučilišta u Zagrebu i Instituta građevinarstva Hrvatske d.d.
+1.4.2Podaci o prostoru i opremi predviđenima za izvođenje studija: Građevinski fakultet – 5 predavaonica, 3 kompjuterske učionice, 400 m2 laboratorijskog prostora
+1.4.3Imena nastavnika i broj suradnika koji će sudjelovati u izvođenju svakog predmeta pri pokretanju studija 
+
+R. b.
+Obvezni predmet
+Nastavnik
+Br. suradnika
+1.
+Termodinamika požara
+Prof.dr.sc. Mladen Pavičić
+Prof.dr.sc. Dunja Mikulić
+2
+2.
+Ponašanje građevinskih materijala i elemenata u požaru
+Prof.dr.sc. Dubravka Bjegović
+3
+3.
+Osnove nosivih konstrukcija
+Prof.dr.sc. Zorislav Sorić
+-
+4.
+Sigurnost nosivih konstrukcija u  požaru
+Prof.dr.sc. Bernardin Peroš
+1
+5.
+Arhitektonsko-građevinske i urbanističke mjere zaštite od požara
+Prof.dr.sc. Mladen Jošić
+1
+6.
+Sustavi aktivne zaštite od požara 
+Prof.dr.sc. Živko Vuković
+3
+R. b.
+Izborni predmeti
+Nastavnik
+Br. suradnika
+1.
+Modeliranje razvoja požara
+Prof.dr.sc. Bernardin Peroš
+Doc.dr.sc. Ivica Boko
+2
+2..
+Ponašanje ljudi u požaru
+Doc.dr.sc. Miljenko Antić
+-
+3..
+Regulativa iz područja zaštite od požara
+Prof.dr.sc. Dubravka Bjegović
+3
+4..
+Upravljanje rizicima u požaru
+Prof.dr.sc. Mladen Radujković
+Doc.dr.sc. Anita Cerić
+-
+5..
+Metodologija istraživačkog rada
+Doc.dr.sc. Anita Cerić
+-
+1.4.4Podaci o svakom angažiranom nastavniku nalaze se u prilogu 3.
+1.4.5Popis radilišta (nastavnih, istraživačkih i stručnih baza) raspoloživih za provođenje studija:
+Građevinski fakultet Sveučilišta u Zagrebu;
+Institut građevinarstva Hrvatske, Zagreb;
+
+Laboratorij za toplinska mjerenja, Lučko - Zagreb.
+
+1.4.6
+1.4.7Popis i kvalifikacije suradnika 
+
+R. b.
+Obvezni predmet
+Suradnik
+1.
+Termodinamika požara
+Dr.sc. Miodrag Drakulić, dipl.ing.stroj. – predavač 
+Slobodan Kocijan, dipl. tehnolog – predavač 
+2.
+Ponašanje građevinskih materijala i elemenata u požaru
+Mr.sc. Vladimir Šimetin, dipl.ing.građ. – viši  predavač
+Mr.sc. Irina Stipanović, dipl.ing.građ. – asistent 
+Marija Jelčić, dipl.ing.građ. – asistent 
+3.
+Osnove nosivih konstrukcija
+-
+4.
+Sigurnost nosivih konstrukcija u požaru 
+Dr. sc. Ivica Boko, dipl.ing.građ. – docent 
+5.
+Arhitektonsko - građevinske     i urbanističke mjere zaštite od požara
+Milan Carević, dipl.ing.arh. – viši  predavač
+6.
+Sustavi aktivne zaštite od požara
+Prof.dr.sc. Petar Donjerković, dipl.ing.građ.
+Dr.sc. Miodrag Drakulić, dipl.ing.stroj. – predavač  
+Branko Šimara, dipl.ing.el. – predavač 
+R. b.
+Izborni predmeti
+Suradnik
+2.
+Modeliranje razvoja požara
+Prof.dr.sc. Esad Hadžiselimović, dipl.ing.fizike – izvanredni  profesor
+Mr.sc. Irina Stipanović, dipl.ing.građ. – asistent 
+3.
+Ponašanje ljudi u požaru
+-
+4.
+Regulativa iz područja zaštite od požara
+Milan Carević, dipl.ing.arh. – viši  predavač 
+Zlatimir Kaštelanac, dipl.ing.stroj. – predavač 
+Branko Šimara, dipl.ing.el. – predavač 
+Slobodan Kocijan, dipl. tehnolog – predavač
+5.
+Upravljanje rizicima u požaru
+-
+6.
+Metodologija istraživačkog rada
+-
+1.4.8Svaki izabrani nastavnik je potencijalni mentor ili voditelj specijalističke radnje.
+1.4.9Praćenje kvalitete uspješnosti izvedbe studijskog programa provodit će se kontinuirano od strane Odbora za znanost u kojem će kao članovi sudjelovati i predstavnici studenata. Bitan dio praćenja kvalitete činit će studentske ankete.
+U uspješnost izvedbe studijskog programa biti će uključeni predstavnici Komore, te trgovačkih društava koji se bave graditeljstvom.
+Nakon završenog jednog ciklusa studija Odbor za znanost izvijestit će fakultetsko vijeće o praćenju kvalitete i uspješnosti, te predložiti možebitne promjene u studijskom programu ili režimu studiranja. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PRILOG 1. 
+
+Opis obveznih predmeta poslijediplomskog specijalističkog studija  «POŽARNO INŽENJERSTVO»
+
+Naziv predmeta:
+TERMODINAMIKA POŽARA
+
+Nositelji predmeta:
+
+redovni profesor
+Mladen Pavičić
+redovni profesor
+Dunja Mikulić
+Suradnici:
+
+predavač
+Miodrag Drakulić 
+predavač
+Slobodan Kocijan
+
+Broj ECTS bodova:
+6
+Ukupno sati nastave:
+30
+
+Okvirni sadržaj predmeta: 
+Termodinamika gorenja, svojstva čistih i složenih substanci, kalorimetrija, požarno opterećenje, standarne krivulje požara (prema temeljnom dokument EU), kemijska termodinamika, brzina izgaranja, vrijeme trajanja požara, razvoj temperature u požaru, prijenos topline (kondukcija, konvekcija, radijacija), termodinamika prijenosnih procesa u požarima, oslobađanje energije, odavanje toplinske energije kroz otvore na objektu (prijenos požara s kata na kat preko vanjskih otvora, prijenos požara na susjedne građevine), razvoj požara u prostoriji (stanje prije flashovera), flashover (potrebni uvjeti), stanje nakon flashovera, parametri požara prema EUROCOD-u, modeliranje požara, termodinamika zaštite od požara (negorljivi materijali, posebni materijali, pregrade, automatski sustavi gašenja), termodinamika gašenja požara.
+
+Znanja i vještine koje student postiže slušanjem predmeta:
+Znanja o termodinamičkim svojstvima građevinskih materijala, termodinamici i dinamici gorenja. Vještine termodinamičkih modeliranja požara, zaštite od požara i gašenja požara.
+
+Oblici provođenja nastave:
+Vrsta nastave
+sati
+oznaka
+naziv
+P
+Predavanja
+15
+A
+Auditorne vježbe
+5
+L
+Laboratorijske vježbe
+-
+S
+Seminar
+10
+CS
+Case studies
+-
+
+Literatura:
+Obvezna literatura: 
+1.
+Vidaković, M. Termodinamika nekontrolisanog sagorevanja, Prometej, Novi Sad, 1994.
+2.
+D. Drysdale: An Introduction to Fire Dynamics, 2nd Edition John Wiley & Sons, Chichester, UK, 2000.
+3.
+Carević M. i dr. Tehnički priručnik za zaštitu od požara, Zagreb, 2002.
+4.
+Šmer Pavelić, Đ. Gorenje i sredstva za gašenje, MiStar, Zagreb, 1996.
+
+Preporučena literatura: 
+1.
+Rashbash D., Ramachandran G., Kandola B., Watts J., Law M. Evaluation of Fire Safety, John Wiley & Sons Ltd, England, 2004 
+2.
+Karlsson B., Quintiere J. G. Enclosure Fire Dynamics, CRC Press, Roca Raton, Florida, USA, 1999.
+
+Način polaganja ispita:
+pismeno
+
+
+Naziv predmeta:
+PONAŠANJE GRAĐEVINSKIH MATERIJALA I ELEMENATA U POŽARU
+
+Nositelj predmeta:
+
+redoviti profesor
+Dubravka Bjegović
+Suradnici:
+
+viši predavač
+Vladimir Šimetin
+viši predavač
+Milan Carević
+asistent
+Irina Stipanović
+asistent
+Marija Jelčić
+
+Broj ECTS bodova:
+5
+Ukupno sati nastave:
+25
+
+
+Okvirni sadržaj predmeta:
+Reakcija na požar građevnih materijala/elemenata: negorivost, zapaljivost, širenje plamena, otpuštanje topline, pojava gorućih kapljica, proizvodnja dima; promjena tehničkih svojstava građevnih materijala pri visokim požarnim temperaturama; načela ispitivanja, priprema ispitnih uzoraka i metode ispitivanja negorivosti, zapaljivosti, kalorijskog potencijala, gorenjem pojedinačnog predmeta (SBI), gorenja podova uporabom zračećeg izvora topline; kriteriji razredbe i razredba građevnih materijala/elemenata; područje primjene razredbe i sadržaj izvještaja o razredbi; sustav ocjenjivanja sukladnosti građevnih proizvoda ovisno o razredu reakcije na požar.
+
+Znanja i vještine koje student postiže slušanjem predmeta:
+Poznavanje utjecaja požara na promjenu osnovnih svojstava građevinskih materijala i elemenata te upoznavanje s osnovnim ispitivanjima požarnih značajki materijala i elemenata.
+
+Oblici provođenja nastave:
+Vrsta nastave
+sati
+oznaka
+naziv
+P
+Predavanja
+20
+A
+Auditorne vježbe
+- 
+L
+Laboratorijske vježbe
+5
+S
+Seminar
+-
+CS
+Case studies
+-
+
+Literatura:
+Obvezna literatura: 
+1.
+Vidaković M. Požar i osiguranje u industriji,Fahrenheit, Beograd, 2002.
+2.
+Vidaković M. Požar i arhitektonski inženjering, Fahrenheit, Beograd, 1995.
+3.
+Važeće HRN norme za razradbu i ispitivanje požarnih svojstava materijala i elemenata 
+
+Preporučena literatura: 
+1.
+Buchanan A.H. Structural Design for Fire Safety, John Wiley & Sons Ltd, England, 2002.
+2.
+Fitzgerald R.W. Building Fire Performance Analysis, John Wiley & Sons Ltd, England, 2004.
+3.
+Tritzsch J. International Plastics Flammability Handbook, New York, 1990.
+
+
+Način polaganja ispita:
+pismeno i usmeno
+
+
+
+Naziv predmeta:
+OSNOVE NOSIVIH KONSTRUKCIJA
+
+Nositelj predmeta:
+
+redoviti profesor
+Zorislav Sorić
+
+
+Broj ECTS bodova:
+2
+Ukupno sati nastave:
+10
+
+
+Okvirni sadržaj predmeta: 	
+U ovom se predmetu daju osnovna znanja o nosivim konstrukcijama. Počinje se od jednostavnijih ka složenijim sklopovima. Proradit će se osnove statike i otpornosti materijala i konstrukcija. Pokazat će se kako se određuje opterećenje, kako to opterećenje preuzimaju ploče, kako se opterećenje s ploča prenosi na grede i/ili zidove, pa s grede na stupove i temelje, ili sa zidova na temelje. Prikazat će se neke vrste nosača, stupova i temelja. Reći će se nešto i o montažnoj gradnji, kao i o nenosivim i nosivim elementima. Razmatrat će se, i težište baciti na nosive dijelove konstrukcije od nearmiranoga i armiranoga betona te zidane konstrukcije, nearmirane i armirane. Samo načelno će se govoriti o metalnim i drvenim konstrukcijama jer se to predaje na drugim predmetima. Polaznike će se upoznati s osnovnim proračunima nosivosti stropnih konstrukcija izvedenih od armiranog betona (ploče) i/ili od rebrastih stropova s opečnim ulošcima. Osim toga prikazat će se i proračun nosivost nearmiranoga ziđa. Proračuni će slijediti logiku Eurokodova 2 i 6. Proračunski primjeri određivanja nosivosti armiranobetonskih ploča nosivih u jednom smjeru i nosivosti nearmiranoga ziđa na ekscentrično vertikalno opterećenje koji će se prikazati na predavanju služit će kao okosnica za pismeni ispit.
+
+Znanja i vještine koje student postiže slušanjem predmeta:
+Studenti svladavaju osnovna znanja o nosivosti konstrukcija s naglaskom na nosivost armiranobetonskih ploča i nosivosti nearmiranoga ziđa .
+
+Oblici provođenja nastave:
+Vrsta nastave
+sati
+oznaka
+naziv
+P
+Predavanja
+10
+A
+Auditorne vježbe
+-
+L
+Laboratorijske vježbe
+-
+S
+Seminar
+-
+CS
+Case studies
+-
+
+Literatura:
+Obvezna literatura: 
+1.
+Sorić, Z., Betonske konstrukcije prema Eurokodu 2, skripta, Zagreb 2008., (196 str.)
+2.
+Sorić, Z., Zidane konstrukcije, skripta, Zagreb 2008., (210 str.)
+
+Preporučena literatura: 
+1.
+Šimić, V. Otpornost materijala I
+2.
+Behaim, B. Otpornost gradiva i nosećih sklopova
+
+Naziv predmeta:
+SIGURNOST NOSIVIH KONSTRUKCIJA U POŽARU
+
+Nositelj predmeta:
+
+redoviti profesor
+Bernandin Peroš
+Suradnici:
+
+docent
+Ivica Boko
+
+Broj ECTS bodova:
+5
+Ukupno sati nastave:
+25
+
+Okvirni sadržaj predmeta: 
+Značenje kolegija s aspekta požarnog inženjerstva. Prva razina: mjere i smjernice zaštite ljudi i imovine od požara – parametri arhitektonskog projektiranja. Druga razina: problem sigurnosti nosivih konstrukcija u slučaju požara kao udesnog djelovanja. Probabilistički pristup u analizi sigurnosti konstrukcija – definiranje baznih varijabli. Bazna varijabla djelovanja – realni požar u zatvorenom prostoru iskazan visokim temperaturama (primjena modela zona). Bazna varijabla otpornost konstrukcije – iskazana parametrima degradacije otpornosti pojedinih elemenata (granica popuštanja, modul elastičnosti i sl.). Modeli sigurnosti i pouzdanosti nosivih konstrukcija – metoda FORM i SORM. Proračun sigurnosti nosivih konstrukcija u slučaju djelovanja požara s aspekta krajnjeg graničnog stanja i graničnog stanja uporabljivosti. Analiza indeksa pouzdanosti β za nosive konstrukcije većih zatvorenih prostora (industrijski objekti, javne garaže i sl.) ovisno o zadanim slučajevima djelovanja realnih požara i stupnja zaštite konstrukcije. Formati proračuna betonskih, čeličnih, zidanih, te drvenih konstrukcija izloženih djelovanju požara. Preporuke za projektiranje konstrukcija otpornih na požar sukladno preporukama Eurocode-a.
+
+Znanja i vještine koje student postiže slušanjem predmeta:
+Student svladava osnovna znanja o sigurnosti nosivih konstrukcija u slučaju djelovanja realnog požara te o načinu proračuna otkazivanja nosivosti pojedinih konstrukcija ovisno o njihovoj vatrootpornosti.
+
+Oblici provođenja nastave:
+Vrsta nastave
+sati
+oznaka
+naziv
+P
+Predavanja
+15
+A
+Auditorne vježbe
+5
+L
+Laboratorijske vježbe
+-
+S
+Seminar
+-
+CS
+Case studies
+5
+
+Literatura:
+Obvezna literatura: 
+1.
+Peroš B., Boko I. Sigurnost čeličnih konstrukcija izloženih djelovanju požara, G-AF, Split, 2005.(u tisku)
+2.
+Milčić V., Peroš B. Uvod u teoriju sigurnosti nosivih konstrukcija, GF Split, 2003.
+
+Preporučena literatura: 
+1.
+Buchanan A.H. Structural Design for Fire Safety, John Wiley & Sons Ltd, England, 2002.
+2.
+SFPE Handbook od Fire Protection Engineering, 2nd Edition, National Fire Protection Association, 1995.
+3.
+Vidaković M. Požar i arhitektonski inženjering, Fahrenheit, Beograd, 1995.
+
+Način polaganja ispita:
+usmeno
+
+
+Naziv predmeta:
+ARHITEKTONSKO – GRAĐEVINSKE I URBANISTIČKE MJERE ZAŠTITE OD POŽARA
+
+
+Nositelj predmeta:
+
+izvanredni profesor
+Mladen Jošić
+Suradnik:
+
+viši predavač
+Milan Carević
+
+Broj ECTS bodova:
+6
+Ukupno sati nastave:
+30
+
+Okvirni sadržaj predmeta: 
+Koncept požarne zaštite u objektima, bitni zahtjevi za građevinu koje moraju ispuniti objekti u slučaju požara, temeljni dokument EU iz područja zaštite od požara, elaborat zaštite od požara, mjere za sprječavanje širenja požara s objekta na objekt, mjere za sprječavanje širenja požara po objektu, mjere pasivne zaštite – požarni sektori, mjere za sprječavanje širenja dima i topline, mjere aktivne požarne zaštite, evakuacijski putovi i izvedba, projektiranje prilaznih putova i površina za rad vatrogasnih vozila, proračunske i procjenske metode za određivanje mjera zaštite od požara u građevinama, projektiranje građevinskih mjera zaštite za objekte pojedinih namjena (stambeni objekti, škole, bolnice, trgovački objekti, restorani, hoteli, kazališta, kina, izložbeni prostori, sportske dvorane, garaže, industrijski objekti, skladišta zapaljivih tekućina, skladišta, eksploziva, luke i dr.).
+
+Znanja i vještine koje student postiže slušanjem predmeta:
+Razumijevane osnovnih principa arhitektonskog i urbanističkog projektiranja građevina u području zaštite od požara. Sposobnost korištenja proračunskih metoda i sposobnost izrade elaborata zaštite od požara.
+
+Oblici provođenja nastave:
+Vrsta nastave
+sati
+oznaka
+naziv
+P
+Predavanja
+30
+A
+Auditorne vježbe
+-
+L
+Laboratorijske vježbe
+-
+S
+Seminar
+-
+CS
+Case studies
+-
+
+Literatura:
+Obvezna literatura: 
+1.
+Vidaković M. Požar i arhitektonski inženjering, Fahrenheit, Beograd, 1995.
+2.
+Buchanan A.H. Structural Design for Fire Safety, John Wiley & Sons Ltd, England, 2002.
+3.
+M.Carević et al..; Tehnički priručnik za zaštiti od požara, Grafo-Amdeus, Zagreb,  2002.
+4.
+Baulicher Brandschutz, Brandschutz Atlas, Wehner Gmbh 1996.
+5.
+TRVB 100, Linz, 1987.
+
+Preporučena literatura: 
+1.
+Fitzgerald R.W. Building Fire Performance Analysis, John Wiley & Sons Ltd, England, 2004.
+2.
+NFPA Fire protection handbook, NFPA, Boston, 1992.
+3.
+NFPA 101, Boston, 2003.
+4.
+NFPA 88A, Boston, 2002.
+
+Način polaganja ispita:
+pismeno i usmeno
+
+
+Naziv predmeta:
+SUSTAVI AKTIVNE ZAŠTITE OD POŽARA
+
+Nositelji predmeta:
+
+redoviti profesor
+Josip Marušić
+Suradnici:
+
+redoviti profesor
+Petar Donjerković
+predavač
+Miodrag Drakulić
+predavač
+Branko Šimara
+
+Broj ECTS bodova:
+6
+Ukupno sati nastave:
+30
+
+Okvirni sadržaj predmeta: 
+Sustavi i naprave za otkrivanje i javljanje požara; sustavi i naprave za prijenos signala i alarmiranje; sustavi i oprema za kontrolu dima pri požaru; unutarnja i vanjska hidrantska mreža i opskrba s vodom; sprinkler sustavi, drugi stabilni sustavi za gašenje s vodom; stabilni sustavi za gašenje s pjenom; stabilni sustavi za gašenje s plinom; prijenosne naprave i oprema za gašenje, mjere zaštite od požara kod električnih instalacije, sustava za ventilaciju i klimatizaciju, instalacija grijanja, plinskih instalacija.
+
+Znanja i vještine koje student postiže slušanjem predmeta:
+Upoznavanje sa sustavima aktivne zaštite od požara na primjerima iz prakse.
+
+Oblici provođenja nastave:
+Vrsta nastave
+sati
+oznaka
+naziv
+P
+Predavanja
+15
+A
+Auditorne vježbe
+5
+L
+Laboratorijske vježbe
+-
+S
+Seminar
+5
+CS
+Case studies
+5
+
+Literatura:
+Obvezna literatura: 
+1.
+Vidaković M. Požar i arhitektonski inženjering, Fahrenheit, Beograd, 1995.
+2.
+Pravilnik o sustavima za dojavu požara (NN 56/99)
+3.
+VdS smernice za projektiranje i izvedbu sustava za automatsko gašenje požara
+4.
+Austrijske smjernice za sustave za odvođenje dima i topline TRVB 125. Linz, 2000.
+5.
+Hrvatski propisi i norme
+
+Preporučena literatura: 
+1.
+Fitzgerald R.W. Building Fire Performance Analysis, John Wiley & Sons Ltd, England, 2004.
+2.
+SFPE Handbook of fire protection engineering. NFPA, Boston 1995.
+
+Način polaganja ispita:
+pismeno i usmeno
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PRILOG 2. 
+
+Opis izbornih predmeta poslijediplomskog specijalističkog studija
+POŽARNO INŽENJERSTVO»
+
+
+
+Naziv predmeta:
+MODELIRANJE RAZVOJA POŽARA
+
+Nositelj predmeta:
+
+redoviti profesor
+Bernandin Peroš
+docent
+Ivica Boko
+Suradnici:
+
+izvanredni profesor
+Esad Hadžiselimović
+asistent
+Irina Stipanović
+
+Broj ECTS bodova:
+4
+Ukupno sati nastave:
+20
+
+
+Okvirni sadržaj predmeta: 
+Općenito o realnom požarnom djelovanju u zatvorenim prostorima. Definiranje problema djelovanja požara s aspekta visokih temperatura prema važećoj hrvatskoj i europskoj regulativi. Razlike u primjeni standardne požarne krivulje i  parametarskih krivulja – modeliranje razvoja realnog požara u velikim prostorima. Numeričko simuliranje temperatura (veliki zatvoreni prostori) variranjem pojedinih parametara kao što su masa gorivog materijala, površina poda pokrivena gorivom, površina ventilacijskih otvora, radijalnoj udaljenosti od centra požara i slično. Analiza požara u fazama: faza razvoja, faza potpuno razvijenog požara i faza dogorijevanja. Modeliranje razvoja požara. Modeli polja – opisivanje vremenske raspodjele temperatura, brzine širenja i koncentracije plinova u zatvorenom prostoru. Modeli zona – konzervativna i aproksimativna formulacija. Prikladni modeli za simuliranje realnog požarnog opterećenja uz navedena variranja. Primjeri primjene modela zona u industrijskim objektima, javnim garažama i sl.
+
+Znanja i vještine koje student postiže slušanjem predmeta:
+Student svladava osnovna znanja o realnom požaru u zatvorenim prostorima, razvoju požara u pojedinim fazama, te načinu modeliranja požara s aspekta visokih temperatura kao udesnog djelovanja na nosive konstrukcije.
+
+Oblici provođenja nastave:
+Vrsta nastave
+sati
+oznaka
+naziv
+P
+Predavanja
+15
+A
+Auditorne vježbe
+5
+L
+Laboratorijske vježbe
+-
+S
+Seminar
+5
+CS
+Case studies
+-
+
+Literatura:
+Obvezna literatura: 
+1.
+Buchanan A.H. Structural Design for Fire Safety, John Wiley & Sons Ltd, England, 2002.
+2.
+Peroš B., Boko I. Sigurnost čeličnih konstrukcija izloženih djelovanju požara, G-AF, Split, 2005.(u tisku)
+3.
+Hadžiselimović E., Kleut N. Požarna karakterizacija materijala i elemenata građevinskih konstrukcija, Naučnoistraživačka radna organizacija, Sarajevo, 1991.
+
+Preporučena literatura: 
+1.
+SFPE Handbook od Fire Protection Engineering, 2nd Edition, National Fire Protection Association,1995.
+2.
+Vidaković M. Požar i arhitektonski inženjering, Fahrenheit, Beograd, 1995.
+
+Način polaganja ispita:
+usmeno
+
+Naziv predmeta:
+PONAŠANJE LJUDI U POŽARU
+
+
+Nositelj predmeta:
+
+docent
+Miljenko Antić
+
+Broj ECTS bodova:
+4
+Ukupno sati nastave:
+20
+
+Okvirni sadržaj predmeta: 
+Temeljni pojmovi iz psihologije osobnosti i psihologije skupina. Određenje pojma požara kao krize. Kriza kao psihičko stanje, razvoj i okončanje krize. Vrsta kriza i najčešće reakcije u stanju krize. Individualne reakcije u požarima i kriznim situacijama. Ponašanje i tipične reakcije skupine u požarima i kriznim situacijama. Psihička prevencija i potpora u požarima i kriznim situacijama, ciljevi, značajke, namjena. Specifični postupci i tehnike djelovanja u kriznim situacijama. Važnost učinkovite komunikacije u pristupanju pojedincu i skupini u krizi. Psihologijske osobitosti pristupa osobama i skupinama sa specifičnim potrebama u kriznim intervencijama. Planiranje, organizacija i provedba kriznih intervencija. Sustav za psihološke krizne intervencije, uloga stručnog pomagača i uloga nositelja sustava. Komunikacija s predstavnicima medija u kriznim situacijama. Post-traumatski stresni sindrom i njegova prevencija.
+
+Znanja i vještine koje student postiže slušanjem predmeta:
+Studenti će steći osnovna znanja neophodna za razumijevanje ponašanja pojedinaca i kolektiva tijekom požara i krize, kao i mogućim posljedicama panike i stresa. Biti će osposobljeni za razumijevanje psiholoških aspekata organiziranja i upravljanja u velikim požarima, zaštitom i spašavanjem u požarima i kriznim uvjetima.
+
+Oblici provođenja nastave:
+Vrsta nastave
+sati
+oznaka
+naziv
+P
+Predavanja
+10
+A
+Auditorne vježbe
+-
+L
+Laboratorijske vježbe
+-
+S
+Seminar
+5
+CS
+Case studies
+5
+
+Literatura:
+Obvezna literatura: 
+1.
+Arambašić, L (ur.), Psihološke krizne intervencije: psihološka prva pomoć nakon kriznih događaja, Društvo za psihološku pomoć, Zagreb, 2000.
+2. 
+Rathus, S. A.Temelji psihologije, naklada slap, Jastrebarsko, 2001.
+
+Preporučena literatura: 
+1.
+Pennington D.C. Osnove socijalne psihologije, Naklada slap, Jastrebarsko 2001.
+2.
+Pavlina, Ž. i Komar, Z. (ur.)Vojna psihologija – priručnik za hrvatske časnike, Knjiga prva, MORH, Zagreb, 2001.
+3. 
+Pavlina, Ž. i Komar, Z. (ur.) Vojna psihologija – priručnik za hrvatske časnike, Knjiga druga, MORH, Zagreb, 2001.
+
+Način polaganja ispita:
+pismeno i usmeno
+
+
+Naziv predmeta:
+REGULATIVA IZ PODRUČJA ZAŠTITE OD POŽARA
+
+Nositelj predmeta:
+
+redoviti profesor
+Dubravka Bjegović
+Suradnici:
+
+viši predavač
+Milan Carević
+predavač
+Zlatimir Kaštelanac
+predavač
+Branko Šimara
+predavač
+Slobodan Kocijan
+
+Broj ECTS bodova:
+6
+Ukupno sati nastave:
+30
+
+
+Okvirni sadržaj predmeta: 
+Zakonska regulativa iz područja zaštite od požara (Zakon o zaštiti od požara; Zakon o prostornom uređenju i gradnji; Zakon o prijevozu opasnih tvari; Zakon o zaštiti na radu; Zakon o zapaljivim tekućinama i plinovima i dr. zakoni i propisi iz područja zaštite od požara). Zakonski i podzakonski akti, priznata pravila tehničke prakse koja se u nedostatku hrvatskih propisa primjenjuju u području zaštite od požara. 
+
+Koja znanja i vještine student postiže slušanjem predmeta:
+Studenti će savladati zakonsku regulativu iz područja zaštite od požara te uz izradu seminarskih radova i projektnih zadataka primijeniti stečena znanja.
+
+Oblici provođenja nastave:
+Vrsta nastave
+sati
+oznaka
+naziv
+P
+Predavanja
+20
+A
+Auditorne vježbe
+-
+L
+Laboratorijske vježbe
+-
+S
+Seminar
+5
+CS
+Case studies
+5
+
+Literatura:
+Obvezna literatura: 
+1.
+Carević M. i dr.; Tehnički priručnik za zaštiti od požara, Zagreb, 2002.
+2.
+ZAKONSKI I PODZAKONSKI AKTI prema popisu 
+
+Preporučena literatura: 
+1.
+NFPA/ 2003, TRVB smjernice
+
+Način polaganja ispita:
+pismeno i usmeno
+
+
+Naziv predmeta:
+UPRAVLJANJE RIZICIMA U POŽARU
+
+Nositelj predmeta:
+
+redoviti profesor
+Mladen Radujković
+docent
+Anita Cerić
+
+Broj ECTS bodova:
+4
+Ukupno sati nastave:
+20
+
+
+Okvirni sadržaj predmeta: 
+Proces upravljanja rizicima izazvanih požarom. Definicija rizika. Uloga upravljanja rizicima i ponašanja objekta tijekom požarnog utjecaja. Identifikacija rizika izazvanih djelovanjem požara koji utječu na funkcije dijelova objekta. Tehnike za identifikaciju rizika. Kvantitativna analiza rizika. Kvalitativna analiza rizika. Odgovori na rizik. Upravljanje zaštitom od požara. Uloga i utjecaj ljudskih čimbenika. Rizici od požara i utjecaj na okoliš. Metode prezentacije rezultata analize rizika. Informacijske tehnologije kod upravljanja rizikom.
+
+Koja znanja i vještine student postiže slušanjem predmeta:
+Cilj kolegija je pripremiti studente za upravljanje rizicima izazvanim požarom kod građevinskih projekata.
+
+Oblici provođenja nastave:
+Vrsta nastave
+sati
+oznaka
+naziv
+P
+Predavanja
+16
+A
+Auditorne vježbe
+-
+L
+Laboratorijske vježbe
+-
+S
+Seminar
+4
+CS
+Case studies
+-
+
+Literatura:
+Obvezna literatura: 
+1.
+CIRIA, Control of Risk, A Guide for systematic management of risk from construction, London, 1996.
+2.
+Vidaković, M.: Požar i osiguranje u industriji, Beograd, 2002.
+3.
+Smith N.J. Managing Risk in Construction Projects, Blackwell Science Ltd, Oxford, 1999.
+
+Preporučena literatura: 
+1.
+Flanagan R. & Norman G. Risk management and Construction, Blackwell Science ltd, Oxford, Reprint, 2000. 
+2.
+Fitzgerald R.W. Building Fire Performance Analysis, John Wiley & Sons Ltd, England, 2004.
+
+Način polaganja ispita:
+pismeno i usmeno
+
+
+Naziv predmeta:
+METODOLOGIJA ISTRAŽIVAČKOG RADA
+
+Nositelj predmeta:
+
+Docent
+Anita Cerić
+
+Broj ECTS bodova:
+4
+Ukupno sati nastave:
+20
+
+
+Okvirni sadržaj predmeta: 
+Prikupljanje, proučavanje i sistematizacija literarne građe. Pojam, vrste i provjeravanje hipoteza. Pisanje seminarskih radova i kritičkih prikaza. Metodologija istraživačkog rada. Metode istraživačkog rada. Analiza rezultata istraživačkog rada. Načini prikaza rezultata. Pisanje izvještaja. Citiranje literature. Bibliografija.
+
+Koja znanja i vještine student postiže slušanjem predmeta:
+Cilj kolegija je pripremiti studente za izradu završne radnje na specijalističkom studiju.
+
+Oblici provođenja nastave:
+Vrsta nastave
+sati
+oznaka
+naziv
+P
+Predavanja
+14
+A
+Auditorne vježbe
+-
+L
+Laboratorijske vježbe
+-
+S
+Seminar
+6
+CS
+Case studies
+-
+
+Literatura:
+Obvezna literatura: 
+1.
+R. Zelenika: Metodologija i tehnologija izrade znanstvenog i stručnog djela, Ekonomski fakultet u Rijeci, Rijeka, 2000
+2.
+R. Fellows & A. Liu: Research Methods for Construction. Oxford: The Blackwell Science, 1997
+
+Preporučena literatura: 
+1.
+Robert, K.Y. Case study reserach, design and methods: SAGE Publications, 1994.
+
+Način polaganja ispita:
+usmeno
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+PRILOG 3. 
+
+Podaci o predmetnim nastavnicima specijalističkog studija
+«POŽARNO INŽENJERSTVO»
+
+
+I. PODACI O NOSITELJIMA POJEDINIH PREDMETA (abecednim redom)
+
+docent
+Miljenko
+Antić
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Sveučilište u Zagrebu, Građevinski fakultet, Zavod za organizaciju i ekonomiku građenja 
+
+Status na studiju Požarno inženjerstvo:
+nositelj predmeta Ponašanje ljudi u požaru
+
+E-mail adresa:
+antic@grad.hr 
+Adresa osobne web stranice:
+http://winmaster.grad.hr/?cro/djelatnici/4&id=1078383457
+Kratki životopis: 
+
+Dr. sc. Miljenko Antić se rodio 1963 g. u Zagrebu, RH i državljanin je Republike Hrvatske. Poslije završenog osnovnog i srednjeg obrazovanja, upisuje Fakultet političkih znanosti u Zagrebu. Diplomirao je 1985. g. s odličnim uspjehom, a poslije završenog poslijediplomskog studija na Fakultetu političkih znanosti u Zagrebu magistrirao je 1990. godine, također s odličnim uspjehom. Na Georgia State University doktorirao je 2003. godine  sa temom Democracy versus dictatorship: The influence of political regime on economic and social development. Fakultet političkih znanosti u Zagrebu nostrificirao mu je doktorat 30. siječnja 2004. Dr. sc. Miljenko Antić radio je u Grafičkoj školi u Zagrebu od 1986. do 1989. godine. U periodu 1989. – 1996. predavao je Sociologiju i Sociologiju rada na Građevinskom i Geodetskom fakultetu u Zagrebu, Višoj građevinskoj školi u Zagrebu, te na Građevinskom fakultetu u Osijeku. U periodu 1996. – 1998. dr. sc. Miljenko Antić predaje Politiku i gospodarstvo i Etiku na Školi za medicinske sestre u Zagrebu. 1999. g. odlazi na doktorski studij u Budimpeštu, a od 2000.-2003. godine radi na Georgia State University kao znanstveni i nastavni asistent. Nakon povratka iz SAD, dr. sc. Miljenko Antić odlazi na Central European University u Budimpešti na osnovu stipendije za postdoktorsko usavršavanje. Od 2004. g. Miljenko Antić ponovno predaje kolegije Sociologija rada i profesionalna etika i Sociologija organizacije na Građevinskom fakultetu Sveučilišta u Zagrebu te kolegij Economic and political transition of Eastern Europe na sveučilišnom postdiplomskom studiju Master of European Studies. Zimski semestar  2005. godine Miljenko Antić je proveo na znanstvenom usavršavanju na London School of Economics and Political Science. 
+
+
+Popis značajnijih radova nastavnika:
+1
+(2002). Kako doktorirati u Sjedinjenim Američkim Državama”, Politološki vjesnik 2.
+2.
+(2003). Reexamining role of the state in promoting development, Politička misao (Croatian Political Science Review) 40 (5), Zagreb, str. 18-29;
+3.
+
+
+(2003). The importance of social sciences in the education of civil engineers, u: Radujković and Završki (ur.), Proceedings of 6th International Conference: Organization, Technology and Management in Construction, Hrvatska udruga za organizaciju građenja, Moščenička Draga, str. 90-93, koautor sa Stjepanom Haladinom
+4.
+(2003). The limits of electoral engineering, Journal of Democracy 14 (11), Washington, str. 45-59; Koautor Carrie Manning
+5.
+
+(2004). Društvene znanosti u obrazovanju građevinskih inženjera, Građevinar 56 (11), Zagreb, str. 690-692. 
+6.
+
+(2004). Democracy versus dictatorship: The influence of political regime on GDP per capita growth, Ekonomski pregled 55 (9-10), Zagreb, str. 773-803;
+7.
+(2004). Utjecaj političkog sistema na porast životnog vijeka, Revija za sociologiju 35 (3-4), Zagreb, str. 217-228;
+8.
+(2004). Teorija nadmoći i rat na teritoriju bivše Jugoslavije (1991. – 1995.), Politička misao 41 (2), Zagreb, str. 117-134.
+9.
+(2006). The presidential election in Croatia. Electoral studies 25 (1). Zagreb, str. 177-84.
+10.
+(2007) Procedure for secession. Politička misao. Vol. 44. Broj 3. Stranice 145-159.
+11.
+(2008). The parliamentary election in Croatia, Novembar 2007. Bit će objavljeno u časopisu Elecoral Studies. 
+12.
+(2008). Organizational culture of Faculty of civil engeeniring, University of Zagreb. Proceedings of 8th International Conference: Organization, Technology and Management in Construction. Stranice 1-8. Koautor sa Anitom Cerić.
+
+
+redoviti profesor
+Dubravka
+Bjegović
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Sveučlište u Zagrebu, Građevinski fakultet, Zavod za materijale
+
+Status na studiju Požarno inženjerstvo:
+nositelj predmeta: Ponašanje građevinskih materijala i elemenata u požaru i Regulativa iz područja zaštite od požara
+
+E-mail adresa:
+dubravka@grad.hr 
+Adresa osobne web stranice:
+http://info.grad.hr/gf/index.asp?pid=1342&o=13
+Kratki životopis:
+
+Diplomirala je na Građevinskom fakultetu – konstrukterski smjer, u proljetnom roku 1968., magistrirala na zajedničkom kolegiju Tehnološkog i Strojarskog fakulteta Sveučilišta u Zagrebu iz discipline korozija i zaštita materijala 1. 6. 1978., a doktorirala na Građevinskom fakultetu Sveučilišta u Zagrebu 16. 6. 1991. Završila je Distance Education Course for Eastern European Universities the Management of University – Industry Partnerships, organiziranog od International Institute for Educational Planning, Paris, France i European Centre for Strategic Management of Universities, Brussels, Belgium, 2001. godine
+Od 2002. do 2006. obnašala je funkciju dekanice Građevinskog fakulteta Sveučilišta u Zagrebu. Redoviti je profesor i predstojnik  Zavoda za materijale. Autor je više od 130 znanstvenih i stručnih radova iz područja tehnologije betona i trajnosti armiranobetonskih konstrukcija i zaštite od požara. Voditelj je niza znanstvenih projekata i koautor nekoliko patenata. Aktivni je član udruženja: Hrvatske akademije tehničkih znanosti, Zagreb, New York Academy of Sciences, New York, USA and NACE International, Houston, Texas, USA.
+
+
+Popis značajnijih radova nastavnika:
+1
+Bjegović, D., Mikulić, D.: Concrete Penetrability Testing, Supplementary Papers of Fifth CANMET/ACI International Conference on Durability of Concrete, Barcelona, Spain 2000, pp. 287 – 301.
+2.
+
+Bjegović, D., Mikulić, D., Sekulić, D.: NDT Methods for Monitoring of reinforcing Steel in Concrete, 9th International  Conference and Exhibition «Extending the Life of Bridges, Civil + Building Structures», paper on CD, / Ford, Michael C. (ur.)., Edinburgh : Commonwealth Institute,  London, UK, 2001.
+3.
+
+
+Bjegović, D., Mikšić, B., Matuzić, S.: New Generation of a Superplasticizer with Synergetic Effect, Second International Symposium on Self-Compacting Concrete SCC-2001, paper on CD, Tokyo, Japan, 2001.
+4.
+Bjegović, D.,  Mikulić, D., Sekulić, D.: Non-Destructive Reinforced Concrete Corrosion Monitoring Techniques, The 6th International Conference of the Slovenian Society for Non-Destructive Testing, "Previous Experience and Current Innovations in Non-Destructive Testing", Portorož, Slovenija, 13-15. September 2001.
+5.
+
+Stipanović, I., Bjegović, D., Carević, M.: Fire Testing of precast Tunnel segments, Proceedings from 5th Congress of Croatian constructors, Brijuni, April 2001, pp. 363 – 370.
+6.
+
+Planinc, R., Tisovec, I., Bjegović, D., Planinc, M., Stipanović, I., Drakulić, M., Carević, M.: Construction system for secondary Tunnel lining, Proceedings from the International Tunnels Forum, New Technology in Tunnel Management Systems, Basel, December 2001.
+7.
+Bjegović, Dubravka; Skazlić, Marijan; Čandrlić, Vinko. Croatian experience with RPC // Proceeding of the 6th International Conference on Short & Medium Span Bridges / Banthia N. (ur.). Vancouver , 2002. 355-362.
+8.
+Bjegović, D.; Planinc, R.; Stipanović, I. Fire-resistant composite tunnel segments. // Tunnel Management International. 5 (2002), 3; 42-46
+9.
+Bjegović, D.; Skazlić, M.; Čandrlić, V. RPC in Croatia // Proceedings of the International Congress Challenges Of Concrete Construction / Dhir R.K. (ur.). Dundee , 2002. 719-716.
+10.
+
+Planinc, R.; Pavetić, J.; Planinc, M.; Pavetić, D.; Tisovec, I.; Bjegović, D.; Stipanović, I. Tunnel for safe traffic // Proceeding from International Conference "Tunnel Safety and Ventilation" / Sturm, Peter (ur.). Graz, Austrija : Graz University of Technology, 2002.
+11.
+
+Skazlić, Marijan; Bjegović, Dubravka; Seferović, Enes. Croatian experience with fibre reinforced shotcrete // Proceeding of the 4th International symposium on sprayed concrete-modern use of wet mix sprayed concrete for underground support. Davos,  2002.
+12.
+Bjegović, Dubravka; Carević, Milan; Drakulić, Miodrag; Stipanović, Irina. Utjecaj velikih požara u cestovnim tunelima Europe na izbor mjera zaštite od požara // Zbornik radova znanstveno stručnog skupa "Sigurnost u okolišu i graditeljstvu" / Miščević, Ljubomir (ur.). Zagreb : SUN ARH d.o.o., 2002. 295-306.
+13.
+Stipanović, Irina; Bjegović, Dubravka; Planinc, Marko. Betoni specijalnih namjena - betoni povećane otpornosti na požar // Materijali i tehnologijski razvoj / Filetin, Tomislav (ur.) Zagreb : Akademija tehničkih znanosti Hrvatske, 2002. 175-183 (znanstveni rad).
+14.
+
+Bjegović, D., Stipanović, I., Carević, M. Fire testing of precast tunnel elements // Proceedings of the ITA World Tunneling Congress 2003 "(Re)Claiming the Underground Space" / Saveur, J. (ur.). Lisse, Netherlands : Swets & Zeitlinger B.V., Lisse, 2003. 251-255.
+15.
+Čandrlić, V.; Bjegović, D.; Skazlić, M. RPC constructions in Croatia // Proceeding of the International Conference on Performance of Construction Materials in The New Millenium. Kairo, 2003. 961-970.
+16.
+Bjegović Dubravka; Stehly, Dick. The multifunctional admixture for concrete, Corrosion 2002, 57th Annual NACE Conference, Denver, April 2002. paper No. 02456.
+17.
+
+Bjegović, Dubravka; Šelih, Jana; Mikulić, Dunja; Stipanović, Irina. Models for service life prediction, Proceedings of the 2nd International RILEMWorkshop on Life Prediction, 5-6 May 2003, Paris, France, 13 – 20.
+18.
+
+
+Bjegović D.; Rosković, R.; Beslać J. Synergic effects of mineral additions combined application on physical and mechanical characteristics of cement. // Durability and maintenance of concrete structures: Proceedings of the International Symposium organized by Croatian Society of Structural Engineers (CSSE) and Austrian Society for Concrete and Construction Technology (ASCCT), Dubrovnik, Croatia, October 21-23, 2004 / J. Radić, editor. Zagreb :  SECON HDGK, 2004. Str. 395-402.
+19.
+
+
+
+Bjegović, D. From durable material towards structural durability // Durability and maintenance of concrete structures : proceedings of the International Symposium organized by Croatian Society of Structural Engineers (CSSE) and Austrian Society for Concrete and Construction Technology (ASCCT), Dubrovnik, Croatia, October 21-23, 2004 / J. Radić, editor. Zagreb : SECON HDGK, 2004. Str. 19-30.
+20.
+Skazlić, M.; Bjegović, D. Effect of hybrid fibres on the properties of fiber-reinforced concrete. //  Proceedings of the Sixth International RILEM Symposium Fibre Reinforced Concretes - BEFIB 2004. Varenna, Italy, 20-22 September 2004. Str. 1381-1390.
+21.
+Bjegović, D.; Carević, M.; Stipanović, I. Zaštita od požara trgovačkih objekata. // Zbornik radova Stručnog skupa Zaštita od požara u graditeljstvu. Bizovac : Zavod za unaprjeđivanje sigurnosti, 2004. Str. 47-54.
+22.
+Stipanović, I.; Bjegović, D. Ponašanje betona u požaru. // Sabor hrvatskih graditelja 2004 Graditelji – nositelji razvojnih projekata Republike Hrvatske, Cavtat 22. do 24. travnja 2004. / gl. urednik V. Simović. Zagreb : Hrvatski savez građevinskih inženjera , 2004. Str. 387-397.
+23.
+Stipanović, I.; Bjegović, D.; Carević, M. Klasifikacija materijala s obzirom na djelovanje požara. //  Zbornik radova Drugog savjetovanja Hrvatska normizacija i srodne djelatnosti – tehničko usklađivanje na putu prema Europskoj uniji, Brijuni, 17.-19. lipnja 2004. / urednik J. Radić. Zagreb : SECON HDGK, 2004. Str. 485-492.
+24.
+Rosković, R.; Bjegović, D. Role of mineral additions in reducing CO_2 emission. // Cement and Concrete Research. 35 (2005), 5; 974-978.
+25.
+
+Skazlić, M.; Bjegović, D. Struktura i svojstva betona povećane tlačne čvrstoće. // Građevinar. 58 (2006), 4; 289-299.
+26.
+Bjegović, Dubravka; Drakulić, Miodrag; Carević, Milan; Stipanović, Irina. Temeljni aspekti sigurnosti od požara u gradskim tunelima // Prometna problematika grada Zagreba. Zagreb: Znanstveno vijeće za promet HAZU, 2006. (stručni rad).
+27.
+Beslać, J.; Bjegović, D.; Rosković, R. Inovativni materijali i tehnologije u građenju i održavanju betonskih konstrukcija. // Građevinar. 57 (2005) , 4; 247-255.
+
+Izvanredni profesor
+Anita
+Cerić
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Sveučlište u Zagrebu, Građevinski fakultet,
+Zavod za organizaciju i ekonomiku građenja
+
+Status na studiju Požarno inženjerstvo:
+nositelj predmeta Metodologija istraživačkog rada i Upravljanje rizicima u požaru
+
+E-mail adresa:
+anita@grad.hr
+Adresa osobne web stranice:
+http://winmaster.grad.hr/?cro/djelatnici/3&id=1033045017
+Kratki životopis:
+
+
+Anita Cerić rođena je 03.08.1969. u Prijedoru, BiH.
+1994: Diplomirala na Građevinskom fakultetu Sveučilišta u Zagrebu
+1997: Diploma ASCE «Site Investigations and field measurement», University of Florida, USA
+1999: Magistrirala na Građevinskom fakultetu Sveučilišta u Zagrebu
+1999: Diploma ASCE «Design- Build -Contacting, Las Vegas, Nevada, USA
+2003: Doktorirala na Salford Universtity, School of Construction and Property management, UK
+2004: Nostrificirana diploma sa Salford University na Građevinskom fakultetu Sveučilita u Zagrebu
+1995-danas: Zaposlena na Građevinskom fakultetu Sveučilišta u Zagrebu.
+Područja koja uključuju nastavnu i istraživačku djelatnost: upravljanje rizicima, upravljanje ljudskim potencijalima i upravljanje održavanjem građevina.
+Član udruga: CIB-  Conseil International du Batiment pour la recherche l'etude et la documentation, IPMA- International Project Management Association.
+
+
+Popis značajnijih radova nastavnika:
+1.
+Orešković, M., Cerić, A. (2004), Ocjena napretka graditeljskog projekta, Građevinar, Vol56, br. 11, 675-681
+2.
+Cerić, A., Brandon, P.S. (2004), An IT  toolokit for managing risk in construction projects, International Conference on Construction Information Technology (INCITE 2004): World IT For Design & Construction, Langkawi, Malaysia
+3.
+A. Cerić (2003): A Framework for Process-Driven Risk management in Construction Projects, Phd Thesis, The University of Salford, United Kingdom
+4.
+Radujković, M., Cerić, A. (2003), Project Managers' Role in Transition Countries, Joint International Symposium of CIB Working Commissions, Singapore, pp.82-88.
+5.
+Katavić, M., Cerić, A.(2003), MBA in Construction? Dream or Fact, VI International Conference Organisation Technology and Management in Construction, Mošćenička Draga pp.23-30
+6.
+Katavić M., Cerić A., Šimac M. (2002),  In a pursiut of a Perfect Manager, Book of Abstracts (integralni teks objavljen na CD–Rom-u) 2nd SENET Conference on Project Management, pp.. 73-83.
+7.
+Cerić, A.., Katavić, M. (2002), Popravci i rekonstrukcije skuplji od izgradnje, Graditelj 1-2, 37-41.
+8.
+Katavić, M., Cerić, A. (2002), Why Croatian companies do not implement a marketing concept? Construction Innovation and Global Competitivness, Cincinnati, USA, pp.973-981.
+9.
+Cerić, A., Katavić, M. (2001), Upravljanje održavanjem zgrada, Građevinar 53, 2,83-89, 2001
+10.
+Cerić, A., Katavić, M., Mlinarić, V. (2000), Decision making in Building Maintenance, South East Europe Regional Conference on Project Management, Ljubljana, Slovenija, pp.103-111.
+
+izvanredni profesor
+Mladen
+Jošić
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Sveučlište u Zagrebu, Arhitektonski fakultet,
+Katedra za arhitektonsko projektiranje
+
+Status na studiju Požarno inženjerstvo:
+nositelj predmeta Arhitektonsko-građevinske i urbanističke mjere zaštite od požara
+
+E-mail adresa:
+mladen.josic@arhitekt.hr
+Adresa osobne web stranice:
+http://www.arhitekt.hr/_af/_hr/informacije/dok/bio/bio_15694.html
+Kratki životopis:
+
+diplomirao 1977. na Arhitektonskom fakultetu u Zagrebu
+radi kao izvanredni profesor na Arhitektonskom fakultetu u Zagrebu na predmetima Arhitektonsko projektiranje III, IV i V, te Metodologija arhitektonskog projektiranja
+vodi Međunarodnu ljetnu školu arhitekture Dubrovnik i više projekata u međunarodnoj suradnji fakulteta
+voditelj je Kabineta za stanovanje Arhitektonskog fakulteta u Zagrebu
+mentor je na diplomskom ispitu, integralnom radu i voditelj stručnog ispita za područje arhitekture za srednje umjetničke škole
+dobitnik je više stručnih nagrada među kojima se ističe Nagrada Zagrebačkog salona za realizaciju 1997. godine
+autor je više stambenih i poslovnih zgrada s više od 1000 izvedenih stanova
+najvažniji realizirani projekti su mu Stambeno naselje „Andrija Hebrang“ u Slav. Brodu i Reifeisenbank u Zagrebu (sa Z.Hanžekom i T.Galijaševićem), stambene zgrade u Zagrebu, Puli, Poreču i Slav. Brodu, te Srednja poljoprivredna i veterinarska škola u Osijeku
+
+
+Popis značajnijih radova nastavnika:
+1.
+“Privremeni pravilnik za društveno poticanu stanogradnju”, 2001., 45 stranica, Ministarstvo javnih radova, obnove i graditeljstva, voditelj projekta prof. Mladen Jošić, dipl.ing.arh.
+2.
+“Pravilnik za poticanu stanogradnju”, 2003., 57 stranica, Ministarstvo javnih radova, obnove i graditeljstva, voditelj projekta prof. Mladen Jošić, dipl.ing.arh
+3.
+“Objekti i projekti poticane stanogradnje”, 2003., Ministarstvo javnih radova, obnove i graditeljstva, voditelj projekta prof. Dragomir Vlahović, dipl.ing.arh..
+4.
+“Elementi standarda naselja, elementi standarda zgrade i elementi standarda stana”, 2004., 63 stranice, voditelj projekt prof. Teufik Galijašević, dipl.ing.arh
+5.
+Članak «Hrvatska stambena arhitektura», 8 stranica, Graditelj, 2002.
+6.
+Članak «Stanovanje u Hrvatskoj», 8 stranica, ČIP, 2002.
+7.
+Članak «Teorija i praksa sustava POS», 7 stranica, Hrvatska komora arhitekata i inženjera u graditeljstvu, 2003.
+8.
+Članak «O hrvatskoj arhitekturi stanovanja » 2000., 2 stranice, Galerija Desa, Ljubljana, 2005.
+9.
+Članak «Europan v.s. POS», 4 stranice, Arhitektura, 2005.
+10.
+Izvedenih cca 1000 stanova u 20-tak stambenih zgrada
+11.
+Više urbanističkih planova u Slavonskom Brodu
+12.
+Nogometni stadion «Inter»
+13.
+Zgrada Reifeisenbanke u Zagrebu
+14.
+Poljoprivredna i veterinarska škola u Osijeku
+
+redoviti profesor
+Josip
+Marušić
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Sveučlište u Zagrebu, Građevinski fakultet, Zavod za hidrotehniku
+
+Status na studiju Požarno inženjerstvo:
+nositelj predmeta Sustavi aktivne zaštite od požara
+
+E-mail adresa:
+marusicj@grad.hr 
+Adresa osobne web stranice:
+http://info.grad.hr/gf/index.asp?pid=1342&o=24
+Kratki životopis:
+
+
+
+Rođen 03. veljače 1943. g. u Jameni. Gimnaziju završio 1961. u Vinkovcima i iste godine upisao Arhitektonsko-građevinsko-geodetski fakultet Sveučilišta u Zagrebu. Diplomirao u prosincu 1966. g. na hidrotehničkom smjeru Građevinskog fakulteta. Magistrirao 1980. g., a doktorirao u srpnju 1986. na hidrotehničkom smjeru Građevinskog fakulteta u Zagrebu. Od 1967. g. do travnja 1981. radio na poslovima projektiranja i izgradnje hidrotehničkih i prometnih objekata te obavljao aktivnosti i poslove tehničkog i glavnog direktora Vodoprivrednog poduzeća «Biđ-Bosut», Vinkovci. 
+Od travnja 1981. g. zaposlen na Građevinskom fakultetu Sveučilišta u Zagrebu na sljedećim poslovima: viši predavač do 1986. g., docent do 1991., izvanredni profesor do 1997., redoviti profesor od 1997. (a u trajnom zvanju od 2001.); predstojnik Zavoda za hidrotehniku od 1998. do 2001. g. i od 2006. do 2008., te prodekan za nastavu, predsjednik Odbora za nastavu, Odbora za diplomske ispite od 2002. do 2006. g. Od 1983. do 2008. g. mentor 119 diplomskih radova, tri magistarska rada i jedne disertacije. Od 1984. g. predaje na Agronomskom fakultetu, a od 1992. na Geodetskom fakultetu Sveučilišta u Zagrebu. Od 1992. do 2000. g. predavao na Građevinskom fakultetu u Osijeku. 
+Od 1970. do 2008. g. ukupno 226 objavljenih stručnih i znanstvenih radova, od čega: 45 na međunarodnim skupovima, 22 u zbornicima HAZU, 25 poglavlja u knjigama i priručnicima, 29 u domaćim znanstvenim časopisima i 105 u ostalim časopisima i zbornicima radova skupova u Hrvatskoj. Predsjednik 14 Znanstvenih i Organizacijskih te član 42 Redakcijska odbora i Uredništva skupova u Hrvatskoj i inozemstvu. Glavni urednik časopisa «Hrvatske vode» od 1992. g. Voditelj tri i suradnik na pet znanstvenih projekata. 
+Dopredsjednik Upravnog vijeća «Hrvatskih voda» od 1991. do 1994. i predsjednik do 2000. g. Glavni koordinator «Dugoročnog plana razvoja vodoprivrede Hrvatske» od 1986. do 2005. g., projekta «Višenamjenskog kanala Dunav-Sava» od 1991. g. te voditelj hidrotehničkog dijela «Nacionalnog projekta navodnjavanja i gospodarenja poljoprivrednim zemljištem i vodama» u 2004. i 2005. g. Recenzent većeg broja studija i projekata odvodnje i navodnjavanja te zaštite od voda i gospodarenja vodama. Redoviti član Hrvatske akademije tehničkih znanosti od travnja 2002. g. i redoviti član Znanstvenog vijeća za promet HAZU od listopada 2005. g. 
+Od 1974. g. član 7 i predsjednik 3 strukovna i znanstvena društva iz područja građevinarstva i vodnogospodarskih djelatnosti Hrvatske. Član Nacionalnog komiteta za suradnju s Međunarodnim hidrološkim programom od 1997. g. Član Hrvatske komore arhitekata i inženjera u graditeljstvu od 1999. g. Član International Conference on Irrigation and Drainage (ICID) i International Assation of Hydrogeologists (IAH). Priznanje Američkog biografskog instituta za objavljene radove na međunarodnim skupovima 1998. g
+
+
+Popis značajnijih radova nastavnika:
+1.
+Norme i standardi za redovno održavanje hidromelioracijskih sustava površinske odvodnje. Priručnik za hidrotehničke melioracije, knjiga 6, DONH, Zagreb, 1991., str. 79
+2.
+Značenje hidrotehničkih objekata Slavonije i Baranje za realizaciju programa «Povezivanje Podunavlja i Jadrana», HAZU, Zagreb, Zavod za znanstveni rad, Osijek, 1993., str. 25
+3.
+Influence of changes in the ground water regime on droughts in Prekodravlje. Procedings of the International Workshop on drought in the Corpathious Region, ICID, Budapest, Hungaria, 1995 p 175
+4.
+Efekti podzemne odvodnje na slivu Karašice i Vučice. Građevinar, 48, Zagreb, 1996., 11, str. 719
+5.
+Održavanje hidromelioracijskih sustava za odvodnju u Hrvatskoj. Građevni godišnjak '97, Zagreb, 1997., str. 329
+6.
+Hydrological Determination of Retardation Basins as Elements of Zagreb City Fload Protection System. IXth World Water Congres, IWRA Montreal, Canada, 1997, p 183
+7.
+Hydroameliration Works and Drainage Systems in the Danube Basin in Croatia. XIX Conference of the Danube Contries on Hydrological Forecasting and Hydrological Bases of Water Management, Osijek, Croatia, 1998, p 587
+8.
+Time Behavior Analysis of Drainage in Hexvy Soils. 7th International Drainage Symposium, Hyatt, Orlando, 1998, p 362
+9.
+Hidromelioracijski sustavi podzemne odvodnje – podloge, projektno
+10.
+Aktualni projekt Višenamjenskog kanala Dunav
+11.
+Present Status and Reconstruction of Protective and Drainage Hydrotechnical Works and Systems in the Drava and Danube Basin in Croatia. Pollution and Water Resources; Centre of Regional Studies Hungarian Academy of Science, 2001, p 224
+12.
+Economic Importance and the Environment of the Multipurpose Danube
+13.
+Ekonomske posljedice stanja hidromelioracijskih sustava za odvodnju u Hrvatskoj. 3 hrvatska konferencija o vodama, Osijek, 2003., str. 1077
+14.
+Značenje i utjecaj «Višenamjenskog kanala Dunav
+15.
+Izgradnja i održavanje hidromelioracijskih sustava za odvodnju u Hrvatskoj. Znanstveno
+16.
+Studij građevinarstva u Sveučilištu u Zagrebu 1919.
+17.
+Značenje crpnih stanica za vodni režim melioracijskih područja. Priručnik za hidrotehničke melioracije, III. kolo, knjiga 2, HDON, Zagreb, GF, Rijeka, 2005., str. 131
+18.
+Izgradnja, obnova i održavanje hidrotehničkih građevina za zaštitu od površinskih voda u Hrvatskoj. Znanstveni skup «Melioracijske mjere u svrhu unapređenja ruralnog prostora – s tržištem na NAPNAV, HAZU i HDON, Zagreb, 2007., str. 77
+19.
+Nacionalni projekt navodnjavanja i gospodarenja poljoprivrednim zemljištem i vodama (NAPNAV). Građevni godišnjak 05/06, HSGI, 2007., str. 1
+
+redoviti profesor
+Dunja
+Mikulić
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Sveučlište u Zagrebu, Građevinski fakultet, Zavod za materijale
+
+Status na studiju Požarno inženjerstvo:
+nositelj predmeta Termodinamika požara
+
+E-mail adresa:
+dmikulic@grad.hr 
+Adresa osobne web stranice:
+http://winmaster.grad.hr/?cro/djelatnici/1&id=1071059616
+Kratki životopis:
+
+1977. diplomirala na Prirodoslovno matematičkom fakultetu u Zagrebu studij fizike-eksperimentalna fizika
+1985. magistrirala na Sveučilištu u Zagrebu, smjer Informacijskih znanosti 
+1993. doktor tehničkih znanosti iz područja građevinarstva
+Specijalnost: 
+građevinski materijali - kontrola kvalitete i osiguravanje kvalitete, beton - trajnost betonskih konstrukcija, primjena umjetne inteligencije na građevinske materijale (ekspertnih sistema, neuronskih ljusaka, mutnih-fuzzy skupova)
+1986/87. - gostujući znanstvenik u Centre d'Etudes et de Recherches de l' Industrie des Liant Hydrauliques, Pariz, Francuska; rad na projektu: «Trajnosti betona»
+1998/99. - gostujući znanstvenik na Rutgers, The State University of New Jersey, Department of Civil and Environmental Engineering, USA, rad na znanstvenim projektima «Istraživanja zaštite ploča mostova» i «Istraživanja u području asfalta»
+01.04.1999.-01.09.2000. - pomoćnik direktora IGH d.d. za Osiguravanje kvalitete, rad na ustrojstvu laboratorija IGH prema Europskim normama, izradi Hrvatskih normi i građevinske regulative
+1999. - predsjednik Znanstvenog vijeća Instituta građevinarstva Hrvatske
+2000-2003 - izvanredni profesor na Građevinskom fakultetu Sveučilišta Josipa Jurja Strossmayera u Osijeku
+2002- predaje na Poslijediplomskom studiju na Građevinskom fakultetu Sveučilišta u Osijeku.
+od 01.10.2003 redoviti profesor i Predstojnik Zavoda za materijale na Građevinskom fakultetu Sveučilišta u Zagrebu, a od 2006. Pročelnik katedre za istraživanje materijala i voditelj laboratorija Zavoda za materijale
+
+
+Popis značajnijih radova nastavnika:
+1.
+Dolaček, Zlata; Mikulić, Dunja; Radujković Mladen. The Role of Standardization in Construction Project Management, Book of Abstracts & Proceedings on CD-ROM, 3rd SENET PM Conference , International Cost Engineering Council, Project Management Association of Slovakia, Slovak University of Technology, Faculty of Civil Engineering, 2004. 9 (1-5)
+2.
+Mikulić, Dunja; Dolaček, Zlata; Bjegović, Dubravka. Application of a New Approach for Controlling Construction Products, Bucharest, Romania, 2003.
+3.
+Dolaček, Z.; Mikulić, D.; Bogičević, Z.; Radujković, M.:Implementing quality systems in construction companies, Proceedings of the 6th International Conference Organisation, Technology and Management in Construction, Mošćenička Draga, 17-20 September 2003, Book of Abstracts ISBN 953-96245-5-X, page 9.
+4.
+Bjegović, Dubravka; Šelih, Jana; Mikulić, Dunja; Stipanović, Irina. Models for service life prediction, Proceedings of the 2nd International RILEM Workshop PRO29: Life Prediction and Aging Management of Concrete Structures, RILEM Publications S.A:R.L., 2003. 13-20
+5.
+Sekulić, Dalibor; Veža, Damir; Bjegović, Dubravka; Mikulić, Dunja. Corrosion monitoring in concrete structures with fibre optical sensors, Proceedings of the 10th International Conference Structural faults + Repair, London, UK, July 01-03, 2003., Engineering Technics Press, 2003.
+6.
+Mikulić, Dunja; Dolaček, Zlata; Bjegović, Dubravka. Application of a New Approach for Controlling Construction Products, Bucharest, Romania , 2003.
+7.
+Dolaček, Z.; Mikulić, D.; Radujković, M.: Quality Management in Construction Projects, 3rd IC TECHSTA 2002 – Technology for Sustainable Development in Building Industry, Prague, Czech Republic, October 16-18 2002, Congress Proceedings, page 307-309, ISBN 80-01-02629-9 
+8.
+Dolaček, Zlata; Mikulić, Dunja; Radujković, Mladen: Harmonization of Croatian Building Regulations with European Union Regulations, 2nd SENET Conference on Project Management, Cavtat, April 17-19 2002, Proceedings of Abstracts, page 22, ISBN 953-98870-0-3.
+9.
+Sekulić, Dalibor; Bjegović, Dubravka; Mikulić, Dunja. Non-destructive Methods for Monitoring of Reinforcing teel in Concrete, Proceedings of the 9 th International Conference and Exhibition, London, United Kingdom, 4-6 July 2001
+
+redoviti profesor
+Mladen
+Pavičić
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Sveučlište u Zagrebu, Građevinski fakultet, Zavod za matematiku
+
+Status na studiju Požarno inženjerstvo:
+nositelj predmeta Termodinamika požara
+
+E-mail adresa:
+pavicic@grad.hr 
+Adresa osobne web stranice:
+http://m3k.grad.hr/pavicic 
+Kratki životopis:
+
+1986           Dr.sc.
+ 1988-90.     2 godine: 2 godine; Köln, Njemačka; od toga 16 mjeseci kao Alexander von Humboldt Post-doc. 
+1990.          Docent. Građevinski fakultet Sveučilišta u Zagrebu.
+1991-5.       Voditelj projekta u Ministarstvu za znanost.
+1992.          1 mjesec. Quantum Mechanical Laboratory, Université de Reims, Francuska. 
+1993.          3 mjeseca. Institute for Theoretical Physics, Technical University, Berlin, Njemačka. Nagrada Humboldt.
+1992- 6.     (1-2 mjeseca svake godine). Atomic Institute of the Austrian Universities.
+1995           5 mjeseci. Humboldt-University Berlin, Njemačka.  Nagrada Humboldt.
+1996            Izvanredni profesor. Građevinski fakultet Sveučilišta u Zagrebu.
+1996-2002. Voditelj projekta „Kvantno računarstvo i kvantna komunikacija”, Ministarstvo znanosti, obrazovanja i športa.
+1996.           2 mjeseca. Humboldt-University Berlin, Njemačka. Supported by the Max-Planck Gesellschaft.
+1999-2000. 1 godina. Appointed Guest Associate Professor. Department for Physics. University of Maryland Baltimore County, Baltimore, Maryland, U. S. A. Senior Fulbright Teaching/Research grant.
+2000           1 mjesec. Erwin Schrödinger Institute, Beč, Austrija. 
+ 2002           Redoviti profesor. Građevinski fakultet Sveučilišta u Zagrebu..
+ 2002-06      Voditelj projekta “Kvantna teorija informacije” Ministarstvo    znanosti, obrazovanja i športa.
+ 2007           Redoviti professor u trajnom zvanju. Građevinski fakultet Sveučilišta u Zagrebu..
+ 2007-         Voditelj projekta „Kvantno računanje: paralelnost i  vizualizacija (082-0982562-3160)” Ministarstvo   znanosti, obrazovanja i športa.
+
+
+Popis značajnijih radova nastavnika:
+1.
+1.4.10Mladen Pavicic, QUANTUM COMPUTATION AND QUANTUM COMMUNICATION: Theory and Experiments, Springer, New York (2005);
+2.
+1.4.11M. Pavicic and N.D. Megill,  Quantum Logic and Quantum Computation, in Kurt Engesser, Dov Gabbay, and Daniel Lehmann (eds.), Handbook of Quantum Logic and Quantum Structures: Quantum Structures, Ch. 17, pp. 755-792, Elsevier, Amsterdam (2007);
+3.
+M. Pavicic and N.D. Megill,  Standard Logics Are Valuation-Nonmonotonic, Journal of Logic and Computation, exn018, 1-24 (2008); 
+4.
+M. Pavicic, Nondestructive interaction-free atom-photon controlled-NOT gate, Physical Review A, 75, 032342-1-8 (2007);
+5.
+Pavičić, M., J.-P. Merlet, B.D. McKay, and N.D. Megill, Kochen-Specker Vectors, Journal of Physics A, 38, 1577-1592 (2005);
+6.
+Megill, N. D. and M. Pavičić, Equivalences, Identities, Symmetric Differences, and Congruences in Orthomodular Lattices, International Journal of Theoretical Physics, 42, 2797-2805 (2003);
+7.
+Megill, N. D. and M. Pavičić, Deduction, Ordering, and Operations in Quantum Logic, Foundation of Physics, 32, 357—378 (2002);
+8.
+Megill, N. D. and M. Pavičić, Equations, States, and Lattices of Infinite-Dimensional Hilbert Spaces, International Journal of Theoretical Physics, 39, 2349--2391 (2000);
+9.
+Pavičić, M., Quantum Simulators and Quantum Repeaters, Fortschritte der Physik - Progress of Physics, 48, 497-503 (2000);
+10.
+Pavičić, M. and N. D. Megill, Non-Orthomodular Models for Both Standard Quantum Logic and Standard Classical Logic: Repercussions for Quantum Computers, Helvetica Physica Acta, 71, 189--210 (1999);
+11.
+Pavičić, M., A Method for Reaching Detection Efficiencies Necessary for Optical Loophole-Free Bell Experiments, Optics Communications, 142, 308--314 (1997);
+12.
+Pavičić, M., Resonance Energy-Exchange-Free Detection and `Welcher Weg' Experiment, Physics Letters A, 223, 241-245 (1996);
+13.
+Pavičić, M. and J. Summhammer (1994), Interferometry with Two Pairs of Spin Correlated Photons, Physical Review Letters, 73, 3191--3194 (1994);
+14
+Pavičić, M., Spin Correlated Interferometry for Polarized and Unpolarized Photons on a Beam Splitter, Physical Review A, 50, 3486--3491 (1994).
+
+
+redoviti profesor
+Bernardin 
+Peroš
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Sveučlište u Splitu, Građevinsko - arhitektonski fakultet, 
+Katedra za metalne i drvene konstrukcije
+
+Status na studiju Požarno inženjerstvo:
+nositelj predmeta Sigurnost nosivih konstrukcija u požaru i Modeliranje razvoja požara
+
+E-mail adresa:
+bernardin.peros@gradst.hr 
+Adresa osobne web stranice:
+http://www.gradst.hr/katedre/mdk/hr/peros.htm
+Kratki životopis:
+
+Datum i mjesto rođenja: 15. siječnja 1948. godine u Gornjem selu na otoku Šolti.
+Obrazovanje: Osnovna škola u Gornjem selu. Srednja tehničku građevinska škola u Splitu. Građevinski fakultet 1976. godine u Sarajevu. Poslijediplomski studij Građevinskog fakulteta Sveučilišta u  Zagrebu 1977. – 1984. Doktorska disertacija "Sigurnost konstrukcija dominantno opterećenih vjetrom" 1995. na Građevinskom fakultetu Sveučilišta u Zagrebu.
+Izbori u zvanja: Asistent 1977.; viši predavač 1989.; docent 1995.; izvanredni profesor 1999.; redoviti profesor 2003.
+Nastavna djelatnost: Redoviti profesor - diplomski studij (Metalne konstrukcije I i II, Metalne konstrukcije u hidrotehnici, Drvene konstrukcije) i poslijediplomski studij Građevinskog fakulteta Sveučilišta u Splitu (Teorija pouzdanosti konstrukcija i Posebna poglavlja metalnih konstrukcija). Profesor na poslijediplomskom studiju Građevinskog fakulteta u Sarajevu.
+Dužnosti: Pročelnik katedre od 1995. do danas, prodekan za znanost i voditelj poslijediplomskog studija Građevinskog fakulteta Sveučilišta u Splitu 2000. – 2002. Prorektor Sveučilišta u Splitu 2002. – 2004.
+Znanstvena djelatnost: Temeljena je na primijenjenim i razvojnim istraživanjima (sigurnosti inženjerskih konstrukcija). Suradnik ili voditelj više znanstvenih tema i projekata, te konzultant na tri znanstvena projekta. Objavio 62 znanstvena rada u časopisima i zbornicima znanstvenih skupova u zemlji i inozemstvu.
+Stručna djelatnost: U svojstvu istraživača, do stručnog savjetnika te danas ovlaštenog revidenta sudjelovao u projektiranju, nadzoru, kontroli projekata, tehničkom pregledu, probnom ispitivanju, izradi ekspertiza i studija na preko 200 složenih i vrlo složenih građevinskih objekata. Objavio je više stručnih radova i studija.
+Članstva: International Association for Wind Engineering (IAWE), ECCS - European Convention for Constructional stealwork. Tehnički odbori za izradu hrvatskih normi u građevinarstvu: TO 98 Djelovanja i potres, TO 167 Metalne konstrukcije, TO 503 Metalni materijali.
+
+
+Popis značajnijih radova nastavnika:
+1.
+Peroš B., Boko I.: Calculation of temperature curves under the influence of actual fires in steel halls, Proceedings of the 3rd European Conference on Steel Structures, Coimbra, Portugal, 	September 19.-20. 2002., Eds. A. Lamas and L. S. Silva, Multicomp, Lisboa, pp. 1345-1354, 2002.
+2.
+Peroš B.,Boko I.: Heat Actions Analysis of Actual Fire in Steel Structures, Proceedings 24th Congress of Structural Engineers of Slovenia, Bled, November 14.-15. 2002., Eds. F. Saje and J. Lopatič, SDGK, pp. 277-284, 2002.
+3.
+Peroš B., Boko I., Šimunović T.: Razmišljanje o projektiranju i izvedbi spregnutih čeličnih nadvožnjaka, vijadukata i mostova na autocesti Zagreb – Split, Znanstveno – stručno savjetovanje Objekti na autocestama, Plitvička jezera, studeni, 2002., str. 109-114.
+4.
+Boko I.; Jović V., Peroš B.: Safety of steel structures under the influence of fire loads, International Journal for ENGINEERING MODELLING vol. 15, No. 1-4; pp. 11-20, 2002.
+5.
+Boko I., Peroš B.: Sigurnost čeličnih konstrukcija pri djelovanju požara, GRAĐEVINAR vol. 54, No. 11; pp. 643-656, 2002.
+6.
+Boko I., Peroš B.: Analiza požarnog djelovanja na čelične konstrukcije, Hrvatska normizacija i srodne djelatnosti, Hrvatsko društvo građevinskih konstruktora, Cavtat, travanj 2003. str. 427-436.
+7.
+Boko I., Peroš B.: Safety of steel structures under the influence of fire action, CD Proceedings of the Response of Structures to Extreme Loading, Toronto, Kanada, August 3.-6. 2003. Ghobarah A. and P. Gould, Elsevier, 2003.
+8.
+Boko I., Peroš B.: Fire safety of steel structures, Proceedings of the 4th International Congress of Croatian Society of Mechanics, Bizovac, September 18.-20. 2003. F. Matejiček, Croatian Society of  Mechanics, pp. 69-76, 2003.
+9.
+Peroš B., Boko I., Šimunović, T.: Safety of structures under the influence of extreme loading, Proceedings of the NATO Advanced Research Workshop, Bled, June 13.-17. 2004. A. Ibrahinbegović, B. Brank, Faculty of Civil and Geodetic Engineering of University of Ljubljana, pp. 585-612. (poglavlje u knjizi)
+10.
+Boko I., Peroš B.: Fire Resistance of Steel Structures, CD Proceedings of the Second International Conference on Steel & Composite Structures, ICSCS'04, Seoul, September 02.-04. 2004. Eds. C. Chang-Koon, K. Sun-Hoon, K. Hyo-Gyong, Techno-Press, 2004.
+11.
+Izrada knjiga (3), poglavlja u knjizi (1), skripata (2) i nastavnih materijala (napisa za predavanja) za studente iz više predmeta za koje je imenovan nastavnik  i to:
+- Sveučilišni udžbenik Sigurnost čeličnih konstrukcija izloženih djelovanju požara, G-AF, Split, 2005. (u tisku)
+- Sveučilišni udžbenik Uvod u teoriju sigurnosti nosivih konstrukcija, GF Split, 2003. Udžbenik je namjenjen   studentima diplomskog i dijelom poslijediplomskog studija. 
+- Sveučilišni udžbenik Čelični i spregnuti mostovi, GF Zagreb, 2005. Sveučilišni je udžbenik sva četiri građevinska fakulteta u Hrvatskoj.
+- Skripta Metalne konstrukcije I, G-AF Split, 2005. je materijal koji potpuno pokriva gradivo za ovaj kolegij u teoretskim podlogama i riješenim zadacima.
+- Skripta Šipkasti čelični nosači, GF Split, 1989.
+12.
+Pored navedenih objavljenih radova, knjiga i skripata bio je mentor pri izradi jednog doktorskog rada, dva magistarska rada, te voditelj 48 diplomanata pri izradi njihovih diplomskih radova i tajnik povjerenstva za diplomske ispite u dva mandata. 
+13.
+Stručna aktivnost je bila stalno prisutna u ukupnoj djelatnosti što je vrlo bitno za izvođenje nastave na inženjerskim predmetima. Kako je navedeno u dugogodišnjem istraživačkom i stručnom radu od istraživača, projektanta, savjetnika do ovlaštenog revidenta sudjelovao je realizaciji preko 200 složenih i vrlo složenih građevinskih objekata (industrijski objekti, stambeno-poslovni objekti, dvorane, stadioni, mostovi i nadvožnjaci na autocestama itd.)
+Ranije navedena dugogodišnja nastavna te znanstvena i stručna djelatnost dala je pretpostavke za uvođenje novih kolegija u nastavnom procesu fakulteta.
+
+
+
+redoviti profesor
+Mladen
+Radujković
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Sveučlište u Zagrebu, Građevinski fakultet,
+Zavod za organizaciju i ekonomiku građenja
+
+Status na studiju Požarno inženjerstvo:
+nositelj predmeta Upravljanje rizicima u požaru
+
+E-mail adresa:
+mladenr@grad.hr 
+Adresa osobne web stranice:
+www.grad.hr/djelatnici
+Kratki životopis:
+
+
+Mladen Radujković rođen je 5. travnja 1952. godine u Piranu, Republika Slovenija. Diplomirao je 1978. g. na Građevinskom fakultetu Sveučilišta u Zagrebu na smjeru organizacije i tehnologije građenja. Od 1978-80. godine zaposlen je u GRO "Hidroelektra", a 1980. zapošljava se u Građevinskom institutu Zagreb. Od 1991. do danas neprekidno je zaposlen na Građevinskom fakultetu Sveučilišta u Zagrebu. Magistrirao je 1986. g., te doktorirao 1993. godine na istom fakultetu sa temom "Analiza utjecajnih faktora pri optimalizaciji roka građenja". U nastavi započinje raditi 1986. godine kao asistent na predmetima iz skupine organizacije građenja, te prolazi izbore u sva zvanja do  redovitog profesora 2003. godine.  Sudjelovao je u koncipiranju i izvedbi nastave iz više predmeta iz područja organizacije građenja.  Do sada je bio mentor na oko 50 diplomskih radova, te na 8  magisterija ili doktorata.   Tijekom rada na Fakultetu objavio je više od 80 znanstvenih ili stručnih radova od kojih oko 30 u inozemstvu, te  desetak u časopisima ili knjigama. Sudjelovao je kao istraživač na 8 znanstveno-istraživačkih projekata, a na 2 projekta bio je voditelj. U sklopu međunarodne suradnje ili kongresa održao je javna predavanja  u Dundeu, Glasgowu, Hong Kongu, Helsinkiju, Berlinu, Parizu, Ljubljani, Cape Townu, Budimpešti, Bukureštu. Član je nekoliko  domaćih i inozemnih strukovnih udruženja kao: International Project Management Association, Project Management Institute USA,  Councel International du Batiment pour Reserche l’Etude et la Documentation (CIB). Uz znanstvenu i stručnu aktivnost radio je i na nizu stručnih projekata iz područja organizacije građenja i upravljanja projektima. Od listopada 2002. godine izabran je na dužnost prodekana za znanost na Građevinskom fakultetu Sveučilišta u Zagrebu.
+Od 2006. obnaša dužnost dekana Građevinskog fakulteta Sveučilišta u Zagrebu.
+
+
+Popis značajnijih radova nastavnika:
+1.
+Radujković M. – Upravljanje s tveganjem pri gradbenih projektih, Gradbeni vestnik 49 Slovenia (2000) 1, str 2-10.
+2.
+Radujkovic M. – Developing regional capacity for better PM profession in south-east Europe, Proceedings of SIG of 16th IPMA World Congress on Project Management (on CD) , International Project Management Association, Berlin 4.-6. June 2002., pp MR1-9 
+3.
+Radujkovic M., Management of qualitative transition changes in construction sector, proceedings of 10th Joint Symposium of W65 & W55 with TG23, TG31 & TG 47 “The Organization & Management of Construction” , organized by International Council for Research and Innovation in Building and Construction, CRC Press, USA Cincinati, September 2002. USA, pp 450-461
+4.
+Radujkovic M. – Management gap – understanding the supportive role of  PM tools, 17th World Congress on Project Management, organized by International Project Management Association,  Moscow 4-6 June 2003,  the Conference proceedings on CD s. 4.14.
+5.
+Radujkovic M., Ceric A. - Project managers role in transitions countries, Proceedings of CIB (W 55, W65, W107), International Council for Research and Innovation in Building and Construction),  Singapore 22. –24. 10. 2003, vol. 3, pages 82 – 88
+6.
+Radujkovic M. – The integration of Strategy, People and Tools, 18th IPMA World Congress on Project Management, organized by International Project Management Association, Budapest 19-20 June 2004, Conference proceedings on CD, stream 2, paper 2, pages1-5, 
+7.
+Arar V., Burcar I., Radujkovic M. – PM in Multicultural Environment : the Landfill Remediation Project Case, 18th IPMA World Congress on Project Management, organized by International Project Management Association,  Budapest 19-20 June 2004, Conference proceedings on CD, stream 2, paper 23, pages1-5, 
+8.
+Radujković M., Car-Pušić D. – The Attributes of Risk Sources and Drivers in the Construction Projects, 3. SENET Conference on CD, organized by SENET & International Cost Engineering Council, Bratislava, Slovak Republic, 22.-24. September 2004, ISBN:80-960212-0-7, Stream : PM New Methods and Best Practices
+
+
+redoviti profesor
+Zorislav
+Sorić
+
+
+
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Građevinski fakultet Sveučilišta u Zagrebu
+
+Status na studiju Požarno inženjerstvo:
+Nositelj predmeta Osnove nosivih konstrukcija
+
+E-mail adresa:
+soric@grad.hr
+Adresa osobne web stranice:
+www.grad.hr/djelatnici
+Kratki životopis:
+
+
+Na Građevinskom fakultetu Sveučilišta u Zagrebu je diplomirao na Konstrukterskom smjeru 1971. godine. 1973. i 1974. godinu radio u Ingenieurbüro Ostrowski u Offenbachu i Frankfurtu, na projektiranju industrijskih i stambenih objekata.
+1975. počinje raditi u Institutu Građevinarstva Hrvatske (IGH), a paralelno, od 1978. i na poslovima nastave kao asistent profesoru dr.sc. Ivanu Tomičiću na predmetu Betonske konstrukcije I. U listopadu 1978. položio je stručni ispit. 
+Magistarsku radnju obranio je u veljači 1982. Mentor: prof.dr.sc. Zlatko Kostrenčić. 
+1982. izabran je u znanstveno-nastavno zvanje Znanstveni asistent.
+Od University of Colorado, USA, dobio je 1983. stipendiju za doktorski studij. Disertaciju pod naslovom "Bond and Slip in Reinforced Masonry Structures" pod mentorstvom profesora L. G. Tulina je obranio 15. svibnja 1987. godine na University of Colorado, Department of Civil, Environmental and Architectural Engineering, Boulder, Colorado, USA. Nakon toga vratio se u Zagreb.
+1989. izabran je u znanstveno-nastavno zvanje Docent za područje građevinarstva, za predmet Betonske konstrukcije Fakulteta građevinskih znanosti Sveučilišta u Zagrebu.
+1990/91. počeo je predavati predmet Betonske konstrukcije na VI/1. stupnju Fakulteta građevinskih znanosti Sveučilišta u Zagrebu. Od 1994/95. predaje Betonske konstrukcije i na Geotehničkom fakultetu u Varaždinu. 1996/97. predaje predmet Betonske konstrukcije I, na VII/1. stupnju na Građevinskom fakultetu Sveučilišta u Zagrebu. 1998/99. počeo je predavati novi predmet Zidane konstrukcije.
+1991. godine izabran je u znanstveno-nastavno zvanje Izvanredni profesor. 1997. izabran je za redovitog profesora na Građevinskom fakultetu Sveučilišta u Zagrebu, a 2001. za redovitog profesora u trajnom zvanju. 
+1993. postao je Ovlašteni revident za obavljanje kontrole projekata mehaničke otpornosti i stabilnosti betonskih i zidanih konstrukcija. Obavio je više desetaka revizija industrijskih, kulturnih, prometnih i stambenih građevina.
+1993. izabran je za člana suradnika, a 1998. za izvanrednog člana Hrvatske akademije tehničkih znanosti u Odjelu za građevinarstvo i rudarstvo.
+1994. izabran je za Prodekana za znanost na Građevinskom fakultetu Sveučilišta u Zagrebu koju dužnost je obnašao do 30. rujna 1998, za koje vrijeme je uveo novi nastavni plan i program poslijediplomskog studija.
+Predaje dva predmeta: 1) Betonske konstrukcije I i 2) Zidane konstrukcije, te po bolonjskom procesu; Betonske i zidane konstrukcije 1 i -2.  Osim toga predaje predmet Betonske konstrukcije i na Geotehničkom fakultetu u Varaždinu. 
+Na poslijediplomskom studiju Građevinskog fakulteta Sveučilišta u Zagrebu predaje dva predmeta: 1) Suvremeni postupci proračuna armiranobetonskih konstrukcija i 2) Posebna poglavlja zidanih konstrukcija.
+1999. godine objavljena mu je knjiga “Zidane konstrukcije I” kao sveučilišni udžbenik, a 2004. drugo izdanje dopunjeno sa 120 novih stranica. 
+Objavio je preko 120 znanstvenih i stručnih radova u domaćim i stranim časopisima i na kongresima. Bio je voditelj tri znanstvene teme. Bio je do 2005. g. predsjednik Tehničkog odbora za zidane konstrukcije, a predsjednik je Tehničkog odbora za betonske konstrukcije za izradu hrvatskih normi iz područja graditeljstva.
+Govori engleski i njemački, a služi se talijanskim i francuskim jezikom.
+
+Datum zadnjega izbora u znanstveno-nastavno ili nastavno zvanje:
+30. travnja 2001.
+
+Popis značajnijih radova nastavnika:
+1
+Sorić, Z.; Kostrenčić, Z.: Ispitivanje pregradnog zida metodom fotoelastičnosti. Materijali i Konstrukcije, 25-2 Beograd, 1982. str.35-39.
+2.
+Sorić,Z.; Aničić,D.: Ispitivanje armirano-betonskog pregradnog zida opterećenog silama u njegovoj ravnini. Građevinar, 35 (1982) 9., Zagreb, str. 367-372.
+3.
+
+Platužić, D.; Sorić, Z.: Sanacija kule Lotršćak u Zagrebu. Građevinar 35 (1983) 10., Zagreb, str. 413-418.
+4.
+Sorić, Z.; Tulin, G. L.: Bond Stress and  Slip in Masonry Reinforced with Spliced Reinforcement. The Masonry Society Journal, Vol 6., No. 1, 1987, 	pp.  T13-T27.
+5.
+Sorić, Z.; Tulin, G. L.: Length of Lap for Spliced Reinforcement in Masonry Structures. Proceedings of the 8th International Brick/Block Conference, Dublin, Ireland, Sept. 1988., pp. 964-975.    
+6.
+Sorić,Z.; Tulin, G. L.: Bond/Slip Behavior of Deformed Reinforcement in Grouted Masonry Beams, Proceedings of the Fourth US/Japan Joint Technical Coordinating Committee onMasonry Research, San Diego, USA, Oct. 1988.
+7.
+Sorić, Z.: Lokalni naponi prianjanja između armature i betona u području maksimalnih momenata savijanja. Naše Građevinarstvo br. 3-4, 1989. str. 1- 6.
+8.
+Sorić, Z; Morić, D.: Teoretska analiza lokalnih napona prianjanja između armature i betona. Građevinar 41 (1989) 8. str. 377-383.
+9.
+Sorić,Z.; Tulin, G. L.: Bond Stress/Deformation in Pull-Out Masonry Specimens. ASCE, Journal of Structural Engineering, Vol. 115 No. 10, 	October 1989. pp. 2588-2602.
+10.
+Sorić, Z.; Tulin, G. L.: Behavior of Hooked Bars in Reinforced Masonry. ACI Structural Journal, Vol. 88, No. 4, July-August 1991. pp. 432-436.
+11.
+Sorić, Z.; Puž, G.; Prpić, V.; Mekjavić, I.; Novak-Šavor, I.: Obnova Međunarodnog središta hrvatskih sveučilišta u Dubrovniku. Građevinar 45 (1993) 5, str. 247-257.
+12.
+Sorić, Z.: Masonry Lintels - Shear Failure Analysis. The Masonry Society Journal. Volume 12, Number 2, February 1994., pp. 60-71.
+13.
+Sorić, Z. : Minimalna i maksimalna armatura u kontinuiranim nosačima. Građevinar 46 (1994) 4, str. 195-204.
+14.
+Sorić, Z.: Eurocode 2, Opći prikaz. Poglavlje u knjizi "Građevinski Godišnjak '95", Hrvatsko društvo građevinskih inženjera, Zagreb, UDK 624(058), ISBN 953-96085-1-1, prosinac 1994.  Str. 21-56.
+15.
+Sorić, Z.: knjiga: ZIDANE KONSTRUKCIJE I, Udžbenici Sveučilišta u Zagrebu, Manualia Universitatis Studiorum Zagrabiensis, Udžbenici Sveučilišta Josipa Jurja Strossmayera u Osijeku; Izdavač: Hrvatski savez građevinskih inženjera; Tisak: Sveučilišna tiskara, Zagreb, svibanj 1999.  317 str.
+16.
+Sorić, Z.: Mehanička svojstva nearmiranog ziđa. Građevinar, 52 (2000) 2, str. 67-78.
+17..
+2Sorić, Z., Lulić, S.: Allowable slenderness ratio L/d and reinforcement coefficient of one-way, one-span reinforced concrete slabs. Engineering Modelling 13 (2000) 1-2, pp. 53-60.
+18..
+Sorić, Z.: knjiga: ZIDANE KONSTRUKCIJE I, 2. prošireno izdanje. Udžbenici Sveučilišta u Zagrebu, Manualia Universitatis Studiorum Zagrabiensis, Zagreb, travanj 2004.  422 str. Tisak tmg-topgraf, Velika Gorica.
+19.
+Sorić, Z., Pičulin, S., Zamolo, M., Kišiček, T., (Jure Radić i suradnici.): Osnove proračuna, V poglavlje u knjizi BETONSKE KONSTRUKCIJE, PRIRUČNIK. Sveučilišni udžbenik, Zagreb, 2006. ISBN 953-169-126-6. Str. 399-663, tj. 265 stranica od ukupno 1000 stranica. Urednik: Čandrlić, V.
+20.
+Sorić, Z., Kišiček, T., Galić J., (Jure Radić i suradnici.):poglavlje u knjizi BETONSKE KONSTRUKCIJE, RIJEŠENI PRIMJERI, III. Konstrukcijski elementi, str. 139-390, tj. 251 stranica od ukupno 960 stranica. Hrvatska sveučilišna naklada, Sveučilište u Zagrebu – Građevinski fakultet, SECON HDGK, ANDRIS. Zagreb, 2006. Urednik: Čandrlić, V. (sveučilišni udžbenik).
+21.
+Sorić, Z., Kišiček, T., Galić, J.: EXPERIMENTAL RESEARCH OF CONCRETE BEAMS AND MASONRY WALLS REINFORCED WITH GFRP REINFORCEMENT. pp. 345-352. Proceednigs of the Asia-Pacific Conference on FRP in Structures, APFIS 2007. December 12.-14. 2007, Hong Kong, China. Editor S. T. Smith.
+22.
+Sorić, Z., Galić, J., Kišiček, T.: STRENGTHENING OF MASONRY WALLS WITH GLASS FIBER STRAPS. Proceednigs of the 14th International Brick and Block Masonry Conference. Sydney, Australia, 17.-20. February 2008. The book of Abstracts, pp. 95. CD-ROM pp. 925-934. Editors: M. Masia, Y. Totoev, A. Page, H. Sugo.
+23.
+Sorić, Z., Galić, J., Rukavina, T.: Determination of tensile strength of glass fiber straps. Journal Materials and Structures, Volume 41, Number 5, June 2008., pp. 879-890. (ORIGINAL ARTICLE). Publisher: Springer Netherlands.
+24.
+Kišiček, T., Sorić, Z., Galić, J.: Određivanje progiba betonskih nosača s armaturom od polimera armiranih vlaknima. Časopis Građevinar 60 (2008) 6. str. 499-511. (Izvorni znanstveni rad).
+
+II. PODACI O SURADNICIMA NA POJEDINIM PREDMETIMA (abecednim redom)
+
+docent
+Ivica 
+Boko
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Sveučlište u Splitu, Građevinko - arhitektonski fakultet, 
+Katedra za metalne i drvene konstrukcije
+
+Status na studiju Požarno inženjerstvo:
+Nositelj predmeta Modeliranje razvoja požara i suradnik na predmetu Sigurnost nosivih konstrukcija u požaru 
+
+E-mail adresa:
+ivica.boko@gradst.hr 
+Adresa osobne web stranice:
+http://www.gradst.hr/katedre/mdk/hr/boko.htm
+Kratki životopis:
+
+Datum i mjesto rođenja: 17. siječnja 1971. godine u Splitu.
+Obrazovanje: Osnovna škola u Splitu. Srednja građevinska škola u Splitu. Građevinski fakultet 1997. godine u Zagrebu. Poslijediplomski studij Građevinskog fakulteta Sveučilišta u Splitu 1997. – 2001.
+Izbori u suradnička zvanja: Mlađi asistent 1997.; asistent 2001, viši asistent 2005 god.
+Izbori u znanstveno-nastavna zvanja: Docent 2006.
+Nastavna djelatnost: Docent – preddiplomski i diplomski studij (Osnove drvenih konstrukcija, Osnove metalnih konstrukcija, Metalne konstrukcije I, Posebne drvene konstrukcije).
+Znanstvena djelatnost: Temeljena je na primijenjenim i razvojnim istraživanjima (sigurnosti inženjerskih konstrukcija). Suradnik više znanstvenih tema i projekata. Objavio 27 znanstvenih radova u časopisima i zbornicima znanstvenih skupova u zemlji i inozemstvu.
+Stručna djelatnost: U svojstvu projektanta suradnika sudjelovao u projektiranju, nadzoru, kontroli projekata, probnom ispitivanju, izradi ekspertiza i studija na preko 50 složenih i vrlo složenih građevinskih objekata. Objavio je više stručnih radova i studija.
+Članstva: Hrvatsko društvo građevinskih inženjera HDGI, Udruga građevinskih inženjera Split UGIS, Hrvatsko društvo za mehaniku HDM.
+
+
+Popis značajnijih radova nastavnika:
+1.
+Peroš B., Boko I.: Calculation of temperature curves under the influence of actual fires in steel 	halls, Proceedings of the 3rd European Conference on Steel Structures, Coimbra, Portugal, 	September 19.-20. 2002., Eds. A. Lamas and L. S. Silva, Multicomp, Lisboa, pp. 1345-1354, 2002.
+2.
+Peroš B.,Boko I.: Heat Actions Analysis of Actual Fire in Steel Structures, Proceedings 24th Congress of Structural Engineers of Slovenia, Bled, November 14.-15. 2002., Eds. F. Saje and J. Lopatič, SDGK, pp. 277-284, 2002.
+3.
+Peroš B., Boko I., Šimunović T.: Razmišljanje o projektiranju i izvedbi spregnutih čeličnih nadvožnjaka, vijadukata i mostova na autocesti Zagreb – Split, Znanstveno – stručno savjetovanje Objekti na autocestama, Plitvička jezera, studeni, 2002., str. 109-114.
+4.
+Boko I.; Jović V., Peroš B.: Safety of steel structures under the influence of fire loads, International Journal for ENGINEERING MODELLING vol. 15, No. 1-4; pp. 11-20, 2002.
+5.
+Boko I., Peroš B.: Sigurnost čeličnih konstrukcija pri djelovanju požara, GRAĐEVINAR vol. 54, No. 11; pp. 643-656, 2002.
+6.
+Boko I., Peroš B.: Analiza požarnog djelovanja na čelične konstrukcije, Hrvatska normizacija i srodne djelatnosti, Hrvatsko društvo građevinskih konstruktora, Cavtat, travanj 2003. str. 427-436.
+7.
+Boko I., Peroš B.: Safety of steel structures under the influence of fire action, CD Proceedings of the Response of Structures to Extreme Loading, Toronto, Kanada, August 3.-6. 2003. Ghobarah A. and P. Gould, Elsevier, 2003.
+8.
+Boko I., Peroš B.: Fire safety of steel structures, Proceedings of the 4th International Congress of Croatian Society of Mechanics, Bizovac, September 18.-20. 2003. F. Matejiček, Croatian Society of  Mechanics, pp. 69-76, 2003.
+9.
+Peroš B., Boko I., Šimunović, T.: Safety of structures under the influence of extreme loading, Proceedings of the NATO Advanced Research Workshop, Bled, June 13.-17. 2004. A. Ibrahinbegović, 	B. Brank, Faculty of Civil and Geodetic Engineering of University of Ljubljana, pp. 585-612. (poglavlje u knjizi)
+10.
+Boko I., Peroš B.: Fire Resistance of Steel Structures, CD Proceedings of the Second International Conference on Steel & Composite Structures, ICSCS'04, Seoul, September 02.-04. 2004. Eds. C. Chang-Koon, K. Sun-Hoon, K. Hyo-Gyong, Techno-Press, 2004.
+11.
+Peroš, B., Boko, I.: Safety of steel structures exposed to fire, Proceedings of 4th European Conference on Steel and Composite Structures, Maastricht, June 08.-10.2005. Eds.B.Hoffmeister, O.Hechler, Druck und Verlagshaus GmbH, pp. 5.1-17 - 5.1-24
+12.
+ Sveučilišni udžbenik Sigurnost čeličnih konstrukcija izloženih djelovanju požara, G-AF, Split, 2005.  (u tisku). 
+
+
+redoviti profesor
+Petar
+Donjerković
+
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Sveučlište u Zagrebu, Fakultet strojarstva i brodogradnje, Zavod za termodinamiku, toplinsku i procesnu tehniku
+
+Status na studiju Požarno inženjerstvo:
+nositelj predmeta Sustavi aktivne zaštite od požara
+
+E-mail adresa:
+petardonjerkovic@zg.htnet.hr 
+Adresa osobne web stranice:
+-
+Kratki životopis:
+
+Petar Donjerković rođen 07.09.1940. u Blatu na Korčuli. 
+Diplomirao na FSB u Zagrebu 1969. 
+1969. god. izabran za asistenta na FSB u Zagrebu  «Katedra za toplinu i toplinske uređaje». 1975. položio je stručni ispit.
+Magistrirao 1978. god.
+1979. god. izabran za asistenta u Zavodu za strojarstvo FSB.
+Predavanja iz predmeta: “Grijanje i klimatizacija”, “Klimatizacija broda”.
+Na Građevinskom fakultetu u Zagrebu, VI stupanj, od 1978. god. izvodi nastavu iz predmeta “Ventilacija i klimatizacija”.
+1989. god. obranio dizertaciju.
+U znanstveno zvanje znanstveni suradnik za znanstvenu disciplinu “Termotehnika i procesna tehnika” znanstvenog područja strojarstvo, izabran 1991. godine.
+U registar znanstvenih radnika upisan je u Ministarstvu znanosti, tehnologije i informatike 1991. god. kao znanstveni suradnik, mat. br. 077542.
+Voditelj je znanstvenoistraživačkog projekta br.120-043 “Gospodarenje energijom”, Ministarstvo znanosti i tehnologije RH.
+Od 1983. god. za grad Zagreb član povjerenstva za tehnički pregled objekata.
+
+
+Popis značajnijih radova nastavnika:
+1.
+Donjerković P., Drakulić M.: Criterion Analysis for Fresh Air Quantity Determination in Ventilation Systems of Road Tunels, Proceedings of Indor Climate of Buildings 98 International Conference, Bratislava, 1998., str. 173.-179
+2.
+Balen, I., Donjerković, P., Galaso I.: Energy use in central air-conditioning system with heat pump and coil energy recovery loop, Proceedings of 7th  REHVA world congress Clima 2000, Napoli, 2001.
+3.
+Donjeković P., Balen I., Galaso I.: Dynamic analysis of an air-conditioning system with heat pump, INTERNATIONAL CONGRESS SITHOK-4: Heating and air-conditioning for the third millennium, Maribor 2000. str. 89-90. Zbornik na CD-u. (Rad objavljen u Strojniški vestniku-Jurnal of Mechanical Engineering. 46(2000)
+4.
+Balen I., Donjerković P., Galaso I.: Dynamic Analysis of an Air-Conditioning System with Heat Pump, Strojniški vestnik - Journal of Mechanical Engineering. 46 (2000), 7; 413-421. 
+5.
+Donjerković P., Drakulić M.: Critical Velocity Estimation of Road Tunnel Ventilation in the Isothermal Conditions of Fire Incident Model Testing, Strojniški Vestnik - Journal of Mechanical Engineering. 46 (2000), 7; 422-428.
+6.
+Donjerković P., Petrić H.: Cogeneration in contemporary HVAC systems, Strojniški Vestnik - Journal of Mechanical Engineering. 46 (2000), 7; 454-465.
+7.
+Donjerković P., Balen I., Cetinić I.:Air-conditioning of the indoor skating rink, Zbornik radova Energetska i procesna postrojenja Dubrovnik 2000, str. 614-617.
+8.
+Cetinić I., Donjerković P.: Gospodarenje energijom u procesima kondicioniranja građevina, Zbornik radova Interklima 2001, Zagreb 2001. str. 199-207.
+
+
+predavač
+Miodrag
+Drakulić
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Brodarski institut d.o.o., Zagreb
+
+Status na studiju Požarno inženjerstvo:
+suradnik na predmetima Sustavi aktivne zaštite od požara i Termodinamika požara
+
+E-mail adresa:
+dmio@hrbi.hr 
+Adresa osobne web stranice:
+www.hrbi.hr
+Kratki životopis:
+
+
+Fakultet strojarstva i brodogradnje Sveučilišta u Zagrebu završava 1983. godine na odjelu strojarstva, termotehnički smjer. Prvi radni odnos zasniva 1984. godine u sastavu Integralne grupe za stručni nadzor izgradnje Nove vojne bolnice u Zagrebu (sadašnje Kliničke bolnice Dubrava). 
+Od 1987. godine radi u Brodarskom institutu u Zagrebu, gdje prolazi sve faze projektno-istraživačkog rada. Područje njegovog stručnog interesa u tom periodu obuhvaća razvoj i aplikaciju termotehničkih postrojenja, što uključuje izradu svih faza tehničke dokumentacije, sudjelovanje u naučno-istraživačkim projektima, modelska i prototipna ispitivanja, kao i terenska mjerenja. Sudjeluje i vodi niz projekata, a iz područja graditeljstva mogu se izdvojiti: Projekti ventilacije tunela Sveti Rok, Mala Kapela, Brinje i Grič, Modelska ispitivanja ventilacije i požarnog incidenta tunela Sveti Rok, Izrada scenarija mogućih događaja i algoritama upravljanja tunela Mala Kapela i dr. 
+Od studenog 2000. godine do prosinca 2003. radi na mjestu direktora Sektora za specijalne projekte Brodarskog instituta, a u protekle dvije godine obnaša funkciju Tehničkog direktora Brodarskog instituta.
+Magistrira 27. travnja 2000. na Fakultetu strojarstva i brodogradnje Sveučilišta u Zagrebu s temom "Analiza modelskih ispitivanja sustava ventilacije prometnih tunela". Na istom fakultetu doktorira 2006. godine s disertacijom pod naslovom "Djelovanje sustava uzdužne ventilacije cestovnog tunela u uvjetima požara".
+Pored gore navedenog, stalni je sudski vještak za strojarstvo Županijskog suda u Zagrebu i član Hrvatskog društva sudskih vještaka. Također je član Komore arhitekata i inženjera u graditeljstvu od 1999. godine. Od 1993. do 1998. godine vodi u svojstvu predavača kolegij "Ventilacija i klimatizacija" na VI. stupnju Građevinskog fakulteta u Zagrebu.
+U razdoblju 2002.-2004. sudjeluje, kao predstavnik Brodarskog instituta, u multidisciplinarnom timu stručnjaka na znanstveno-istraživačkom projektu "Fire Tunnel" (oznaka E!2823), financiranom od strane EUREKE i Ministarstva znanosti i tehnologije RH.
+Od 2004. god., kao predstavnik Hrvatske, član je Tehničkog komiteta C3.3. u sklopu Međunarodne organizacije za ceste (PIARC), u radnoj grupi 6 (Ventilation and Fire Control).
+
+
+Popis značajnijih radova nastavnika:
+1.
+Drakulić, M.; Abrashi A.: Numeričko modeliranje razvoja požara u cestovnim tunelima, Report 04, EUREKA! 2823 Factory Fire Tunnel, Zagreb, listopad 2004. (oznaka projekta u BI: D10-CBA01-000)
+2.
+Drakulić, M.; Abrashi, A.; Ambruš, D.: Dimenzioniranje opreme cestovnih tunela na tlačne zračne udare uvjetovane prometovanjem vozila, 6. Međunarodno znanstveno-stručno savjetovanje "Energetska i procesna postrojenja", Dubrovnik, listopad 2004.
+3.
+Tkalčić, D.; Šarić, D.; Drakulić, M.; Dušek, A.: Uronjeni tuneli kao rješenje prijelaza na Pelješac, Savjetovanje "Prometna povezanost Dubrovačko-neretvanske županije", Dubrovnik, ožujak 2004.
+4.
+Drakulić, M.; Cvitanović V.; Abrashi A.: Prikaz tipskog hidrantskog ormarića za cestovne tunele, Znanstvenostručno savjetovanje “Sigurnost u okolišu i graditeljstvu”, Zagreb, listopad 2003.
+5.
+Drakulić, M.; Donjerković, P. i dr.: New Tendencies in Selection and Implementation of Road Tunnel Ventilation System in the Area of Fire Protection, 5. Međunarodno znanstveno-stručno savjetovanje "Energetska i procesna postrojenja", Dubrovnik, svibanj 2002.
+6.
+Lozica, M.; Drakulić, M.: Suvremeni sustavi vatrodojave u cestovnim tunelima, Znanstvenostručno savjetovanje “Sigurnost u okolišu i graditeljstvu”, Solaris, svibanj 2002.
+7.
+Bjegović, D.;… Drakulić, M. i dr.: Utjecaj velikih požara u cestovnim tunelima Europe na izbor mjera zaštite od požara Znanstvenostručno savjetovanje “Sigurnost u okolišu i graditeljstvu”, Solaris, svibanj 2002.
+8.
+Planinc, R.;… Drakulić, M. i dr.: Multifunkcionalna sekundarna obloga tunela od predgotovljenih armirano-betonskih elemenata, 5. Opći sabor Hrvatskog društva građevinskih konstruktora, 357÷362, Brijunski otoci, travanj 2001.
+9.
+Donjerković, P., Drakulić, M.: Determination of Ventilation Critical Velocity of the Road Tunnel in Isothermal Conditions of Fire Incident Model Test, Proceedings of International Congress SITHOK-5, Heating and Air-Conditioning of Buildings, Maribor (Slovenija), svibanj 2000.
+10.
+Donjerković, P.; Drakulić, M.: Sustavi uzdužne ventilacije cestovnih tunela u uvjetima požarnog incidenta, 15. Međunarodni simpozij o grijanju, hlađenju i klimatizaciji "Interklima '99", 160÷167, Zagreb, lipanj1999.
+
+
+predavač
+Milan 
+Carević
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Visoka škola za sigurnost s pravom javnosti, Zagreb
+
+Status na studiju Požarno inženjerstvo:
+suradnik na predmetima Arhitektonsko-urbanističke mjere zaštite od požara i Regulativa iz područja zaštite od požara
+
+E-mail adresa:
+inspekting@zg.htnet.hr 
+Adresa osobne web stranice:
+- 
+Kratki životopis:
+
+Rođen  u Zagrebu 26.11.1948., gdje je završio gimnaziju i Arhitektonski fakultet. Radio u projektnom biro arhitekta Richtera, te "Banija- projektu" i "Novogradnji". Do 1997. godine radio kao republički inspektor za zaštitu od požara i eksplozija u Ministrastvu unutranjih poslova Republike Hrvatske. Od 1997., predavač, a od 2005., viši predavač na Visokoj školi za sigurnost na radu i zaštitu od požara u Zagrebu. Od 1997., radi u vlastitoj tvrtci na poslovima projektiranja u području zaštite od požara. Kao projektant zaštite od požara izradio oko 400 elaborata iz tog područja. Konzultant iz područja zaštite od požara brojnih domaćih i inozemnih tvrtki.
+1992/93. predsjednik povjerenstva međuresorne grupe MUP-a RH za izradu prijedloga zakonskih i podzakonskih akata iz područja zaštite od požara građevina. 
+1998-99. voditelj stručne komisije Instituta građevinarstva Hrvatske za izradu novih propisa iz područja zaštite od požara usklađenih s europskom regulativom. 1998. suradnik (istraživač) na znanstveno-istraživačkom projektu Teorija i modeliranje zaštite armirano betonskih konstrukcija u požaru, Građevinski fakultet, Zagreb, a od 2002 član (istraživač) u timu koji radi na europskom projektu  EUREKA – E!2823-FACTORY FIRE –TUNEL. 2005/06. član komisije Ministarstva unutranjih poslova RH za izradu novih propisa iz područja zaštite od požara. Ocjenitelj Hrvatske akreditacijske agencije za područje zaštite od požara. Stalni predavač na savjetovanjima iz područja zaštite od požara za projektante i  inspektore zaštite od požara ( Zagreb, Split, Dubrovnik, Rijeka, Opatija, Zadar i dr.) 
+
+
+Popis značajnijih radova nastavnika:
+1.
+Carević M., Kocijan S., Bijelić R.: Zbirka propisa iz područja zaštite od požara (Nading, Zagreb, 1994.)
+2.
+Carević M.: Zaštita od požara nosivih konstrukcija građevine ( IV.Kongres društva hrvatskih građevinskih konstruktora , Cavtat, 1996.) 
+3.
+Carević M.: Priprema normi iz područja zaštite od požara građevina, Glasilo Državnog zavoda za normizaciju i mjeriteljstvo broj 7-8/1996
+4.
+Carević M., Bjegović D.: Požarne značajke građevinskih materijala i konstrukcija u Hrvatskoj i europskoj regulativi, Međunarodno znanstveno stručno savjetovanje, Šibenik 2001. 
+5.
+D.Bjegović, M.Carević : Požar kao djelovanje na gradiva i konstrukcije, Peti opći sabor HDGK, Brijuni 26.4.-28.4.2001.
+6.
+Carević M. et..al: Tehnički priručnik za zaštitu od požara, Grafoamdeus, Zagreb, 2002
+7.
+Bjegović, D., Stipanović, I., Carević, M.: Fire testing of precast tunnel elements, Proceedings of the ITA World Tunneling Congress 2003 "(Re)Claiming the Underground Space" / Saveur, J. (ur.). Lisse, Netherlands : Swets & Zeitlinger B.V., Lisse, April 2003. pp. 251-255.
+8.
+Stipanović, I., Bjegović, D., Carević, M.: Klasifikacija materijala s obzirom na djelovanje požara, Zbornik radova ″Hrvatska normizacija i srodne djelatnosti″, Brijuni lipanj 2004., pp. 485-492.
+
+
+
+
+izvanredni profesor
+Esad 
+Hadžiselimović
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Univerzitet u Sarajevu, Prirodno-matematički fakultet, 
+Odsjek za fiziku
+
+Status na studiju Požarno inženjerstvo:
+Suradnik na predmetu Modeliranje razvoja požara
+
+E-mail adresa:
+hesad@pmf.unsa.ba  
+Kratki žvotopis:
+
+
+
+Datum i mjesto rođenja: 19. lipnja 1947. godine u Travniku.
+3Obrazovanje: Osnovna škola u Donjem Vakufu i Sarajevu. Gimnazija u Sarajevu. Prirodno-matematički fakultet 1970. godine u Sarajevu. Poslijediplomski studij Prirodno-matematičkog fakulteta Univerziteta u Sarajevu 1977. Doktorska disertacija “Uloga eksitonskog mehanizma u organizaciji molekularnih sistema” 1981.
+Izbori u zvanja: Asistent 1971.; naučni saradnik 1984.; docent 2000.; izvanredni profesor 2004.
+Nastavna djelatnost: Izvanredni profesor - diplomski studij (Mehanika, Termodinamika, Teorija elektromagnetnog polja, Specijalna teorija relativiteta, Matematičke metode fizike) i poslijediplomski studij Prirodno-matematičkog fakulteta u Sarajevu (Izabrana poglavlja opšte i savremene fizike I).
+Dužnosti: Šef Odsjeka za fiziku Prirodno-matematičkog fakulteta u Sarajevu 2000 - do danas. 
+Znanstvena djelatnost: Fizika čvrstog stanja – teorija eksitona. Zaštita od požara. Suradnik ili voditelj više znanstvenih tema i projekata. Objavio 5 znanstvenih radova u inozemnim časopisima i 50 radova u domaćim časopisima.
+Stručna djelatnost: Sudjelovao u osnivanju Laboratorija za testiranje Instituta zaštite od požara i eksplozije. Sudjelovao u izradi studija i projekata zaštite od požara, kontroli projekata, tehničkom pregledu, probnom ispitivanju, izradi ekspertiza, itd.
+
+
+Popis značajnijih radova nastavnika:
+1.
+E. Hadžiselimovic, TASEF Modelling of a Water Tank Exposed to Radiative Heat Flux from a Pool Fire, Preventivno inženjerstvo, Beograd, 2/2001.
+2.
+E. Hadžiselimovic, R. Vujovic, S. Sulejmanovic, TASEF proračuni otpornosti na požar određenih građevinskih struktura, Preventivno inženjerstvo, 1/2003.
+3.
+Ivica Boko, Bernardin Peroš, Esad Hadžiselimović,  Eksperimentalna istraživanja ponašanja armiranometonskih nosača u slučaju djelovanja požara, Prvi hrvatski Dani betona, Zbornik radova, Cavtat 13-15. listopada 2005.
+4.
+E. Hadžiselimović, S. Sulejmanović, I. Boko, B. Peroš
+TASEF modeliranje nosača izloženog požaru, prihvaćeno za objavljivanje u Zborniku radova prirodno-matematičkog fakulteta Univerziteta u Tuzli, 2006.
+5.
+Koautor priručnika «Požarna karakterizacija materijala i elemenata građevinskih konstrukcija» (1991)  Koautor brošure «Zaštita od dima pri požaru» (1985).
+Autor univerzitetskog udžbenika «Osnove termodinamike i molekularne fizike», 2005.
+Predaje predmet: Teorija gorenja i zaštita od požara na Visokoj zdravstvenoj školi u Sarajevu. 
+
+
+znanstveni novak - asistent
+Marija 
+Jelčić
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Sveučilište u Zagrebu, Građevinski fakultet; Zavod za materijale
+
+Status na studiju Požarno inženjerstvo:
+suradnik na predmetu Ponašanje građevinskih materijala i elemenata u požaru
+
+E-mail adresa:
+jmarija@grad.hr 
+Adresa osobne web stranice:
+http://info.grad.hr/gf/index.asp?pid=1342&o=1120041066
+Kratki životopis:
+2004. godine je diplomirala na Građevinskom fakultetu Sveučilišta u Zagrebu na smjeru Gradiva i stekla naslov diplomirani inženjer građevinarstva. Iste godine je zaposlena u Institutu građevinarstva Hrvatske, Zavod za zgradarstvo na poslovima vezanim za građevinsku fiziku. Od 2006. do 2008. godine je zaposlena na Građevinskom fakultetu, kao znanstveni novak – asistent u Zavodu za materijale, na znanstvenoj temi «Upravljanje kvalitetom u građevinskim projektima», čiji je voditelj prof.dr.sc. Dunja Mikulić, a od 2008. godine kao znanstveni novak-asistent na znanstvenoj temi «Razvoj novih materijala i sustava zaštite betonskih konstrukcija», čiji je voditelj prof.dr.sc. Dubravka Bjegović. 
+
+
+Popis značajnijih radova nastavnika:
+1.
+Stipanović, Irina; Veršić, Zoran; Jelčić, Marija.Prikaz norme HRN EN 832 - Toplinske značajke zgrada, Proračun energije za grijanje, Stambene zgrade // Zbornik radova "Hrvatska normizacija i srodne djelatnosti″ ;  / Radić, Jure (ur.).Zagreb : Hrvatski inženjerski savez, 2004. 511-520 (pregledni rad).
+2.
+S.Šilhard-Mihaljević, I.Weigand, M.Jelčić.Potvrđivanje sukladnosti povezanih sustava za vanjsku toplinsku izolaciju (ETICS) za primjenu u zgradarstvu; Zbornik radova trećeg savjetovanja ˝Hrvatska normizacija i srodne djelatnosti – tehničko usklađivanje na putu prema Europskoj uniji˝ ; / Radić, Jure (ur.). Zagreb : Hrvatski inženjerski savez, 2005. 285-290. (pregledni rad). 
+3.
+Stipanović, Irina; Jelčić, Marija; Serdar, Marijana Deterioration of Historical Buildings - Case Study: Parish Church in Marija Bistrica // Heritage Protection-Construction Aspects / Radić, Jure ; Rajčić, Vlatka ; Žarnić, Roko (ur.). Zagreb : Secon HDGK, 2006. 257-264 (međunarodna recenzija, stručni rad).
+4.
+Mikulić Dunja; Gabrijel Ivan; Jelčić Marija.
+Application of different testing methods for the air void characterisation in concrete // Proceedings of the 4th International Specialty Conference on The Conceptual Approach to Structural Design / Mola F ; Mola E ; Tan John S Y (ur.).Singapore : CI-PREMIER PTE LTD, 2007. 531-537 (predavanje,međunarodna recenzija,objavljeni rad,znanstveni).
+5.
+Mikulić, Dunja; Gabrijel, Ivan; Jelčić, Marija. Ispitivanje karakteristika zračnih pora betona u sviježem i očvrsnulom stanju // Zbornik referatov ˝Novo na področju betona 2007˝ / Šajna, Anton (ur.).Ljubljana : ZBS, Združenje za beton Slovenije, 2007. 36-44 (predavanje,međunarodna recenzija,objavljeni rad,znanstveni).
+6.
+Štirmer, Nina; Jelčić, Marija; Mikulić, Dunja; Bjegović Dubravka. Roof tiles damages after 30 years in use // Proceedings of the 4th International Specialty Conference on The Conceptual Approach to Structural Design / Mola F ; Mola E ; Tan John S Y (ur.). Singapore : CI-PREMIER PTE LTD, 2007. 637-643 (predavanje,međunarodna recenzija,objavljeni rad,znanstveni).
+7.
+Bjegović, Dubravka; Stipanović, Irina; Jelčić, Marija.
+Fire performance of concrete composite segments used as secondary tunnel linings // 5th International Seminar on Fire and Explosion hazards - Manuscript PDF Files 
+(predavanje, međunarodna recenzija, objavljeni rad,znanstveni). 
+8.
+
+
+Bjegović, Dubravka; Carević, Milan; Stipanović, Irina; Jelčić, Marija.
+Harmonisation of Croatian and EU legislative in the field of fire safety // Proceedings of the 12th International Symposium / Trombev, Tome (ur.).
+Skopje : MASE - Macedonian Association of Structural Engineers, 2007. 87-98 (plenarno predavanje,međunarodna recenzija,objavljeni rad,znanstveni).
+9.
+Netinger, Ivanka; Bjegović, Dubravka; Jelčić, Marija. Fire resistance of structural concrete // Innovative materials and technologies for concrete structures / Balasz-Nehme (ur.).
+Budapest : Publishing Company of Budapest University of Technology and Economics, 2007. 321-326 (poster,međunarodna recenzija,objavljeni rad).
+10.
+Seferović, Enes; Jelčić, Marija; Bjegović, Dubravka. Improved fire properties of concrete made with polypropylene fibres // Proceedings of the International Conference and EurekaBuild Event Networks for sustainable environment and high quality of life / Radić, Jure ; Bleiziffer Jelena (ur.).
+Zagreb : SECON, 2008. 373-380 (predavanje,međunarodna recenzija,objavljeni rad,znanstveni).
+11.
+Bjegović, Dubravka; Rosković, Ružica; Jelčić Marija. Possibility of the utilisation of melted metallurgical slags in Croatia // Proceedings of the International Symposium: Non-Traditional Cement & Concrete / Bilek, Vlastimil ; Keršner Zbynek (ur.).
+Brno : Brno University of Technology, 2008. 90-97 (predavanje,međunarodna recenzija,objavljeni rad,znanstveni).
+
+predavač
+Zlatimir
+Kaštelanac
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik
+Visoka škola za sigurnost s pravom javnosti, Zagreb
+
+Status na studiju Požarno inženjerstvo:
+suradnik na izbornom predmetu Regulativa iz područja zaštite od požara
+
+E-mail adresa:
+zlatimir.kastelanac@gmail.com 
+Adresa osobne web stranice:
+- 
+Kratki životopis:
+
+
+Rođen je 21.05.1954. god. u Zagrebu gdje je završio osnovno obrazovanje i V Gimnaziju "Bogdan Ogrizović".
+Na Fakultetu strojarstva i brodogradnje u Zagrebu diplomirao je 30.05.1979. god.
+
+U Elektrotehničkom institutu Rade Končar radio je od 08.10.1979. god. do 20.12.1990. god. na različitim poslovima razvoja i poslovima rukovođenja razvojem.
+
+U Ministarstvu unutarnjih poslova zaposlen je od 01.06.1993. god. do danas.
+Obavljao je poslove inspektora u Odjelu zaštite od požara i eksploziva na službeničkom mjestu "službenik za inspekcijske poslove zaštite od požara", a od 01.02.2001. god do 03.05.2001. bio je v.d. načelnika Odjela zaštite od požara i eksploziva. 
+Od 03.05.2001. do 31.12.2005. god. obavljao je poslove načelnika Inspektorata unutarnjih poslova.
+Od 01.01.2006. god. je u mirovini.
+
+Za vrijeme rada u Ministarstvu unutarnjih poslova učestvovao je kao voditelj radne skupine ili kao član radne skupine u izradi nacrta : 
+Zakona o eksplozivnim tvarima, 
+Zakona o privatnoj zaštiti, 
+Izmjenama i dopunama Zakona o zaštiti od požara, 
+Izmjenama i dopunama Zakona o prijevozu opasnih tvari,
+Zakona  o privatnim detektivima
+te podzakonskih propisa donijetih temeljem naprijed citiranih zakona (tridesetak pravilnika).
+
+Osim navedenog učestvovao je u radu raznih stručnih seminara kao predavač :
+seminari s inspektorima  s područja zaštite od požara, eksploziva i privatne zaštite MUP-a (11 seminara),
+seminarima o ispitivanju stabilnih sustava za dojavu i gašenje požara i održavanju vatrogasnih aparata (5 seminara),
+seminarima hrvatske udruge banaka o privatnoj zaštiti te minimalnim mjerama zaštite u poslovanju gotovim novcem i drugim vrijednostima (2 seminara),
+seminarima Hrvatskog ceha zaštitara o privatnoj zaštiti (3 seminara),
+seminaru PROMINS sa tematikom  gospodarskih eksploziva,
+tematskim seminarima na EMAT – Interproteks,
+i drugim.
+
+Za vrijeme rada u MUP-u bio je predsjednik Povjerenstva za:
+rješavanje žalbi u drugostupanjskom upravnom postupku po propisima iz područja zaštite od požara, vatrogastva, proizvodnje i prometa opasnih tvari, razminiranja, zaštitarske i detektivske djelatnosti i djelatnosti stanica za tehnički pregled vozila,
+polaganje stručnih ispita iz područja zaštite od požara, stručnih ispita djelatnika s posebnim ovlastima i odgovornostima u vatrogasnim postrojbama, stručnih ispita djelatnika koji ispituju stabilne sustave za dojavu i gašenje požara te stručnih ispita za održavanje vatrogasnih aparata,
+provedbu stručnih ispita osoba koje prevoze i sudjeluju u prijevozu opasnih tvari,
+utvrđivanje postojanja uvjeta za dobivanje ovlasti za ispitivanje ispravnosti i podobnosti uvezenih uređeja za gašenje požara.
+
+Bio je član Povjerenstva za : 
+građevne proizvode,
+procjenu utjecaja na okoliš za zahvate izgradnje plinskih polja Marica i Katarina i Zračne luke Zagreb,
+uništavanje minsko – eksplozivnih sredstava.
+
+Kao predstavnik Ministarstva bio je član CARDS 2001 i 2003 „Steering committe“ te član Ex – Savjeta i član Izdavačkog savjeta S – Biltena.
+
+Jedan je od autora Tehničkog priručnika za zaštitu od požara i autor više stručnih članaka objavljenih u časopisu Sigurnost, a bio je i recenzent raznim autorima priručnika i stručnih članaka.
+
+Služi se engleskim jezikom.
+
+
+Popis značajnijih radova nastavnika:
+1.
+Carević, M.; Jukić, P.; Kaštelanac. Z.; Sertić, Z. Tehnički priručnik za zaštitu od požara. Zagreb: Grafo-Amadeus, 1997.
+2.
+Zakon o gradnji i pripadajući propisi; Priučnik s komentarima i uputama; autor L. Fučić i suradnici (jedan od suradnika Z. Kaštelanac) - Zag; Kigen, 2006
+
+
+predavač
+Slobodan
+Kocijan
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Visoka škola za sigurnost s pravom javnosti, Zagreb
+
+Status na studiju Požarno inženjerstvo:
+suradnik na predmetu Termodinamika požara i Regulativa iz područja zaštite od požara
+
+E-mail adresa:
+slobodan.kocijan@zg.t-com.hr 
+Adresa osobne web stranice:
+- 
+Kratki životopis:
+
+Rođen je u Varaždinu. Osnovnu i srednju kemijsku tehnička škola kao i Tehnološki fakultet pohađao je u Zagrebu. Radio je na Tehnološkom fakultetu na Zavodu za anorgansku kemijsku tehnologiju i Zavodu za kemijsko inženjerstvo kao: tehnički suradnik 2 god. te nakon diplomiranja kao viši tehnički suradnik jednu god. (od 1973. do 1974.). Nakon toga je radio u Rudniku mrkog uglja u Zenici (Republika BiH) od 1974. do 1980. god. i to kao tehnički rukovoditelj pogona separacija ugljena i kao rukovoditelj laboratorija. Od 1980. pa do kraja 1998. god  radio je u Ministarstvo unutarnjih poslova RH kao inspektor za zaštitu od požara i eksplozija.
+Od 1999.god predavač je na Visokoj školi za sigurnost s pravom javnosti
+Stručno usavršavanje:
+Certifikat o stručnoj osposobljenosti sigurnosnog savjetnika za prijevoz opasnih tvari (temeljem ADR-a  dijela 1 – poglavlja 1.8 – odsječka 1.8.3 ) izdao IVD Maribor - R. Slovenija, 2003. god.
+Potvrdnica o pedagoško-psihološkoj izobrazbi (u skladu sa Zakonom o srednjem školstvu, čl. 78. NN, br. 19/92) koju je izdalo Sveučilište u Zagrebu, Učiteljska akademija Zagreb, 21. siječnja, 2002. god.
+
+
+Popis značajnijih radova nastavnika:
+1.
+Studija utjecaja na okoliš "Družba Adria", s radom  «Zaštita od požara», nositelj Rudarsko-geološki-naftni fakultet, 2004. god.
+2.
+Studija utjecaja na okoliš «Tvornice duhana Rovinj u industrijskoj zoni Kanfanar», s radom Zaštita od požara», nositelj «Hidroelektra-Projekt» Zagreb, 2005. god
+3.
+Studija utjecaja na okoliš «Prestanak rada TDR d..o.o. Pogon Zagreb» s radom Zaštita od požara i eksplozija», nositelj «Hidroelektra-Projekt» Zagreb, 2005. god
+4.
+Studija utjecaja na okoliš «Rekonstrukcija i dogradnja objekta prehrambene industrije Vindija», s radom Zaštita od požara», nositelj «Hidroelektra-Projekt» Zagreb, 2005. god.
+5.
+Studija utjecaja na okoliš «Mehaničko-biološka obrada komunalnog otpada Bokanjac (Zadar)», s radom «Zaštita od požara», nositelj «Interkonzalting» Zagreb, 2005. god.
+6.
+Skripta za studente "Sigurnost pri prijevozu opasnih tvari"
+
+
+asistent
+Irina
+Stipanović
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Institut građevinarstva Hrvatske, Zavod za betonske i zidane konstrukcije
+
+Status na studiju Požarno inženjerstvo:
+suradnik na predmetima Ponašanje građevinskih materijala i elemenata u požaru i Modeliranje razvoja požara
+
+E-mail adresa:
+irinas@grad.hr 
+Adresa osobne web stranice:
+http://info.grad.hr/gf/index.asp?pid=1342&o=1022051111
+Kratki životopis:
+
+Irina Stipanović rođena je 7.02.1974. godine u Osijeku. U Zagrebu je završila Matematičku gimnaziju, a 1993. godine je upisala Građevinski fakultet Sveučilišta u Zagrebu, gdje je u prosincu 2000. godine diplomirala na smjeru Konstrukcije i stekla naslov diplomirani inženjer građevine. Od 2001. godine je zaposlena na Građevinskom fakultetu, kao znanstveni novak – asistent u Zavodu za materijale, na znanstvenoj temi "Modeliranje trajnosti građevinskih materijala i elemenata", čiji je voditelj prof.dr.sc. Dubravka Bjegović. Od 2007. radi u Institutu građevinarstva Hrvatske u Zavodu za betonske i zidane konstrukcije.
+Poslijediplomski znanstveni studij na Građevinskom fakultetu Sveučilišta u Zagrebu, smjer Konstrukcije, upisala je u studenom 2001. godine, a magistarski rad "Proračun uporabnog vijeka armiranobetonskih konstrukcija izloženih djelovanju klorida" obranila je 11. 4. 2005. godine. 
+Aktivno sudjeluje u provedbi niza domaćih i međunarodnih znanstveno istraživačkog projekta: “Trajnost armiranobetonskih konstrukcija izloženih maritimnom okolišu” (TABKIMO), tehnologijski istraživačko-razvojni projekt "Vatrootporni višeslojni tunelski elementi", EUREKA projekt E!2823 Fire- Tunnel, COST 534 projektu – ”Improvement of properties of grouts for prestressing tendons and/or ground anchors”, LIFE Third Countries 2005 - Development of sustainable construction and demolition waste management system for Croatia, FP6 projekt "Assessment and rehabilitation of Central European highway structures".
+
+
+Popis značajnijih radova nastavnika:
+1.
+Stipanović, I., Carević, M., Skazlić, M.: Požari u tunelima, Zbornik radova, Peti opći sabor Hrvatskih građevinskih konstruktora, Brijuni, travanj 2001., pp. 371.-380.
+2.
+Stipanović, I., Planinc, M., Žuljević, M.: Testiranje otpornosti na požar obloga tunela od predgotovljenih armiranobetonskih elemenata, Zbornik radova, Peti opći sabor Hrvatskih građevinskih konstruktora, Brijuni, travanj 2001., pp. 363.-370.
+3.
+Planinc, R., Tisovec, I., Bjegović, D., Planinc, M., Stipanović, I., Drakulić, M., Carević, M.: Construction system for secondary tunnel lining, Proceedings from the international Tunnels Forum, New Technology in Tunnel Management Systems, Basel, December 2001, pp. 31-36.
+4.
+Planinc, R.; Pavetić, J.; Planinc, M.; Pavetić, D.; Tisovec, I.; Bjegović, D.; Stipanović, I.: Tunnel for safe traffic, Proceedings from International Conference "Tunnel Safety and Ventilation", Graz, Austria, April 2002. 
+5.
+Bjegović, D.; Planinc, R.; Stipanović, I.: Fire-resistant composite tunnel segments,  Tunnel Management International Journal, Vol. 5,  (2002), 3; pp. 42-46.
+6.
+Bjegović, Dubravka; Carević, Milan; Drakulić, Miodrag; Stipanović, Irina. Utjecaj velikih požara u cestovnim tunelima Europe na izbor mjera zaštite od požara // Zbornik radova znanstveno stručnog skupa "Sigurnost u okolišu i graditeljstvu" / Miščević, Ljubomir (ur.). Zagreb : SUN ARH d.o.o., 2002. 295-306
+7.
+Stipanović, Irina; Bjegović, Dubravka; Planinc, Marko. Betoni specijalnih namjena - betoni povećane otpornosti na požar // Materijali i tehnologijski razvoj / Filetin, Tomislav (ur.) Zagreb : Akademija tehničkih znanosti Hrvatske, 2002. 175-183 (znanstveni rad).
+8.
+Bjegović, D., Stipanović, I., Carević, M.: Fire testing of precast tunnel elements, Proceedings of the ITA World Tunneling Congress 2003 "(Re)Claiming the Underground Space" / Saveur, J. (ur.). Lisse, Netherlands : Swets & Zeitlinger B.V., Lisse, April 2003. pp. 251-255.
+9.
+Bjegović, D.; Stipanović, I.; Skazlić, M.; Szavits-Nossan, A.; Kovačević, M.S.: Znanost i tehnologija: Eureka projekt E!2823 Fire-Tunnel,  Zbornik savjetovanja "Nove tehnologije u hrvatskom graditeljstvu", HDGK, Brijuni lipanj 2003., pp. 59-66.
+10.
+Mikulić, D., Stipanović, I.: Analiza temperaturnog toka u betonu, Zbornik radova 1. simpozija “Računalstvo u graditeljstvu”, Građevinski fakultet Sveučilišta u Zagrebu, 4.- 6. prosinca 2003., pp. 239-244.
+11.
+Bjegovic, D.; Šelih, J.; Mikulić, D.; Stipanović, I.: Models for service life prediction, Proceedings of the 2nd International RILEM Workshop on Life Prediction, 5-6 May 2003, Paris, France, pp. 13 – 20.
+12.
+Bjegović, D.; Stipanović, I.; Skazlić, M.; Ferić, K.; Barbalić, I.: Case Study - Corrosion Monitoring i n Marine Environment in Croatia, Proceedings of Eurocorr 2003, The European Corrosion Congress / European Federation of Corrosion, Budapest, Hungary, September 2003, paper No.219. 
+13.
+Bjegović, D., Radić, J., Stipanović, I.: Development of Service-Life Prediction Models, Proceedings of the 4th International Conference on ″Concrete under Severe Conditions″, CONSEC ’04, Seoul, June 2004, pp. 957-964.
+14.
+Stipanović, I., Bjegović, D., Rako, D.: Chlorides Impact On Reinforced Concrete Structures, “Durability nad Maintenance of Concrete Structures”, Cavtat, Dubrovnik, October 2004, pp. 583-590.
+15.
+Stipanović, I., Barisic, E., Beslac, J., Mikulic, D.: Condition Survey of Reinforced Concrete in Hydroelectric Power Plant Vinodol, “Durability nad Maintenance of Concrete Structures”, Cavtat, Dubrovnik, October 2004, pp. 591-598.
+16.
+Stipanović, I., Bjegović, D., Skazlić, M.: Korozijski monitoring armiranobetonskih konstrukcija korištenjem galvanostatičke impulsne metode, Sabor hrvatskih graditelja, Cavtat, svibanj 2004., pp. 377-386.
+17.
+Stipanović, I.; Bjegović, D.; Carević, M. Klasifikacija materijala s obzirom na djelovanje požara. //  Zbornik radova Drugog savjetovanja Hrvatska normizacija i srodne djelatnosti – tehničko usklađivanje na putu prema Europskoj uniji, Brijuni, 17.-19. lipnja 2004. / urednik J. Radić. Zagreb : SECON HDGK, 2004. Str. 485-492.
+18.
+Stipanović, I., Veršić, Z., Jelčić, M.: Prikaz norme HRN EN 832 – Toplinske značajke zgrada, Proračun energije za grijanje, Stambene zgrade, Zbornik radova ″Hrvatska normizacija i srodne djelatnosti″, Brijuni lipanj 2004., pp. 511-520. 
+19.
+Bjegović, D.; Carević, M.; Stipanović, I. Zaštita od požara trgovačkih objekata. // Zbornik radova Stručnog skupa Zaštita od požara u graditeljstvu. Bizovac : Zavod za unaprjeđivanje sigurnosti, 2004. Str. 47-54.
+20.
+Stipanović, I.; Bjegović, D. Ponašanje betona u požaru. // Sabor hrvatskih graditelja 2004 Graditelji – nositelji razvojnih projekata Republike Hrvatske, Cavtat 22. do 24. travnja 2004. / gl. urednik V. Simović. Zagreb : Hrvatski savez građevinskih inženjera , 2004. Str. 387-397.
+21.
+Bjegović, D.; Stipanović, I.; Rosković, R. Chloride Concentration in 25-Year-Old Concrete // Proceedings of the International Conference held at the University of Dundee: Application of Codes, Design and Regulations / Dhir, Ravindra K. ; Newlands, Moray D. ; Whyte, Andrew (ur.). London : Thomas Telford Publishing, 2005. 165-174 (međunarodna recenzija, znanstveni rad).
+22.
+Stipanović, Irina; Kovačević, Meho-Saša; Bjegović, Dubravka. Improvement of Grout Properties by Different Admixtures // New Materials and Systems for Prestressed Concrete Structures: Proceedings of COST 2nd Workshop / Radkowsky, Stanislaw (ur.).Kielce : Kielce University of Technology, 2005. 117-128.
+23.
+Bjegović, Dubravka; Stipanović, Irina; Milevoj, Marijana. Fire resistant secondary tunnel lining: results of thermal analysis and experimental study // Keep Concrete Atractive: Proceedings of the FIB Symposium Vol. 2 / Balazs, Gyorgy L. ; Borosnyoi, Adorjan (ur.) Budapest : Budapest University of Technology and Economics, 2005. 1181-1186 (međunarodna recenzija, znanstveni rad).
+24.
+Bjegović, Dubravka; Drakulić, Miodrag; Carević, Milan; Stipanović, Irina. Temeljni aspekti sigurnosti od požara u gradskim tunelima // Prometna problematika grada Zagreba. Zagreb : Znanstveno vijeće za promet HAZU, 2006. 
+
+predavač
+Branko
+Šimara
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Visoka škola za sigurnost s pravom javnosti, Zagreb
+
+Status na studiju Požarno inženjerstvo:
+suradnik na predmetu Sustavi aktivne zaštite od požara i Regulativa iz područja zaštite od požara
+
+E-mail adresa:
+upvh@zg.htnet.hr 
+Adresa osobne web stranice:
+
+Kratki životopis:
+
+Rođen 10.01.1955. godine u Podravskim Podgajcima općina D. Miholjac. Osnovnu školu završio sam u D. Miholjcu, a srednju elektrotehničku u Zagrebu gdje sam završio Višu elektrotehničku školu “Rade Končar” 1980. godine a 1985. godine diplomirao je na Elektrotehničkom fakultetu u Zagrebu. Od 1985. pa do 1988. godine bio je zaposlen u Institutu “Rade Končar”, elektrotehničkom poduzeću “Vlado Četković” i TEP-u Zagreb. Godine 1988. zaposlen u tadašnjem RSUP-u kao inspektor zaštite od požara a od 1992. godine postavljen za glavnog inspektora zaštite od požara i eksploziva što je obavljao do umirovljenja 2001. godine.
+
+
+Popis značajnijih radova nastavnika:
+1.
+Tehnički priručnik o zaštiti od požara, “Zagrebinspekt”, 2002. jedan od autora.
+2.
+Studija sigurnosti Autoceste Bosiljevo – Split – 2002. godine, jedan od autora.
+3.
+Studija zaštite od požara Autoceste Rijeka – Zagreb – 2003. godine, jedan od autora.
+4.
+Studija utjecaja na okoliš naftno – rudarskih objekata INA d.d. u Županiji koprivničko – križevačkoj, bjelovarsko – bilogorskoj i osječko – baranjskoj s radom “Procjena zaštite od požara objekata INA d.d.” –2001 – 2002. godine, nositelj Rudarsko – geološki – naftni fakultet.
+5.
+Studija “Koncepcija zaštite objekata Hrvatske elektroprivrede te potencijalne opasnosti od požara, požar i sustavi zaštite od požara” – 2002. godine, jedan od autora - nositelj ENKONET International, Zagreb.
+6.
+Zbirka propisa iz zaštite od požara s obrazloženjima, IPROZ, 1994., autor;
+7.
+Primjeri općih akata iz područja zaštite od požara, IPROZ, 1994., jedan od autora;
+8.
+Pravila i mjere sigurnosti pri radu na plinsko energetskim postrojenjima – Fakultet elektrotehnike i računarstva – 03.2001. godine – jedan od autora;
+9.
+Grafički simboli i oznake za izradu planova zaštite od požara i prikaz planova, IPROZ, 1994., autor;
+10.
+Tehničke smjernice za preventivnu zaštitu od požara TRVB 100, TRVB 125 i TRVB 126 , Hrvatska vatrogasna zajednica 1997., recenzija.
+
+
+predavač
+Vladimir 
+Šimetin
+
+Naziv ustanove u kojoj je zaposlen predmetni nastavnik:
+Institut građevinarstva Hrvatske d.d, Zagreb, Zavod za zgradarstvo
+
+Status na studiju Požarno inženjerstvo:
+suradnik na predmetu Ponašanje građevinskih materijala u požaru
+
+E-mail adresa:
+vladimir.simetin@igh.hr 
+Adresa osobne web stranice:
+http://www.igh.hr/Zagreb/29/Simetin.htm
+Kratki životopis:
+
+Mr. sc. Vladimir Šimetin, dipl. inž. građ., rođen je 19. 12. 1940. godine u Splitu. Narodnost Hrvat, Državljanstvo Republike Hrvatske, Završena Realna gimnazija u Splitu, maturirao 1959. godine. Završen Građevinski fakultet Sveučilišta u Zagrebu, konstruktivni smjer, diplomirao je 1964. i stekao stručni naziv diplomirani inženjer građevinarstva. Završio poslijediplomski studij na Građevinskom fakultetu u Zagrebu, te magistrirao s magistarskim radom «Toplinski mostovi u zgradarstvu – proračun konačnim elementima» 1979. i stekao akademski stupanj magistra znanosti. Stručni ispit položio 1977. Godine 1969. završio specijalizaciju građevinske akustike u CSTB u Parizu. Godine 1970. završio je specijalisitčko usavršavanje u Znanstveno istraživačkom institutu građevinske fizike u Moskvi. Ovlašteni je revident od 1993. godine za područje uštede energije i toplinske zaštite. Od 1993. godine ovlašten je revident za područje zaštite od buke i vibracije.
+Od 1999. godine upisan je u Imenik ovlaštenih inženjera građevinarstva Hrvatske komore arhitekata i inženjera u graditeljstvu. Godine 1979. izabran je u nastavno zvanje višeg predavača za predmet Građevinske fizike. Godine 1985. izabran je u trajno zvanje predavača za predmet Građevinska fizika. Godine 1980. izabran je u zvanje asistenta. Od 1966. zaposlen je u Institutu građevinarstva Hrvatske. Savjetnik je u Zavodu za zgradarstvo u IGH Zagreb.
+
+
+Popis značajnijih radova nastavnika:
+Kao znanstveni djelatnik objavio je samostalno 3 originalna znanstvena rada u domaćim časopisima, 35 stručno-znanstvenih članaka, referata, separata u zbornicima stručnih skupova i znanstvenih simpozija.
+Bio je voditelj 9 znanstvenoistraživačkih projekata.
+
+
+

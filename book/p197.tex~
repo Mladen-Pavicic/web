@@ -1,0 +1,8 @@
+\magnification=1440 
+\hsize=12.7cm
+\parindent=0pt
+\nopagenumbers
+$(\forall A,B\in{\cal L})(\exists m \in S)((m(A)=1\ \Rightarrow
+\ m(B)=1)\ \Rightarrow\ A\le B)\,.$\hfill (3.127)
+
+\bye

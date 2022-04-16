@@ -1,0 +1,33 @@
+ul.trans_entry .title {
+	font-weight: bold;
+}
+ul.trans_entry li {
+	list-style: none;
+	width: 100%;
+	clear: left;
+}
+div.key_text {
+	margin-right: 10px;
+	margin-bottom: 5px;
+	border-style: solid;
+	border-color: gray;
+	float: left;
+	width: 40%;
+
+}
+div.translation {
+	float: left;
+	width: 50%;
+	margin-bottom: 5px;
+	border-style: solid;
+	border-color: gray;
+}
+
+#home {
+	float: left;
+}
+
+#language {
+	float: right;
+	clear: right;
+}

@@ -1,0 +1,42 @@
+;; Object fire/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "fire/"
+  :tables (list 
+   (semanticdb-table "fire1.html"
+    :major-mode 'html-mode
+    :tags '(("Po&#382;arno in&#382;enjerstvo" section nil nil [72 200]) ("Naslovnica" section (:members (("Naslovnica" section nil nil [448 571]) ("Studij" section nil nil [571 692]) ("Kolegiji" section nil nil [692 819]) ("Nastavnici" section nil nil [819 944]) ("Obavijesti" section nil nil [944 1037]) ("Linkovi" section nil nil [1037 1155]) ("(Foto)Arhiva" section nil nil [1155 1250]) ("Kontakti" section nil nil [1250 1253]))) nil [200 205]))
+    :file "fire1.html"
+    :pointmax 1404
+    )
+   (semanticdb-table "fire2a-ljudi.html"
+    :major-mode 'html-mode
+    :tags '(("Po&#382;arno in&#382;enjerstvo" section nil nil #<overlay from 71 to 199 in fire-link.html>) ("Linkovi" section (:members (("Linkovi" section (:members (("Sve za nastavu<font>" section nil nil #<overlay from 412 to 415 in fire-link.html>))) nil #<overlay from 370 to 373 in fire-link.html>))) nil #<overlay from 199 to 205 in fire-link.html>))
+    :file "fire2a-ljudi.html"
+    )
+   (semanticdb-table "uvod.html"
+    :major-mode 'html-mode
+    :tags '(("Za&#353;to studirati Po&#382;arno in&#382;enjerstvo?" section nil nil #<overlay from 72 to 199 in zasto.html>) ("Za&#353;to studirati Po&#382;arno in&#382;enjerstvo?" section (:members (("Za&#353;to studirati Po&#382;arno in&#382;enjerstvo?" section nil nil #<overlay from 303 to 307 in zasto.html>))) nil #<overlay from 199 to 205 in zasto.html>))
+    :file "uvod.html"
+    )
+   (semanticdb-table "fire.html"
+    :major-mode 'html-mode
+    :tags '(("Po&#382;arno in&#382;enjerstvo" section (:members (("file" section nil nil [973 976]))) nil [79 85]))
+    :file "fire.html"
+    :pointmax 1024
+    )
+   (semanticdb-table "fire0.html"
+    :major-mode 'html-mode
+    :tags '(("PO&#381;ARNO IN&#381;ENJERSTVO&nbsp; &mdash;&nbsp; Zagreb" section nil nil [67 73]))
+    :file "fire0.html"
+    :pointmax 680
+    )
+   (semanticdb-table "kontakti.html"
+    :major-mode 'html-mode
+    :tags '(("Linkovi" section nil nil #<overlay from 72 to 183 in link.html>) ("Linkovi" section (:members (("Linkovi za nastavu" section (:members (("Materijali za predavanja i u&#269;enje se mogu na&#263;i" section nil nil #<overlay from 285 to 367 in link.html>) ("o v d j e" section (:members (("o v d j e" section nil nil #<overlay from 387 to 390 in link.html>))) nil #<overlay from 367 to 371 in link.html>))) nil #<overlay from 241 to 245 in link.html>))) nil #<overlay from 183 to 189 in link.html>))
+    :file "kontakti.html"
+    )
+   )
+  :file "semantic.cache"
+  :semantic-tag-version "2.0pre3"
+  :semanticdb-version "2.0pre3"
+  )

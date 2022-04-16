@@ -1,0 +1,406 @@
+\voffset=-25pt
+\hoffset=-10pt
+
+\def\fuzzy#1{\setbox0=\hbox{#1}%
+  \kern-.025em\copy0\kern-\wd0
+  \kern.05em\copy0\kern-\wd0
+  \kern-.025em\raise.0433em\box0 }
+
+\def\undertext#1{$\underline{\hbox{#1}}$}
+\def\crta{\vrule height1.41ex depth-1.27ex width0.34em}
+\def\dj{d\kern-0.36em\crta}
+\def\Crta{\vrule height1ex depth-0.86ex width0.4em}
+\def\Dj{D\kern-0.73em\Crta\kern0.33em}
+\font\cal=cmsy10
+\def\DJ{\cal D\kern-0.73em\Crta\kern0.33em}
+\font\calcal=cmsy10 scaled \magstep3
+
+
+\overfullrule=0cm
+\newtoks\footfont \footfont={\eightpoint}
+\font\eightrm=cmr8      \font\sixrm=cmr6
+\font\eighti=cmmi8      \font\sixi=cmmi6
+\font\eightsy=cmsy8     \font\sixsy=cmsy6
+\font\eightbf=cmbx8     \font\fiverm=cmr5
+\font\eighttt=cmtt8     \font\fivei=cmmi5
+\font\eightit=cmti8     \font\fivesy=cmsy5
+\font\eightsl=cmsl8     \font\fivebf=cmbx5
+\font\tenex=cmex10      \font\sixbf=cmbx6
+\newskip\ttglue
+\def\eightpoint{\def\rm{\fam0\eightrm}
+\textfont0=\eightrm     \scriptfont0=\sixrm     \scriptscriptfont0=\fiverm
+\textfont1=\eighti      \scriptfont1=\sixi      \scriptscriptfont1=\fivei
+\textfont2=\eightsy     \scriptfont2=\sixsy     \scriptscriptfont2=\fivesy
+\textfont3=\tenex       \scriptfont3=\tenex     \scriptscriptfont3=\tenex
+\textfont\itfam=\eightit        \def\it{\fam\itfam\eightit}
+\textfont\slfam=\eightsl        \def\sl{\fam\slfam\eightsl}
+\textfont\ttfam=\eighttt        \def\tt{\fam\ttfam\eighttt}
+\textfont\bffam=\eightbf        \scriptfont\bffam=\sixbf
+\scriptscriptfont\bffam=\fivebf \def\bf{\fam\bffam\eightbf}
+\tt \ttglue=.5em plus .25em minus.15em
+\normalbaselineskip=9pt
+\footfont={\eightpoint}
+\setbox\strutbox=\hbox{\vrule height7pt depth2pt  width0pt}
+\let\sc=\sixrm \let\big=\eightbig \normalbaselines\rm}
+
+\def\tenpoint{\def\rm{\fam0\tenrm}
+\textfont0=\tenrm       \scriptfont0=\sevenrm   \scriptscriptfont0=\fiverm
+\textfont1=\teni        \scriptfont1=\seveni    \scriptscriptfont1=\fivei
+\textfont2=\tensy       \scriptfont2=\sevensy   \scriptscriptfont2=\fivesy
+\textfont3=\tenex       \scriptfont3=\tenex     \scriptscriptfont3=\tenex
+\textfont\itfam=\tenit  \def\it{\fam\itfam\tenit}
+\textfont\slfam=\tensl  \def\sl{\fam\slfam\tensl}
+\textfont\ttfam=\tentt  \def\tt{\fam\ttfam\tentt}
+\textfont\bffam=\tenbf  \scriptfont\bffam=\sixbf
+\scriptscriptfont\bffam=\fivebf \def\bf{\fam\bffam\tenbf}
+\tt \ttglue=.5em plus .25em minus.15em
+\normalbaselineskip=9pt
+\footfont={\eightpoint}
+\setbox\strutbox=\hbox{\vrule height8.5pt depth3.5pt  width0pt}
+\let\sc=\eightrm \let\big=\tenbig \normalbaselines\rm}
+
+\font\twelverm=cmr10 at12pt     
+\font\twelvei=cmmi10 at12pt     
+\font\twelvesy=cmsy10 at12pt    
+\font\twelvebf=cmbx10 at12pt    
+\font\twelvett=cmtt10 at12pt    
+\font\twelveit=cmti10 at12pt    
+\font\twelvesl=cmsl10 at12pt 
+\font\tenex=cmex10 at12pt       
+\def\twelvepoint{\def\rm{\fam0\twelverm}
+\textfont0=\twelverm    \scriptfont0=\tenrm     \scriptscriptfont0=\eightrm
+\textfont1=\twelvei     \scriptfont1=\teni      \scriptscriptfont1=\eighti
+\textfont2=\twelvesy    \scriptfont2=\tensy     \scriptscriptfont2=\eightsy
+\textfont3=\tenex       \scriptfont3=\tenex     \scriptscriptfont3=\tenex
+\textfont\itfam=\twelveit       \def\it{\fam\itfam\twelveit}
+\textfont\slfam=\twelvesl       \def\sl{\fam\slfam\twelvesl}
+\textfont\ttfam=\twelvett       \def\tt{\fam\ttfam\twelvett}
+\textfont\bffam=\twelvebf       \scriptfont\bffam=\sixbf
+\scriptscriptfont\bffam=\fivebf \def\bf{\fam\bffam\twelvebf}
+\tt \ttglue=.7em plus .35em minus.25em
+\normalbaselineskip=14.4pt
+\footfont={\tenpoint}
+\setbox\strutbox=\hbox{\vrule height9.5pt depth4pt  width0pt}
+\let\sc=\tenrm \let\big=\twelvebig \normalbaselines\rm}
+
+\catcode`@=11
+\def\footnote#1{\let\@sf\empty % parameter #2 (the text) is read later
+  \ifhmode\edef\@sf{\spacefactor\the\spacefactor}\/\fi
+  \kern-2.8em\raise.6ex\hbox{\the\footfont #1}\@sf\vfootnote{#1}}
+\def\vfootnote#1{\insert\footins\bgroup
+  \interlinepenalty\interfootnotelinepenalty
+  \splittopskip\ht\strutbox % top baseline for broken footnotes
+  \splitmaxdepth\dp\strutbox \floatingpenalty\@MM
+  \leftskip\z@skip \rightskip\z@skip \spaceskip\z@skip \xspaceskip\z@skip
+  \parindent=0.5cm\the\footfont \item{#1}\footstrut\futurelet\next\fo@t}
+\catcode`@=12
+
+\font\bbb=cmssdc10 at 12pt
+\font\sss=cmss10 at 12pt
+\font\ssi=cmssi10 at 12pt
+\font\ssb=cmssdc10 at 12pt
+\font\UNI=cmbx8 scaled \magstep2
+\font\UNII=cmbx9 scaled \magstep2
+\font\INST=cmbx9 scaled \magstep1
+\font\NAME=cmbx10
+\newtoks\name   \name={Prof.~dr.~sc.~Mladen Pavi\v ci\'c}
+\newtoks\number \number={470/4206}
+\newtoks\date   \date={5.~travnja 2007.}
+\newbox\falzbox \newbox\addressbox
+\setbox\falzbox=\vbox to 27cm{\offinterlineskip\vskip0pt minus1filll
+                     \vbox to7.9cm{\vfill}
+                     \moveleft 2cm\vbox to 0pt{\vss\hrule width.4cm height.01pt}
+                     \vbox to10cm{\vfill}
+                     \moveleft 2cm\vbox to 0pt{\vss\hrule width.4cm height.01pt}
+                     \vfill}
+\output{\myoutput}
+\def\myoutput{
+    \ifnum\pageno=1
+      \shipout\hbox{\rlap{\copy\falzbox}
+         \hbox{\vbox{\vskip 0pt minus1filll \makeheader\pagebody\makefootline}}}
+      \global\advance\vsize by9cm
+    \else
+        \shipout\hbox{\rlap{\copy\falzbox}
+        \hbox{\vbox{\makeheadline\pagebody\makefootline}}}
+    \fi     
+    \ifnum\outputpenalty>-20000 \else\dosupereject\fi
+    \advancepageno
+}
+        
+\def\makeheader{
+\vbox to 9cm{\hbox to \hsize{
+     \vbox{\hbox to 6.3cm{\UNI$\!$GRA\Dj EVINSKI FAKULTET}
+           \vskip.8ex
+           \hbox to 6.3cm{\UNII\hfill Sveu\v cili\v sta u Zagrebu\hfill}
+           \vskip.8ex
+           \hbox to 6.3cm{\INST\hfill Odjel za matematiku\hfill}
+           \vskip.7ex
+           \hbox to 6.3cm{\NAME \hss\the\name\hss}
+           \vskip1.4cm}
+     \hfill
+     \vbox{\tenpoint
+           \hbox to 4.8cm{Ka\v ci\'ceva 26, Po\v st. pret. 217\hfill}
+           \vskip.7ex 
+           \hbox to 4.8cm{10001 Zagreb\hfill}
+           \vskip.7ex 
+           \hbox to 4.8cm{Tel.\kern2pt 01--4639423\hfill}  
+           \vskip.7ex
+           \hbox to 4.8cm{Fax:\kern2pt 01--4828050\hfill}
+           \vskip.9ex
+           \hbox to 4.8cm{\eightrm{E--mail:\hfill}}
+           \vskip.4ex
+           \hbox to 4.8cm{\eightrm{pavicic@grad.hr\hfill}}
+           \vskip.8cm
+           \hbox to 4.8cm{Zagreb, \the\date\hfill}
+           \vskip.1cm}
+     }          
+     \vskip-3ex
+          \moveleft.9cm\hbox to 8.6cm{\vbox to 6.3cm{
+           \hbox to8.6cm{\raise1.5ex\hbox{\eightbf .}\hfill
+                 \hbox{\fiverm \kern1.9ptM. Pavi\v ci\'c, 
+Odjel za matematiku GF--a, Po\v st. pret. 217, 10001 Zagreb}
+                 \hfill\raise1.5ex\hbox{\eightbf .}}
+           \vskip1ex
+           \vss
+           \hbox to8.6cm{\hbox{\copy\addressbox}\hss}
+           \vss
+           \hbox to 8.6cm{\eightbf .\hfill .}
+           \vskip15pt\hbox to \hsize{\undertext{\sss Predmet}: \bbb \v Zalba  
+na tretman projekta 1184 od strane Prosudbene komisije i\hfill}
+\hbox to \hsize{\bbb \hbox to 52pt{\hfill}prijedlog izdvojenog 
+procesiranja revidirane verzije projekta (3380).\hfill}
+       \vskip10pt
+           \hbox to \hsize{\sss \hfill Va\v sa KLASA: 402-07/06-08/00115; 
+Va\v s BROJ: 533-08-07-0004}}}
+
+              \vfil
+}}
+
+\def\beginlinemode{\endmode
+   \begingroup\obeylines\def\endmode{\par\endgroup}}
+\let\endmode=\par
+\def\address{\global\advance\vsize by-9cm
+        \beginlinemode\getaddress}
+{\obeylines\gdef\getaddress #1
+  #2
+  {#1\gdef\addresse{#2}%
+     \global\setbox\addressbox=\vbox\bgroup\raggedright%
+     \hsize=10cm \everypar{\hangindent2em}\twelvepoint #2
+     \def\endmode{\egroup\endgroup}}}
+\def\endaddress{\endmode}
+\vsize=26cm
+\hsize=16cm
+\nopagenumbers
+\twelvepoint
+
+\font\bfi=cmbxti12
+
+\parindent=0cm
+
+%lprdvi -Palw -y-1.4cm lett
+%lprdvi -Pkyo -x-2.2cm -y-0.4cm lett
+
+\address
+\parindent=20pt
+
+\bf UPRAVI ZA ZNANOST 
+\smallskip
+\it Ministarstvo znanosti, obrazovanja i \v sporta\break\hbox to 30pt{\hfill} Republike Hrvatske, 
+\rm Trg hrvatskih velikana 6 
+10000 Zagreb.
+
+\endaddress
+
+%\magnification=1200
+\vbox to 0.5cm{\vfill}
+
+
+\parindent=0pt    
+
+%\centerline{\bf U p r a v i \ \ z a \ \ z n a n o s t} 
+
+\bigskip\medskip
+Cijenjeni, 
+
+\medskip
+
+U prilogu svog pisma od 15.1.07., dr\v zavni tajnik prof.~dr.~sc.~Dra\v zen 
+Viki\'c Topi\'c nam je poslao recenzije i mi\v sljenje 
+prosudbene skupine za na\v s projekt
+
+\it
+\parindent=40pt   
+Kvantno ra\v cunanje: paralelnost i vizualizacija (broj prijave 1184)
+\rm
+
+\parindent=0pt   
+i predlo\v zio nam da uzimaju\'ci u obzir mi\v sljenja recenzenata
+i prosudbene skupine prijavimo revidirani projekt.  
+
+\smallskip
+\parindent=20pt   
+Mi smo prihvatili prijedlog i prijavili revidirani projekt pod 
+brojem \bf 3380\rm. U njemu smo uva\v zili sve 
+primjedbe recenzenata ili razjasnili to\v cke za koje su recenzenti 
+smatrali da su nejasne ili nedovoljno obja\v snjenje. Time smo tako\dj er 
+uva\v zili to\v cke I, II, V i VI prosudbene skupine u kojima ona 
+u potpunosti prihva\'ca ocjenu recenzenata. 
+
+\smallskip 
+U to\v ckama V i VI (kompetentnost voditelja projekta i 
+kompetentnost suradnika na projektu) prosudbena  skupina 
+\special{blue}{\bf ``korigira''} \rm prosje\v cne ocjene 
+recenzenata \bf 4,83 \rm i \bf 3,30 \rm sa \bf ``faktorom znanstvene 
+produkcije i utjecaja'' \rm na \bf 2\rm, \bf odbija 
+\rm prijedloge \bf oba recenzenta da se projekt prihvati \rm i 
+\bf odbija \rm projekt, te misli da bismo se ``mogli usredoto\v citi na 
+rad na drugim  projektima na kojima su prijavljeni kao suradnici''. 
+Budu\'ci da nema preklapanja na\v seg sa spomenutim projektima, ovo
+posljednje bi zna\v cilo ubijanje jedinog projekta u Hrvatskoj \rm 
+koji se bavi teorijom \it kvantnih kompjutera\rm. (Njihovu favoriziranost 
+u svijetu predo\v cuje \bf 53.200.000 \rm stranica koje \it Google \rm daje kad 
+upi\v sete \it quantum computer\rm, kao i \bf milijarde dolara \rm investiranih 
+u to polje godi\v snje.) Kako pokazuje prilo\v zena analiza u interesu 
+je svjetske i hrvatske znanosti da se to ne dogodi. 
+
+ \smallskip 
+Prosudbena skupina nije specificirala \v sto bi ``me\dj unarodni 
+odjek i produkcija" trebali biti, no, mi smo, s obzirom 
+na e-mailove dva \v clana prosudbene skupine, pretpostavili
+da su to citiranja bez samocitiranja i \it Impact Factor\/\rm i i 
+broj \it Current Contents \/\rm \v clanaka po koautoru u skladu s 
+me\dj unarodnim bibliometrijskim standardima. Iako smatramo 
+da je apsolutno neprihvatljivo da se u kreiranju znanstvene 
+politike jedne dr\v zave mi\v sljenja kompetentnih stru\v cnjaka 
+zamijenjuju administrativnim faktorima, mi smo ipak 
+izra\v cunali te faktore za na\v su grupu i za voditelje svih 72 
+projekta, \v cije je financiranje ovo \it Ministarstvo \/\rm 
+odobrilo na prijedlog prosudbene skupine, i usporedili ih.
+
+\smallskip 
+Dobili smo da je---u posljednjem projektnom periodu (2002-06.)---po broju 
+\it Current Contents \/\rm \v clanaka voditelj 
+bolji od 41 voditelja (od 72 voditelja prihva\'cenih projekata), 
+a suradnici da su bolji od 49 voditelja. Po  \it Impact Factor\/\rm 
+ima. voditelj je bolji od 29, a suradnici bolji od 18 voditelja. 
+I po citiranosti, voditelj je bolji od 27, a suradnici \v cak od
+51 voditelja prihva\'cenih projekata. Detalji su dani u prilo\v zenim 
+dokumentima iz kojih je tako\dj er vidljivo da navedni faktori primijenjeni 
+na 72 voditelja prihva\'cenih projekata dovode do potpunog ispremje\v savanja
+redoslijeda projekata kojeg je sama prosudbena skupina predlo\v zila 
+ovom \it Ministarstvu\/\rm.
+ 
+\smallskip 
+\bf Dakle, ne samo da proizlazi da prosudbena 
+skupina nije uva\v zila ocjene i preporuke recenzenata, 
+ni brojne dostupne podatke o visokoj znanstvenoj 
+kvaliteti voditelja i suradnika,  i da je uvela kriterije 
+po kojima je djelovala samovoljno i bez konsenzusa znanstvene 
+zajednice i protivno proklamiranoj politici ovog 
+Ministarstva o ulozi recenzenata, i da nije objavila 
+kriterije barem jedan projektni period unaprijed nego ad 
+hoc tijekom evaluacijske procedure, ve\'c 
+izgleda da nije primjenila ni jednake kriterije na na\v s i 
+ostale projekte (v.~priloge 4, 5 i 6) i to bi trebalo zabrinuti 
+i uznemiriti znanstvenu zajednicu, ovo Ministarstvo i javnost.\rm  
+
+\medskip
+Zbog svega toga, a rukovode\'ci se detaljnom analizom koju 
+smo proveli, koju prila\v zemo i koja je dobavljiva na 
+hrvatskom i engleskom na slijede\'coj web adresi:
+
+\smallskip \tt
+\parindent=0pt
+\centerline{http://m3k.grad.hr/pavicic/projekt/recenzija/}
+
+\smallskip\rm
+
+molimo:
+
+\parindent=40pt
+\ssb
+\smallskip
+\item{1.} da se revidirana verzija (3380) na\v seg projekta prvo 
+po\v salje istim recenzentima koji su ocjenjivali prvobitnu 
+verziju (1184);
+
+\ssb
+\smallskip
+\item{2.} da se nakon primitka mi\v sljenja recenzenata 
+\undertext{ne dozvoli} da prosudbena skupina mijenja ocjene koje 
+su dali recenzenti;  
+
+\ssb
+\smallskip
+\item{3.} da se na\v s projekt prema ocjenama recenzenata 
+rangira me\dj u 72 ve\'c prihva\'cena projekta---kako bi se 
+kompenzirala \v steta nanesena projektu neprimjerenom intervencijom 
+prosudbene skupine u mi\v sljenje i prijedlog recenzenata; 
+
+\ssb
+\smallskip
+\item{4.} da se odobri trajanje projekta od 5 godina i pridru\v zivanje
+programu ``Distribuirana obrada i znanstvena vizualizacija podataka'' 
+prof.~dr.~sc. Karolja Skale kao \v sto je prvobitno bilo prijavljeno u okviru 
+verzije 1184---kako bi se kompenzirala \v steta nanesena projektu 
+neprimjerenom intervencijom prosudbene skupine u mi\v sljenje i 
+prijedlog recenzenata; 
+
+\ssb
+\smallskip
+\item{5.} da se po primitku kona\v cne ocjene recenzenata 
+odobri naknadno tra\v zenje opreme za projekt---kako bi se 
+kompenzirala \v steta nanesena projektu neprimjerenom intervencijom 
+prosudbene skupine u mi\v sljenje i prijedlog recenzenata;
+
+
+\ssb
+\smallskip
+\item{6.} da se ve\'c sad, na po\v cetku projektnog perioda definira
+na\v cin ocjenjivanja projekata tijekom perioda i kriteriji za 
+dodjelu novih projekata nakon isteka sada\v snjih.   
+
+\rm
+\bigskip\bigskip\bigskip\bigskip\bigskip\bigskip
+
+\line{\hbox to 12truecm{\hfill}Mladen Pavi\v ci\'c,\hfill}
+\medskip 
+\line{\hbox to 12truecm{\hfill}Voditelj projekta\hfill}
+
+\parindent=0pt   
+\sss
+\undertext{Prilozi:}
+
+\parindent=20pt   
+\medskip
+\item{1.}Usporedna analiza tretmana projekta od strane prosudbene 
+skupine;
+
+\smallskip
+\item{2.}Recenzije prijedloga projekta \ssi Kvantno ra\v cunanje: 
+paralelnost i vizualizacija\sss;
+
+\smallskip
+\item{3.}Dopis prosudbene skupine Ministarstvu kojim odbija projekt;
+
+\smallskip
+\item{4.}\ssi Impact Factor\/ \sss rang lista voditelja 72 od 
+odobrena projekta iz fizike i na\v seg voditelja;
+
+\smallskip
+\item{5.}\ssi Current Contents\/ \sss rang lista voditelja 72  
+odobrena projekta iz fizike i na\v seg voditelja;
+
+\smallskip
+\item{6.}Rang lista \ssi citiranosti\/ \sss voditelja 72 od 
+odobrena projekta iz fizike i na\v seg voditelja;
+
+\smallskip
+\item{7.}Kopija pisma dr\v zavnog tajnika prof.~dr.sc.~Dra\v zena Viki\'c Topi\'ca 
+od 15.1.07.
+
+\parindent=0pt    
+
+\vfill\eject\end
+
+

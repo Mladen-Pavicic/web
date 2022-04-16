@@ -1,0 +1,30 @@
+a.button:link, a.button:visited
+{
+/*  float: left; */
+  margin: 2px 5px 2px 5px;
+  padding: 2px;
+  width: 70px;
+  border-top: 1px solid #cccccc;
+  border-bottom: 1px solid black;
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid black;
+  background: #cccccc;
+  text-align: center;
+  text-decoration: none;
+  font: normal 12px sans-serif;
+  color: black;
+}
+
+a.button:hover
+{
+  background: #eeeeee;
+}
+
+a.button:active
+{
+  border-bottom: 1px solid #eeeeee;
+  border-top: 1px solid black;
+  border-right: 1px solid #eeeeee;
+  border-left: 1px solid black;
+}
+

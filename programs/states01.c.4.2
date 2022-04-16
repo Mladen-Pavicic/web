@@ -1,0 +1,3038 @@
+/* states01.c */
+#define VERSION "4.2 24-Jul-2018"
+/* 4.2 24-Jul-2018 nm - fix bug where vectors are lost with -1 -r */
+/* 4.1 27-Nov-2017 nm - set MMPPrefix to empty string if there is no prefix */
+/* 4.0 19-Jun-2017 nm - added detection for maxAtoms exceeding MAX_ATOMS;
+   increase MAX_BLOCKS to 9000 and MAX_ATOMS to 3000 */
+/* 3.9 20-May-2017 nm - improve help text for -p */
+/* 3.8 18-May-2017 nm - cleanup of fflush */
+/* 3.7 30-Apr-2017 nm - take out "#if", "#ifdef" surrounding fflush(stdout) */
+/* 3.6 26-Apr-2017 nm - add fflush(stdout) after all printf statements */
+/* 3.5 4-Feb-2017 nm - fix bug that omits MMP with -c option */
+/* 3.4a 16-Jan-2017 nm - fix memory leak */
+/* 3.4 16-Jan-2017 nm - propagate vector assignment suffix from input to
+   output */
+/* 3.3 5-Apr-2016 nm - increased MAX_BLOCKS to 3000 */
+/* 3.2 26-Mar-2014 nm - added -i option; added imin search */
+/* 3.1 16-Mar-2014 nm - state01Test() is now a stub, calling main test
+   with forward, then backward, then up to 10 random diagrams until a
+   timeout (-tnnn) no longer occurs */
+/* 3.0 26-Jan-2014 nm - added -t timeout option */
+/* 2.9 23-Jan-2014 nm - linput() now allows unlimited input line length */
+/* 2.8 25-Dec-2013 nm - fixed output formatting to handle ++ notation */
+/* 2.7 13-Dec-2013 nm - added indep set to verbose mode lines; added
+   imax and and indep set to -1 line; see 13-Dec-2013 6:03PM mladen email */
+/* 2.6 27-Mar-2012 nm - MIN_BLOCK_SIZE=1; added state printout for default
+   verbose mode */
+/* 2.5 12-Mar-2012 nm - switched meaning of pass and fail for -p option */
+/* 2.4 22-Feb-2012 nm - add parity signature as per Waegell-Aravind 2011
+   arXiv paper, for -p -1 option */
+/* 2.3 16-Feb-2012 nm - add -p option for parity proof check only;
+   -r<n> now generates n criticals for each input diagram */
+/* 2.2 23-Dec-2011 nm - add parity proof checking to -c option */
+/* 2.1 26-Oct-2011 nm - add -r (generate random critical) */
+/* 2.0 30-Oct-2010 nm - add -e (continue if error found). */
+/* 1.9 25-Apr-2010 nm - add -c (test for critical diagram). */
+/* 1.8 4-Apr-2010 nm - fix bug 1015. */
+/* 1.7 24-Apr-2009 nm - added extended notation handling. */
+/* 1.6 17-Apr-2009 nm - fixed bug where the default option (i.e. neither
+   -sc, -wc, nor -1.0) incorrectly yielded "Admits no {0,1} states" for
+   the case of 1 block diagram e.g. "123.". */
+/* 1.5 2-Apr-2008 nm - increased MAX_BLOCKS from 64 to 128 */
+/* 1.1 27-Oct-04 nm - slight change in sorting criteria for improved
+   speed; added -1.0 option for old version; added -v verbose option */
+
+/* To run this program, type:
+      states01 < file1 > file2
+   where
+      file1 = input file with MMP diagrams in Brendan McKay's format
+      file2 = output file with {0,1} state existence information
+   See  states01 --help  for more options and explanation.
+*/
+
+/*****************************************************************************/
+/*       Copyright (C) 2014  NORMAN D. MEGILL  <nm at alum.mit.edu>          */
+/*             License terms:  GNU General Public License                    */
+/*****************************************************************************/
+
+
+#include <stdarg.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdio.h>
+#include <time.h>
+#include <ctype.h>
+#include <limits.h>  /* Added 26-Oct-2011 */
+#include <unistd.h>  /* For getpid; not part of C standard */ /* 26-Oct-2011 */
+
+/***********************************************************************/
+/************ Start of "vstring" header stuff **************************/
+/************ Do not touch anything in this section ********************/
+/***********************************************************************/
+typedef char* vstring;
+
+/* String assignment - MUST be used to assign vstrings */
+void let(vstring *target,vstring source);
+/* String concatenation - last argument MUST be NULL */
+vstring cat(vstring string1,...);
+
+/* Emulate BASIC linput statement; returns NULL if EOF */
+/* Note that linput assigns target string with let(&target,...) */
+  /*
+    BASIC:  linput "what";a$
+    c:      linput(NULL,"what?",&a);
+
+    BASIC:  linput #1,a$                        (error trap on EOF)
+    c:      if (!linput(file1,NULL,&a)) break;  (break on EOF)
+
+  */
+/*vstring linput(FILE *stream,vstring ask,vstring *target);*/
+int linput(FILE *stream, const char* ask, vstring *target);
+
+/* Emulation of BASIC string functions */
+vstring seg(vstring sin, long p1, long p2);
+vstring mid(vstring sin, long p, long l);
+vstring left(vstring sin, long n);
+vstring right(vstring sin, long n);
+vstring edit(vstring sin, long control);
+vstring space(long n);
+vstring string(long n, char c);
+vstring chr(long n);
+vstring xlate(vstring sin, vstring control);
+vstring date(void);
+vstring time_(void);
+vstring num(double x);
+vstring num1(double x);
+vstring str(double x);
+long len(vstring s);
+long instr(long start, vstring sin, vstring s);
+long rinstr(vstring string1, vstring string2);
+long ascii_(vstring c);
+double val(vstring s);
+/* Emulation of PROGRESS string functions added 11/25/98 */
+vstring entry(long element, vstring list);
+long lookup(vstring expression, vstring list);
+long numEntries(vstring list);
+long entryPosition(long element, vstring list);
+/* Print to log file as well as terminal if fplog opened */
+void print2(char* fmt,...);
+FILE *fplog = NULL;
+/* Opens files with error message; opens output files with
+   backup of previous version.   Mode must be "r" or "w". */
+FILE *fSafeOpen(vstring fileName, vstring mode);
+/* Bug check error */
+void bug(int bugNum);
+/* End of functions you should call directly */
+
+
+/* Do not call the ones below directly */
+/******* Special pupose routines for better
+      memory allocation (use with caution) *******/
+/* Make string have temporary allocation to be released by next let() */
+/* Warning:  after makeTempAlloc() is called, the vstring may NOT be
+   assigned again with let() */
+void makeTempAlloc(vstring s);   /* Make string have temporary allocation to be
+                                    released by next let() */
+#define MAX_ALLOC_STACK 100
+int tempAllocStackTop=0;        /* Top of stack for tempAlloc functon */
+int startTempAllocStack=0;      /* Where to start freeing temporary allocation
+                                    when let() is called (normally 0, except in
+                                    special nested vstring functions) */
+char *tempAllocStack[MAX_ALLOC_STACK];
+
+
+/*****************************************************************************/
+/*********************** End of "vstring" header stuff ***********************/
+/*****************************************************************************/
+
+/* Constants */
+
+/* Mapping for MMP diagram atoms */
+#define ATOM_MAP "123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrs" \
+    "tuvwxyz!\"#$%&'()*-/:;<=>?@[\\]^_`{|}~"
+/* Maximum number of atoms - increase as needed, at expense of memory */
+#define MAX_ATOMS 3000
+/* Maximum number of blocks - increase as needed, at expense of memory */
+#define MAX_BLOCKS 9000
+/* Minimum block size */
+#define MIN_BLOCK_SIZE 1
+/* Maximum block size - increase as needed, at expense of memory */
+#define MAX_BLOCK_SIZE 10
+
+/* Global variables */
+char oneLineDisplay = 0;
+char verboseMode = 0;
+char worstCaseAlgorithm = 0;
+char version1_0Algorithm = 0;
+char skipClusterSortAlgorithm = 0;
+char criticalTestFlag = 0;
+char checkParityOnly = 0; /* Do parity check in default mode  9-Feb-2012 nm */
+char noErrorCheck = 0;
+char noAbortOnError = 0;
+long lattices = 0;
+long atomMapLen;
+long block[MAX_BLOCKS + 1][MAX_BLOCK_SIZE + 1];
+long blockSize[MAX_BLOCKS + 1];
+long blocks;
+long maxAtom;
+long atoms;
+long totalBacktrackCount = 0; /* For user information */
+/* saveBlock... stuff for the criticalTestingFlag mode */
+long saveBlock[MAX_BLOCKS + 1][MAX_BLOCK_SIZE + 1];
+long saveBlockSize[MAX_BLOCKS + 1];
+long saveBlocks;
+long saveAtoms;
+
+/* 26-Oct-2011 Variables for -r (random critical) option - from mmpstrip.c */
+char randomCriticalFlag = 0;
+long randomCriticalCount = 1;
+char blockRemovedFlag[MAX_BLOCKS + 1];
+long randomMap[MAX_BLOCKS + 1];
+long unsigned randomSeed;
+
+/* 22-Feb-2012 Make atomCount[] array in parityProofTest() global
+   for parity signature */
+long atomCount[MAX_ATOMS + 1];
+
+/* 13-Dec-2013 Add independence set information */
+long imax; /* Maximum independence set found so far */
+vstring imaxExample = "";    /* Example of a maximal independence set */
+vstring iminExample = "";   /* Example of a minimum independence set */
+long imin; /* Minimum independence set found so far (global) */
+long indCount; /* Cumulative number of imin/imax cases */
+long indTotal; /* Cumulative total of imin/imax values to get avg */
+long indNumBlocks; /* Number of blocks with 1 needed for relevant
+                                  imin/imax number */
+vstring MMPSuffix = ""; /* 16-Jan-2017 nm */
+
+/* 26-Jan-2014 */
+long backtrackLimit = 0; /* If non-zero, this is the backtrack timeout */
+long userIndIter = 0; /* If non-zero, the number of iterations in
+                              imax/imin search */
+
+/* Prototypes */
+vstring state01(vstring glattice);
+char state01Test(long *backtrackCount);
+char state01TestRun(long *backtrackCount, long blocks_, long *blockSize_,
+    long (*block_)[MAX_BLOCK_SIZE + 1]);
+vstring buildMMP(long blocks_, long *blockSize_,
+    long (*block_)[MAX_BLOCK_SIZE + 1], char *aTOM_MAP,
+    long atomMapLen_);
+vstring extendedAtomName(long atom);
+
+/* 23-Dec-2011 */
+char parityProofTest(void);
+
+/* 26-Oct-2011 Prototypes for -r (random critical) option - from mmpstrip.c */
+void shuffle(long *card, long cards);
+unsigned long getSeed(void);
+unsigned long mix3(unsigned long a, unsigned long b, unsigned long c);
+
+
+/******************** Main program *******************************************/
+
+int main(int argc, char *argv[])
+{
+
+  /* Integer variable declarations */
+
+  /* This is how you declare some strings you want to work with */
+  /* They MUST be initialized to the empty string, never to anything else */
+  vstring str1 = "";
+  vstring str2 = "";
+  long p, q;
+  long arg;
+
+  vstring MMPPrefix = ""; /* 16-Jan-2017 nm */
+  /*vstring MMPSuffix = "";*/ /* Now global */ /* 16-Jan-2017 nm */
+  vstring inputMMP = ""; /* 16-Jan-2017 nm */
+
+  /* if (strlen(ATOM_MAP) != MAX_ATOMS) bug(1); */
+  atomMapLen = (long)strlen(ATOM_MAP); /* Do here to speed up its reuse */
+
+  /* For use of the random shuffling in state01Test(), ensure that some
+     seed is provided (may get overridden by -r option) */
+  srand(0);
+
+  for (arg = 1; arg < argc; arg++) {
+    if (!strcmp(argv[arg], "-1")) {
+      oneLineDisplay = 1;
+    } else if (!strcmp(argv[arg], "-e")) {
+      noAbortOnError = 1;
+    } else if (!strcmp(argv[arg], "-ne")) {
+      noErrorCheck = 1;
+    } else if (!strcmp(argv[arg], "-v")) {
+      verboseMode = 1;
+    } else if (!strcmp(argv[arg], "-wc")) {
+      worstCaseAlgorithm = 1;
+    } else if (!strcmp(argv[arg], "-1.0")) {
+      version1_0Algorithm = 1;
+    } else if (!strcmp(argv[arg], "-sc")) {
+      skipClusterSortAlgorithm = 1;
+    } else if (!strcmp(argv[arg], "-c")) {
+      criticalTestFlag = 1;
+    } else if (!strcmp(argv[arg], "-p")) { /* 9-Feb-2012 nm */
+      checkParityOnly = 1;
+    } else if (!strcmp(left(argv[arg], 2), "-r")) {
+      randomCriticalFlag = 1;
+      let(&str1, right(argv[arg], 3));
+      p = instr(1, str1, "s");
+      if (p != 0) {
+        randomSeed = (long unsigned)val(right(str1, p + 1));
+        let(&str1, left(str1, p - 1));
+      } else {
+        randomSeed = getSeed();
+      }
+      if (str1[0]) {
+        randomCriticalCount = (long)val(str1);
+      } else {
+        randomCriticalCount = 1;
+      }
+      fprintf(stderr, "Seed for pseudo-random number generator = %lu\n",
+          randomSeed);
+      if (/*randomSeed < 0 ||*/ randomSeed > RAND_MAX) {
+        fprintf(stderr, "?Error: random seed must be 0 through %lu\n",
+            (unsigned long)RAND_MAX);
+        exit(1);
+      }
+      srand((unsigned int)randomSeed);
+    } else if (!strcmp(left(argv[arg], 2), "-t")) {
+      /* Set backtrack timeout limit */
+      let(&str1, right(argv[arg], 3));
+      backtrackLimit = (long)val(str1);
+      if (backtrackLimit <= 0 || strcmp(str((double)backtrackLimit), str1)) {
+        printf("?Error: -t value > 2 billion, or format error\n");
+        fflush(stdout); /* Flush output buffer */
+        exit(1);
+      }
+    } else if (!strcmp(left(argv[arg], 2), "-i")) {
+      /* Set number of independence set trial iterations */
+      let(&str1, right(argv[arg], 3));
+      userIndIter = (long)val(str1);
+      if (userIndIter <= 0 || strcmp(str((double)userIndIter), str1)) {
+        printf("?Error: -i value > 2 billion, or format error\n");
+        fflush(stdout); /* Flush output buffer */
+        exit(1);
+      }
+    } else if (!strcmp(argv[arg], "--help")) {
+printf("states01.c  Version %s\n", VERSION);
+printf("To run this program, type:\n");
+/*
+printf("   states01 < file1 > file2\n");
+*/
+printf("   states01 [-1] [-ne] [-sc] [-wc] < file1 > file2\n");
+printf("where:\n");
+printf(
+"   -1 = display 1-line output for use with Unix pipe filters (formatted\n");
+printf(
+"        per Mladen Pavicic: \"fails\" means \"admits no {0,1} state\"\n");
+printf(
+"        except in -p, -c, and -r modes where the meaning is different)\n");
+printf(
+"   -e = do not abort on error; instead, output '...error...' and continue\n");
+printf(
+"   -ne = skip some error checking for speedup\n");
+printf(
+"   -v = verbose mode for debugging\n");
+printf(
+"   -sc = skip cluster sort algorithm completely\n");
+printf(
+"   -wc = worst-case (vs. best-case) cluster sort algorithm for debugging\n");
+printf(
+"   -p = quick check of only whether the diagram has a parity proof.  For\n");
+printf(
+"        fast speed, there is no checking for 0/1 states or criticality.\n");
+printf(
+"        If a diagram has a parity proof, then it is definitely KS.  However,\n");
+printf(
+"        KS subsets or supersets of a diagram with a parity proof may or may\n");
+printf(
+"        not continue to have parity proofs.  If a diagram does not have a\n");
+printf(
+"        parity proof, then we can't say whether or not it is KS.  If it is\n");
+printf(
+"        KS, then its KS subsets or supersets may or may not have parity\n");
+printf(
+"        proofs. In -1 mode, a Waegell-Aravind's \"parity signature\" is\n");
+printf(
+"        included, e.g. 18(2)2(4) means \"18 rays have multiplicity 2, 2 rays\n");
+printf(
+"        have multiplicity 4.\"  Note: for the -p option, \"passes\" means\n");
+printf(
+"        it HAS a parity proof and \"fails\" means it does NOT have one.\n");
+printf(
+"   -1.0 = use Version 1.0 cluster sort algorithm\n");
+printf(
+"   -c = pass/fail means diagram is/is not critical KS i.e. has no 0/1\n");
+printf(
+"        state, and removing any block has a 0/1 state.  \"parity-pass\" means\n");
+printf(
+"        the critical KS configuration has a parity proof.\n");
+printf(
+"   -r[<n>][s<seed>] = generate n random critical diagrams from each input\n");
+printf(
+"        diagram.  \"fails\" indicates that the input diagram admitted a 0/1\n");
+printf(
+"        state.  Random blocks are stripped from the input diagram until\n");
+printf(
+"        it is critical.  The <seed> may be from 0 to 2147483647 inclusive\n");
+printf(
+"        and specifies the seed of the first random number generator call.\n");
+printf(
+"        If s<seed> is omitted, a random seed will be used.  If <n> is\n");
+printf(
+"        omitted, n=1 will be used.  Examples:  -r means generate one\n");
+printf(
+"        critical with a random seed; -rs123 means generate one critical\n");
+printf(
+"        with seed 123; -r20 means generate 20 criticals with a random\n");
+printf(
+"        seed; -r20s123 means generate 20 criticals with seed 123.\n");
+printf(
+"   -t = time limit per diagram (limit of number of backtracks).  -t should\n");
+printf(
+"        be followed by a positive integer less than 2 billion, with no\n");
+printf(
+"        space, for example -t1000000.  The output is \"timeoutnnn\"\n");
+printf(
+"        instead of \"pass\" or \"fail\" when this limit is exceeded.\n");
+printf(
+"        There is no limit if -t is not specified, and the program may run\n");
+printf(
+"        indefinitely (\"forever\").\n");
+printf(
+"   -i = number of diagram iterations to search for maximum and minimum\n");
+printf(
+"        sets of independent vertices.  -i should be followed by a positive\n");
+printf(
+"        integer less than 2 billion, with no space, for example -i100.\n");
+printf(
+"        If -i is omitted, the default is 1 iteration.  As the iterations\n");
+printf(
+"        increase, the estimate of imin and imax in the -1 option output\n");
+printf(
+"        will improve.\n");
+printf(
+"   file1 = input file with diagrams in Brendan McKay's format\n");
+printf("   file2 = output file with {0,1} state information\n");
+/*
+printf("Only one of -n or -s may be specified.\n");
+*/
+
+/* 16-Jan-2017 nm */
+
+printf("\n");
+printf(
+"Special feature:  if the input MMP has a vector assignment\n");
+printf(
+"    suffix (normally added by vecfind.c), then the suffix is\n");
+printf(
+"    appended to the output MMP in \"-1\" mode.  In some cases, such\n");
+printf(
+"    as with \"-r[<n>][s<seed>]\", the output MMP is a subset of the\n");
+printf(
+"    input MMP; in that case, the unused vector assignments on the\n");
+printf(
+"    input diagram can be trimmed, and vertex numbering gaps closed,\n");
+printf(
+"    by passing it through mmpshuffle.c, for example,\n");
+printf(
+"    \"./states01 -1 -r < test.mmp | mmpshuffle -na\".\n");
+printf("\n");
+
+
+
+
+printf("For this help message, type:  states01 --help\n");
+printf("\n");
+printf(
+"Purpose:  This program determines whether an MMP diagram admits a {0,1}\n");
+printf(
+"(non-dispersive) state.  The MMP input file notation is the same as\n");
+printf(
+"for Greechie diagrams described in the help for the program latticeg.c\n");
+printf("\n");
+printf("Example of use:\n");
+printf("  states01 < test.o\n");
+printf("where test.o contains the two lines:\n");
+printf("  1234.\n");
+printf("  FHJ,EGJ,DIJ,9AI,6BE,68A,5CF,579,4BC,38H,27G,14D,123.\n");
+printf("corresponding to two diagrams, the first admitting {0,1}-states and\n");
+printf("the second one not admitting them.\n");
+      goto return_point;
+    } else {
+      fprintf(stderr,
+          "?Unrecognized option \"%s\".  Type \"states01 --help\" for usage\n",
+          argv[arg]);
+      exit(1);
+    }
+  }
+
+  if (criticalTestFlag && randomCriticalFlag) {
+    fprintf(stderr, "?Error: You can't specify both -c and -r.\n");
+    exit(1);
+  }
+
+  while (1) {
+    /* Get line from 1st file */
+    if (linput(NULL, NULL, &inputMMP) == 0) break; /* 0 means EOF */
+    /* Clean off carriage return (for Windows files under Cygwin) and spaces */
+    /*let(&inputMMP, edit(inputMMP, 2 + 4));*/
+    /* Clean off carriage return (for Windows files under Cygwin); keep spaces */
+    let(&inputMMP, edit(inputMMP,  4));  /* 16-Jan-2017 nm */
+    lattices++;
+
+
+    /* 16-Jan-2017 nm */
+    /* Get any prefix i.e. part of line before last space and any
+       suffix i.e. part of line after "." */
+    p = 0;
+    while (1) {  /* Find last space */
+      q = instr(p + 1, inputMMP, " ");
+      if (q == 0) break;
+      p = q;
+    }
+    q = instr(p + 1, inputMMP, "."); /* End of MMP, just before suffix */
+    if (q == 0) {
+      fprintf(stderr, "?Error: MMP #%ld doesn't end with period.\n", lattices);
+    }
+    if (p != 0) {
+      let(&MMPPrefix, left(inputMMP, p));
+    } else {
+      let(&MMPPrefix, ""); /* 27-Nov-2017 nm */
+    }
+    let(&MMPSuffix, right(inputMMP, q + 1));
+    let(&inputMMP, seg(inputMMP, p + 1, q));
+
+
+    /*let(&str2, "");*/
+    str2 = state01(inputMMP); /* Must always return empty string */
+    if (str2[0] != 0) bug(2); /* ...to make sure */
+    /*printf("%s\n", str2);*/
+    fflush(stdout); /* Flush output buffer */
+  }
+
+  if (!oneLineDisplay) {
+    printf("Total diagrams = %ld  Total backtrack count = %ld",
+        lattices, totalBacktrackCount);
+#ifdef CLOCKS_PER_SEC
+    printf("  CPU time =%6.2f s", ((1.0 * (double)(clock()))/CLOCKS_PER_SEC));
+#endif
+    printf("\n");
+    fflush(stdout); /* Flush output buffer */
+  }
+
+ return_point:
+  /* Deallocate vstring memory */
+  let(&str1, "");
+  let(&str2, "");
+  let(&inputMMP, "");
+  let(&MMPPrefix, "");
+  let(&MMPSuffix, "");
+
+  return 0;
+} /* End of main() */
+
+
+/* Caller must deallocate returned string. */
+vstring state01(vstring glattice1) {
+  long i, j, k, n, p, iteration;
+  vstring jptr;
+  long extendedNotationIncr; /* For + notation */
+  long extendedNotationOffset; /* For + notation */
+  /*vstring glattice1 = "";*/
+  /* long newSize; */
+  vstring newMMP = "";
+  vstring str1 = "";
+  char atomUsed[MAX_ATOMS + 1]; /* To count actual atoms */
+  long backtrackCount = 0; /* Returned statistic from state01Test */
+  char result; /* Returned value of state01Test: 0 = has state; 1 = no state;
+                                                           2 = error occured */
+  char parityResult; /* Returned value of parityProofTest() */
+  long multiplicityCount[MAX_ATOMS + 1];
+                              /* 22-Feb-2012 nm used for parity signature */
+  vstring MMPwithSuffix = ""; /* 16-Jan-2017 nm */
+
+  result = 0; /* Default to error condition until determined otherwise */
+  /* extendedNotationIncr = strlen(ATOM_MAP); */ /* For + notation */
+  extendedNotationIncr = atomMapLen; /*  For + notation (faster than strlen) */
+
+  /*let(&glattice1, glattice);*/
+  /*let(&glattice1, edit(glattice, 2));*/ /* Remove spaces */
+
+  if (!oneLineDisplay) {
+    printf("#%ld %s\n", lattices, glattice1);
+    fflush(stdout); /* Flush output buffer */
+  }
+
+  n = (long)strlen(glattice1);
+
+  if (!noErrorCheck) {
+    /* The calling routine should ensure this */
+    if (strchr(glattice1, ' ') != NULL) bug(3);
+
+    /* glattice1 can't be a blank line */
+    if (glattice1[0] == 0) {
+      fprintf(stderr, "#%ld: %s\n", lattices, glattice1);
+      fprintf(stderr, "?Error: Blank lines are not allowed\n");
+      if (noAbortOnError) goto ERROR_RETURN; else exit(1);
+    }
+
+    /* glattice1 must have ending period for new (Brendan) compact standard */
+    if (glattice1[n - 1] != '.') {
+      fprintf(stderr, "#%ld: %s\n", lattices, glattice1);
+      fprintf(stderr, "?Error: Last character should be a period\n");
+      if (noAbortOnError) goto ERROR_RETURN; else exit(1);
+    }
+
+    /* if (instr(1, left(glattice1, n - 1), ".") != 0) { */
+    if (strchr(glattice1, '.') != glattice1 + n - 1) {
+      fprintf(stderr, "#%ld: %s\n", lattices, glattice1);
+      fprintf(stderr, "?Error: Period can only be last character\n");
+      if (noAbortOnError) goto ERROR_RETURN; else exit(1);
+    }
+    if (n == 1) {
+      fprintf(stderr, "#%ld: %s\n", lattices, glattice1);
+      fprintf(stderr, "?Error: Diagram must have at least one block\n");
+      if (noAbortOnError) goto ERROR_RETURN; else exit(1);
+    }
+  }
+
+  maxAtom = 0;
+  blocks = 1;
+  blockSize[blocks] = 0;
+  extendedNotationOffset = 0; /* For + notation */
+  for (i = 0; i < n; i++) {
+    if (glattice1[i] == ',' || glattice1[i] == '.') {
+      /* End of block */
+      if (blockSize[blocks] < MIN_BLOCK_SIZE) {
+        fprintf(stderr, "#%ld: %s\n", lattices, glattice1);
+        fprintf(stderr,
+            "?Error: Block %ld has %ld atoms, but minimum block size is %ld\n",
+             blocks, blockSize[blocks], (long)MIN_BLOCK_SIZE);
+        if (noAbortOnError) goto ERROR_RETURN; else exit(1);
+      }
+      if (glattice1[i] == ',') {
+        /* Start of new block */
+        blocks++;
+        if (blocks > MAX_BLOCKS) {
+          fprintf(stderr, "#%ld: %s\n", lattices, glattice1);
+          fprintf(stderr,
+   "?Error: Maximum blocks allowed is %ld.  Increase MAX_BLOCKS in program.\n",
+                (long)MAX_BLOCKS);
+          if (noAbortOnError) goto ERROR_RETURN; else exit(1);
+        }
+        blockSize[blocks] = 0;
+      }
+      continue;
+    }
+
+    if (glattice1[i] == '+') {
+      /* Process the extended notation
+         12...9A...Za...`{|}~+1+2...+|+}+~++1...++~+++1....
+         From 23-Apr-2009 email to Mladen:
+           "If in the far future we get to say 10000 atoms, that would be
+           around 100 +'s per atom, obviously extremely inefficient.  But,
+           we still have "0" unused, and can have an alternate (and
+           compatible) notation where "0" is the start of a decimal number,
+           with some non-digit, say ".", terminating it.  I'll leave a
+           comment to that effect in the latticeg.c file, for when it
+           becomes a problem for a future generation" */
+      extendedNotationOffset += extendedNotationIncr;
+      continue;
+    }
+
+    /* Get the atom number */
+    /*j = instr(1, ATOM_MAP, chr(glattice1[i]));*/
+    /*let(&str1, "");*/ /* Deallocate chr call */
+    jptr = strchr(ATOM_MAP, glattice1[i]);
+    if (jptr == NULL) {
+      fprintf(stderr, "#%ld: %s\n", lattices, glattice1);
+      fprintf(stderr, "?Error: Illegal character '%c' in diagram\n",
+          glattice1[i]);
+      if (noAbortOnError) goto ERROR_RETURN; else exit(1);
+    }
+    j = jptr - ATOM_MAP + 1; /* Atom number */
+    j += extendedNotationOffset; /* For + notation */
+    extendedNotationOffset = 0; /* For + notation - initialize for next atom */
+    blockSize[blocks]++;
+    if (blockSize[blocks] > MAX_BLOCK_SIZE) {
+      fprintf(stderr, "#%ld: %s\n", lattices, glattice1);
+      fprintf(stderr,
+           "?Error: Block %ld has %ld atoms, but maximum block size is %ld \n",
+           blocks, blockSize[blocks], (long)MAX_BLOCK_SIZE);
+      if (noAbortOnError) goto ERROR_RETURN; else exit(1);
+    }
+    /* Assign the atom */
+    block[blocks][blockSize[blocks]] = j;
+    if (j > maxAtom) {
+      maxAtom = j; /* Maximum atom number */
+      if (maxAtom > MAX_ATOMS) {
+        fprintf(stderr, "#%ld: %s\n", lattices, glattice1);
+        fprintf(stderr,
+   "?Error: Atom %ld found but MAX_ATOMS is %ld.  Increase MAX_ATOMS.\n",
+             maxAtom, (long)MAX_ATOMS);
+        if (noAbortOnError) goto ERROR_RETURN; else exit(1);
+      }
+    }
+  } /* next i */
+
+  /* Find the actual number of atoms */
+  for (i = 1; i <= maxAtom; i++) {
+    atomUsed[i] = 0;
+  }
+  for (i = 1; i <= blocks; i++) {
+    for (j = 1; j <= blockSize[i]; j++) {
+      atomUsed[block[i][j]] = 1;
+    }
+  }
+  n = 0; /* Number of gaps in atom numbering */
+  for (i = 1; i <= maxAtom; i++) {
+    if (atomUsed[i] == 0) n++;
+  }
+  atoms = maxAtom - n; /* True number of atoms, even if gaps */
+
+
+  if (!noErrorCheck) {
+    for (i = 1; i <= blocks; i++) {
+      for (j = 1; j <= blockSize[i] - 1; j++) {
+        for (k = j + 1; k <= blockSize[i]; k++) {
+          if (block[i][j] == block[i][k]) {
+            fprintf(stderr, "#%ld: %s\n", lattices, glattice1);
+            fprintf(stderr,
+                "?Error: Duplicate atom numbers in a block\n");
+            if (noAbortOnError) goto ERROR_RETURN; else exit(1);
+          }
+        }
+      }
+    }
+  }
+
+  let(&MMPwithSuffix, cat(glattice1, MMPSuffix, NULL)); /* 16-Jan-2017 nm */
+
+  if (!criticalTestFlag && !randomCriticalFlag) { /* Normal testing */
+    if (checkParityOnly) {    /* 9-Feb-2010 nm */
+      parityResult = parityProofTest();
+        /* 1 if it fails parity proof, 0 if it passes */
+      result = parityResult;
+    } else {
+      /* The default is now to test both (parity takes < 5% of run time) */
+      result = state01Test(&backtrackCount);
+        /* Returns 0 if there is a {0,1} state, 1 if there is no {0,1} state */
+      parityResult = parityProofTest();  /* 9-Feb-2010 nm */
+    }
+    if (result == 0 && parityResult == 1) bug (25);
+        /* If it admits a {0,1} state, it shouldn't fail parity check */
+    totalBacktrackCount += backtrackCount;
+    let(&str1, "");
+
+    /* Compute parity signature */
+    /* 18(2)2(4) means "18 rays have multiplicity 2, 2 rays have mult. 4" */
+    if (checkParityOnly /* && result */) {
+      /* 22-Feb-2012 nm Added parity signature */
+      /* If it has (fails) a parity proof, build the parity signature
+         as per Waegell-Ara 2011 arxiv paper */
+      let(&str1, " ");
+      for (i = 1; i <= maxAtom; i++) {
+        multiplicityCount[i] = 0;
+      }
+      for (i = 1; i <= maxAtom; i++) {
+        multiplicityCount[atomCount[i]]++;
+      }
+      for (i = 1; i <= maxAtom; i++) {
+        j = multiplicityCount[i];
+        if (j != 0) {
+          let(&str1, cat(str1, str((double)j),
+              "(", str((double)i), ")", NULL));
+        }
+      }
+      let(&str1, cat(str1, "-", str((double)blocks),
+          "(", str((double)blockSize[1]), ")",
+          NULL));
+    }
+
+    if (oneLineDisplay) {
+      /* #16 a32-b34 ((37)) passes:: 8HP,9KP,25A,23L,BCQ,5DN,7CL,67F,... */
+      /* printf("#%ld a%ld-b%ld ((%ld)) %s%s:: %s\n", lattices, atoms, */
+      /* 13-Dec-2013: */
+      printf("#%ld a%ld-b%ld ((%ld)) %s%s%s%s:: %s\n", lattices, atoms,
+          blocks, backtrackCount,
+
+          /* 25-Jan-2014 */
+          (result == 2 && !checkParityOnly)
+              ? cat("timeout", str((double)backtrackLimit), NULL)
+              : "",
+
+          checkParityOnly
+              ? (parityResult ?
+                   "passes (has parity proof)" :
+                   "fails (has no parity proof)")
+              : ((result != 2)
+                  ? (result
+                    ? (parityResult
+                      ? "fails (admits no {0,1} state)" /* and has parity proof)" */
+                      : "fails (admits no {0,1} state)" /* but has no parity proof)" */ )
+                    : "passes (admits {0,1} state)")  /* Has {0,1} state */
+                  : ""),
+          str1, /* Parity signature */  /* 22-Feb-2012 nm */
+          checkParityOnly ?  /* 13-Dec-2013 */
+              ""
+              :
+              cat(" imax=", str((double)imax), ";", imaxExample,
+                  " imin=", str((double)imin), ";", iminExample,
+                  " iavg=", str((double)indTotal), "/",
+                    str((double)indCount), "=",
+                    str((double)(1.0 * (double)indTotal / (double)indCount)),
+                  " iedges=", str((double)indNumBlocks),
+                  ((userIndIter == 0) ? "" :
+                      cat(" -i", str((double)userIndIter), NULL)),
+                  ((backtrackLimit == 0) ? "" :
+                      cat(" -t", str((double)backtrackLimit), NULL)),
+                    NULL)
+              ,
+          /*glattice1*/ MMPwithSuffix);  /* 17-Jan-2017 nm */
+    } else {
+      printf("#%ld Backtrack count = %ld\n", lattices, backtrackCount);
+      if (result == 2) {
+        printf("TIMED OUT - {0,1} state test result unknown\n");
+      } else if (result) {
+        printf("#%ld (atoms%ld-blocks%ld)%s%s\n", lattices, atoms,
+              blocks, " Admits no {0,1} states",
+              (checkParityOnly == 1 && parityResult == 1) ?
+                  "; has parity proof" : "");
+      } else {
+        printf("#%ld (atoms%ld-blocks%ld)%s\n", lattices, atoms,
+              blocks,
+              (checkParityOnly == 1 && parityResult == 0) ?
+                  " Has no parity proof"
+                     : " Admits at least one {0,1} state");
+      }
+    }
+    fflush(stdout); /* Flush output buffer */
+    let(&str1, ""); /* Deallocate memory */
+  } else { /* criticalTestFlag or randomCriticalFlag */
+    /* First make sure that the diagram is KS i.e. does not admit a {0,1}
+       assignment */
+    result = state01Test(&backtrackCount);
+    totalBacktrackCount += backtrackCount;
+    if (!result) { /* The original diagram didn't fail (i.e. admits a 0/1
+                      state), so it isn't critical */
+      if (oneLineDisplay) {
+          /* #16 ((37)) passes:: 8HP,9KP,25A,23L,BCQ,5DN,7CL,9EN,67F,... */
+          printf("#%ld a%ld-b%ld ((%ld)) %s:: %s\n", lattices, atoms,
+              blocks, backtrackCount,
+              "fails (admits state)",
+              /*glattice1*/ MMPwithSuffix);  /* 17-Jan-2017 nm */
+      } else {
+        printf("#%ld Backtrack count = %ld\n", lattices, backtrackCount);
+        printf("#%ld (atoms%ld-blocks%ld)%s\n", lattices, atoms, blocks,
+            " is not critical because it admits at least one {0,1} state");
+      }
+      fflush(stdout); /* Flush output buffer */
+    } else {
+      /* The diagram doesn't admit a {0,1} state, so we can proceed. */
+      if (criticalTestFlag) {
+        parityResult = parityProofTest();
+            /* 1 if it fails parity proof, 0 if it passes */
+        /* Now check that after any block is removed, it does admit a
+           {0,1} state. */
+        /* First, save the original diagram */
+        saveBlocks = blocks;
+        for (i = 1; i <= blocks; i++) {
+          saveBlockSize[i] = blockSize[i];
+          for (j = 1; j <= blockSize[i]; j++) {
+            saveBlock[i][j] = block[i][j];
+          }
+        }
+        /* Next, remove each block and test again */
+        for (n = 1; n <= saveBlocks; n++) {
+          blocks = saveBlocks - 1;
+          for (i = 1; i <= blocks; i++) {
+            if (i < n) blockSize[i] = saveBlockSize[i];
+            else blockSize[i] = saveBlockSize[i + 1];
+            for (j = 1; j <= blockSize[i]; j++) {
+              if (i < n) block[i][j] = saveBlock[i][j];
+              else block[i][j] = saveBlock[i + 1][j];
+            }
+          }
+          /* We assume that state01Test() can tolerate atom numbering gaps
+             (I think it does), so we don't bother to renumber the atoms
+             to remove gaps */
+          result = state01Test(&backtrackCount);
+          totalBacktrackCount += backtrackCount;
+          if (result) break; /* A state couldn't be assigned; therefore
+                                it isn't critical */
+        } /* next n (next block removed) */
+        /* We don't bother to restore from saveBlocks etc., since they
+           aren't used again. */
+        if (oneLineDisplay) {
+            /* #16 ((37)) passes:: 8HP,9KP,25A,23L,BCQ,5DN,7CL,9EN,67F,... */
+            printf("#%ld a%ld-b%ld ((%ld)) %s:: %s\n", lattices, atoms,
+                saveBlocks, backtrackCount,
+                result ? "fails (not critical)" :
+                    (parityResult ? "parity-passes (is critical)" :
+                        "passes (is critical)"),
+                /*glattice1*/ MMPwithSuffix);  /* 17-Jan-2017 nm */
+        } else {
+          printf("#%ld Backtrack count = %ld\n", lattices, backtrackCount);
+          if (result) {
+            printf("#%ld (atoms%ld-blocks%ld)%s\n", lattices, atoms,
+                saveBlocks, " is not critical");
+          } else {
+            if (parityResult) {
+              printf("#%ld (atoms%ld-blocks%ld)%s\n", lattices, atoms,
+                  saveBlocks, " is critical and has parity proof");
+            } else {
+              printf("#%ld (atoms%ld-blocks%ld)%s\n", lattices, atoms,
+                  saveBlocks, " is critical but has no parity proof");
+            }
+          }
+        }
+        fflush(stdout); /* Flush output buffer */
+
+      } else if (randomCriticalFlag == 1) {
+
+        /* 26-Oct-2011 section for -r */
+
+        /* Save the orginal diagram */
+        saveBlocks = blocks;
+        for (i = 1; i <= blocks; i++) {
+          saveBlockSize[i] = blockSize[i];
+          for (j = 1; j <= blockSize[i]; j++) {
+            saveBlock[i][j] = block[i][j];
+          }
+        }
+        saveAtoms = atoms;
+
+        for (iteration = 1; iteration <= randomCriticalCount; iteration++) {
+
+          atoms = saveAtoms; /* Restore from previous iteration */
+
+          /* Initialize the mapping to blocks and removed block indicators */
+          for (i = 1; i <= saveBlocks; i++) {
+             randomMap[i] = i;
+             blockRemovedFlag[i] = 0;
+          }
+          /* Shuffle the mapping */
+          shuffle(randomMap, saveBlocks);
+
+          /* Try removing each block */
+          for (n = 1; n <= saveBlocks; n++) {
+            if (blockRemovedFlag[randomMap[n]]) bug(22);
+            blockRemovedFlag[randomMap[n]] = 1;
+            /* Reconstruct the diagram with removed blocks */
+            blocks = 0;
+            for (i = 1; i <= saveBlocks; i++) {
+              if (blockRemovedFlag[i] == 0) {
+                blocks++;
+                blockSize[blocks] = saveBlockSize[i];
+                for (j = 1; j <= blockSize[blocks]; j++) {
+                  block[blocks][j] = saveBlock[i][j];
+                }
+              }
+            }
+            /* See if a KS configuration (assumed) has a parity proof - returns
+               1 if yes, 0 if no */
+            result = parityProofTest();
+            /* (Use result from parityProofTest() first for speedup - I'm
+               not sure it speeds things up; if it slows down, remove
+               parityProofTest above and if statement) */
+            if (!result)
+              /* We assume that state01Test() can tolerate atom numbering gaps
+                 (I think it does), so we don't bother to renumber the atoms
+                 to remove gaps */
+              /* Returns 0 if there is a {0,1} state, 1 if not */
+              result = state01Test(&backtrackCount);
+            totalBacktrackCount += backtrackCount;
+            if (!result) { /* A state could be assigned, so put the block back */
+              blockRemovedFlag[randomMap[n]] = 0;
+            }
+          } /* next n (next block removed) */
+
+          let(&str1, space(maxAtom + 1));  /* For counting atoms */
+          /* Construct the final diagram with removed blocks */
+          blocks = 0;
+          for (i = 1; i <= saveBlocks; i++) {
+            if (blockRemovedFlag[i] == 0) {
+              blocks++;
+              blockSize[blocks] = saveBlockSize[i];
+              for (j = 1; j <= blockSize[blocks]; j++) {
+                p = saveBlock[i][j];
+                block[blocks][j] = p;
+                /* Indicate that atom is used */
+                if (p > maxAtom) bug(24);
+                str1[block[blocks][j]] = '1';
+              }
+            }
+          }
+          /* Count the new number of atoms */
+          j = 0;
+          for (i = 1; i <= maxAtom; i++) {
+            if (str1[i] == '1') j++;
+          }
+          atoms = j;
+          let(&str1, ""); /* Deallocate memory */
+
+          /* See if it has a parity proof */
+          parityResult = parityProofTest();
+
+
+          /* Build the new MMP diagram */
+          /* WARNING: extended notation is NOT accounted for here! */
+          /***** deleted 25-Dec-2013 ***********
+          newSize = 0;
+          for (j = 1; j <= blocks; j++) {
+            newSize = newSize + blockSize[j] + 1;
+          }
+          let(&newMMP, space(newSize));
+          p = 0;
+          for (j = 1; j <= blocks; j++) {
+            for (k = 1; k <= blockSize[j]; k++) {
+              if (newMMP[p] != ' ') bug(5);
+              newMMP[p] = ATOM_MAP[block[j][k] - 1];
+              p++;
+            }
+            if (newMMP[p] != ' ') bug(6);
+            newMMP[p] = ',';
+            p++;
+          }
+          if (newMMP[p] != 0) bug(12);
+          newMMP[p - 1] = '.';
+          ***** end of deleted 25-Dec-2013 *******/
+
+
+          /* Build the new MMP diagram */
+          /* New 25-Dec-2013 */
+          let(&newMMP, "");
+          newMMP = buildMMP(blocks, blockSize, block, ATOM_MAP, atomMapLen);
+
+
+          /* Note that the original input block structure and newMMP have
+             been overwritten by the stripped version */
+          if (oneLineDisplay) {
+            /* #16 ((37)) passes:: 8HP,9KP,25A,23L,BCQ,5DN,7CL,9EN,67F,... */
+            printf("#%ld a%ld-b%ld %s%s:: %s%s\n", lattices, atoms,
+                blocks,
+                "passes (is critical)",
+                (parityResult ? "; has parity proof" : ""),
+                newMMP,
+                MMPSuffix /* 24-Jul-2018 nm */
+                );
+          } else {
+            printf("#%ld A random critical%s is (atoms%ld-blocks%ld):\n",
+                  lattices,
+                  (parityResult ? " (has parity proof)" : ""),
+                  atoms, blocks);
+            printf("#%ld %s\n", lattices, newMMP);
+          }
+          fflush(stdout); /* Flush output buffer */
+        } /* next (random critical) iteration */
+
+        let(&newMMP, ""); /* Deallocate memory */
+
+      } else {
+        bug(24);
+      }
+    } /* else the parent diagram does not admit a 01 state */
+  } /* else we're doing the special critical test */
+
+
+
+  /* Deallocate strings */
+  /*let(&glattice1, "");*/
+  let(&MMPwithSuffix, "");
+
+  /* The caller must deallocate str1 */
+  return str1;
+
+ ERROR_RETURN:  /* Gets here is noAbortOnError is set and an error occurred */
+  if (oneLineDisplay) {
+      /* #16 a32-b34 ((37)) passes:: 8HP,9KP,25A,23L,BCQ,5DN,7CL,67F,... */
+      printf("#%ld a%ld-b%ld ((%ld)) %s:: %s\n", lattices, atoms,
+            blocks, backtrackCount,
+          "error",
+          /*glattice1*/ MMPwithSuffix);  /* 17-Jan-2017 nm */
+  } else {
+    printf("#%ld Backtrack count = %ld\n", lattices, backtrackCount);
+    printf("#%ld (atoms%ld-blocks%ld)%s\n", lattices, atoms,
+          blocks, " An error occurred");
+  }
+  fflush(stdout); /* Flush output buffer */
+  let(&MMPwithSuffix, "");
+  /* The caller must deallocate str1 */
+  return str1;
+
+
+} /* states01 */
+
+
+/* Stub for calling state01TestRun() */
+/* Returns 0 if there is a {0,1} state, 1 if there is no {0,1} state */
+char state01Test(long *backtrackCount) {
+  long i, j, iter;
+  char retVal = 2; /* Default to 2 for debugging */
+  long partialBackTrackCount;
+  static long reorderedBlock[MAX_BLOCKS + 1][MAX_BLOCK_SIZE + 1];
+  static long reorderedBlockSize[MAX_BLOCKS + 1];
+  static long randomMap_[MAX_BLOCKS + 1];
+  static long saveAtom[MAX_BLOCK_SIZE + 1];
+
+  /* vstring imaxExample = "" */   /* Example of a maximal independence set
+                                       (global) */
+  /* vstring iminExample = "" */   /* Example of a minimum independence set
+                                       (global) */
+  /* long imin; */ /* Minimum independence set found so far (global) */
+  /* long indCount; */ /* Cumulative number of imin/imax cases */
+  /* long indTotal; */ /* Cumulative total of imin/imax values to get avg */
+  /* long indNumBlocks; */ /* Number of blocks with 1 needed for relevant
+                                  imin/imax number */
+  long randomTrialCount;
+
+  *backtrackCount = 0;
+
+  /* 25-Mar-2013 nm */
+  imax = 0;
+  imin = 1000000;
+  /* let(&imaxExample, ""); */ /* Initialize max independence set example */
+  /* let(&iminExample, ""); */ /* Initialize min independence set example */
+                                           /* (not necessary) */
+  indCount = 0;
+  indTotal = 0;
+  indNumBlocks = 0;
+
+
+  /* Run the test with the unaltered input diagram */
+  retVal = state01TestRun(&partialBackTrackCount, blocks, blockSize,
+      block);
+  *backtrackCount += partialBackTrackCount;
+
+  /* If a timeout occurred, try reversing the input diagram */
+  if (retVal == 2  /* A timeout occurred; try reversing diagram */
+      || userIndIter > 1) {
+    /* Reverse the input diagram */
+    for (i = 1; i <= blocks; i++) {
+      reorderedBlockSize[blocks - i + 1] = blockSize[i];
+      for (j = 1; j <= blockSize[i]; j++) {
+        reorderedBlock[blocks - i + 1][blockSize[i] - j + 1]
+            = block[i][j];
+      }
+    }
+    retVal = state01TestRun(&partialBackTrackCount, blocks, reorderedBlockSize,
+        reorderedBlock);
+    *backtrackCount += partialBackTrackCount;
+  }
+
+  /* If a timeout occurred again, try scrambling the input diagram, up
+     to 10 times */
+  randomTrialCount = 10;
+  if (userIndIter != 0) {  /* -i option specified */
+    randomTrialCount = userIndIter - 2; /* subtract 2 for forw & rev above */
+  }
+  for (iter = 1; iter <= randomTrialCount; iter++) {
+    if (retVal != 2 && userIndIter == 0) break;  /* No timeout, so break out
+       of (or don't perform) this loop */
+    /* Initialize the block map used for -r */
+    for (i = 1; i <= blocks; i++) {
+       /* For normal use, map is transparent (identity map) */
+       randomMap_[i] = i;
+    }
+    shuffle(randomMap_, blocks);
+
+    /* Shuffle the input diagram's blocks */
+    for (i = 1; i <= blocks; i++) {
+      reorderedBlockSize[randomMap_[i]] = blockSize[i];
+      for (j = 1; j <= blockSize[i]; j++) {
+        reorderedBlock[randomMap_[i]][j] = block[i][j];
+      }
+    }
+
+    /* For each block, randomize the atoms inside the block */
+    for (i = 1; i <= blocks; i++) {
+      /* Initialize the random map for one block */
+      for (j = 1; j <= reorderedBlockSize[i]; j++) {
+         /* For normal use, map is transparent (identity map) */
+         randomMap_[j] = j;
+      }
+      shuffle(randomMap_, reorderedBlockSize[i]);
+      /* Save the block's atoms */
+      for (j = 1; j <= reorderedBlockSize[i]; j++) {
+        saveAtom[j] = reorderedBlock[i][j];
+      }
+      /* Shuffle the atoms in the block */
+      for (j = 1; j <= reorderedBlockSize[i]; j++) {
+        reorderedBlock[i][randomMap_[j]] = saveAtom[j];
+      }
+    } /* next i (block) */
+
+    /* Run the test with scrambled blocks */
+    retVal = state01TestRun(&partialBackTrackCount, blocks, reorderedBlockSize,
+        reorderedBlock);
+    *backtrackCount += partialBackTrackCount;
+  } /* next iter */
+
+  return retVal;
+}
+
+
+/* states01.c */
+/* 7/25/03 */
+/* Returns 0 if there is a {0,1} state, 1 if there is no {0,1} state */
+char state01TestRun(long *backtrackCount, long blocks_, long *blockSize_,
+    long (*block_)[MAX_BLOCK_SIZE + 1])
+{
+  long i, j, k, l, m, n;
+  char found;
+  long blockSort[MAX_BLOCKS + 1]; /* Sort # vs. block # */
+  long reverseBlockSort[MAX_BLOCKS + 1];
+      /* Block # vs. sort #; 0 means block not sorted yet */
+  long sortedBlockSize[MAX_BLOCKS + 1];
+      /* Same as blockSize_[] but sorted by clustering routine */
+  static long sortedBlock[MAX_BLOCKS + 1][MAX_BLOCKS + 1];
+      /* Same as block_[][] but sorted by clustering routine */
+      /* We use 'static' for big arrays to prevent dynamic stack overflow */
+  long atomCommittedBy[MAX_ATOMS + 1];
+      /* 0 means atom has is available for assignment */
+      /* >0 means sorted block_ entry that first assigned atom */
+  signed char atomValue[MAX_ATOMS + 1];  /* 0 or 1 or -1 if unassigned */
+  long blockConnectedSize[MAX_BLOCKS + 1];
+      /* Size of the block if unconnected atoms are removed */
+  static char blockAtomConnected[MAX_BLOCKS + 1][MAX_BLOCKS + 1];
+      /* If 1, it means the atom in the block is connected to another block */
+
+  long blocksConnected[MAX_ATOMS + 1];
+      /* Number of blocks connected to this atom */
+  static long connectedBlockList[MAX_ATOMS + 1][MAX_BLOCKS + 1];
+      /* List of the blocks connected to this atom */
+
+  /* Variables for block "tightness" sorting */
+  long maxBlockConnections;
+  long maxConnectedBlock;
+  long maxConnectedBlockSize;
+  long thisBlockConnections;
+
+  /* Variables for main backtracking scan */
+  long lastAtomTried[MAX_BLOCKS + 1];
+      /* The latest atom assigned to 1 for the sorted block # */
+  /* char unconnectedAtomWasTried[MAX_BLOCKS + 1]; */ /* not used (removed
+                                                         13-Dec-2013) */
+      /* Flag that we've already tried an unconnected atom, so don't again */
+  char retVal;  /* Return value: 0 if {0,1} state found, 1 if not */
+  /* char backtrackAgain; */ /* not used (removed 13-Dec-2013) */
+  long atom1;
+  char conflict;
+  long atom;
+  long connectedBlock;
+  long onesInBlock;
+  long unassignedInBlock;
+
+  long backtrackCountx = 0; /* For informational purposes */
+  long p, q;       /* For verbose mode */
+  long iter = 0;   /* For verbose mode */
+  long v;          /* For verbose mode */
+  vstring tmp="";  /* For verbose mode */
+
+  /* 13-Dec-2013 */
+  /* long imax = 0; */ /* Maximum independence set found so far (global) */
+  long onesCount = 0; /* For imax (indep max) - number of atoms with 1 */
+  vstring extAtomName = "";
+  /* vstring imaxExample = "" */   /* Example of a maximal independence set
+                                       (global) */
+  /* vstring iminExample = "" */   /* Example of a minimum independence set
+                                       (global) */
+  char block1Flag[MAX_BLOCKS + 1]; /* To compute number of blocks having a 1 */
+  long blocksWith1;
+  /* long imin; */ /* Minimum independence set found so far (global) */
+  /* long indCount; */ /* Cumulative number of imin/imax cases */
+  /* long indTotal; */ /* Cumulative total of imin/imax values to get avg */
+  /* long indNumBlocks; */ /* Number of blocks with 1 needed for relevant
+                                  imin/imax number */
+
+  /* 13-Dec-2013 */
+  /* This is now done in the stub */
+  /*
+  imax = 0;
+  let(&imaxExample, "");
+  */
+
+  for (i = 1; i <= maxAtom; i++) {
+    blocksConnected[i] = 0;
+  }
+  /* Scan blocks to determine blocks atoms are connected to */
+  for (i = 1; i <= blocks_; i++) {
+    blockConnectedSize[i] = blockSize_[i];
+    for (j = 1; j <= blockSize_[i]; j++) {
+
+      /* Build the atom to block connection list while we're at it */
+      blocksConnected[block_[i][j]]++;
+      connectedBlockList[block_[i][j]][blocksConnected[block_[i][j]]] = i;
+
+      /* Now back to the "not connected" scan */
+      found = 0;
+      for (k = 1; k <= blocks_; k++) {
+        if (k == i) continue;
+        for (l = 1; l <= blockSize_[k]; l++) {
+          if (block_[i][j] == block_[k][l]) {
+            found = 1;
+            break;
+          }
+        }
+        if (found) break;
+      } /* next k */
+      if (found) {
+        blockAtomConnected[i][j] = 1;
+      } else {
+        blockAtomConnected[i][j] = 0;
+        blockConnectedSize[i]--;
+      }
+    } /* next j */
+  } /* next i */
+
+  /* Arrange blocks into a list sorted by "tightness" (clustering)
+     to other blocks */
+  if (skipClusterSortAlgorithm) {
+    /* To bypass algorithm for experimentation, just assign the necessary
+       arrays without sorting the blocks */
+    for (n = 1; n <= blocks_; n++) {
+      blockSort[n] = n;
+      reverseBlockSort[n] = n;
+      /* Create sorted versions of blockSize_[], block_[][] for speedup */
+      sortedBlockSize[n] = blockSize_[n];
+      for (i = 1; i <= blockSize_[n]; i++) {
+        sortedBlock[n][i] = block_[n][i];
+      }
+    }
+  } else {
+    for (n = 1; n <= blocks_; n++) {
+      reverseBlockSort[n] = 0;
+    }
+    for (n = 1; n <= blocks_; n++) {
+      /* In remaining blocks, count the number of connections to blocks
+         already in the list.  Put the "best" block (the one most tightly
+         coupled to the list so far) next in the sorted list.  The idea
+         is to identify infeasible solutions in tight areas more quickly
+         and not have to iterate exponentially through long chains of
+         blocks. */
+      maxBlockConnections = 0;
+      /* Worst-case algorithm for speed experiments */
+      if (worstCaseAlgorithm) maxBlockConnections = 10000000;
+      maxConnectedBlock = 0;
+      maxConnectedBlockSize = -1; /* -1 instead of 0 will tolerate blocks
+              with no connections (to fix bug 1015) */
+      for (i = 1; i <= blocks_; i++) {
+        thisBlockConnections = 0;
+        if (reverseBlockSort[i]) continue; /* Skip blocks already in list */
+        for (j = 1; j <= blockSize_[i]; j++) {
+          if (!blockAtomConnected[i][j]) continue; /* Ignore unconnected atoms*/
+          found = 0;
+          for (k = 1; k <= blocks_; k++) {
+            if (k == i) continue;
+                /* Ignore same block (actually redundant due to next 'if') */
+            if (reverseBlockSort[k] == 0) continue;
+                /* Look only at blocks already in list */
+            for (l = 1; l <= blockSize_[k]; l++) {
+              if (block_[i][j] == block_[k][l]) {
+                found = 1;
+                break;
+              }
+            }
+            if (found) break;
+          } /* next k */
+          if (found) thisBlockConnections++;
+        } /* next j */
+        if (worstCaseAlgorithm) { /* Worst-case algorithm for experiments */
+          if (thisBlockConnections < maxBlockConnections
+              || (thisBlockConnections == maxBlockConnections
+                  && blockConnectedSize[i] <= maxConnectedBlockSize)) {
+            /* The criterion for the preferred block to put next in sorted
+               listed has been met */
+            maxBlockConnections = thisBlockConnections;
+            maxConnectedBlockSize = blockConnectedSize[i];
+            maxConnectedBlock = i;
+          }
+        } else {   /* Use normal intended algorithm (best case) */
+          if (thisBlockConnections > maxBlockConnections
+              || (thisBlockConnections == maxBlockConnections
+                  /* 27-Oct-04 nm Changed comparison criteria - seems to
+                     reduce average backtracks (based on limited testing) */
+                  && (blockConnectedSize[i] > maxConnectedBlockSize ||
+                  /* 27-Oct-04 nm Old algorithm can be invoked if desired */
+                     (version1_0Algorithm &&
+                         blockConnectedSize[i] >= maxConnectedBlockSize)))) {
+            /* The criterion for the preferred block to put next in sorted
+               listed has been met */
+            maxBlockConnections = thisBlockConnections;
+            maxConnectedBlockSize = blockConnectedSize[i];
+            maxConnectedBlock = i;
+          }
+        }
+      } /* next i */
+      if (maxConnectedBlock <= 0) {
+        bug(1015);
+      }
+      /* Add block to sorted list */
+      blockSort[n] = maxConnectedBlock;
+      reverseBlockSort[maxConnectedBlock] = n;
+      /* Create sorted versions of blockSize_[], block_[][] for speedup */
+      sortedBlockSize[n] = blockSize_[maxConnectedBlock];
+      for (i = 1; i <= blockSize_[maxConnectedBlock]; i++) {
+        sortedBlock[n][i] = block_[maxConnectedBlock][i];
+      }
+
+    } /* next n */
+  } /* if !skipClusterSortAlgorithm */
+
+  /* Consistency check */
+  for (i = 1; i <= blocks_; i++) {
+    if (blockSort[reverseBlockSort[i]] != i) {
+      printf("i = %ld != blockSort[reverseBlockSort[i]] = %ld\n", i,
+          blockSort[reverseBlockSort[i]]);
+      fflush(stdout); /* Flush output buffer */
+      bug(1016);
+    }
+    if (reverseBlockSort[blockSort[i]] != i) {
+      printf("i = %ld != reverseBlockSort[blockSort[i]] = %ld\n", i,
+          reverseBlockSort[blockSort[i]]);
+      fflush(stdout); /* Flush output buffer */
+      bug(1018);
+    }
+  }
+
+  /* Scan the sorted list of blocks to try to assign a state */
+  for (i = 1; i <= maxAtom; i++) {
+    atomCommittedBy[i] = 0;
+    atomValue[i] = -1; /* -1 value means it is unassigned and available */
+  }
+  /* Initialize the starting atom to "no previous atoms tried" */
+  for (n = 1; n <= blocks_; n++) {
+    lastAtomTried[n] = 0;
+    /* unconnectedAtomWasTried[n] = 0; */ /* not used */
+  }
+  n = 1;
+
+  if (verboseMode) {
+    /* Print header above iteration display */
+    printf("     ");
+    for (p = 1; p <= blocks_; p++) {
+      for (q = 1; q <= blockSize_[p]; q++) {
+        /* printf("%c", aTOM_MAP[block_[p][q] - 1] ); */
+        /* Added 25-Jan-2014 */
+        let(&tmp, "");
+        tmp = extendedAtomName(block_[p][q]);
+        printf("%s", tmp);
+      }
+      if (p < blocks_) printf(",");
+    }
+    printf("\n");
+    fflush(stdout); /* Flush output buffer */
+    iter = 0; /* Iteration counter */
+  }
+
+  while (1) {
+
+    /* 13-Dec-2013 Get number of atoms with 1 (independence set size) */
+    if (iter > 0) {
+      onesCount = 0;
+      for (p = 1; p <= blocks_; p++) {
+        block1Flag[p] = 0;
+      }
+      for (p = 1; p <= maxAtom; p++) {
+        if (atomValue[p] == 1) {
+          onesCount++;
+          for (q = 1; q <= blocksConnected[p]; q++) {
+            block1Flag[connectedBlockList[p][q]] = 1;
+          }
+        }
+      }
+      blocksWith1 = 0;
+      for (p = 1; p <= blocks_; p++) {
+        if (block1Flag[p] == 1) {
+          blocksWith1++;
+        }
+      }
+      if (blocksWith1 > indNumBlocks) {
+        /* We found a new larger number of assigned blocks than earlier, so
+           reset everything and start over */
+        imax = 0;
+        imin = 1000000;
+        /*let(&imaxExample, "");*/ /* Initialize max independence set example */
+        /*let(&iminExample, "");*/ /* Initialize min independence set example */
+        indCount = 0;
+        indTotal = 0;
+        indNumBlocks = blocksWith1;
+/*D*//*printf("inb=%ld\n",indNumBlocks);*/
+      }
+
+      if (blocksWith1 == indNumBlocks) {
+        /* We found an independence set w/ max blocks, so check it */
+        indCount++;             /* Accum for average */
+        indTotal += onesCount;  /* Accum for average */
+        if (onesCount > imax) {
+          /* We found a larger independence set */
+          imax = onesCount;
+          let(&imaxExample, "");
+          for (p = 1; p <= maxAtom; p++) {
+            if (atomValue[p] == 1) {
+              let(&extAtomName, "");
+              extAtomName = extendedAtomName(p);
+              let(&imaxExample, cat(imaxExample, extAtomName, NULL));
+            }
+          }
+          let(&extAtomName, "");
+/*D*//*printf("inx=%s\n",imaxExample);*/
+        }
+        if (onesCount < imin) {
+          /* We found a smaller independence set */
+          imin = onesCount;
+          let(&iminExample, "");
+          for (p = 1; p <= maxAtom; p++) {
+            if (atomValue[p] == 1) {
+              let(&extAtomName, "");
+              extAtomName = extendedAtomName(p);
+              let(&iminExample, cat(iminExample, extAtomName, NULL));
+            }
+          }
+          let(&extAtomName, "");
+/*D*//*printf("inn=%s\n",iminExample);*/
+        }
+      } /* if (blocksWith1 == indNumBlocks) */
+    } /* if iter > 1 */
+
+    if (verboseMode) {
+      /* Print iteration line */
+      if (iter > 0) {
+        printf("%s", cat(space(4 - (long)strlen(str((double)iter))),
+            str((double)iter), " ", NULL));
+        for (p = 1; p <= blocks_; p++) {
+          for (q = 1; q <= blockSize_[p]; q++) {
+            v = atomValue[block_[p][q]];
+            printf("%c", v == -1 ? '?' : str((double)v)[0]);
+            let(&tmp,""); /* Purge temp strings to prevent overflow */
+          }
+          if (p < blocks_) printf(",");
+        }
+
+        /* Print number of atoms with 1 (independence set size) */
+        printf(" %s ", cat(space(2 - (long)strlen(str((double)onesCount))),
+            str((double)onesCount), NULL));
+        /* Print list of atoms with 1 (independence set) */
+        for (p = 1; p <= maxAtom; p++) {
+          if (atomValue[p] == 1) {
+            /* printf("%c", aTOM_MAP[p - 1] ); */
+            /* Added 25-Jan-2014 */
+            let(&tmp, "");
+            tmp = extendedAtomName(p);
+            printf("%s", tmp);
+          }
+        }
+
+        printf("\n");
+        fflush(stdout); /* Flush output buffer */
+      }
+    }
+    iter++; /* Iteration counter */
+
+    if (n > blocks_) {
+      retVal = 0; /* A state was found */
+      break;
+    }
+    /* Try assigning a value 1 to atoms in the block, until an assignment
+       without conflict is found */
+    atom1 = 0; /* This is the atom to which the value=1 is assigned, or 0 if
+                  no value=1 assignment is possible without conflict */
+    for (j = lastAtomTried[n] + 1; j <= sortedBlockSize[n]; j++) {
+      if (atomValue[sortedBlock[n][j]] != 0) {
+        /* The trial atom j is either already 1 or uncommitted, so we can
+           try it */
+
+        /* See if all other atoms in the block are either 0 or uncommitted;
+           if not, we have a conflict and we'll try the next j */
+        conflict = 0;
+        for (k = 1; k <= sortedBlockSize[n]; k++) {
+          if (k == j) continue; /* Skip the "1" atom */
+          if (atomValue[sortedBlock[n][k]] == 1) {
+            /* There's a conflict; try the next j */
+            conflict = 1;
+            break;
+          }
+        }
+        if (conflict) continue;
+
+        /* Assign the jth atom to 1, and assign the other atoms in the
+           block to 0 */
+        for (k = 1; k <= sortedBlockSize[n]; k++) {
+          if (atomCommittedBy[sortedBlock[n][k]] == 0) {
+            atomCommittedBy[sortedBlock[n][k]] = n;
+            if (atomValue[sortedBlock[n][k]] != -1) bug(1017);
+            if (k == j) {
+              atomValue[sortedBlock[n][k]] = 1;
+            } else {
+              atomValue[sortedBlock[n][k]] = 0;
+            }
+          } else {
+            if (k == j) {
+              if (atomValue[sortedBlock[n][k]] != 1) bug(1018);
+            } else {
+              if (atomValue[sortedBlock[n][k]] != 0) bug(1019);
+            }
+          }
+        }
+
+        /* See if the assignment has caused a conflict */
+        conflict = 0;
+        for (k = 1; k <= sortedBlockSize[n]; k++) {
+          atom = sortedBlock[n][k];
+          for (l = 1; l <= blocksConnected[atom]; l++) {
+            connectedBlock = connectedBlockList[atom][l];
+            onesInBlock = 0;
+            unassignedInBlock = 0;
+            for (m = 1; m <= blockSize_[connectedBlock]; m++) {
+              if (atomValue[block_[connectedBlock][m]] == 1) {
+                onesInBlock++;
+              } else {
+                if (atomValue[block_[connectedBlock][m]] == -1) {
+                  unassignedInBlock++;
+                }
+              }
+            }
+            if (onesInBlock > 1
+                || (onesInBlock == 0 && unassignedInBlock == 0)) {
+              /* The assignment caused a conflict - can't use it */
+              conflict = 1;
+              break;
+            }
+          }
+          if (conflict) break;
+        }
+
+        if (conflict) {
+          /* If there was a conflict, remove the new assignment */
+          for (k = 1; k <= sortedBlockSize[n]; k++) {
+            if (atomCommittedBy[sortedBlock[n][k]] == n) {
+              atomCommittedBy[sortedBlock[n][k]] = 0;
+              atomValue[sortedBlock[n][k]] = -1;
+            }
+          }
+          continue; /* Try the next j */
+        } else {  /* No conflict */
+          /* We found an uncommitted atom without a conflict, and
+             we have assigned it */
+          atom1 = j;
+          break;
+        }
+      } /* end if block's jth atom value = 1 or unassigned */
+    } /* next j */
+
+
+    if (atom1 > 0) {
+      lastAtomTried[n] = atom1;
+      /*
+      if (!blockAtomConnected[sortedBlock[n][j]]) {
+        unconnectedAtomWasTried[n] = 1;
+      }
+      */ /* not used */
+      n++; /* Go to next block in sorted list */
+      continue;
+    }
+
+    /* We have exhausted possibilities for finding a 1, so we must backtrack */
+    retVal = 0;
+    if (atomCommittedBy[sortedBlock[n][1]] >= n) bug(1022);
+    lastAtomTried[n] = 0;  /* Start over next time around */
+    /* unconnectedAtomWasTried[n] = 0; */ /* not used */
+    n--;
+    backtrackCountx++;
+    if (n == 0) {
+      retVal = 1; /* No {0,1} state is possible */
+      break;
+    }
+    if (backtrackLimit != 0 && backtrackCountx >= backtrackLimit) {
+      retVal = 2; /* Timeout */
+      break;
+    }
+    /* backtrackAgain = 0; */ /* not used */
+    for (j = 1; j <= sortedBlockSize[n]; j++) {
+      if (atomCommittedBy[sortedBlock[n][j]] == 0) bug(1023);
+      if (atomCommittedBy[sortedBlock[n][j]] == n) {
+        /* Uncommit any values assigned by previous block */
+        atomCommittedBy[sortedBlock[n][j]] = 0;
+        atomValue[sortedBlock[n][j]] = -1;
+      } else {
+        if (atomCommittedBy[sortedBlock[n][j]] > n) bug(1024);
+      }
+    }
+    if (retVal == 1) break;
+  } /* while 1 */
+
+  /* backtrackCount is for informational purposes */
+  /*if (!oneLineDisplay) printf("Backtrack count = %ld\n", backtrackCountx);*/
+  *backtrackCount = backtrackCountx;  /* return argument */
+
+  /* 27-Mar-2012  Print out state in default mode (also
+     already available via the -v option). */
+/*
+  if (retVal == 0 && !oneLineDisplay
+      && !criticalTestFlag && !randomCriticalFlag) {
+    for (i = 1; i <= maxAtom; i++) {
+      printf("%c=%ld ", aTOM_MAP[i - 1], (long)(atomValue[i]));
+    }
+  }
+*/
+  if (retVal == 0 && !oneLineDisplay
+      && !criticalTestFlag && !randomCriticalFlag) {
+
+    /* Print header above 0/1 state display - it may be different from input
+       diagram if diagram was reversed for 2nd pass */
+    printf("#%s State assignment found:\n", str((double)lattices));
+    printf("#%s ", str((double)lattices));
+    for (p = 1; p <= blocks_; p++) {
+      for (q = 1; q <= blockSize_[p]; q++) {
+        /* printf("%c", aTOM_MAP[block_[p][q] - 1] ); */
+        /* Added 25-Jan-2014 */
+        let(&tmp, "");
+        tmp = extendedAtomName(block_[p][q]);
+        printf("%s", tmp);
+      }
+      if (p < blocks_) printf(",");
+    }
+    printf("\n");
+
+    /*
+    for (i = 1; i <= blocks_; i++) {
+      for (j = 1; j <= blockSize_[i]; j++) {
+        printf("%c", aTOM_MAP[block_[i][j] - 1]);
+      }
+      printf("%c", (i < blocks_) ? ',' : '.');
+    }
+    printf("\n");
+    */
+    /* printf("%s", space(2 + strlen(str((double)lattices)))); */
+    printf("#%s ", str((double)lattices));
+    for (i = 1; i <= blocks_; i++) {
+      for (j = 1; j <= blockSize_[i]; j++) {
+        printf("%ld", (long)(atomValue[block_[i][j]]));
+      }
+      printf("%c", (i < blocks_) ? ',' : '.');
+    }
+    printf("\n");
+    fflush(stdout); /* Flush output buffer */
+  }
+
+  let(&tmp, ""); /* Deallocate */
+  return retVal;  /* 0 if {0,1} state found, 1 if not, 2 if timeout */
+} /* state01Test */
+
+
+/* See if a KS configuration (assumed) has a parity proof - returns
+   1 if yes, 0 if no */
+/* The globals blocks, maxAtom, blockSize[], block[][] are used */
+char parityProofTest(void) {
+  /* long atomCount[MAX_ATOMS + 1]; */ /* 22-Feb-2012 nm Now is global */
+  long a, b, ba;
+  /* There must be an odd number of blocks */
+  for (a = 1; a <= maxAtom; a++) {
+    atomCount[a] = 0;
+  }
+  for (b = 1; b <= blocks; b++) {
+    for (ba = 1; ba <= blockSize[b]; ba++) {
+      a = block[b][ba];
+      atomCount[a]++;
+    }
+  }
+
+  if (blocks % 2 == 0) return 0;
+             /* This is not done earlier for speedup because we want the
+                atomCount[] statistics */
+
+  for (a = 1; a <= maxAtom; a++) {
+    /* Check that all atoms are used an even number of times (could be
+       0 if atom is skipped) */
+    if (atomCount[a] % 2 != 0) return 0;
+  }
+  return 1;
+}
+
+
+/* The following function is from mmpshuffle.c, added 25-Dec-2013 */
+
+/* Build an MMP diagram from input:  blocks, blockSize[], block[][],
+   ATOM_MAP, and atomMapLen */
+/* User must deallocate returned string */
+vstring buildMMP(long blocks_, long *blockSize_,
+    long (*block_)[MAX_BLOCK_SIZE + 1], char *aTOM_MAP,
+    long atomMapLen_) {
+  long m, b, ba, a, extendedNotationIncr;
+  vstring newMMP = "";
+  /* extendedNotationIncr = strlen(aTOM_MAP); */ /* For + notation */
+  extendedNotationIncr = atomMapLen_; /*  For + notation (faster than strlen) */
+  /* First, we compute the size of the new MMP diagram */
+  m = 0; /* Pointer to MMP diagram character */
+  for (b = 1; b <= blocks_; b++) {
+    for (ba = 1; ba <= blockSize_[b]; ba++) {
+      a = block_[b][ba]; /* Atom in block */
+      while (a > extendedNotationIncr) {
+        /* Handle extended notation */
+        m++;
+        a -= extendedNotationIncr;
+      }
+      m++;
+    }
+    m++;
+  }
+  let(&newMMP, space(m)); /* Preallocate string to computed size */
+  /* Next, fill in the characters */
+  m = 0;  /* Pointer to MMP diagram character */
+  for (b = 1; b <= blocks_; b++) {
+    for (ba = 1; ba <= blockSize_[b]; ba++) {
+      a = block_[b][ba]; /* Atom */
+      while (a > extendedNotationIncr) {
+        /* Handle extended notation */
+        if (newMMP[m] != ' ') bug(206);
+        newMMP[m] = '+';
+        m++;
+        a -= extendedNotationIncr;
+      }
+      if (newMMP[m] != ' ') bug(207);
+      newMMP[m] = aTOM_MAP[a - 1];
+      m++;
+    }
+    if (newMMP[m] != ' ') bug(208);
+    newMMP[m] = ',';
+    m++;
+  }
+  if (newMMP[m] != 0) bug(210); /* Should be end of string */
+  if (m == 0) bug(212);
+  if (newMMP[m - 1] != ',') bug(213);
+  newMMP[m - 1] = '.';
+     /* This global is updated for possible later use so we don't have to
+        call parseMMP again, but the other block_[] structure entries
+        are NOT valid! */
+  return newMMP; /* Caller must deallocate */
+} /* buildMMP */
+
+
+/* Added 25-Dec-2013 nm */
+/* Get the extended notation name of a single atom */
+/* The user must deallocate the output string */
+/* This function is inefficient but is not expected to be used often;
+   if it is, it can be rewritten to implement the buildMMP algorithm
+   directly. */
+vstring extendedAtomName(long atom) {
+  long block_[2][MAX_BLOCK_SIZE + 1];
+  long blockSize_[2];
+  long blocks_ = 1;
+  vstring newMMP = "";
+  blockSize_[1] = 1;
+  block_[1][1] = atom;
+  /* Build the new MMP diagram */
+  /* New 25-Dec-2013 */
+  let(&newMMP, "");
+  newMMP = buildMMP(blocks_, blockSize_, block_, ATOM_MAP, atomMapLen);
+  let(&newMMP, left(newMMP, (long)strlen(newMMP) - 1)); /* Remove period */
+  return newMMP;
+} /* extendedAtomName */
+
+
+/* The 3 following functions are from mmpstrip.c, added 26-Oct-2011 */
+
+/* Shuffle a deck of cards, 1 through cards */
+void shuffle(long *card, long cards) {
+  long r, a, i;
+  for (i = 1; i < cards; i++) {
+    /* Get a random number from i through cards */
+    r = rand() % (cards - i + 1) + i;
+    if (r < 1 || r > cards) bug(20);
+    /* Swap ith card with rth card */
+    a = card[i];
+    card[i] = card[r];
+    card[r] = a;
+  }
+}
+
+
+/* Get a random seed */
+unsigned long getSeed(void) {
+  unsigned long seed;
+  static unsigned long offset = 0;
+  seed = mix3((unsigned long)(clock()) + offset,
+       (unsigned long)(time(NULL)), (unsigned long)(getpid()));
+  offset++; /* Ensure a different result next time this is called */
+  if (seed > RAND_MAX) seed = seed % RAND_MAX;
+  if (seed > RAND_MAX /* || seed < 0 */) {
+    fprintf(stderr, "seed = %lu  RAND_MAX = %lu\n",
+        seed, (unsigned long)RAND_MAX);
+    bug(21);
+  }
+  return seed;
+}
+
+/* http://www.concentric.net/~Ttwang/tech/inthash.htm
+   Public domain code */
+unsigned long mix3(unsigned long a, unsigned long b, unsigned long c)
+{
+    a = a - b;  a = a - c;  a = a ^ (c >> 13);
+    b = b - c;  b = b - a;  b = b ^ (a << 8);
+    c = c - a;  c = c - b;  c = c ^ (b >> 13);
+    a = a - b;  a = a - c;  a = a ^ (c >> 12);
+    b = b - c;  b = b - a;  b = b ^ (a << 16);
+    c = c - a;  c = c - b;  c = c ^ (b >> 5);
+    a = a - b;  a = a - c;  a = a ^ (c >> 3);
+    b = b - c;  b = b - a;  b = b ^ (a << 10);
+    c = c - a;  c = c - b;  c = c ^ (b >> 15);
+    return c;
+}
+
+
+
+/******************* End of main program ********************************/
+
+
+/***********************************************************************/
+/************ Start of "vstring" body stuff ****************************/
+/************ Do not touch anything from here to end of program ********/
+/***********************************************************************/
+
+/*****************************************************************************/
+/*       Copyright (C) 1999  NORMAN D. MEGILL  <nm at alum.mit.edu>          */
+/*             License terms:  GNU General Public License                    */
+/*****************************************************************************/
+
+/**************************************************************************
+
+Variable-length string handler
+------------------------------
+
+     This collection of string-handling functions emulate most of the
+string functions of VMS BASIC.  The objects manipulated by these functions
+are strings of a special type called 'vstring' which
+have no pre-defined upper length limit but are dynamically allocated
+and deallocated as needed.  To use the vstring functions within a program,
+all vstrings must be initially set to the null string when declared or
+before first used, for example:
+
+        vstring string1 = "";
+        vstring stringArray[] = {"","",""};
+
+        vstring bigArray[100][10]; /- Must be initialized before using -/
+        int i,j;
+        for (i=0; i<100; i++)
+          for (j=0; j<10; j++)
+            bigArray[i][j] = ""; /- Initialize -/
+
+
+     After initialization, vstrings should be assigned with the 'let(&'
+function only; for example the statements
+
+        let(&string1,"abc");
+        let(&string1,string2);
+        let(&string1,left(string2,3));
+
+all assign the second argument to 'string1'.  The 'let(&' function must
+not be used to initialize a vstring for the first time.
+
+     The 'cat' function emulates the '+' concatenation operator in BASIC.
+It has a variable number of arguments, and the last argument should always
+be NULL.  For example,
+
+        let(&string1,cat("abc","def",NULL));
+
+assigns "abcdef" to 'string1'.  Warning: 0 will work instead of NULL on the
+VAX but not on the Macintosh, so always use NULL.
+
+     All other functions are generally used exactly like their BASIC
+equivalents.  For example, the BASIC statement
+
+        let string1$=left$("def",len(right$("xxx",2)))+"ghi"+string2$
+
+is emulated in c as
+
+        let(&string1,cat(left("def",len(right("xxx",2))),"ghi",string2,NULL));
+
+Note that ANSI c does not allow "$" as part of an identifier
+name, so the names in c have had the "$" suffix removed.
+
+     The string arguments of the vstring functions may be either standard c
+strings or vstrings (except that the first argument of the 'let(&' function
+must be a vstring).  The standard c string functions may use vstrings or
+vstring functions as their string arguments, as long as the vstring variable
+itself (which is a char * pointer) is not modified and no attempt is made to
+increase the length of a vstring.  Caution must be excercised when
+assigning standard c string pointers to vstrings or the results of
+vstring functions, as the memory space may be deallocated when the
+'le(&t' function is next executed.  For example,
+
+        char *stdstr; /- A standard c string pointer -/
+         ...
+        stdstr=left("abc",2);  /- DO NOT DO THIS -/
+
+will assign "ab" to 'stdstr', but this assignment will be lost when the
+next 'let(&' function is executed.  To be safe, use 'strcpy':
+
+        char stdstr1[80]; /- A fixed length standard c string -/
+         ...
+        strcpy(stdstr1,left("abc",2));
+
+Here, of course, the user must ensure that the string copied to 'stdstr1'
+does not exceed 79 characters in length.  IT IS SAFEST NOT TO USE ANY
+STANDARD C STRING FUNCTIONS WITH VSTRINGS OR VSTRING FUNCTIONS UNLESS YOU
+REALLY UNDERSTAND WHAT YOU ARE DOING.
+
+     The vstring functions ('left', 'right', 'cat', etc.) allocate temporary
+memory whenever they are called.  This temporary memory is deallocated
+whenever a 'let(&' assignment is made.  The user should be aware of this
+when using vstring functions outside of 'let(&' assignments; for example
+
+        for (i=0; i<10000; i++)
+          print2("%s\n",left(string1,70));
+
+will allocate another 70 bytes or so of memory each 'left' call
+and eventually overflow the temporary string stack.
+If necessary, dummy 'let(&' assignments can be made periodically to clear
+this temporary memory:
+
+        for (i=0; i<10000; i++)
+          {
+          print2("%s\n",left(string1,70));
+          let(&dummy,"");
+          }
+
+It should be noted that the 'linput' function assigns its target string
+with 'let(&' and thus has the same deallocation effect as 'let(&'.
+
+************************************************************************/
+
+
+static void freeTempAlloc(void)
+{
+  /* All memory previously allocated with tempAlloc is deallocated. */
+  /* EXCEPT:  When startTempAllocStack != 0, the freeing will start at
+     startTempAllocStack. */
+  int i;
+  for (i = startTempAllocStack; i < tempAllocStackTop; i++) {
+    free(tempAllocStack[i]);
+  }
+  tempAllocStackTop = startTempAllocStack;
+} /* freeTempAlloc */
+
+
+static void pushTempAlloc(void *mem)
+{
+  if (tempAllocStackTop >= (MAX_ALLOC_STACK-1)) {
+    printf("*** FATAL ERROR ***  Temporary string stack overflow\n");
+    fflush(stdout);
+    bug(2201);
+  }
+  tempAllocStack[tempAllocStackTop++] = mem;
+} /* pushTempAlloc */
+
+
+static void* tempAlloc(long size)  /* String memory allocation/deallocation */
+{
+  void* memptr = malloc((size_t)size);
+  if (!memptr || size == 0) {
+    printf("*** FATAL ERROR ***  Temporary string allocation failed\n");
+    fflush(stdout);
+    bug(2202);
+  }
+  pushTempAlloc(memptr);
+  return memptr;
+} /* tempAlloc */
+
+
+/* Make string have temporary allocation to be released by next let() */
+/* Warning:  after makeTempAlloc() is called, the vstring may NOT be
+   assigned again with let() */
+void makeTempAlloc(vstring s)
+{
+  pushTempAlloc(s);
+} /* makeTempAlloc */
+
+
+/* 8-Jul-2013 Wolf Lammen - rewritten to simplify it */
+void let(vstring *target, vstring source)        /* String assignment */
+/* This function must ALWAYS be called to make assignment to */
+/* a vstring in order for the memory cleanup routines, etc. */
+/* to work properly.  If a vstring has never been assigned before, */
+/* it is the user's responsibility to initialize it to "" (the */
+/* null string). */
+{
+
+  size_t sourceLength = strlen(source);  /* Save its length */
+  size_t targetLength = strlen(*target); /* Save its length */
+  if (targetLength < sourceLength) { /* Old string has not enough room for new one */
+    /* Free old string space and allocate new space */
+    if (targetLength)
+      free(*target);  /* Free old space */
+    *target = malloc(sourceLength + 1); /* Allocate new space */
+    if (!*target) {
+      printf("*** FATAL ERROR ***  String memory couldn't be allocated\n");
+      fflush(stdout);
+      bug(2204);
+    }
+  }
+  if (sourceLength) {
+    strcpy(*target, source);
+  } else {
+    /* Empty strings could still be temporaries, so always assign a constant */
+    if (targetLength) {
+      free(*target);
+    }
+    *target= "";
+  }
+
+  freeTempAlloc(); /* Free up temporary strings used in expression computation */
+
+} /* let */
+
+vstring cat(vstring string1,...)        /* String concatenation */
+#define MAX_CAT_ARGS 50
+{
+  va_list ap;   /* Declare list incrementer */
+  vstring arg[MAX_CAT_ARGS];    /* Array to store arguments */
+  size_t argPos[MAX_CAT_ARGS]; /* Array of argument positions in result */
+  vstring result;
+  int i;
+  int numArgs = 0;        /* Define "last argument" */
+
+  size_t pos = 0;
+  char* curArg = string1;
+
+  va_start(ap, string1); /* Begin the session */
+  do {
+        /* User-provided argument list must terminate with 0 */
+    if (numArgs >= MAX_CAT_ARGS) {
+      printf("*** FATAL ERROR ***  Too many cat() arguments\n");
+      fflush(stdout);
+      bug(2206);
+    }
+    arg[numArgs] = curArg;
+    argPos[numArgs] = pos;
+    pos += strlen(curArg);
+  } while (++numArgs, (curArg = va_arg(ap,char *)) != 0);
+  va_end(ap);           /* End var args session */
+
+  /* Allocate the memory for it */
+  result = tempAlloc((long)pos+1);
+  /* Move the strings into the newly allocated area */
+  for (i = 0; i < numArgs; ++i)
+    strcpy(result + argPos[i], arg[i]);
+  return result;
+} /* cat */
+
+
+/* 20-Oct-2013 Wolf Lammen - allow unlimited input line lengths */
+/* Input a line from the user or from a file */
+/* Returns 1 if a (possibly empty) line was successfully read, 0 if EOF */
+int linput(FILE *stream, const char* ask, vstring *target)
+{                           /* Note: "vstring *target" means "char **target" */
+  /*
+    BASIC:  linput "what"; a$
+    c:      linput(NULL, "what?", &a);
+
+    BASIC:  linput #1, a$                         (error trap on EOF)
+    c:      if (!linput(file1, NULL, &a)) break;  (break on EOF)
+
+  */
+  /* This function prints a prompt (if 'ask' is not NULL), gets a line from
+    the stream, and assigns it to target using the let(&...) function.
+    0 is returned when end-of-file is encountered.  The vstring
+    *target MUST be initialized to "" or previously assigned by let(&...)
+    before using it in linput. */
+  char f[10001]; /* Read in chunks up to 10000 characters */
+  int result = 0;
+  int eol_found = 0;
+  if (ask) {
+    printf("%s", ask);
+    fflush(stdout);
+  }
+  if (stream == NULL) stream = stdin;
+  while (!eol_found && fgets(f, sizeof(f), stream))
+  {
+    size_t endpos = strlen(f) - 1;
+    eol_found = (f[endpos] == '\n');
+    /* If the last line in the file has no newline, eol_found will be 0 here.
+       The fgets() above will return 0 and prevent another loop iteration. */
+    if (eol_found)
+      f[endpos] = 0; /* The return string will have any newline stripped. */
+    if (result)
+      /* Append additional parts of the line to *target */
+      /* The let() reallocates *target and copies the concatenation of the
+         old *target and the additional input f[] to it */
+      let(target /* = &(*target) */, cat(*target, f, NULL));
+    else
+      /* This is the first time through the loop, and normally
+         the only one unless the input line overflows f[] */
+      let(target, f);  /* Allocate *target and copy f to it */
+    result = 1;
+  }
+  return result;
+} /* linput */
+
+
+/* Find out the length of a string */
+long len(vstring s)
+{
+  return ((long)strlen(s));
+} /* len */
+
+
+/* Extract sin from character position start to stop into sout */
+vstring seg(vstring sin, long start, long stop)
+{
+  if (start < 1) start = 1;
+  return mid(sin, start, stop - start + 1);
+} /* seg */
+
+
+/* Extract sin from character position start for length len */
+vstring mid(vstring sin, long start, long length)
+{
+  vstring sout;
+  if (start < 1) start = 1;
+  if (length < 0) length = 0;
+  sout=tempAlloc(length + 1);
+  strncpy(sout,sin + start - 1, (size_t)length);
+  sout[length] = 0;
+  return (sout);
+} /* mid */
+
+
+/* Extract leftmost n characters */
+vstring left(vstring sin,long n)
+{
+  return mid(sin, 1, n);
+} /* left */
+
+
+/* Extract after character n */
+vstring right(vstring sin, long n)
+{
+  return seg(sin, n, (long)(strlen(sin)));
+} /* right */
+
+
+/* Emulate VMS BASIC edit$ command */
+vstring edit(vstring sin,long control)
+#define isblank_(c) ((c==' ') || (c=='\t'))
+    /* 11-Sep-2009 nm Added _ to fix '"isblank" redefined' compiler warning */
+{
+  /* EDIT$ (from VMS BASIC manual)
+       Syntax:  str-vbl = EDIT$(str-exp, int-exp)
+       Values   Effect
+       1        Trim parity bits
+       2        Discard all spaces and tabs
+       4        Discard characters: CR, LF, FF, ESC, RUBOUT, and NULL
+       8        Discard leading spaces and tabs
+       16       Reduce spaces and tabs to one space
+       32       Convert lowercase to uppercase
+       64       Convert [ to ( and ] to )
+       128      Discard trailing spaces and tabs
+       256      Do not alter characters inside quotes
+
+       (non-BASIC extensions)
+       512      Convert uppercase to lowercase
+       1024     Tab the line (convert spaces to equivalent tabs)
+       2048     Untab the line (convert tabs to equivalent spaces)
+       4096     Convert VT220 screen print frame graphics to -,|,+ characters
+
+       (Added 10/24/03:)
+       8192     Discard CR only (to assist DOS-to-Unix conversion)
+  */
+  vstring sout;
+  long i, j, k, m;
+  int last_char_is_blank;
+  int trim_flag, discardctrl_flag, bracket_flag, quote_flag, case_flag;
+  int alldiscard_flag, leaddiscard_flag, traildiscard_flag, reduce_flag;
+  int processing_inside_quote=0;
+  int lowercase_flag, tab_flag, untab_flag, screen_flag, discardcr_flag;
+  unsigned char graphicsChar;
+
+  /* Set up the flags */
+  trim_flag = control & 1;
+  alldiscard_flag = control & 2;
+  discardctrl_flag = control & 4;
+  leaddiscard_flag = control & 8;
+  reduce_flag = control & 16;
+  case_flag = control & 32;
+  bracket_flag = control & 64;
+  traildiscard_flag = control & 128;
+  quote_flag = control & 256;
+
+  /* Non-BASIC extensions */
+  lowercase_flag = control & 512;
+  tab_flag = control & 1024;
+  untab_flag = control & 2048;
+  screen_flag = control & 4096; /* Convert VT220 screen prints to |,-,+
+                                   format */
+  discardcr_flag = control & 8192; /* Discard CR's */
+
+  /* Copy string */
+  i = (long)strlen(sin) + 1;
+  if (untab_flag) i = i * 7; /* Allow for max possible length */
+  sout=tempAlloc(i);
+  strcpy(sout,sin);
+
+  /* Discard leading space/tab */
+  i=0;
+  if (leaddiscard_flag)
+    while ((sout[i] != 0) && isblank_(sout[i]))
+      sout[i++] = 0;
+
+  /* Main processing loop */
+  while (sout[i] != 0) {
+
+    /* Alter characters inside quotes ? */
+    if (quote_flag && ((sout[i] == '"') || (sout[i] == '\'')))
+       processing_inside_quote = ~ processing_inside_quote;
+    if (processing_inside_quote) {
+       /* Skip the rest of the code and continue to process next character */
+       i++; continue;
+    }
+
+    /* Discard all space/tab */
+    if ((alldiscard_flag) && isblank_(sout[i]))
+        sout[i] = 0;
+
+    /* Trim parity (eighth?) bit */
+    if (trim_flag)
+       sout[i] = sout[i] & 0x7F;
+
+    /* Discard CR,LF,FF,ESC,BS */
+    if ((discardctrl_flag) && (
+         (sout[i] == '\015') || /* CR  */
+         (sout[i] == '\012') || /* LF  */
+         (sout[i] == '\014') || /* FF  */
+         (sout[i] == '\033') || /* ESC */
+         /*(sout[i] == '\032') ||*/ /* ^Z */ /* DIFFERENCE won't work w/ this */
+         (sout[i] == '\010')))  /* BS  */
+      sout[i] = 0;
+
+    /* Discard CR */
+    if ((discardcr_flag) && (
+         (sout[i] == '\015')))  /* CR  */
+      sout[i] = 0;
+
+    /* Convert lowercase to uppercase */
+    /*
+    if ((case_flag) && (islower(sout[i])))
+       sout[i] = toupper(sout[i]);
+    */
+    /* 13-Jun-2009 nm The upper/lower case C functions have odd behavior
+       with characters > 127, at least in lcc.  So this was rewritten to
+       not use them. */
+    if ((case_flag) && (sout[i] >= 'a' && sout[i] <= 'z'))
+       sout[i] = (char)(sout[i] - ('a' - 'A'));
+
+    /* Convert [] to () */
+    if ((bracket_flag) && (sout[i] == '['))
+       sout[i] = '(';
+    if ((bracket_flag) && (sout[i] == ']'))
+       sout[i] = ')';
+
+    /* Convert uppercase to lowercase */
+    /*
+    if ((lowercase_flag) && (isupper(sout[i])))
+       sout[i] = tolower(sout[i]);
+    */
+    /* 13-Jun-2009 nm The upper/lower case C functions have odd behavior
+       with characters > 127, at least in lcc.  So this was rewritten to
+       not use them. */
+    if ((lowercase_flag) && (sout[i] >= 'A' && sout[i] <= 'Z'))
+       sout[i] = (char)(sout[i] + ('a' - 'A'));
+
+    /* Convert VT220 screen print frame graphics to +,|,- */
+    if (screen_flag) {
+      graphicsChar = (unsigned char)sout[i]; /* Need unsigned char for >127 */
+      /* vt220 */
+      if (graphicsChar >= 234 && graphicsChar <= 237) sout[i] = '+';
+      if (graphicsChar == 241) sout[i] = '-';
+      if (graphicsChar == 248) sout[i] = '|';
+      if (graphicsChar == 166) sout[i] = '|';
+      /* vt100 */
+      if (graphicsChar == 218 /*up left*/ || graphicsChar == 217 /*lo r*/
+          || graphicsChar == 191 /*up r*/ || graphicsChar == 192 /*lo l*/)
+        sout[i] = '+';
+      if (graphicsChar == 196) sout[i] = '-';
+      if (graphicsChar == 179) sout[i] = '|';
+    }
+
+    /* Process next character */
+    i++;
+  }
+  /* sout[i]=0 is the last character at this point */
+
+  /* Clean up the deleted characters */
+  for (j = 0, k = 0; j <= i; j++)
+    if (sout[j]!=0) sout[k++]=sout[j];
+  sout[k] = 0;
+  /* sout[k] = 0 is the last character at this point */
+
+  /* Discard trailing space/tab */
+  if (traildiscard_flag) {
+    --k;
+    while ((k >= 0) && isblank_(sout[k])) --k;
+    sout[++k] = 0;
+  }
+
+  /* Reduce multiple space/tab to a single space */
+  if (reduce_flag) {
+    i = j = last_char_is_blank = 0;
+    while (i <= k - 1) {
+      if (!isblank_(sout[i])) {
+        sout[j++] = sout[i++];
+        last_char_is_blank = 0;
+      } else {
+        if (!last_char_is_blank)
+          sout[j++]=' '; /* Insert a space at the first occurrence of a blank */
+        last_char_is_blank = 1; /* Register that a blank is found */
+        i++; /* Process next character */
+      }
+    }
+    sout[j] = 0;
+  }
+
+  /* Untab the line */
+  if (untab_flag || tab_flag) {
+
+    /*
+    DEF FNUNTAB$(L$)      ! UNTAB LINE L$
+    I9%=1%
+    I9%=INSTR(I9%,L$,CHR$(9%))
+    WHILE I9%
+      L$=LEFT(L$,I9%-1%)+SPACE$(8%-((I9%-1%) AND 7%))+RIGHT(L$,I9%+1%)
+      I9%=INSTR(I9%,L$,CHR$(9%))
+    NEXT
+    FNUNTAB$=L$
+    FNEND
+    */
+
+    /***** old code (doesn't handle multiple lines)
+    k = (long)strlen(sout);
+    for (i = 1; i <= k; i++) {
+      if (sout[i - 1] != '\t') continue;
+      for (j = k; j >= i; j--) {
+        sout[j + 8 - ((i - 1) & 7) - 1] = sout[j];
+      }
+      for (j = i; j < i + 8 - ((i - 1) & 7); j++) {
+        sout[j - 1] = ' ';
+      }
+      k = k + 8 - ((i - 1) & 7);
+    }
+    *****/
+
+    /* Untab string containing multiple lines */ /* 9-Jul-2011 nm */
+    /* (Currently this is needed by outputStatement() in mmpars.c) */
+    k = (long)strlen(sout);
+    m = 0;  /* Position on line relative to last '\n' */
+    for (i = 1; i <= k; i++) {
+      if (sout[i - 1] == '\n') {
+        m = 0;
+        continue;
+      }
+      m++; /* Should equal i for one-line string */
+      if (sout[i - 1] != '\t') continue;
+      for (j = k; j >= i; j--) {
+        sout[j + 8 - ((m - 1) & 7) - 1] = sout[j];
+      }
+      for (j = i; j < i + 8 - ((m - 1) & 7); j++) {
+        sout[j - 1] = ' ';
+      }
+      k = k + 8 - ((m - 1) & 7);
+    }
+  }
+
+  /* Tab the line */
+  /* (Note that this does not [yet?] handle string with multiple lines) */
+  if (tab_flag) {
+
+    /*
+    DEF FNTAB$(L$)        ! TAB LINE L$
+    I9%=0%
+    FOR I9%=8% STEP 8% WHILE I9%<LEN(L$)
+      J9%=I9%
+      J9%=J9%-1% UNTIL ASCII(MID(L$,J9%,1%))<>32% OR J9%=I9%-8%
+      IF J9%<=I9%-2% THEN
+        L$=LEFT(L$,J9%)+CHR$(9%)+RIGHT(L$,I9%+1%)
+        I9%=J9%+1%
+      END IF
+    NEXT I9%
+    FNTAB$=L$
+    FNEND
+    */
+
+    k = (long)strlen(sout);
+    for (i = 8; i < k; i = i + 8) {
+      j = i;
+
+      /* 26-May-2016 nm */
+      /* gcc m*.c -o metamath.exe -O2 -Wall was giving:
+             mmvstr.c:285:9: warning: assuming signed overflow does not occur
+             when assuming that (X - c) <= X is always true [-Wstrict-overflow]
+         Here we trick gcc into turning off this optimization by moving
+         the computation of i - 2 here, then referencing m instead of i - 2
+         below.  Note that if "m = i - 2" is moved _after_ the "while", the
+         error message returns. */
+      m = i - 2;
+
+      while (sout[j - 1] == ' ' && j > i - 8) j--;
+      /*if (j <= i - 2) {*/
+      if (j <= m) {  /* 25-May-2016 nm */
+        sout[j] = '\t';
+        j = i;
+        while (sout[j - 1] == ' ' && j > i - 8 + 1) {
+          sout[j - 1] = 0;
+          j--;
+        }
+      }
+    }
+    i = k;
+    /* sout[i]=0 is the last character at this point */
+    /* Clean up the deleted characters */
+    for (j = 0, k = 0; j <= i; j++)
+      if (sout[j] != 0) sout[k++] = sout[j];
+    sout[k] = 0;
+    /* sout[k] = 0 is the last character at this point */
+  }
+
+  return (sout);
+} /* edit */
+
+
+/* Return a string of the same character */
+vstring string(long n, char c)
+{
+  vstring sout;
+  long j = 0;
+  if (n < 0) n = 0;
+  sout=tempAlloc(n + 1);
+  while (j < n) sout[j++] = c;
+  sout[j] = 0;
+  return (sout);
+} /* string */
+
+
+/* Return a string of spaces */
+vstring space(long n)
+{
+  return (string(n, ' '));
+} /* space */
+
+
+/* Return a character given its ASCII value */
+vstring chr(long n)
+{
+  vstring sout;
+  sout = tempAlloc(2);
+  sout[0] = (char)(n & 0xFF);
+  sout[1] = 0;
+  return(sout);
+} /* chr */
+
+
+/* Search for string2 in string1 starting at start_position */
+/* If there is no match, 0 is returned */
+/* If string2 is "", (length of the string) + 1 is returned */
+long instr(long start_position, vstring string1, vstring string2)
+{
+  char *sp1, *sp2;
+  long ls1, ls2;
+  long found = 0;
+  if (start_position < 1) start_position = 1;
+  ls1 = (long)strlen(string1);
+  ls2 = (long)strlen(string2);
+  if (start_position > ls1) start_position = ls1 + 1;
+  sp1 = string1 + start_position - 1;
+  while ((sp2 = strchr(sp1, string2[0])) != 0) {
+    if (strncmp(sp2, string2, (size_t)ls2) == 0) {
+      found = sp2 - string1 + 1;
+      break;
+    } else
+      sp1 = sp2 + 1;
+  }
+  return (found);
+} /* instr */
+
+
+/* 12-Jun-2011 nm Added rinstr */
+/* Search for _last_ occurrence of string2 in string1 */
+/* 1 = 1st string character; 0 = not found */
+/* ??? Future - this could be made more efficient by searching directly,
+   backwards from end of string1 */
+long rinstr(vstring string1, vstring string2)
+{
+  long pos = 0;
+  long savePos = 0;
+
+  while (1) {  /* Scan until substring no longer found */
+    pos = instr(pos + 1, string1, string2);
+    if (!pos) break;
+    savePos = pos;
+  }
+  return (savePos);
+} /* rinstr */
+
+
+/* Translate string in sin to sout based on table.
+   Table must be 256 characters long!! <- not true anymore? */
+vstring xlate(vstring sin,vstring table)
+{
+  vstring sout;
+  long len_table, len_sin;
+  long i, j;
+  long table_entry;
+  char m;
+  len_sin = (long)strlen(sin);
+  len_table = (long)strlen(table);
+  sout = tempAlloc(len_sin+1);
+  for (i = j = 0; i < len_sin; i++)
+  {
+    table_entry = 0x000000FF & (long)sin[i];
+    if (table_entry < len_table)
+      if ((m = table[table_entry])!='\0')
+        sout[j++] = m;
+  }
+  sout[j]='\0';
+  return (sout);
+} /* xlate */
+
+
+/* Returns the ascii value of a character */
+long ascii_(vstring c)
+{
+  return ((long)c[0]);
+} /* ascii_ */
+
+
+/* Returns the floating-point value of a numeric string */
+double val(vstring s)
+{
+  double v = 0;
+  char signFound = 0;
+  double power = 1.0;
+  long i;
+  for (i = (long)strlen(s); i >= 0; i--) {
+    switch (s[i]) {
+      case '.':
+        v = v / power;
+        power = 1.0;
+        break;
+      case '-':
+        signFound = 1;
+        break;
+      case '0': case '1': case '2': case '3': case '4':
+      case '5': case '6': case '7': case '8': case '9':
+        v = v + ((double)(s[i] - '0')) * power;
+        power = 10.0 * power;
+        break;
+    }
+  }
+  if (signFound) v = - v;
+  return v;
+  /*
+  return (atof(s));
+  */
+} /* val */
+
+
+/* Returns current date as an ASCII string */
+vstring date()
+{
+  vstring sout;
+  struct tm *time_structure;
+  time_t time_val;
+  char *month[12];
+
+  /* (Aggregrate initialization is not portable) */
+  /* (It must be done explicitly for portability) */
+  month[0] = "Jan";
+  month[1] = "Feb";
+  month[2] = "Mar";
+  month[3] = "Apr";
+  month[4] = "May";
+  month[5] = "Jun";
+  month[6] = "Jul";
+  month[7] = "Aug";
+  month[8] = "Sep";
+  month[9] = "Oct";
+  month[10] = "Nov";
+  month[11] = "Dec";
+
+  time(&time_val); /* Retrieve time */
+  time_structure = localtime(&time_val); /* Translate to time structure */
+  sout = tempAlloc(12);
+  /* "%02d" means leading zeros with min. field width of 2 */
+  /* sprintf(sout,"%d-%s-%02d", */
+  sprintf(sout,"%d-%s-%04d", /* 10-Apr-06 nm 4-digit year */
+      time_structure->tm_mday,
+      month[time_structure->tm_mon],
+      /* time_structure->tm_year); */ /* old */
+      /* (int)((time_structure->tm_year) % 100)); */ /* Y2K */
+      (int)((time_structure->tm_year) + 1900)); /* 10-Apr-06 nm 4-digit yr */
+  return(sout);
+} /* date */
+
+
+/* Return current time as an ASCII string */
+vstring time_()
+{
+  vstring sout;
+  struct tm *time_structure;
+  time_t time_val;
+  int i;
+  char *format;
+  char *format1 = "%d:%d %s";
+  char *format2 = "%d:0%d %s";
+  char *am_pm[2];
+  /* (Aggregrate initialization is not portable) */
+  /* (It must be done explicitly for portability) */
+  am_pm[0] = "AM";
+  am_pm[1] = "PM";
+
+  time(&time_val); /* Retrieve time */
+  time_structure = localtime(&time_val); /* Translate to time structure */
+  if (time_structure->tm_hour >= 12)
+    i = 1;
+  else
+    i = 0;
+  if (time_structure->tm_hour > 12)
+    time_structure->tm_hour -= 12;
+  if (time_structure->tm_hour == 0)
+    time_structure->tm_hour = 12;
+  sout = tempAlloc(12);
+  if (time_structure->tm_min >= 10)
+    format = format1;
+  else
+    format = format2;
+  sprintf(sout,format,
+      time_structure->tm_hour,
+      time_structure->tm_min,
+      am_pm[i]);
+  return(sout);
+} /* time */
+
+
+/* Return a number as an ASCII string */
+vstring str(double f)
+{
+  /* This function converts a floating point number to a string in the */
+  /* same way that %f in printf does, except that trailing zeroes after */
+  /* the one after the decimal point are stripped; e.g., it returns 7 */
+  /* instead of 7.000000000000000. */
+  vstring s;
+  long i;
+  s = tempAlloc(50);
+  sprintf(s,"%f", f);
+  if (strchr(s, '.') != 0) { /* The string has a period in it */
+    for (i = (long)strlen(s) - 1; i > 0; i--) {  /* Scan string backwards */
+      if (s[i] != '0') break; /* 1st non-zero digit */
+      s[i] = 0; /* Delete the trailing 0 */
+    }
+    if (s[i] == '.') s[i] = 0; /* Delete trailing period */
+  }
+  return (s);
+} /* str */
+
+
+/* Return a number as an ASCII string */
+/* (This may have differed slightly from str() in BASIC but I forgot how.
+   It should be considered deprecated.) */
+vstring num1(double f)
+{
+  return (str(f));
+} /* num1 */
+
+
+/* Return a number as an ASCII string surrounded by spaces */
+/* (This should be considered deprecated.) */
+vstring num(double f)
+{
+  return (cat(" ",str(f)," ",NULL));
+} /* num */
+
+
+
+/*** NEW FUNCTIONS ADDED 11/25/98 ***/
+
+/* Emulate PROGRESS "entry" and related string functions */
+/* (PROGRESS is a 4-GL database language) */
+
+/* A "list" is a string of comma-separated elements.  Example:
+   "a,b,c" has 3 elements.  "a,b,c," has 4 elements; the last element is
+   an empty string.  ",," has 3 elements; each is an empty string.
+   In "a,b,c", the entry numbers of the elements are 1, 2 and 3 (i.e.
+   the entry numbers start a 1, not 0). */
+
+/* Returns a character string entry from a comma-separated
+   list based on an integer position. */
+/* If element is less than 1 or greater than number of elements
+   in the list, a null string is returned. */
+vstring entry(long element, vstring list)
+{
+  vstring sout;
+  long commaCount, lastComma, i, length;
+  if (element < 1) return ("");
+  lastComma = -1;
+  commaCount = 0;
+  i = 0;
+  while (list[i] != 0) {
+    if (list[i] == ',') {
+      commaCount++;
+      if (commaCount == element) {
+        break;
+      }
+      lastComma = i;
+    }
+    i++;
+  }
+  if (list[i] == 0) commaCount++;
+  if (element > commaCount) return ("");
+  length = i - lastComma - 1;
+  if (length < 1) return ("");
+  sout = tempAlloc(length + 1);
+  strncpy(sout, list + lastComma + 1, (size_t)length);
+  sout[length] = 0;
+  return (sout);
+}
+
+/* Emulate PROGRESS lookup function */
+/* Returns an integer giving the first position of an expression
+   in a comma-separated list. Returns a 0 if the expression
+   is not in the list. */
+long lookup(vstring expression, vstring list)
+{
+  long i, exprNum, exprPos;
+  char match;
+
+  match = 1;
+  i = 0;
+  exprNum = 0;
+  exprPos = 0;
+  while (list[i] != 0) {
+    if (list[i] == ',') {
+      exprNum++;
+      if (match) {
+        if (expression[exprPos] == 0) return exprNum;
+      }
+      exprPos = 0;
+      match = 1;
+      i++;
+      continue;
+    }
+    if (match) {
+      if (expression[exprPos] != list[i]) match = 0;
+    }
+    i++;
+    exprPos++;
+  }
+  exprNum++;
+  if (match) {
+    if (expression[exprPos] == 0) return exprNum;
+  }
+  return 0;
+}
+
+
+/* Emulate PROGRESS num-entries function */
+/* Returns the number of items in a comma-separated list.  If the
+   list is the empty string, return 0. */
+long numEntries(vstring list)
+{
+  long i, commaCount;
+  if (list[0] == 0) {
+    commaCount = -1; /* 26-Apr-2006 nm Return 0 if list empty */
+  } else {
+    commaCount = 0;
+    i = 0;
+    while (list[i] != 0) {
+      if (list[i] == ',') commaCount++;
+      i++;
+    }
+  }
+  return (commaCount + 1);
+}
+
+/* Returns the character position of the start of the
+   element in a list - useful for manipulating
+   the list string directly.  1 means the first string
+   character. */
+/* If element is less than 1 or greater than number of elements
+   in the list, a 0 is returned.  If entry is null, a 0 is
+   returned. */
+long entryPosition(long element, vstring list)
+{
+  long commaCount, lastComma, i;
+  if (element < 1) return 0;
+  lastComma = -1;
+  commaCount = 0;
+  i = 0;
+  while (list[i] != 0) {
+    if (list[i] == ',') {
+      commaCount++;
+      if (commaCount == element) {
+        break;
+      }
+      lastComma = i;
+    }
+    i++;
+  }
+  if (list[i] == 0) {
+    if (i == 0) return 0;
+    if (list[i - 1] == ',') return 0;
+    commaCount++;
+  }
+  if (element > commaCount) return (0);
+  if (list[lastComma + 1] == ',') return 0;
+  return (lastComma + 2);
+}
+
+
+void print2(char* fmt,...)
+{
+  /* This performs the same operations as printf, except that if a log file is
+    open, the characters will also be printed to the log file. */
+  va_list ap;
+  char printBuffer[10001];
+
+  va_start(ap, fmt);
+  vsprintf(printBuffer, fmt, ap); /* Put formatted string into buffer */
+  va_end(ap);
+
+  printf("%s", printBuffer); /* Terminal */
+
+  if (fplog != NULL) {
+    fprintf(fplog, "%s", printBuffer);  /* Print to log file */
+  }
+  return;
+}
+
+
+/* Bug check */
+void bug(int bugNum)
+{
+  print2("?Error: Program bug # %d\n", bugNum);
+  exit(0);
+}
+
+
+/* Opens files with error message; opens output files with
+   backup of previous version.   Mode must be "r" or "w". */
+FILE *fSafeOpen(vstring fileName, vstring mode)
+{
+  FILE *fp;
+  vstring prefix = "";
+  vstring postfix = "";
+  vstring bakName = "";
+  vstring newBakName = "";
+  long v;
+
+  if (!strcmp(mode, "r")) {
+    fp = fopen(fileName, "r");
+    if (!fp) {
+      print2("?Sorry, couldn't open the file \"%s\".\n", fileName);
+    }
+    return (fp);
+  }
+
+  if (!strcmp(mode, "w")) {
+    /* See if the file already exists. */
+    fp = fopen(fileName, "r");
+
+    if (fp) {
+      fclose(fp);
+
+#define VERSIONS 9
+      /* The file exists.  Rename it. */
+
+#if defined __WATCOMC__ /* MSDOS */
+      /* Make sure file name before extension is 8 chars or less */
+      i = instr(1, fileName, ".");
+      if (i) {
+        let(&prefix, left(fileName, i - 1));
+        let(&postfix, right(fileName, i));
+      } else {
+        let(&prefix, fileName);
+        let(&postfix, "");
+      }
+      let(&prefix, cat(left(prefix, 5), "~", NULL));
+      let(&postfix, cat("~", postfix, NULL));
+      if (0) goto skip_backup; /* Prevent compiler warning */
+
+#elif defined __GNUC__ /* Assume unix */
+      let(&prefix, cat(fileName, "~", NULL));
+      let(&postfix, "");
+
+#elif defined THINK_C /* Assume Macintosh */
+      let(&prefix, cat(fileName, "~", NULL));
+      let(&postfix, "");
+
+#elif defined VAXC /* Assume VMS */
+      /* For debugging on VMS: */
+      /* let(&prefix, cat(fileName, "-", NULL));
+         let(&postfix, "-"); */
+      /* Normal: */
+      goto skip_backup;
+
+#else /* Unknown; assume unix standard */
+      /*if (1) goto skip_backup;*/  /* [if no backup desired] */
+      let(&prefix, cat(fileName, "~", NULL));
+      let(&postfix, "");
+
+#endif
+
+
+      /* See if the lowest version already exists. */
+      let(&bakName, cat(prefix, str(1), postfix, NULL));
+      fp = fopen(bakName, "r");
+      if (fp) {
+        fclose(fp);
+        /* The lowest version already exists; rename all to lower versions. */
+
+        /* If version VERSIONS exists, delete it. */
+        let(&bakName, cat(prefix, str(VERSIONS), postfix, NULL));
+        fp = fopen(bakName, "r");
+        if (fp) {
+          fclose(fp);
+          remove(bakName);
+        }
+
+        for (v = VERSIONS - 1; v >= 1; v--) {
+          let(&bakName, cat(prefix, str((double)v), postfix, NULL));
+          fp = fopen(bakName, "r");
+          if (!fp) continue;
+          fclose(fp);
+          let(&newBakName, cat(prefix, str((double)(v + 1)), postfix, NULL));
+          rename(bakName, newBakName);
+        }
+
+      }
+      let(&bakName, cat(prefix, str(1), postfix, NULL));
+      rename(fileName, bakName);
+
+      /***
+      printLongLine(cat("The file \"", fileName,
+          "\" already exists.  The old file is being renamed to \"",
+          bakName, "\".", NULL), "  ", " ");
+      ***/
+    } /* End if file already exists */
+   /*skip_backup:*/
+
+    fp = fopen(fileName, "w");
+    if (!fp) {
+      print2("?Sorry, couldn't open the file \"%s\".\n", fileName);
+    }
+
+    let(&prefix, "");
+    let(&postfix, "");
+    let(&bakName, "");
+    let(&newBakName, "");
+
+    return (fp);
+  } /* End if mode = "w" */
+
+  bug(1510); /* Illegal mode */
+  return(NULL);
+
+}
+
+/***********************************************************************/
+/************ End of "vstring" body stuff ******************************/
+/***********************************************************************/

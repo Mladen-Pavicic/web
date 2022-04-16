@@ -1,0 +1,418 @@
+body
+{
+}
+/* -- NUMBER -- */
+.bkprint_tdnumber
+{
+	width: 8%;
+	padding-left: 2px;
+	
+}
+.bkprint_tdnumber3101
+{
+	padding-left: 7px;
+	width: 8%;
+	
+}
+.bkprint_tdnumber811
+{
+	padding-left: 7px;
+	width: 8%;
+	
+}
+/* -- NUMBER -- */
+
+/* -- HEADER -- */
+.bkprint_tdheader1
+{
+	border-right: #000000 2px solid;
+	border-top: #000000 1px solid;
+	padding-left: 3px;
+	font-weight: bold;
+	font-size: medium;
+	padding-bottom: 3px;
+	border-left: #000000 1px solid;
+	padding-top: 3px;
+	border-bottom: #000000 2px solid;
+	
+}
+.bkprint_tdheader2
+{
+	font-weight: bold;
+	font-size: 13pt;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	
+}
+.bkprint_tdheader3
+{
+	font-weight: bold;
+	font-size: 13pt;
+	padding-bottom: 2px;
+	padding-top: 2px;
+	
+}
+/* -- HEADER -- */
+
+/* -- NAME -- TD koji je zapravo label */
+.bkprint_tdnameCenter
+{
+	font-weight: bold;
+	text-align:center;
+	
+}
+.bkprint_tdname2
+{
+	width: 25%;
+	font-weight: bold;
+	
+}
+.bkprint_tdname3
+{
+	width: 23%;
+	font-weight: bold;
+	
+}
+.bkprint_tdname4
+{
+	width: 23%;
+	font-weight: bold;
+	
+}
+.bkprint_tdname5
+{
+	font-weight: bold;
+	
+}
+.bkprint_tdnameProgram51
+{
+	width: 18%;
+	font-weight: bold;
+	
+}
+.bkprint_tdnameEnd1
+{
+	width:17%;
+	height:30px;
+	font-weight: bold;
+	
+}
+.bkprint_tdnameEnd2
+{
+	width:40%;
+	height:30px;
+	font-weight: bold;
+	
+}
+.bkprint_tdname38
+{
+	font-weight: bold;
+	
+}
+/* -- NAME -- */
+
+/* -- VALUE -- TD u koji se upisuje vrijednost */
+.bkprint_tdvalue
+{
+	border-right: #000000 2px solid;
+	border-top: #000000 1px solid;
+	padding-left: 2px;
+	border-left: #000000 1px solid;
+	border-bottom: #000000 2px solid;
+	
+}
+.bkprint_tdvalue1
+{
+	border-right: #000000 2px solid;
+	padding-right: 2px;
+	border-top: #000000 1px solid;
+	padding-left: 2px;
+	border-left: #000000 1px solid;
+	width: 47%;
+	border-bottom: #000000 2px solid;
+	
+}
+.bkprint_tdvalue_52_2
+{
+	border-right: #000000 2px solid;
+	border-top: #000000 1px solid;
+	padding-left: 2px;
+	border-left: #000000 1px solid;
+	width: 40%;
+	padding-right: 2px;
+	border-bottom: #000000 2px solid;
+	
+}
+.bkprint_tdvalue_52_4
+{
+	border-right: #000000 2px solid;
+	border-top: #000000 1px solid;
+	padding-left: 2px;
+	border-left: #000000 1px solid;
+	width: 15%;
+	padding-right: 2px;
+	text-align:right;
+	border-bottom: #000000 2px solid;
+	
+}
+
+.bkprint_tdvalueTable
+{
+	vertical-align:top;
+	
+}
+.bkprint_tdvalue38
+{
+	border-right: #000000 1px solid;
+	border-top: #000000 1px solid;
+	padding-left: 2px;
+	vertical-align: top;
+	border-left: #000000 1px solid;
+	border-bottom: #000000 1px solid;
+	height: 50px;
+	
+}
+.bkprint_tdvalue83
+{
+	border-right: #000000 1px solid;
+	border-top: #000000 1px solid;
+	padding-left: 2px;
+	vertical-align: top;
+	border-left: #000000 1px solid;
+	border-bottom: #000000 1px solid;
+	height: 70px;
+}
+
+.bkprint_tablevalue21
+{
+	width:30%;
+	
+}
+/* -- VALUE -- */
+
+/*--Broj Prijave */
+.bkprint_tdnameBrojPrijave
+{
+	font-weight: bold;
+	
+}
+.bkprint_tdvalueBrojPrijave
+{
+	border-right: #000000 2px solid;
+	padding-right: 2px;
+	border-top: #000000 1px solid;
+	padding-left: 2px;
+	border-left: #000000 1px solid;
+	border-bottom: #000000 2px solid;
+	
+}
+.bkprint_tdvalueTableBrojPrijave
+{
+	
+}
+.bkprint_tablevalueBrojPrijave
+{
+	width:70%;
+	
+}
+/*--Broj Prijave */
+
+/* -- Troškovi -- */
+.bkprint_troskovi_tdH1
+{
+	border-right: #000000 1px solid;
+	border-top: #000000 1px solid;
+	border-left: #000000 1px solid;
+	border-bottom: #000000 1px solid;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align:center;
+	
+}
+.bkprint_troskovi_tdH2
+{
+	border-right: #000000 1px solid;
+	border-top: #000000 1px solid;
+	border-bottom: #000000 1px solid;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align:center;
+	
+}
+.bkprint_troskovi_tdH3
+{
+	border-right: #000000 1px solid;
+	border-top: #000000 1px solid;
+	border-bottom: #000000 1px solid;
+	font-weight: bold;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align:center;
+	
+}
+.bkprint_troskovi_tdH4
+{
+	border-right: #000000 1px solid;
+	border-top: #000000 1px solid;
+	font-weight: bold;
+	border-bottom: #000000 1px solid;
+	background-color: #cccccc;
+	padding-right: 5px;
+	padding-left: 5px;
+	text-align:center;
+	
+}
+.bkprint_troskovi_tdnumber1
+{
+	border-right: #000000 1px solid;
+	border-bottom: #000000 1px solid;
+	border-left: #000000 1px solid;
+	padding-left: 2px;
+	width: 8%;
+	
+}
+.bkprint_troskovi_tdnumber2
+{
+	border-right: #000000 1px solid;
+	border-bottom: #000000 1px solid;
+	border-left: #000000 1px solid;
+	padding-left: 7px;
+	
+}
+.bkprint_troskovi_tdname1
+{
+	border-right: #000000 1px solid;
+	border-bottom: #000000 1px solid;
+	font-weight: bold;
+	padding-right: 5px;
+	padding-left: 5px;
+	
+}
+.bkprint_troskovi_tdname2
+{
+	border-right: #000000 1px solid;
+	border-bottom: #000000 1px solid;
+	padding-left: 17px;
+	padding-right: 5px;
+	padding-left: 45px;
+	
+}
+.bkprint_troskovi_tdname3
+{
+	border-right: #000000 1px solid;
+	border-bottom: #000000 1px solid;
+	font-weight: bold;
+	text-align:right;
+	padding-right: 5px;
+	padding-left: 5px;
+	
+}
+.bkprint_troskovi_tdvalue1
+{
+	border-right: #000000 1px solid;
+	border-bottom: #000000 1px solid;
+	padding-right: 5px;
+	padding-left: 5px;
+	width:18%;
+	text-align:right;
+	
+}
+.bkprint_troskovi_tdvalue2
+{
+	border-right: #000000 1px solid;
+	padding-right: 5px;
+	padding-left: 5px;
+	width: 18%;
+	border-bottom: #000000 1px solid;
+	background-color: #cccccc;
+	text-align: right;
+	
+}
+/* -- Troškovi -- */
+
+/* -- OPREMA -- */
+.bkprint_oprema_tdname1
+{
+	font-weight: bold;
+	
+}
+.bkprint_oprema_tdname2
+{
+	font-weight: bold;
+	text-align:right;
+	
+}
+.bkprint_oprema_tdvalue1
+{
+	border-right: #000000 2px solid;
+	padding-right: 2px;
+	border-top: #000000 1px solid;
+	padding-left: 2px;
+	border-left: #000000 1px solid;
+	width: 20%;
+	border-bottom: #000000 2px solid;
+	text-align: right;
+	
+}
+.bkprint_oprema_tdvalue2
+{
+	border-right: #000000 2px solid;
+	padding-right: 2px;
+	border-top: #000000 1px solid;
+	padding-left: 2px;
+	border-left: #000000 1px solid;
+	width: 20%;
+	border-bottom: #000000 2px solid;
+	background-color: #cccccc;
+	text-align: right;
+	
+}
+.bkprint_oprema_tdvalue3
+{
+	border-right: #000000 2px solid;
+	padding-right: 2px;
+	border-top: #000000 1px solid;
+	padding-left: 2px;
+	border-left: #000000 1px solid;
+	width: 25%;
+	border-bottom: #000000 2px solid;
+	
+}
+/* -- OPREMA -- */
+
+/* -- RAZMCI */
+.bkprint_tdrazmakStart
+{
+}
+.bkprint_tdrazmak1
+{
+	height: 15px;
+}
+.bkprint_tdrazmak2
+{
+	height: 10px;
+	
+}
+.bkprint_tdrazmak3
+{
+	height: 20px;
+	
+}
+.bkprint_tdrazmak4
+{
+	height: 50px;
+	
+}
+.bkprint_tdrazmak5
+{
+	height: 10px;
+	
+}
+.bkprint_tdrazmakEnd
+{
+}
+.bkprint_afterpagebreak
+{
+	page-break-after:always;
+}
+/* -- RAZMCI */

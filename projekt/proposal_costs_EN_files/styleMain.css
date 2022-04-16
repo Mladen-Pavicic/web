@@ -1,0 +1,201 @@
+/*
+zelena svijetla: #b9ce8e
+zelena tamna: #758455
+siva svijetla: #d2d3cf
+siva tamna: #565850
+*/
+
+/* ----------------------------------------------------- */
+/* --------------- JK general classes ------------------ */
+/* ----------------------------------------------------- */
+
+hr {color:#b9ce8e; width:100%; height:1px;}
+
+.cont1 {border:solid 1px red; padding:5px 5px 5px 5px;}
+.jk_pad1111 {padding:5px 5px 5px 5px;}
+.jk_naslov1 {color:#CC0000; text-align:center; font-size:11pt; font-weight:bold; background-color:#CC0000; color:White;}
+.jk_naslovLink {cursor:hand;}
+
+.jk_btn2 {background-color:#CC0000; color:White; padding:1px 2px 1px 2px; font-size:8pt; font-weight:bold; cursor:hand;}
+.jk_btn1 {background-color:#666666; color:White; padding:1px 2px 1px 2px; font-size:8pt; font-weight:bold; cursor:hand;}
+
+/* -- /dodao Josip -- */
+
+/* -- text clases -- */
+.b {font-weight:bold;}
+.txtWhite {color:White;}
+.txtWarning {color:White; font-size:10pt; font-weight:bold; background-color:Red; padding:2px 5px 2px 5px; border:solid 2px #CC0000;}
+.txtWarningOk {color:White; font-size:10pt; font-weight:bold; background-color:green; padding:2px 5px 2px 5px; border:solid 2px #CC0000;}
+.txtMainTitle {border:solid 1px #CC3333; padding:3px 5px 3px 5px; font-size:11pt; font-weight:bold; width:auto;}
+.txtCounter {font-family: Arial, Helvetica,sans-serif; font-size:9px; font-weight:700; color:Silver; text-decoration:none; height:10px; padding:0px 0px 5px 0px;}
+
+/* -- /text clases -- */
+
+.ddlText {text-align:left;}
+
+/* -- padding clases -- */
+.pad5_1111 {padding:5px 5px 5px 5px;}
+.pad5_1010 {padding:5px 0px 5px 0px;}
+.pad5_0101 {padding:0px 5px 0px 5px;}
+
+.pad2_1111 {padding:2px 2px 2px 2px;}
+.pad2_1010 {padding:2px 0px 2px 0px;}
+.pad2_0101 {padding:0px 2px 0px 2px;}
+/* -- /padding clases -- */
+
+/* -- border clases -- */
+.bor11_1111 {border:solid 1px #CFD6D1;}
+.bor11_1010 {border-top:solid 1px #CFD6D1; border-right:solid 0px #CFD6D1; border-bottom:solid 1px #CFD6D1; border-left:solid 0px #CFD6D1;}
+.bor11_0101 {border-top:solid 0px #CFD6D1; border-right:solid 1px #CFD6D1; border-bottom:solid 0px #CFD6D1; border-left:solid 1px #CFD6D1;}
+.bor11_1000 {border-top:solid 1px #CFD6D1;}
+.bor11_0010 {border-bottom:solid 1px #CFD6D1;}
+.bor11_0100 {border-right:solid 1px #CFD6D1;}
+.bor11_0001 {border-left:solid 1px #CFD6D1;}
+
+.bor21_1111 {border:solid 2px #CFD6D1;}
+.bor21_1010 {border-top:solid 2px #CFD6D1; border-right:solid 0px #CFD6D1; border-bottom:solid 2px #CFD6D1; border-left:solid 0px #CFD6D1;}
+.bor21_0101 {border-top:solid 0px #CFD6D1; border-right:solid 2px #CFD6D1; border-bottom:solid 0px #CFD6D1; border-left:solid 2px #CFD6D1;}
+.bor21_1000 {border-top:solid 2px #CFD6D1;}
+.bor21_0010 {border-bottom:solid 2px #CFD6D1;}
+.bor21_0100 {border-right:solid 2px #CFD6D1;}
+.bor21_0001 {border-left:solid 2px #CFD6D1;}
+
+.bor12_1111 {border:solid 1px #b9ce8e;}
+.bor12_1010 {border-top:solid 1px #b9ce8e; border-right:solid 0px #b9ce8e; border-bottom:solid 1px #b9ce8e; border-left:solid 0px #b9ce8e;}
+.bor12_0101 {border-top:solid 0px #b9ce8e; border-right:solid 1px #b9ce8e; border-bottom:solid 0px #b9ce8e; border-left:solid 1px #b9ce8e;}
+.bor12_1000 {border-top:solid 1px #b9ce8e;}
+.bor12_0010 {border-bottom:solid 1px #b9ce8e;}
+.bor12_0100 {border-right:solid 1px #b9ce8e;}
+.bor12_0001 {border-left:solid 1px #b9ce8e;}
+
+.bor22_1111 {border:solid 2px #b9ce8e;}
+.bor22_1010 {border-top:solid 2px #b9ce8e; border-right:solid 0px #b9ce8e; border-bottom:solid 2px #b9ce8e; border-left:solid 0px #b9ce8e;}
+.bor22_0101 {border-top:solid 0px #b9ce8e; border-right:solid 2px #b9ce8e; border-bottom:solid 0px #b9ce8e; border-left:solid 2px #b9ce8e;}
+.bor22_1000 {border-top:solid 2px #b9ce8e;}
+.bor22_0010 {border-bottom:solid 2px #b9ce8e;}
+.bor22_0100 {border-right:solid 2px #b9ce8e;}
+.bor22_0001 {border-left:solid 2px #b9ce8e;}
+/* -- /border clases -- */
+
+/* -- table clases -- */
+
+/* -- /table clases -- */
+
+/* ----------------------------------------------------- */
+/* --------------- /JK general classes ----------------- */
+/* ----------------------------------------------------- */
+
+/* --------------------------------------------------- */
+/* ----------------  menu classes	------------------ */
+/* --------------------------------------------------- */
+/*
+zelena svijetla: #b9ce8e
+zelena tamna: #758455
+siva svijetla: #d2d3cf
+siva tamna: #565850
+*/
+.menustyle {background-color:#FFFFFF; border:0px; border-style:solid; border-color:Gray;}
+.menuitem {background-color:#d2d3cf; font-family:verdana; font-size:10px; border:0px; border-style:solid; border-color:white; padding-left:0px; padding-right:0px; padding-bottom:0px; padding-top:0px; cursor:pointer; cursor:hand; width:auto;}
+.mmTopItem {background-color:#d2d3cf; font-family:verdana; font-size:10px; border:0px; border-style:solid; border-color:white; padding:0px; padding-left:0px; padding-right:0px; border-left:solid 1px white; border-left:solid 1px black; cursor:pointer; cursor:hand; width:auto;}
+.mmTopItemOver {}
+.mmItemNormal {background-color:Red; color:#617266; border-left:solid 1px #D9E5BE; border-right:solid 1px #D9E5BE; background-color:#EFF4E3; padding:4px; cursor:pointer; cursor:hand;}
+.mmItemOver {background-color:Red; color:Black; border-left:solid 1px #D9E5BE; border-right:solid 1px #D9E5BE; background-color:#EFF4E3; padding:4px; cursor:pointer; cursor:hand;}
+
+/* --------------------------------------------------- */
+/* ----------------  /menu classes	------------------ */
+/* --------------------------------------------------- */
+
+/* ------------------------------------------------------- */
+/* ----------------  specific classes	------------------ */
+/* ------------------------------------------------------- */
+/*
+zelena svijetla: #b9ce8e
+zelena tamna: #758455
+siva svijetla: #d2d3cf
+siva tamna: #565850
+*/
+.pageTitle {font-family:Arial Narrow; font-size:22pt; color:Black; font-weight:500; line-height: 30px; letter-spacing:2px; font-style:normal; padding:0px 0px 0px 10px; padding-bottom:0px;}
+.UserName {font-size:9pt; padding:3px 3px 3px 3px; color:#758455; font-weight:bold;}
+.smallLine {line-height:13px;}
+.money
+{
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-bottom: 0px;
+	width:92px;
+	padding-top: 0px;
+	text-align: right;
+}
+.moneyKapitalna
+{
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-bottom: 0px;
+	width:100px;
+	padding-top: 0px;
+	text-align: right;
+}
+.bkTextArea1
+{
+	width:500px;
+}
+.money1
+{
+	padding-right: 3px;
+	padding-left: 3px;
+	padding-bottom: 0px;
+	width:80px;
+	padding-top: 0px;
+	text-align: right;
+}
+.bkZvjezdica {color: #ff0000;}
+.tdheadermoney {width:77px;}
+
+.LeftMenuItem {
+	color: #6C8072;
+	text-decoration: none;
+	vertical-align: middle;
+	height: 25px;
+	cursor: hand;
+	text-align: left;
+	padding-right: 3px;
+	padding-left: 3px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #A6A9A0;
+	background-repeat: no-repeat;
+}
+/*
+zelena svijetla: #b9ce8e
+zelena tamna: #758455
+siva svijetla: #d2d3cf
+siva tamna: #565850
+*/
+.jkhelp {border: 1px solid #758455; padding: 5px 5 5 5px; background-color: #b9ce8e; text-align: left; color: black; width: 18em; font-size: 11px; font-family: arial, sans-serif;} 
+
+.txtDisabled {color:#808080; font-weight:bold;}
+
+.locked {font-weight:bold; color:Red;}
+/*.printRV{background-image:url(../images/print_rv.gif); background-repeat:repeat;}*/
+.printRV {width:100%;height:40;font-size:28pt;font-weight:bold;color:silver;text-align:center;letter-spacing:20px;line-height:40px;}
+
+.bk_NumberTD {width:40px;}
+
+.divBoxScroll{width:auto; height:100%; overflow:scroll;}
+.dlItemAlt {border:solid #d2d3cf 1px;}
+.dlItem {border:solid #b9ce8e 1px;}
+
+.DocStatus0 {color:Red; font:normal normal normal 8pt/8pt Arail;}
+.DocStatus1 {color:Green; font:normal normal normal 8pt/8pt Arail;}
+.DocStatus2 {color:Gray; font:normal normal normal 8pt/8pt Arail;}
+.DocStatus3 {color:Black; font:normal normal normal 8pt/8pt Arail;}
+
+.pnlBox {BORDER-RIGHT: silver 1px solid; BORDER-TOP: silver 1px solid; DISPLAY: none; BORDER-LEFT: silver 1px solid; WIDTH: 100%; BORDER-BOTTOM: silver 1px solid; HEIGHT: 50px}
+.dgItemTopLeft {vertical-align:top; text-align:left;}
+.dgItemTopCenter {vertical-align:top; text-align:center;}
+.dgItemTopRight {vertical-align:top; text-align:right;}
+.NoWrap {white-space:nowrap;}
+
+/* ------------------------------------------------------- */
+/* ----------------  /specific classes	------------------ */
+/* ------------------------------------------------------- */
